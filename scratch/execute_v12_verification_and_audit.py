@@ -342,7 +342,7 @@ manifest_content = f"""# PAPER V12 RELEASE MANIFEST & SCIENTIFIC ARTIFACT AUDIT
 ## 3. Scientific Invariance & Baseline Verification
 
 - **Paper V5 through V11 Frozen Status:** All prior version artifacts (`PaperV5_*` through `PaperV11_*`) are frozen and untouched.
-- **Empirical Metrics Invariance:** Field F1 (75.23%), Raw Exact Match (74.60%), Normalized Exact Match (82.18%), CER (11.35%), WER (8.21%), Total Observations (24,480), Evaluated Specimens (360), Category Accuracy (100.00%).
+- **Empirical Metrics Invariance:** Field F1 (75.23%), Raw Exact Match (74.60%), Normalized Exact Match (82.18%), CER (8.21%), WER (24.77%), Total Observations (24,480), Evaluated Specimens (360), Category Accuracy (100.00%).
 
 **Audit Sign-off:** Automated Release Audit completed successfully with zero defects.
 """

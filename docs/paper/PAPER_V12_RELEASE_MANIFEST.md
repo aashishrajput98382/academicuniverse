@@ -11,9 +11,9 @@
 
 | Artifact File | Size (Bytes) | SHA-256 Checksum | Verification Status |
 | :--- | :---: | :--- | :---: |
-| `docs/paper/PaperV12_Ollama_Primary.docx` | 2,108,179 | `687ffde9ea396e028cf7621762fc85c5abe77370ff4b4b2349d825d587c48030` | **VERIFIED** |
-| `docs/paper/PaperV12_Ollama_Primary.pdf` | 1,497,541 | `6699590124ab7d60dc464621c1364a9ae4fb08126c38e5b73a495bb3dada950c` | **VERIFIED (22 Pages)** |
-| `docs/paper/Paper_V12.md` | 45,592 | `bc195a2afb75824ff16fcafe6771155c830bf99022fa250f853fdaaf482375b4` | **VERIFIED** |
+| `docs/paper/PaperV12_Ollama_Primary.docx` | 2,108,302 | `5ca3464a7eee9fd167e75a58d143e19794b754f43697b65883fc2d1c3ec3a0f9` | **VERIFIED** |
+| `docs/paper/PaperV12_Ollama_Primary.pdf` | 1,498,040 | `fe8692fcd87524957279b704b930edbefabc0b5cb677243ad8139cd463f5e5c5` | **VERIFIED (22 Pages)** |
+| `docs/paper/Paper_V12.md` | 45,846 | `e058f8c18e7b5f7ee43bbb762cecacff90d1e56371d33d785d92ef6cd93b7e24` | **VERIFIED** |
 
 ---
 
@@ -39,6 +39,6 @@
 ## 3. Scientific Invariance & Baseline Verification
 
 - **Paper V5 through V11 Frozen Status:** All prior version artifacts (`PaperV5_*` through `PaperV11_*`) are frozen and untouched.
-- **Empirical Metrics Invariance:** Field F1 (75.23%), Raw Exact Match (74.60%), Normalized Exact Match (82.18%), CER (11.35%), WER (8.21%), Total Observations (24,480), Evaluated Specimens (360), Category Accuracy (100.00%).
+- **Empirical Metrics Invariance:** Field F1 (75.23%), Raw Exact Match (74.60%), Normalized Exact Match (82.18%), CER (8.21%), WER (24.77%), Total Observations (24,480), Evaluated Specimens (360), Category Accuracy (100.00%).
 
 **Audit Sign-off:** Automated Release Audit completed successfully with zero defects.

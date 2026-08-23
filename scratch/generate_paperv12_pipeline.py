@@ -113,7 +113,7 @@ exact_abstract_text = (
     "degradation and complete ground-truth annotations, while semantic normalization reduces the effect "
     "of superficial formatting and representation differences during evaluation. In the canonical live "
     "evaluation using MiniCPM-V (7.6B, Q4_0) through the local Ollama runtime, the system achieved "
-    "75.23% field-level F1, 74.60% raw exact match, 82.18% normalized exact match, and 11.35% character "
+    "75.23% field-level F1, 74.60% raw exact match, 82.18% normalized exact match, and 8.21% character "
     "error rate across 24,480 field observations, while document-category classification achieved 100.00% "
     "accuracy. These results demonstrate that the proposed system can provide a privacy-preserving and "
     "structured approach for evaluating automated academic document extraction without requiring real "
@@ -1460,7 +1460,7 @@ add_styled_table(p_sec6, tbl8_data, col8_w, align_center_from_col=1)
 # --- ITEM 3: Paragraph 3, Table IX, Fig. 4, & Fig. 5 ---
 add_body_p(
     p_sec6,
-    "To isolate the impact of the Six-Stage Semantic Canonical Normalizer, a two-pass ablation study was conducted across all 24,480 field observations. As summarized in Table IX and visualized in Fig. 4 and Fig. 5, canonical normalization increased Field F1 from 50.00% to 95.49% (+45.49% net gain) while reducing Character Error Rate from 38.13% to 3.65% (a 90.42% relative error reduction).",
+    "To isolate the synthetic formatting discrepancy correction capability of the Six-Stage Semantic Canonical Normalizer independently from visual perception errors, a two-pass rule ablation study was conducted across all 24,480 field observations. As summarized in Table IX and visualized in Fig. 4 and Fig. 5, canonical normalization resolved superficial syntax variations, increasing Field F1 from 50.00% to 95.49% (+45.49% net gain) while reducing Character Error Rate from 38.13% to 3.65% (a 90.42% relative error reduction).",
     space_after=4
 )
 
@@ -1540,7 +1540,7 @@ add_styled_table(p_sec6, tbl12_data, col12_w, align_center_from_col=2)
 # --- ITEM 6: Paragraph 6 & Table XIII ---
 add_body_p(
     p_sec6,
-    "The nine-class diagnostic OCR error taxonomy distribution shift detailed in Table XIII confirms that all 2,620 `FORMAT_ERROR` instances in Pass A were systematically converted into character-perfect `EXACT_MATCH` records in Pass B (raising exact match from 50.00% to 95.49%), while all 260 genuine `NORMALIZATION_ERROR` cases (4.51%) were preserved, demonstrating that canonicalization isolates formatting variations without concealing model recognition errors.",
+    "The nine-class diagnostic OCR error taxonomy distribution shift detailed in Table XIII evaluates 5,760 core scalar metadata observations across the 360 specimens (360 x 16 canonical fields). All 2,620 `FORMAT_ERROR` instances in Pass A were systematically converted into character-perfect `EXACT_MATCH` records in Pass B (raising exact match from 50.00% to 95.49%), while 260 genuine `NORMALIZATION_ERROR` cases (4.51%) were preserved, proving that canonicalization isolates formatting discrepancies without concealing model recognition errors.",
     space_after=4
 )
 
@@ -1630,7 +1630,7 @@ if p_c_h.runs:
     r.font.size = Pt(11)
     r.bold = True
 
-conclusion_para_text = "Benchmarking document intelligence systems on academic credentials remains bottlenecked by statutory privacy regulations such as FERPA and GDPR, alongside rigid string evaluation metrics that artificially penalize benign formatting variances [25], [28], [35]. To resolve these limitations, this paper presented a reproducible synthetic evaluation methodology (ADBG v1.0 and AU DIC Framework v1.0) [26], [31]. The framework integrates seed-deterministic credential compilation, a six-stage semantic canonical normalizer, an automated nine-class OCR error taxonomy [37], and a four-profile optical degradation matrix [30]. Live empirical evaluation across 360 specimens (24,480 paired observations) confirmed that canonical normalization isolates genuine extraction failures (McNemar \u03c7\u00b2 = 1853.0005, p < 0.0001) [22], [25], establishing a standardized, privacy-preserving benchmark foundation [26], [31]."
+conclusion_para_text = "Benchmarking document intelligence systems on academic credentials remains bottlenecked by statutory privacy regulations such as FERPA and GDPR, alongside rigid string evaluation metrics that artificially penalize benign formatting variances [25], [28], [35]. To resolve these limitations, this paper presented a reproducible synthetic evaluation methodology (ADBG v1.0 and AU DIC Framework v1.0) [26], [31]. The framework integrates seed-deterministic credential compilation, a six-stage semantic canonical normalizer, an automated nine-class OCR error taxonomy [37], and a four-profile optical degradation matrix [30]. Live empirical evaluation across 360 specimens (24,480 paired observations) confirmed that canonical normalization isolates genuine extraction failures (McNemar \u03c7\u00b2 = 2618.00, p < 0.0001) [22], [25], establishing a standardized, privacy-preserving benchmark foundation [26], [31]."
 
 p_c_b = p_ack.insert_paragraph_before(conclusion_para_text)
 p_c_b.paragraph_format.line_spacing = 1.05
@@ -1650,7 +1650,7 @@ if p_fw_h.runs:
     r.font.size = Pt(11)
     r.bold = True
 
-future_work_para_text = "Promising avenues for future research encompass three primary dimensions to further expand the benchmark capability. First, ADBG v2.0 will introduce multi-lingual credential synthesis supporting Indic scripts (Hindi, Tamil, Devanagari) and multi-lingual institutional degree layouts [26]. Second, we will expand Option A image-based benchmarking across leading vision-language foundation models (Donut [7], Florence-2 [9], GOT-OCR2.0 [38], LLaVA-NeXT-Doc [15], DocFormers 2.0 [32]) and specialized OCR systems (Tesseract [18], olmOCR 2 [45]) to measure extraction robustness under severe optical distortions [30]. Third, multi-model comparative benchmarking will incorporate instruction-tuned architectures (Marten [40], Docopilot [39]) to deliver comprehensive model rankings and cross-domain diagnostic evaluations across diverse higher education administrative workflows [31]."
+future_work_para_text = "Promising avenues for future research encompass three primary dimensions to further expand the benchmark capability. First, ADBG v2.0 will introduce multi-lingual credential synthesis supporting Indic scripts (Hindi, Tamil, Devanagari) and multi-lingual institutional degree layouts [26]. Second, we will expand Option A image-based benchmarking across leading vision-language foundation models (Donut [7], Florence-2 [9], GOT-OCR2.0 [38], LLaVA-NeXT-Doc [15], DocFormers 2.0 [32]) and specialized OCR systems (Tesseract [19], MinerU [43]) to measure extraction robustness under severe optical distortions [30]. Third, multi-model comparative benchmarking will incorporate instruction-tuned multimodal architectures (such as LayoutLMv2 [46] and DocFormers 2.0 [32]) to deliver comprehensive model rankings and cross-domain diagnostic evaluations across diverse higher education administrative workflows [31]."
 
 p_fw_b = p_ack.insert_paragraph_before(future_work_para_text)
 p_fw_b.paragraph_format.line_spacing = 1.05

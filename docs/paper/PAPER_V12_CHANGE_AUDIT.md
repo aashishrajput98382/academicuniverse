@@ -16,7 +16,7 @@ As directed, the order of Conclusion and Future Work has been swapped, and both 
 4. **4. Experimental Setup**: Unchanged (4.1 to 4.6 + Tables II-VI).
 5. **5. Results & Discussion**: Unchanged (7 concise ~50-60 word paragraphs + Tables VII-XIV + Figs. 3-9).
 6. **6. Conclusion**: Swapped to Section 6, formatted as a single high-impact paragraph (112 words).
-7. **7. Future Work**: Swapped to Section 7, formatted as a single structured paragraph (105 words).
+7. **7. Future Work**: Swapped to Section 7, formatted as a single structured paragraph (109 words).
 8. **ACKNOWLEDGMENT**: Unchanged.
 9. **REFERENCES**: Unchanged (50 IEEE numbered citations).
 
