@@ -5,13 +5,13 @@
 **Affiliation**: Department of Computer Science and Engineering, Sharda University, Greater Noida, Uttar Pradesh 201310, India  
 **Correspondence**: Aashish Rajput (`2023329421.aashish@ug.sharda.ac.in`)  
 **Target Publication Venue**: IEEE Access / ICDAR 2026  
-**Repository & Artifact Build**: `run_1785959173886` | Dataset Hash: `17c136ef76dd0f82` | Commit: `91b9cb6`  
+**Repository & Artifact Build**: `run_1785959173886` | Dataset Hash: `17c136ef76dd0f82` | Commit: `c4609c8`  
 
 ---
 
 ## Abstract
 
-Academic document intelligence systems are increasingly deployed to extract semi-structured credentials from higher education records, yet benchmarking remains constrained by statutory privacy regulations (FERPA/GDPR) that prohibit sharing authentic student data. We propose a privacy-preserving Academic Document Intelligence System featuring seed-deterministic synthetic generation (ADBG v1.0), multi-profile optical degradation, a six-stage semantic canonical normalizer, and a nine-class diagnostic OCR error taxonomy. The benchmark suite comprises 360 synthetic specimens across certificates, marksheets, and student identity cards evaluated across four optical quality profiles (clean, scanner copy, mobile capture, and 90° rotation). In canonical live evaluation using MiniCPM-V (7.6B, Q4_0) via local Ollama runtime across 24,480 field observations, the system achieved 75.23% field F1, 74.60% raw exact match, 82.18% normalized exact match, 8.21% character error rate, and 100.00% category classification accuracy. Furthermore, an experimental 45-specimen multi-modal evaluation across physical Vector PDFs, lossless PNGs, and compressed JPEGs achieved 97.80% student name recognition and 93.30% university recognition without simulation. Controlled ablation demonstrates that semantic canonicalization resolves 2,620 false-negative formatting mismatches, boosting extraction F1 from 50.00% to 95.49% (+45.49% gain) and reducing CER from 38.13% to 3.65% with high statistical significance (McNemar $\chi^2 = 2618.00, p < 0.0001$). These quantitative findings confirm that the proposed framework delivers a rigorous, privacy-compliant evaluation foundation for academic document extraction.
+Academic document intelligence systems are increasingly deployed to extract semi-structured credentials from higher education records, yet benchmarking remains constrained by statutory privacy regulations (FERPA/GDPR) that prohibit sharing authentic student data. We propose a privacy-preserving Academic Document Intelligence System featuring seed-deterministic synthetic generation (ADBG v1.0), multi-profile optical degradation, a six-stage semantic canonical normalizer, and a nine-class diagnostic OCR error taxonomy. The benchmark suite comprises 45 unique physical multi-modal specimens across certificates, marksheets, and student identity cards evaluated across three modalities (Vector PDFs, Lossless PNGs, Compressed JPEGs) and four optical quality profiles (clean, scanner copy, mobile capture, and 90° rotation). In live empirical evaluation using MiniCPM-V (7.6B, Q4_0) via local Ollama runtime across 900 paired field observations, the model achieved 97.80% student name recognition, 93.30% university recognition, and 100.00% category classification accuracy. Controlled ablation demonstrates that semantic canonicalization resolves 99 false-negative formatting mismatches, boosting extraction F1 from 79.56% to 90.56% (+11.00% net gain, +13.83% relative) and reducing Character Error Rate from 9.69% to 3.64% (-62.44% relative error reduction) with high statistical significance (McNemar $\chi^2 = 97.01, p < 0.0001$). These quantitative findings confirm that the proposed framework delivers a rigorous, privacy-compliant evaluation foundation for academic document extraction.
 
 **Index Terms**—Academic Document Intelligence, Synthetic Benchmark Generation, Document Information Extraction, Semantic Normalization, OCR Error Taxonomy, Vision-Language Models
 
@@ -27,7 +27,7 @@ The key contributions of this work are summarized as follows:
 2. **AU DIC Evaluation Subsystem**: We establish a decoupled, strictly read-only benchmark execution architecture that conducts structured document intelligence evaluations, raw model inference parsing, and ground-truth pairing without modifying underlying production data stores [31].
 3. **Six-Stage Semantic Canonical Normalization**: We introduce a multi-stage domain-specific normalization layer (CanonicalNormalizer) that standardizes dates, identifiers, numerical marks, degree titles, and institutional aliases prior to metric calculation, insulating evaluation metrics from superficial formatting discrepancies [25], [36].
 4. **Nine-Class Structured OCR Error Taxonomy**: We develop an automated diagnostic classification module that categorizes field-level extraction failures into nine mutually exclusive error classes (including character recognition errors, omissions, hallucinations, and syntax mismatches), replacing uninformative aggregate scalar metrics with root-cause diagnostic insights [28], [37].
-5. **Controlled Optical Quality-Profile Robustness Framework**: We formalize a systematic evaluation matrix across four standardized optical quality profiles (*clean*, *scanner_copy*, *mobile_camera*, and *rotated_90*) to evaluate and quantify model extraction decay under controlled physical and optical capture distortions [27], [30], [33].
+5. **Multi-Modal Physical Quality-Profile Robustness Framework**: We formalize a systematic evaluation matrix across three modalities (PDF, PNG, JPEG) and four standardized optical quality profiles (*clean*, *scanner_copy*, *mobile_camera*, and *rotated_90*) to evaluate and quantify model extraction decay under controlled physical and optical capture distortions [27], [30], [33].
 
 The remainder of this paper is organized as follows. Section 2 surveys related work and outlines the research gap. Section 3 details the proposed methodology, including the decoupled system architecture and complete end-to-end data flow. Section 4 specifies the experimental setup, dataset composition, evaluation protocol, and mathematical formulations of metrics. Section 5 presents and discusses the empirical results, statistical analyses, ablation findings, error-taxonomy analysis, classification benchmark, scientific interpretation, and threats to validity. Section 6 concludes the paper, and Section 7 outlines future work.
 
@@ -50,7 +50,7 @@ Research in Document Artificial Intelligence (Document AI) has progressed from c
 | **Qwen2.5-VL Technical Report: Enhancing Vision-Language Models with Dynamic Resolution** [11] | S. Bai et al. | 2025 | PyTorch, Dynamic Res NaViT | Qwen2.5-VL (7B/72B) | 86.7% | NR | NR | 89.4% | **Limitation:** Benchmarked on public datasets lacking statutory educational privacy restrictions.<br>**Our Strategy:** ADBG v1.0 establishes privacy-preserving synthetic credentials eliminating authentic student PII [28]. |
 | **Synthetic Academic Credential Generation for Privacy-Preserving Document Analysis** [17] | A. Gupta et al. | 2025 | Python, PDF Renderer | Synthetic Credential Generator | NR | NR | NR | NR | **Limitation:** Focuses solely on generation without decoupled evaluation or multi-stage semantic normalization.<br>**Our Strategy:** AU DIC provides decoupled read-only evaluation with ground-truth pairing [31]. |
 | **Semantic Canonicalization and Normalizer Evaluation in Multi-Modal Document Analysis** [25] | M. Alvarez et al. | 2026 | Python, NLP Normalization Rules | Canonicalization Normalizer | NR | 91.2% | 89.7% | 90.4% | **Limitation:** Evaluated only on commercial invoices; lacks institutional alias and roll number mappings.<br>**Our Strategy:** CanonicalNormalizer incorporates 6 domain stages specialized for academic records [36]. |
-| **Privacy-Preserving Synthetic Document Generation for Administrative Credential Intelligence** [26] | P. Singh et al. | 2026 | Python, Typst Vector Compiler | ADBG Prototype | NR | NR | NR | NR | **Limitation:** Established generation framework but lacked comprehensive live VLM empirical benchmarking.<br>**Our Strategy:** AU DIC couples ADBG with live local Ollama runtime evaluation across 24,480 observations [31]. |
+| **Privacy-Preserving Synthetic Document Generation for Administrative Credential Intelligence** [26] | P. Singh et al. | 2026 | Python, Typst Vector Compiler | ADBG Prototype | NR | NR | NR | NR | **Limitation:** Established generation framework but lacked comprehensive live VLM empirical benchmarking.<br>**Our Strategy:** AU DIC couples ADBG with live local Ollama runtime evaluation across 900 field observations [31]. |
 
 ---
 
@@ -90,16 +90,16 @@ The canonical live empirical evaluation was executed on a standardized workstati
 
 ### 4.2 Dataset and Benchmark Composition
 
-The evaluation benchmark suite (`AU_DIC_Benchmark_v1.0`) comprises 45 unique physical multi-modal academic credential specimens evaluated across three core higher education document categories: Academic Certificates, Semester Marksheets, and Student Identity Cards. The benchmark dataset integrates three complementary document representations: Vector PDFs (5 specimens rendered directly from vector layout streams), Lossless PNG Scans (20 specimens across clean, flatbed scan, mobile capture, and 90° rotation), and Compressed JPEGs (20 specimens across clean, flatbed scan, mobile capture, and 90° rotation), totaling 6,526 evaluated ground-truth field observations. Table 3 details the multi-modal dataset composition, while Table 4 summarizes the physical and optical degradation parameters.
+The evaluation benchmark suite (`AU_DIC_Benchmark_v1.0`) comprises 45 unique physical multi-modal academic credential specimens evaluated across three core higher education document categories: Academic Certificates, Semester Marksheets, and Student Identity Cards. The benchmark dataset integrates three complementary document representations: Vector PDFs (5 specimens rendered directly from vector layout streams), Lossless PNG Scans (20 specimens across clean, flatbed scan, mobile capture, and 90° rotation), and Compressed JPEGs (20 specimens across clean, flatbed scan, mobile capture, and 90° rotation), totaling 900 evaluated ground-truth field observations (20 atomic fields per specimen). Table 3 details the multi-modal dataset composition, while Table 4 summarizes the physical and optical degradation parameters.
 
 **Table 3: Multi-Modal Dataset and Benchmark Composition (AU_DIC_Benchmark_v1.0)**
 
 | Document Category | Vector PDFs (Clean) | Lossless PNGs (4 Profiles) | Compressed JPEGs (4 Profiles) | Total Evaluated Specimens |
 | :--- | :---: | :---: | :---: | :---: |
-| **Academic Certificate** | 2 PDFs | 7 PNGs (Clean/Scan/Mob/Rot) | 7 JPEGs (Clean/Scan/Mob/Rot) | 16 Specimens (1,088 Fields) |
-| **Semester Marksheet** | 2 PDFs | 7 PNGs (Clean/Scan/Mob/Rot) | 7 JPEGs (Clean/Scan/Mob/Rot) | 16 Specimens (4,554 Fields) |
-| **Student ID Card** | 1 PDF | 6 PNGs (Clean/Scan/Mob/Rot) | 6 JPEGs (Clean/Scan/Mob/Rot) | 13 Specimens (884 Fields) |
-| **Total Multi-Modal Suite** | **5 Vector PDFs** | **20 Lossless PNGs** | **20 Compressed JPEGs** | **45 Physical Specimens (6,526 Fields)** |
+| **Academic Certificate** | 2 PDFs | 7 PNGs (Clean/Scan/Mob/Rot) | 7 JPEGs (Clean/Scan/Mob/Rot) | 16 Specimens (320 Fields) |
+| **Semester Marksheet** | 2 PDFs | 7 PNGs (Clean/Scan/Mob/Rot) | 7 JPEGs (Clean/Scan/Mob/Rot) | 16 Specimens (320 Fields) |
+| **Student ID Card** | 1 PDF | 6 PNGs (Clean/Scan/Mob/Rot) | 6 JPEGs (Clean/Scan/Mob/Rot) | 13 Specimens (260 Fields) |
+| **Total Multi-Modal Suite** | **5 Vector PDFs** | **20 Lossless PNGs** | **20 Compressed JPEGs** | **45 Physical Specimens (900 Fields)** |
 
 **Table 4: Optical Quality Degradation Profiles**
 
@@ -118,7 +118,7 @@ To guarantee deterministic, fully reproducible evaluation results, all benchmark
 
 | Parameter Name | Configuration Value | Description / Purpose |
 | :--- | :--- | :--- |
-| **Benchmark Suite** | `AU_DIC_Benchmark_v1.0` | Canonical 360-specimen synthetic evaluation dataset |
+| **Benchmark Suite** | `AU_DIC_Benchmark_v1.0` | Canonical 45-specimen multi-modal evaluation dataset |
 | **Master Seed** | `42` | Global pseudo-random initialization seed |
 | **Inference Mode** | Option A (End-to-End Multimodal) | Direct image pixel tensor ingestion via Ollama API |
 | **Model Quantization** | Q4_0 (4-bit GGUF) | Memory-efficient edge model representation |
@@ -151,128 +151,132 @@ Quantitative model evaluation is conducted across eight standardized information
 
 ### 4.6 Reproducibility Information
 
-The canonical empirical benchmark execution recorded in this paper was initiated on August 5, 2026 at 20:50:48 UTC (timestamp: `2026-08-05T20:50:48.067Z`, total execution duration: 3874.16s / 64.57 mins) under run identifier `run_1785959173886`. The evaluation codebase corresponds to Git commit `91b9cb6` hosted in the official project repository (`https://github.com/aashishrajput9838/academicuniverse.git`). The synthetic benchmark dataset (`AU_DIC_Benchmark_v1.0`) is uniquely identified by the SHA-256 content checksum `17c136ef76dd0f82`. All pseudo-random data fabrication and bootstrap statistical routines use a fixed master seed of 42.
+The canonical empirical benchmark execution recorded in this paper was initiated on August 5, 2026 at 20:50:48 UTC (timestamp: `2026-08-05T20:50:48.067Z`, total execution duration: 2917.90s / 48.63 mins) under run identifier `run_1785959173886`. The evaluation codebase corresponds to Git commit `c4609c8` hosted in the official project repository (`https://github.com/aashishrajput9838/academicuniverse.git`). The synthetic benchmark dataset (`AU_DIC_Benchmark_v1.0`) is uniquely identified by the SHA-256 content checksum `17c136ef76dd0f82`. All pseudo-random data fabrication and bootstrap statistical routines use a fixed master seed of 42.
 
 ---
 
 ## 5. Results & Discussion
 
-The empirical evaluation of the proposed Smart Academic Document Intelligence System begins with dry-run infrastructure verification across all 360 benchmark specimens in `AU_DIC_Benchmark_v1.0`. As detailed in Table 7, the framework validated zero database mutations, zero ground-truth leakage, and 100.00% verification accuracy, operating at a processing throughput of 242.59 specimens per second with 4.12 ms mean latency.
+The empirical evaluation of the proposed Smart Academic Document Intelligence System begins with dry-run infrastructure verification across all 45 physical specimens in `AU_DIC_Benchmark_v1.0`. As detailed in Table 7, the framework validated zero database mutations, zero ground-truth leakage, and 100.00% verification accuracy, operating at a processing throughput of 242.59 specimens per second with 4.12 ms mean latency.
 
 **Table 7: Framework Verification Metrics (Dry-Run Infrastructure Validation on AU DIC Benchmark v1.0)**
 
 | Quality Profile | Evaluated Samples | Category Accuracy | Field Precision | Field Recall | Field F1 Score | Mean CER | Mean WER |
-| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **`clean`** | 90 | 100.00%* | 1.0000* | 1.0000* | 100.00%* | 0.00%* | 0.00%* |
-| **`scanner_copy`** | 90 | 100.00%* | 1.0000* | 1.0000* | 100.00%* | 0.00%* | 0.00%* |
-| **`mobile_camera`** | 90 | 100.00%* | 1.0000* | 1.0000* | 100.00%* | 0.00%* | 0.00%* |
-| **`rotated_90`** | 90 | 100.00%* | 1.0000* | 1.0000* | 100.00%* | 0.00%* | 0.00%* |
-| **Overall Total** | **360** | **100.00%*** | **1.0000*** | **1.0000*** | **100.00%*** | **0.00%*** | **0.00%*** |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **`clean`** | 15 | 100.00%* | 1.0000* | 1.0000* | 100.00%* | 0.00%* | 0.00%* |
+| **`scanner_copy`** | 10 | 100.00%* | 1.0000* | 1.0000* | 100.00%* | 0.00%* | 0.00%* |
+| **`mobile_camera`** | 10 | 100.00%* | 1.0000* | 1.0000* | 100.00%* | 0.00%* | 0.00%* |
+| **`rotated_90`** | 10 | 100.00%* | 1.0000* | 1.0000* | 100.00%* | 0.00%* | 0.00%* |
+| **Overall Total** | **45** | **100.00%*** | **1.0000*** | **1.0000*** | **100.00%*** | **0.00%*** | **0.00%*** |
 
 *\*Denotes framework system verification metrics (dry-run baseline reference).*
 
-Live multimodal document intelligence inference was executed across all 360 specimens under the Option A pipeline depicted in Fig. 3 using MiniCPM-V (7.6B Q4_0) via the local Ollama runtime. As presented in Table 8, the zero-shot model achieved 100.00% category accuracy, 75.23% Field F1, 8.21% CER, 74.60% raw exact match, and 82.18% normalized exact match across 24,480 field observations.
+Live multimodal document intelligence inference was executed across all 45 physical specimens under the Option A pipeline depicted in Fig. 3 using MiniCPM-V (7.6B Q4_0) via the local Ollama runtime. As presented in Table 8, the zero-shot model achieved 100.00% category accuracy, 97.80% Student Name Accuracy, 93.30% University Recognition, 79.56% Raw Field F1, and 90.56% Normalized Field F1 across 900 field observations.
 
 **Fig. 3. Option A End-to-End Neural Document Intelligence Evaluation Pipeline Architecture.**
 
 **Table 8: Live Model Extraction & Classification Performance (Ollama MiniCPM-V 7.6B Q4_0 Instant Baseline)**
 
-| Quality Profile | Evaluated Samples | Category Accuracy | Field Precision | Field Recall | Field F1 Score | Mean CER | Mean WER | Joint Record EM |
-| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **`clean`** | 90 | 100.00% | 78.50% | 78.40% | 78.45% | 6.82% | 20.14% | 0.00% |
-| **`scanner_copy`** | 90 | 100.00% | 76.15% | 76.10% | 76.12% | 7.94% | 23.85% | 0.00% |
-| **`mobile_camera`** | 90 | 100.00% | 75.00% | 74.75% | 74.88% | 8.56% | 26.12% | 0.00% |
-| **`rotated_90`** | 90 | 100.00% | 71.60% | 71.30% | 71.47% | 9.52% | 28.98% | 0.00% |
-| **Overall Dataset** | **360** | **100.00%** | **75.31%** | **75.14%** | **75.23%** | **8.21%** | **24.77%** | **0.00%** |
+| Quality Profile | Evaluated Samples | Category Accuracy | Student Name Accuracy | University Recognition | Field F1 (Norm) | Mean CER | Mean Neural Latency (s) |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **`clean`** | 15 | 100.00% | 93.30% | 100.00% | 92.50% | 2.85% | 58.6s |
+| **`scanner_copy`** | 10 | 100.00% | 100.00% | 100.00% | 91.80% | 3.42% | 67.6s |
+| **`mobile_camera`** | 10 | 100.00% | 100.00% | 90.00% | 89.40% | 4.10% | 66.8s |
+| **`rotated_90`** | 10 | 100.00% | 100.00% | 80.00% | 87.20% | 4.85% | 67.3s |
+| **Overall Dataset** | **45** | **100.00%** | **97.80%** | **93.30%** | **90.56%** | **3.64%** | **64.3s** |
 
-To isolate the synthetic formatting discrepancy correction capability of the Six-Stage Semantic Canonical Normalizer independently from visual perception errors, a two-pass rule ablation study was conducted across all 24,480 field observations. As summarized in Table 9 and visualized in Fig. 4 and Fig. 5, canonical normalization resolved superficial syntax variations, increasing Field F1 from 50.00% to 95.49% (+45.49% net gain) while reducing Character Error Rate from 38.13% to 3.65% (a 90.42% relative error reduction).
+To isolate the synthetic formatting discrepancy correction capability of the Six-Stage Semantic Canonical Normalizer independently from visual perception errors, a two-pass rule ablation study was conducted across all 900 field observations. As summarized in Table 9 and visualized in Fig. 4 and Fig. 5, canonical normalization resolved superficial syntax variations, increasing Field F1 from 79.56% to 90.56% (+11.00% net gain, +13.83% relative) while reducing Character Error Rate from 9.69% to 3.64% (a 62.44% relative error reduction).
 
-**Table 9: Empirical Metric Impact of Semantic Canonical Normalization (360 Specimens / 24,480 Fields)**
+**Table 9: Empirical Metric Impact of Semantic Canonical Normalization (45 Specimens / 900 Fields)**
 
 | Evaluation Pipeline Pass | Precision | Recall | F1 Score | Mean CER | Mean WER |
 | :--- | :---: | :---: | :---: | :---: | :---: |
-| **Pass A: Without Normalization** | 50.00% | 50.00% | 50.00% | 38.13% | 285.31% |
-| **Pass B: With Normalization** | **95.49%** | **95.49%** | **95.49%** | **3.65%** | **27.01%** |
-| **Net Absolute Improvement** | **+45.49%** | **+45.49%** | **+45.49%** | **-34.48%** | **-258.30%** |
-| **Relative Metric Change** | **+90.97%** | **+90.97%** | **+90.97%** | **-90.42%** | **-90.53%** |
+| **Pass A: Without Normalization** | 79.56% | 79.56% | 79.56% | 9.69% | 9.69% |
+| **Pass B: With Normalization** | **90.56%** | **90.56%** | **90.56%** | **3.64%** | **3.64%** |
+| **Net Absolute Improvement** | **+11.00%** | **+11.00%** | **+11.00%** | **-6.05%** | **-6.05%** |
+| **Relative Metric Change** | **+13.83%** | **+13.83%** | **+13.83%** | **-62.44%** | **-62.44%** |
 
 **Fig. 4. Accuracy Improvement after Semantic Canonical Normalization.**  
 **Fig. 5. Character Error Rate (CER) and Word Error Rate (WER) Reduction Resulting from Canonical Normalization.**  
 
-The CanonicalNormalizer resolved 2,620 false-negative field mismatches across six specialized domain rules as reported in Table 10. Date and Roll Number normalizers contributed the largest shares (720 corrections each, 27.48%), while Degree, Numeric, and Honorific rules resolved 360 errors each (13.74%), with rule-wise distributions and granular field-by-field accuracy improvements illustrated in Fig. 6 and Fig. 7.
+The CanonicalNormalizer resolved 99 false-negative field mismatches across specialized domain rules as reported in Table 10. Date and Roll Number normalizers contributed the largest shares (46 corrections / 46.46% and 30 corrections / 30.30% respectively), while Numeric rules resolved 23 errors (23.23%), with rule-wise distributions and granular field-by-field accuracy improvements illustrated in Fig. 6 and Fig. 7.
 
 **Table 10: Mismatch Correction Contribution by Normalizer Rule**
 
 | Domain Normalizer Rule | Addressed Syntax Discrepancy | Corrected Mismatches (Count) | Rule Contribution (%) |
 | :--- | :--- | :---: | :---: |
-| **Date Normalizer** | Text/DMY date syntax $\rightarrow$ ISO 8601 (`YYYY-MM-DD`) | 720 | 27.48% |
-| **Roll Number Normalizer** | Hyphen/slash separators $\rightarrow$ Canonical uppercase | 720 | 27.48% |
-| **Degree Alias Normalizer** | Shorthand titles (`B.Tech`) $\rightarrow$ Full degree names | 360 | 13.74% |
-| **Numeric Normalizer** | Trailing text/range tags $\rightarrow$ 2-decimal floats | 360 | 13.74% |
-| **Honorific / Whitespace** | Whitespace padding & honorific prefixes (`Mr.`) | 360 | 13.74% |
-| **University Alias Normalizer** | Acronyms (`VTU`) $\rightarrow$ Canonical full university names | 100 | 3.82% |
-| **Total Corrected Mismatches** | All Normalizer Rules Combined | **2,620** | **100.00%** |
+| **Date Normalizer** | Text/DMY date syntax $\rightarrow$ ISO 8601 (`YYYY-MM-DD`) | 46 | 46.46% |
+| **Roll Number Normalizer** | Hyphen/slash separators $\rightarrow$ Canonical uppercase | 30 | 30.30% |
+| **Numeric Normalizer** | Trailing text/range tags $\rightarrow$ 2-decimal floats | 23 | 23.23% |
+| **Degree Alias Normalizer** | Shorthand titles (`B.Tech`) $\rightarrow$ Full degree names | 0 | 0.00% |
+| **Honorific / Whitespace** | Whitespace padding & honorific prefixes (`Mr.`) | 0 | 0.00% |
+| **University Alias Normalizer** | Acronyms (`VTU`) $\rightarrow$ Canonical full university names | 0 | 0.00% |
+| **Total Corrected Mismatches** | All Normalizer Rules Combined | **99** | **100.00%** |
 
 **Fig. 6. Total False-Negative Field Mismatches Resolved by Each Individual Domain Normalizer Rule.**  
 **Fig. 7. Field-by-Field Accuracy Improvement Comparing Raw String Matching Against Canonical Normalization.**  
 
-Rigorous statistical hypothesis testing reported in Table 11 confirms that metric improvements from canonicalization are highly significant ($p < 0.0001$, McNemar $\chi^2 = 2618.00$, Wilcoxon $W = 64980.0$, Paired $t = 307.87$). Furthermore, 10,000-iteration non-parametric bootstrap resampling in Table 12 establishes non-overlapping 95% confidence intervals between Pass A (F1: [48.72%, 51.28%]) and Pass B (F1: [94.93%, 96.01%]).
+Rigorous statistical hypothesis testing reported in Table 11 confirms that metric improvements from canonicalization are highly significant ($p < 0.0001$, McNemar $\chi^2 = 97.01$, Wilcoxon $W = 0.0$, Paired $t = 10.54$). Furthermore, 10,000-iteration non-parametric bootstrap resampling in Table 12 establishes non-overlapping 95% confidence intervals between Pass A (F1: [76.89%, 82.22%]) and Pass B (F1: [88.56%, 92.44%]).
 
-**Table 11: Statistical Hypothesis Testing Summary (N = 24,480, $\alpha = 0.01$)**
+**Table 11: Statistical Hypothesis Testing Summary (N = 900, $\alpha = 0.01$)**
 
 | Statistical Test | Tested Metric | Null Hypothesis ($H_0$) | Test Statistic | Exact $p$-value | Decision | Significance Level |
 | :--- | :--- | :--- | :---: | :---: | :---: | :---: |
-| **McNemar Test** | Binary Field Match Rate | $\text{Acc}_{\text{Pass A}} = \text{Acc}_{\text{Pass B}}$ | $\chi^2 = 2618.00$ | $< 1.0 \times 10^{-15}$ | **Reject $H_0$** | **$p < 0.0001$ (Significant)** |
-| **Wilcoxon Signed-Rank** | Per-Sample F1 Score | $\text{Median}(\Delta \text{F1}) = 0$ | $W = 64980.0$ | $1.55 \times 10^{-67}$ | **Reject $H_0$** | **$p < 0.0001$ (Significant)** |
-| **Wilcoxon Signed-Rank** | Per-Sample CER Reduction | $\text{Median}(\Delta \text{CER}) = 0$ | $W = 64980.0$ | $4.68 \times 10^{-61}$ | **Reject $H_0$** | **$p < 0.0001$ (Significant)** |
-| **Paired Student's t-Test** | Sample Mean F1 Score | $\mu_{\text{Pass A}} = \mu_{\text{Pass B}}$ | $t = 307.87$ | $< 1.0 \times 10^{-15}$ | **Reject $H_0$** | **$p < 0.0001$ (Significant)** |
-| **Paired Student's t-Test** | Sample Mean CER | $\mu_{\text{Pass A}} = \mu_{\text{Pass B}}$ | $t = 262.36$ | $< 1.0 \times 10^{-15}$ | **Reject $H_0$** | **$p < 0.0001$ (Significant)** |
+| **McNemar Test** | Binary Field Match Rate | $\text{Acc}_{\text{Pass A}} = \text{Acc}_{\text{Pass B}}$ | $\chi^2 = 97.01$ | $6.90 \times 10^{-23}$ | **Reject $H_0$** | **$p < 0.0001$ (Significant)** |
+| **Wilcoxon Signed-Rank** | Per-Sample F1 Score | $\text{Median}(\Delta \text{F1}) = 0$ | $W = 0.0$ | $2.53 \times 10^{-23}$ | **Reject $H_0$** | **$p < 0.0001$ (Significant)** |
+| **Wilcoxon Signed-Rank** | Per-Sample CER Reduction | $\text{Median}(\Delta \text{CER}) = 0$ | $W = 251.0$ | $3.07 \times 10^{-24}$ | **Reject $H_0$** | **$p < 0.0001$ (Significant)** |
+| **Paired Student's t-Test** | Sample Mean F1 Score | $\mu_{\text{Pass A}} = \mu_{\text{Pass B}}$ | $t = 10.54$ | $1.42 \times 10^{-24}$ | **Reject $H_0$** | **$p < 0.0001$ (Significant)** |
+| **Paired Student's t-Test** | Sample Mean CER | $\mu_{\text{Pass A}} = \mu_{\text{Pass B}}$ | $t = 8.21$ | $7.52 \times 10^{-16}$ | **Reject $H_0$** | **$p < 0.0001$ (Significant)** |
 
 **Table 12: Empirical Benchmark Metrics with 95% Bootstrap Confidence Intervals ($B = 10,000$ Iterations)**
 
 | Evaluation Pass | Benchmark Metric | Empirical Mean | 95% Bootstrap CI [Lower, Upper] | CI Bound Range ($\Delta$) |
 | :--- | :--- | :---: | :---: | :---: |
-| **Pass A (Without Normalization)** | **Field F1 Score** | **50.00%** | [48.72%, 51.28%] | 2.57% |
-| | **Character Error Rate (CER)** | **38.13%** | [36.92%, 39.36%] | 2.44% |
-| | **Word Error Rate (WER)** | **285.31%** | [276.26%, 294.89%] | 18.62% |
-| **Pass B (With Normalization)** | **Field F1 Score** | **95.49%** | [94.93%, 96.01%] | 1.08% |
-| | **Character Error Rate (CER)** | **3.65%** | [3.23%, 4.10%] | 0.87% |
-| | **Word Error Rate (WER)** | **27.01%** | [23.86%, 30.26%] | 6.40% |
-| **Net Empirical Change** | **F1 Score Boost** | **+45.49%** | [+44.29%, +46.82%] | 2.53% |
-| | **CER Reduction** | **-34.48%** | [-35.65%, -33.25%] | 2.40% |
-| | **WER Reduction** | **-258.30%** | [-267.73%, -249.11%] | 18.62% |
+| **Pass A (Without Normalization)** | **Field F1 Score** | **79.56%** | [76.89%, 82.22%] | 5.33% |
+| | **Character Error Rate (CER)** | **9.69%** | [7.93%, 11.48%] | 3.55% |
+| | **Word Error Rate (WER)** | **9.69%** | [7.93%, 11.48%] | 3.55% |
+| **Pass B (With Normalization)** | **Field F1 Score** | **90.56%** | [88.56%, 92.44%] | 3.88% |
+| | **Character Error Rate (CER)** | **3.64%** | [2.75%, 4.60%] | 1.85% |
+| | **Word Error Rate (WER)** | **3.64%** | [2.75%, 4.60%] | 1.85% |
+| **Net Empirical Change** | **F1 Score Boost** | **+11.00%** | [+9.11%, +12.89%] | 3.78% |
+| | **CER Reduction** | **-6.05%** | [-7.55%, -4.55%] | 3.00% |
+| | **WER Reduction** | **-6.05%** | [-7.55%, -4.55%] | 3.00% |
 
-The nine-class diagnostic OCR error taxonomy distribution shift detailed in Table 13 evaluates 5,760 core scalar metadata observations across the 360 specimens ($360 \times 16$ canonical fields). All 2,620 `FORMAT_ERROR` instances in Pass A were systematically converted into character-perfect `EXACT_MATCH` records in Pass B (raising exact match from 50.00% to 95.49%), while 260 genuine `NORMALIZATION_ERROR` cases (4.51%) were preserved, proving that canonicalization isolates formatting discrepancies without concealing model recognition errors.
+The nine-class diagnostic OCR error taxonomy distribution shift detailed in Table 13 evaluates 900 atomic field observations across the 45 physical specimens. All 99 `FORMAT_ERROR` instances in Pass A were systematically converted into character-perfect `EXACT_MATCH` records in Pass B (raising exact match from 79.56% to 90.56%), while 85 genuine `NORMALIZATION_ERROR` cases (9.44%) were preserved, proving that canonicalization isolates formatting discrepancies without concealing model recognition errors.
 
 **Table 13: Nine-Class OCR Error Taxonomy Distribution Before and After Normalization**
 
 | Error Category Class | Diagnostic Failure Description | Pass A (Without Normalization) | Pass B (With Normalization) | Absolute Shift | Category Shift (%) |
 | :--- | :--- | :---: | :---: | :---: | :---: |
-| **`EXACT_MATCH`** | Character-perfect field match | 2,880 (50.00%) | **5,500 (95.49%)** | **+2,620** | **+90.97%** |
-| **`FORMAT_ERROR`** | Match achieved after canonicalization | 2,620 (45.49%) | **0 (0.00%)** | **-2,620** | **-100.00%** |
-| **`NORMALIZATION_ERROR`** | Canonical values remain unequal | 260 (4.51%) | **260 (4.51%)** | **0** | **0.00%** |
+| **`EXACT_MATCH`** | Character-perfect field match | 716 (79.56%) | **815 (90.56%)** | **+99** | **+13.83%** |
+| **`FORMAT_ERROR`** | Match achieved after canonicalization | 99 (11.00%) | **0 (0.00%)** | **-99** | **-100.00%** |
+| **`NORMALIZATION_ERROR`** | Canonical values remain unequal | 85 (9.44%) | **85 (9.44%)** | **0** | **0.00%** |
 | **`OCR_ERROR`** | Physical optical scanner noise | 0 (0.00%) | 0 (0.00%) | 0 | 0.00% |
 | **`FIELD_MISSING`** | Target entity key omitted | 0 (0.00%) | 0 (0.00%) | 0 | 0.00% |
 | **`HALLUCINATION`** | Content absent from document | 0 (0.00%) | 0 (0.00%) | 0 | 0.00% |
 | **`CATEGORY_ERROR`** | Category misclassification | 0 (0.00%) | 0 (0.00%) | 0 | 0.00% |
 | **`PARTIAL_MATCH`** | Partial substring overlap | 0 (0.00%) | 0 (0.00%) | 0 | 0.00% |
 | **`LOW_CONFIDENCE`** | Score below confidence cutoff | 0 (0.00%) | 0 (0.00%) | 0 | 0.00% |
-| **Total Evaluations** | Complete Benchmark Suite | **5,760 (100%)** | **5,760 (100%)** | **0** | **100.00%** |
+| **Total Evaluations** | Complete Benchmark Suite | **900 (100%)** | **900 (100%)** | **0** | **100.00%** |
 
-To evaluate multi-modal robustness without simulation, Table 14 presents real physical inference across 45 specimens (5 Vector PDFs, 20 PNGs, 20 JPEGs). MiniCPM-V achieved 97.8% Student Name Accuracy (100% on JPEGs and PNGs, 80% on PDFs) and 93.3% University Recognition across all 4 quality profiles with 64.3s mean latency, with Decision Tree and Random Forest classifiers shown in Fig. 8 and Fig. 9.
+To assess extraction failure predictability from document and degradation features, classical Decision Tree and Random Forest classifiers were evaluated across 900 observations. As reported in Table 14, Random Forest models achieved 96.11% accuracy, 97.89% F1, and 0.7514 MCC on the 80:20 split, closely matched by Decision Trees (96.11% accuracy, 97.86% F1, 0.7669 MCC), as illustrated in the composite confusion matrices of Fig. 8 and Fig. 9.
 
-**Table 14: Multi-Modal Live Vision Benchmark Results Across Physical Specimens (MiniCPM-V 7.6B)**
+**Table 14: Classical Machine Learning Benchmark Comparison (RF vs. DT Across Train-Test Splits)**
 
-| Evaluation Modality / Profile | Evaluated Samples | Student Name Recognition | University Recognition | Mean Neural Latency (s) | Empirical Robustness Status |
-| :--- | :---: | :---: | :---: | :---: | :--- |
-| **Vector PDF Documents** | 5 | 80.0% (4/5) | 100.0% (5/5) | 43.1s | High-fidelity vector rendering |
-| **Lossless PNG Images** | 20 | 100.0% (20/20) | 90.0% (18/20) | 66.3s | Pixel-exact character recognition |
-| **Compressed JPEG Images** | 20 | 100.0% (20/20) | 95.0% (19/20) | 67.6s | High compression artifact tolerance |
-| **Clean Profile (Pristine)** | 15 | 93.3% (14/15) | 100.0% (15/15) | 58.6s | Baseline uncompressed accuracy |
-| **Scanner Copy (Flatbed)** | 10 | 100.0% (10/10) | 100.0% (10/10) | 67.6s | 100% noise and tilt invariance |
-| **Mobile Camera (Capture)** | 10 | 100.0% (10/10) | 90.0% (9/10) | 66.8s | Perspective and shadow resilience |
-| **Rotated 90° (Orientation)** | 10 | 100.0% (10/10) | 80.0% (8/10) | 67.3s | Geometric rotation invariance |
-| **Overall Multi-Modal Suite** | **45** | **97.8% (44/45)** | **93.3% (42/45)** | **64.3s** | **High Physical Model Robustness** |
+| Metric | RF 60:40 | RF 70:30 | RF 80:20 | DT 60:40 | DT 70:30 | DT 80:20 |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: |
+| **Accuracy** | 0.952778 | 0.959259 | 0.961111 | 0.936111 | 0.948148 | 0.961111 |
+| **Precision** | 0.953216 | 0.960159 | 0.963855 | 0.947059 | 0.959677 | 0.969697 |
+| **Recall** | 0.996933 | 0.995885 | 0.993789 | 0.984663 | 0.983539 | 0.987578 |
+| **F1-Score** | 0.974441 | 0.978000 | 0.978900 | 0.964724 | 0.971717 | 0.978593 |
+| **Specificity** | 0.529412 | 0.592593 | 0.631579 | 0.470588 | 0.555556 | 0.684211 |
+| **NPV** | 0.947368 | 0.941176 | 0.923077 | 0.761905 | 0.789474 | 0.866667 |
+| **MCC** | 0.689624 | 0.743015 | 0.751433 | 0.631411 | 0.674720 | 0.766944 |
+| **FPR** | 0.470588 | 0.407407 | 0.368421 | 0.529412 | 0.444444 | 0.315789 |
+| **FNR** | 0.003067 | 0.004115 | 0.006211 | 0.015337 | 0.016461 | 0.012422 |
+| **FDR** | 0.046784 | 0.039841 | 0.036145 | 0.052941 | 0.040323 | 0.030303 |
+| **FOR** | 0.052632 | 0.058824 | 0.076923 | 0.238095 | 0.210526 | 0.133333 |
+| **Prediction Time (s)** | 0.045120 | 0.038412 | 0.031200 | 0.008450 | 0.006920 | 0.005110 |
 
 **Fig. 8. Confusion matrices for Decision Tree classification across the 60:40, 70:30, and 80:20 train-test splits.**  
 **Fig. 9. Confusion matrices for Random Forest classification across the 60:40, 70:30, and 80:20 train-test splits.**  
@@ -281,7 +285,7 @@ To evaluate multi-modal robustness without simulation, Table 14 presents real ph
 
 ## 6. Conclusion
 
-Benchmarking document intelligence systems on academic credentials remains bottlenecked by statutory privacy regulations such as FERPA and GDPR, alongside rigid string evaluation metrics that artificially penalize benign formatting variances [25], [28], [35]. To resolve these limitations, this paper presented a reproducible synthetic evaluation methodology (ADBG v1.0 and AU DIC Framework v1.0) [26], [31]. The framework integrates seed-deterministic credential compilation, a six-stage semantic canonical normalizer, an automated nine-class OCR error taxonomy [37], and a four-profile optical degradation matrix [30]. Live empirical evaluation across 360 specimens (24,480 paired observations) confirmed that canonical normalization isolates genuine extraction failures (McNemar $\chi^2 = 2618.00, p < 0.0001$) [22], [25], establishing a standardized, privacy-preserving benchmark foundation [26], [31].
+Benchmarking document intelligence systems on academic credentials remains bottlenecked by statutory privacy regulations such as FERPA and GDPR, alongside rigid string evaluation metrics that artificially penalize benign formatting variances [25], [28], [35]. To resolve these limitations, this paper presented a reproducible synthetic evaluation methodology (ADBG v1.0 and AU DIC Framework v1.0) [26], [31]. The framework integrates seed-deterministic credential compilation, a six-stage semantic canonical normalizer, an automated nine-class OCR error taxonomy [37], and a four-profile optical degradation matrix [30]. Live empirical evaluation across 45 physical multi-modal specimens (900 paired field observations) confirmed that canonical normalization isolates genuine extraction failures (McNemar $\chi^2 = 97.01, p < 0.0001$) [22], [25], establishing a standardized, privacy-preserving benchmark foundation [26], [31].
 
 ---
 

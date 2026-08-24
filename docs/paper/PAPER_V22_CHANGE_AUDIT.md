@@ -30,7 +30,7 @@ As directed, the order of Conclusion and Future Work has been swapped, and both 
 | **Section 7** | `7. Conclusion` | **`7. Future Work` (Single ~100-word para)** | **VERIFIED** |
 | **TOC Synchronization** | 6. Future Work, 7. Conclusion | **6. Conclusion, 7. Future Work** | **VERIFIED** |
 | **Total Tables** | Exactly 13 Tables | Exactly 13 Tables | **VERIFIED** |
-| **Page Layout** | IEEE Access Double Column (22 Pages) | **IEEE Access Double Column (19 Pages)** | **VERIFIED** |
+| **Page Layout** | IEEE Access Double Column (22 Pages) | **IEEE Access Double Column (20 Pages)** | **VERIFIED** |
 | **Prior Versions Preservation** | Untouched / Frozen | Untouched / Frozen | **VERIFIED** |
 
 ---

@@ -1,0 +1,901 @@
+Sample_ID,Modality,Quality_Profile,Field_Type,GT_Raw,Pred_Raw,Raw_Match,CER_A,WER_A,GT_Norm,Pred_Norm,Norm_Match,CER_B,WER_B,Expected_Len,Pred_Len,Is_Missing
+1,PDF,clean,student_name,Lakshay Sinha,Lakshay Sinha,1,0.0,0.0,Lakshay Sinha,Lakshay Sinha,1,0.0,0.0,13,13,0
+1,PDF,clean,roll_number,2020ECE000725,2020ece000725,0,0.23076923076923078,0.23076923076923078,2020ECE000725,2020ECE000725,1,0.0,0.0,13,13,0
+1,PDF,clean,enrollment_number,EN202000725,en202000725,0,0.18181818181818182,0.18181818181818182,EN202000725,EN202000725,1,0.0,0.0,11,11,0
+1,PDF,clean,degree_name,Bachelor of Technology in Electronics and Communication Engineering,B.Tech in ECE,0,0.8208955223880597,0.8208955223880597,Bachelor of Technology in Electronics and Communication Engineering,Bachelor of Technology,0,0.6716417910447762,0.6716417910447762,67,13,0
+1,PDF,clean,branch_name,Electronics and Communication Engineering,Electronics and Communication Engineering,1,0.0,0.0,Electronics and Communication Engineering,Electronics and Communication Engineering,1,0.0,0.0,41,41,0
+1,PDF,clean,batch_years,2020 - 2024,2020 - 2024,1,0.0,0.0,2020 - 2024,2020 - 2024,1,0.0,0.0,11,11,0
+1,PDF,clean,father_name,Deepak Sinha,Deepak Sinha,1,0.0,0.0,Deepak Sinha,Deepak Sinha,1,0.0,0.0,12,12,0
+1,PDF,clean,mother_name,Surbhi Sinha,Surbhi Sinha,1,0.0,0.0,Surbhi Sinha,Surbhi Sinha,1,0.0,0.0,12,12,0
+1,PDF,clean,date_of_birth,2001-12-15,2001/12/15,0,0.2,0.2,2001-12-15,2001-12-15,1,0.0,0.0,10,10,0
+1,PDF,clean,email,lakshay.sinha725@igce.edu.in,lakshay.sinha725@igce.edu.in,1,0.0,0.0,lakshay.sinha725@igce.edu.in,lakshay.sinha725@igce.edu.in,1,0.0,0.0,28,28,0
+1,PDF,clean,phone,+91 9881044392,+91 9881044392,1,0.0,0.0,+91 9881044392,+91 9881044392,1,0.0,0.0,14,14,0
+1,PDF,clean,address,"House No. 263, Sector 26, Mumbai","House No. 263, Sector 26, Mumbai",1,0.0,0.0,"House No. 263, Sector 26, Mumbai","House No. 263, Sector 26, Mumbai",1,0.0,0.0,32,32,0
+1,PDF,clean,blood_group,B-,B-,1,0.0,0.0,B-,B-,1,0.0,0.0,2,2,0
+1,PDF,clean,university_name,Indira Gandhi College of Engineering,Indira Gandhi College of Engineering,1,0.0,0.0,Indira Gandhi College of Engineering,Indira Gandhi College of Engineering,1,0.0,0.0,36,36,0
+1,PDF,clean,university_code,IGCE,IGCE,1,0.0,0.0,Indira Gandhi College of Engineering,Indira Gandhi College of Engineering,1,0.0,0.0,4,4,0
+1,PDF,clean,issue_date,2024-04-27,2024/04/27,0,0.2,0.2,2024-04-27,2024-04-27,1,0.0,0.0,10,10,0
+1,PDF,clean,cgpa,5.94,5.94 CGPA,0,1.25,1.25,5.94,5.94,1,0.0,0.0,4,9,0
+1,PDF,clean,document_type,certificate,certificate,1,0.0,0.0,certificate,certificate,1,0.0,0.0,11,11,0
+1,PDF,clean,template_id,certificate_alpha,certificate_alpha,1,0.0,0.0,certificate_alpha,certificate_alpha,1,0.0,0.0,17,17,0
+1,PDF,clean,locale,en_IN,en_IN,1,0.0,0.0,en_IN,en_IN,1,0.0,0.0,5,5,0
+2,PDF,clean,student_name,Prashant Kulkarni,Prashant Kulkarni,1,0.0,0.0,Prashant Kulkarni,Prashant Kulkarni,1,0.0,0.0,17,17,0
+2,PDF,clean,roll_number,2019EE000450,2019EE000450,1,0.0,0.0,2019EE000450,2019EE000450,1,0.0,0.0,12,12,0
+2,PDF,clean,enrollment_number,EN201900450,EN201900450,1,0.0,0.0,EN201900450,EN201900450,1,0.0,0.0,11,11,0
+2,PDF,clean,degree_name,Bachelor of Technology in Electrical Engineering,B.Tech in ECE,0,0.7708333333333334,0.7708333333333334,Bachelor of Technology in Electrical Engineering,Bachelor of Technology,0,0.5416666666666666,0.5416666666666666,48,13,0
+2,PDF,clean,branch_name,Electrical Engineering,Electrical Engineering,1,0.0,0.0,Electrical Engineering,Electrical Engineering,1,0.0,0.0,22,22,0
+2,PDF,clean,batch_years,2019 - 2023,2019 - 2023,1,0.0,0.0,2019 - 2023,2019 - 2023,1,0.0,0.0,11,11,0
+2,PDF,clean,father_name,Akash Kulkarni,Akash Kulkarni,1,0.0,0.0,Akash Kulkarni,Akash Kulkarni,1,0.0,0.0,14,14,0
+2,PDF,clean,mother_name,Anjali Kulkarni,Anjali Kulkarni,1,0.0,0.0,Anjali Kulkarni,Anjali Kulkarni,1,0.0,0.0,15,15,0
+2,PDF,clean,date_of_birth,2003-09-19,2003-09-19,1,0.0,0.0,2003-09-19,2003-09-19,1,0.0,0.0,10,10,0
+2,PDF,clean,email,prashant.kulkarni450@vtu.edu.in,prashant.kulkarni450@vtu.edu.in,1,0.0,0.0,prashant.kulkarni450@vtu.edu.in,prashant.kulkarni450@vtu.edu.in,1,0.0,0.0,31,31,0
+2,PDF,clean,phone,+91 9861968328,+91 9861968328,1,0.0,0.0,+91 9861968328,+91 9861968328,1,0.0,0.0,14,14,0
+2,PDF,clean,address,"House No. 38, Sector 49, New Delhi","House No. 38, Sector 49, New Delhi",1,0.0,0.0,"House No. 38, Sector 49, New Delhi","House No. 38, Sector 49, New Delhi",1,0.0,0.0,34,34,0
+2,PDF,clean,blood_group,O-,O-,1,0.0,0.0,O-,O-,1,0.0,0.0,2,2,0
+2,PDF,clean,university_name,Vivekananda Technical University,Vivekananda Technical University,1,0.0,0.0,Vivekananda Technical University,Vivekananda Technical University,1,0.0,0.0,32,32,0
+2,PDF,clean,university_code,VTU,VTU,1,0.0,0.0,Vivekananda Technical University,Vivekananda Technical University,1,0.0,0.0,3,3,0
+2,PDF,clean,issue_date,2023-12-21,2023-12-21,1,0.0,0.0,2023-12-21,2023-12-21,1,0.0,0.0,10,10,0
+2,PDF,clean,cgpa,8.59,8.59,1,0.0,0.0,8.59,8.59,1,0.0,0.0,4,4,0
+2,PDF,clean,document_type,certificate,certificate,1,0.0,0.0,certificate,certificate,1,0.0,0.0,11,11,0
+2,PDF,clean,template_id,certificate_alpha,certificate_alpha,1,0.0,0.0,certificate_alpha,certificate_alpha,1,0.0,0.0,17,17,0
+2,PDF,clean,locale,en_IN,en_IN,1,0.0,0.0,en_IN,en_IN,1,0.0,0.0,5,5,0
+3,PDF,clean,student_name,Harsh Patel,Harsh Patel,1,0.0,0.0,Harsh Patel,Harsh Patel,1,0.0,0.0,11,11,0
+3,PDF,clean,roll_number,21BTME0584,21BTME0584,1,0.0,0.0,21BTME0584,21BTME0584,1,0.0,0.0,10,10,0
+3,PDF,clean,enrollment_number,EN202100584,EN202100584,1,0.0,0.0,EN202100584,EN202100584,1,0.0,0.0,11,11,0
+3,PDF,clean,degree_name,Bachelor of Technology in Mechanical Engineering,B.Tech in ECE,0,0.7916666666666666,0.7916666666666666,Bachelor of Technology in Mechanical Engineering,Bachelor of Technology,0,0.5416666666666666,0.5416666666666666,48,13,0
+3,PDF,clean,branch_name,Mechanical Engineering,Mechanical Engineering,1,0.0,0.0,Mechanical Engineering,Mechanical Engineering,1,0.0,0.0,22,22,0
+3,PDF,clean,batch_years,2021 - 2025,2021 - 2025,1,0.0,0.0,2021 - 2025,2021 - 2025,1,0.0,0.0,11,11,0
+3,PDF,clean,father_name,Arjun Patel,Arjun Patel,1,0.0,0.0,Arjun Patel,Arjun Patel,1,0.0,0.0,11,11,0
+3,PDF,clean,mother_name,Meera Patel,Meera Patel,1,0.0,0.0,Meera Patel,Meera Patel,1,0.0,0.0,11,11,0
+3,PDF,clean,date_of_birth,2001-06-21,2001/06/21,0,0.2,0.2,2001-06-21,2001-06-21,1,0.0,0.0,10,10,0
+3,PDF,clean,email,harsh.patel584@srit.edu.in,harsh.patel584@srit.edu.in,1,0.0,0.0,harsh.patel584@srit.edu.in,harsh.patel584@srit.edu.in,1,0.0,0.0,26,26,0
+3,PDF,clean,phone,+91 9853586581,+91 9853586581,1,0.0,0.0,+91 9853586581,+91 9853586581,1,0.0,0.0,14,14,0
+3,PDF,clean,address,"House No. 49, Sector 49, Bengaluru","House No. 49, Sector 49, Bengaluru",1,0.0,0.0,"House No. 49, Sector 49, Bengaluru","House No. 49, Sector 49, Bengaluru",1,0.0,0.0,34,34,0
+3,PDF,clean,blood_group,O+,O+,1,0.0,0.0,O+,O+,1,0.0,0.0,2,2,0
+3,PDF,clean,university_name,Sri Ramanujan Institute of Technology,Sri Ramanujan Institute of Technology,1,0.0,0.0,Sri Ramanujan Institute of Technology,Sri Ramanujan Institute of Technology,1,0.0,0.0,37,37,0
+3,PDF,clean,university_code,SRIT,SRIT,1,0.0,0.0,Sri Ramanujan Institute of Technology,Sri Ramanujan Institute of Technology,1,0.0,0.0,4,4,0
+3,PDF,clean,issue_date,2025-07-02,2025/07/02,0,0.2,0.2,2025-07-02,2025-07-02,1,0.0,0.0,10,10,0
+3,PDF,clean,cgpa,8.65,8.65 CGPA,0,1.25,1.25,8.65,8.65,1,0.0,0.0,4,9,0
+3,PDF,clean,document_type,certificate,certificate,1,0.0,0.0,certificate,certificate,1,0.0,0.0,11,11,0
+3,PDF,clean,template_id,certificate_alpha,certificate_alpha,1,0.0,0.0,certificate_alpha,certificate_alpha,1,0.0,0.0,17,17,0
+3,PDF,clean,locale,en_IN,en_IN,1,0.0,0.0,en_IN,en_IN,1,0.0,0.0,5,5,0
+4,PDF,clean,student_name,Siddharth Nair,Siddharth Nair,1,0.0,0.0,Siddharth Nair,Siddharth Nair,1,0.0,0.0,14,14,0
+4,PDF,clean,roll_number,2018CE000529,2018ce000529,0,0.16666666666666666,0.16666666666666666,2018CE000529,2018CE000529,1,0.0,0.0,12,12,0
+4,PDF,clean,enrollment_number,EN201800529,en201800529,0,0.18181818181818182,0.18181818181818182,EN201800529,EN201800529,1,0.0,0.0,11,11,0
+4,PDF,clean,degree_name,Bachelor of Technology in Civil Engineering,B.Tech in ECE,0,0.7674418604651163,0.7674418604651163,Bachelor of Technology in Civil Engineering,Bachelor of Technology,0,0.4883720930232558,0.4883720930232558,43,13,0
+4,PDF,clean,branch_name,Civil Engineering,Civil Engineering,1,0.0,0.0,Civil Engineering,Civil Engineering,1,0.0,0.0,17,17,0
+4,PDF,clean,batch_years,2018 - 2022,2018 - 2022,1,0.0,0.0,2018 - 2022,2018 - 2022,1,0.0,0.0,11,11,0
+4,PDF,clean,father_name,Nikhil Nair,Nikhil Nair,1,0.0,0.0,Nikhil Nair,Nikhil Nair,1,0.0,0.0,11,11,0
+4,PDF,clean,mother_name,Aditi Nair,Aditi Nair,1,0.0,0.0,Aditi Nair,Aditi Nair,1,0.0,0.0,10,10,0
+4,PDF,clean,date_of_birth,2000-01-08,2000-01-08,1,0.0,0.0,2000-01-08,2000-01-08,1,0.0,0.0,10,10,0
+4,PDF,clean,email,siddharth.nair529@igce.edu.in,siddharth.nair529@igce.edu.in,1,0.0,0.0,siddharth.nair529@igce.edu.in,siddharth.nair529@igce.edu.in,1,0.0,0.0,29,29,0
+4,PDF,clean,phone,+91 9840480491,+91 9840480491,1,0.0,0.0,+91 9840480491,+91 9840480491,1,0.0,0.0,14,14,0
+4,PDF,clean,address,"House No. 400, Sector 43, Mumbai","House No. 400, Sector 43, Mumbai",1,0.0,0.0,"House No. 400, Sector 43, Mumbai","House No. 400, Sector 43, Mumbai",1,0.0,0.0,32,32,0
+4,PDF,clean,blood_group,AB+,AB+,1,0.0,0.0,AB+,AB+,1,0.0,0.0,3,3,0
+4,PDF,clean,university_name,Indira Gandhi College of Engineering,Indira Gandhi College of Engineering,1,0.0,0.0,Indira Gandhi College of Engineering,Indira Gandhi College of Engineering,1,0.0,0.0,36,36,0
+4,PDF,clean,university_code,IGCE,IGCE,1,0.0,0.0,Indira Gandhi College of Engineering,Indira Gandhi College of Engineering,1,0.0,0.0,4,4,0
+4,PDF,clean,issue_date,2022-01-27,2022-01-27,1,0.0,0.0,2022-01-27,2022-01-27,1,0.0,0.0,10,10,0
+4,PDF,clean,cgpa,8.5,8.5,1,0.0,0.0,8.50,8.50,1,0.0,0.0,3,3,0
+4,PDF,clean,document_type,certificate,certificate,1,0.0,0.0,certificate,certificate,1,0.0,0.0,11,11,0
+4,PDF,clean,template_id,certificate_alpha,certificate_alpha,1,0.0,0.0,certificate_alpha,certificate_alpha,1,0.0,0.0,17,17,0
+4,PDF,clean,locale,en_IN,en_IN,1,0.0,0.0,en_IN,en_IN,1,0.0,0.0,5,5,0
+5,PDF,clean,student_name,Kavya Sharma,Kayya Sharma,0,0.08333333333333333,0.08333333333333333,Kavya Sharma,Kayya Sharma,0,0.08333333333333333,0.08333333333333333,12,12,0
+5,PDF,clean,roll_number,2021ECE000187,2021ECE000187,1,0.0,0.0,2021ECE000187,2021ECE000187,1,0.0,0.0,13,13,0
+5,PDF,clean,enrollment_number,EN202100187,EN202100187,1,0.0,0.0,EN202100187,EN202100187,1,0.0,0.0,11,11,0
+5,PDF,clean,degree_name,Bachelor of Technology in Electronics and Communication Engineering,B.Tech in ECE,0,0.8208955223880597,0.8208955223880597,Bachelor of Technology in Electronics and Communication Engineering,Bachelor of Technology,0,0.6716417910447762,0.6716417910447762,67,13,0
+5,PDF,clean,branch_name,Electronics and Communication Engineering,Electronics and Communication Engineering,1,0.0,0.0,Electronics and Communication Engineering,Electronics and Communication Engineering,1,0.0,0.0,41,41,0
+5,PDF,clean,batch_years,2021 - 2025,2021 - 2025,1,0.0,0.0,2021 - 2025,2021 - 2025,1,0.0,0.0,11,11,0
+5,PDF,clean,father_name,Tarun Sharma,Tarun Sharma,1,0.0,0.0,Tarun Sharma,Tarun Sharma,1,0.0,0.0,12,12,0
+5,PDF,clean,mother_name,Sonali Sharma,Sonali Sharma,1,0.0,0.0,Sonali Sharma,Sonali Sharma,1,0.0,0.0,13,13,0
+5,PDF,clean,date_of_birth,2004-05-30,2004/05/30,0,0.2,0.2,2004-05-30,2004-05-30,1,0.0,0.0,10,10,0
+5,PDF,clean,email,kavya.sharma187@igce.edu.in,kavya.sharma187@igce.edu.in,1,0.0,0.0,kavya.sharma187@igce.edu.in,kavya.sharma187@igce.edu.in,1,0.0,0.0,27,27,0
+5,PDF,clean,phone,+91 9888717099,+91 9888717099,1,0.0,0.0,+91 9888717099,+91 9888717099,1,0.0,0.0,14,14,0
+5,PDF,clean,address,"House No. 314, Sector 26, Mumbai","House No. 314, Sector 26, Mumbai",1,0.0,0.0,"House No. 314, Sector 26, Mumbai","House No. 314, Sector 26, Mumbai",1,0.0,0.0,32,32,0
+5,PDF,clean,blood_group,O-,O-,1,0.0,0.0,O-,O-,1,0.0,0.0,2,2,0
+5,PDF,clean,university_name,Indira Gandhi College of Engineering,Indira Gandhi College of Engineering,1,0.0,0.0,Indira Gandhi College of Engineering,Indira Gandhi College of Engineering,1,0.0,0.0,36,36,0
+5,PDF,clean,university_code,IGCE,IGCE,1,0.0,0.0,Indira Gandhi College of Engineering,Indira Gandhi College of Engineering,1,0.0,0.0,4,4,0
+5,PDF,clean,issue_date,2025-06-03,2025/06/03,0,0.2,0.2,2025-06-03,2025-06-03,1,0.0,0.0,10,10,0
+5,PDF,clean,cgpa,7.31,7.31 CGPA,0,1.25,1.25,7.31,7.31,1,0.0,0.0,4,9,0
+5,PDF,clean,document_type,certificate,certificate,1,0.0,0.0,certificate,certificate,1,0.0,0.0,11,11,0
+5,PDF,clean,template_id,certificate_alpha,certificate_alpha,1,0.0,0.0,certificate_alpha,certificate_alpha,1,0.0,0.0,17,17,0
+5,PDF,clean,locale,en_IN,en_IN,1,0.0,0.0,en_IN,en_IN,1,0.0,0.0,5,5,0
+6,PNG,clean,student_name,Lakshay Sinha,Lakshay Sinha,1,0.0,0.0,Lakshay Sinha,Lakshay Sinha,1,0.0,0.0,13,13,0
+6,PNG,clean,roll_number,2020ECE000725,2020ECE000725,1,0.0,0.0,2020ECE000725,2020ECE000725,1,0.0,0.0,13,13,0
+6,PNG,clean,enrollment_number,EN202000725,EN202000725,1,0.0,0.0,EN202000725,EN202000725,1,0.0,0.0,11,11,0
+6,PNG,clean,degree_name,Bachelor of Technology in Electronics and Communication Engineering,B.Tech in ECE,0,0.8208955223880597,0.8208955223880597,Bachelor of Technology in Electronics and Communication Engineering,Bachelor of Technology,0,0.6716417910447762,0.6716417910447762,67,13,0
+6,PNG,clean,branch_name,Electronics and Communication Engineering,Electronics and Communication Engineering,1,0.0,0.0,Electronics and Communication Engineering,Electronics and Communication Engineering,1,0.0,0.0,41,41,0
+6,PNG,clean,batch_years,2020 - 2024,2020 - 2024,1,0.0,0.0,2020 - 2024,2020 - 2024,1,0.0,0.0,11,11,0
+6,PNG,clean,father_name,Deepak Sinha,Deepak Sinha,1,0.0,0.0,Deepak Sinha,Deepak Sinha,1,0.0,0.0,12,12,0
+6,PNG,clean,mother_name,Surbhi Sinha,Surbhi Sinha,1,0.0,0.0,Surbhi Sinha,Surbhi Sinha,1,0.0,0.0,12,12,0
+6,PNG,clean,date_of_birth,2001-12-15,2001-12-15,1,0.0,0.0,2001-12-15,2001-12-15,1,0.0,0.0,10,10,0
+6,PNG,clean,email,lakshay.sinha725@igce.edu.in,lakshay.sinha725@igce.edu.in,1,0.0,0.0,lakshay.sinha725@igce.edu.in,lakshay.sinha725@igce.edu.in,1,0.0,0.0,28,28,0
+6,PNG,clean,phone,+91 9881044392,+91 9881044392,1,0.0,0.0,+91 9881044392,+91 9881044392,1,0.0,0.0,14,14,0
+6,PNG,clean,address,"House No. 263, Sector 26, Mumbai","House No. 263, Sector 26, Mumbai",1,0.0,0.0,"House No. 263, Sector 26, Mumbai","House No. 263, Sector 26, Mumbai",1,0.0,0.0,32,32,0
+6,PNG,clean,blood_group,B-,B-,1,0.0,0.0,B-,B-,1,0.0,0.0,2,2,0
+6,PNG,clean,university_name,Indira Gandhi College of Engineering,Indira Gandhi College of Engineering,1,0.0,0.0,Indira Gandhi College of Engineering,Indira Gandhi College of Engineering,1,0.0,0.0,36,36,0
+6,PNG,clean,university_code,IGCE,IGCE,1,0.0,0.0,Indira Gandhi College of Engineering,Indira Gandhi College of Engineering,1,0.0,0.0,4,4,0
+6,PNG,clean,issue_date,2024-04-27,2024-04-27,1,0.0,0.0,2024-04-27,2024-04-27,1,0.0,0.0,10,10,0
+6,PNG,clean,cgpa,5.94,5.94,1,0.0,0.0,5.94,5.94,1,0.0,0.0,4,4,0
+6,PNG,clean,document_type,certificate,certificate,1,0.0,0.0,certificate,certificate,1,0.0,0.0,11,11,0
+6,PNG,clean,template_id,certificate_alpha,certificate_alpha,1,0.0,0.0,certificate_alpha,certificate_alpha,1,0.0,0.0,17,17,0
+6,PNG,clean,locale,en_IN,en_IN,1,0.0,0.0,en_IN,en_IN,1,0.0,0.0,5,5,0
+7,PNG,clean,student_name,Prashant Kulkarni,Prashant Kulkarni,1,0.0,0.0,Prashant Kulkarni,Prashant Kulkarni,1,0.0,0.0,17,17,0
+7,PNG,clean,roll_number,2019EE000450,2019ee000450,0,0.16666666666666666,0.16666666666666666,2019EE000450,2019EE000450,1,0.0,0.0,12,12,0
+7,PNG,clean,enrollment_number,EN201900450,en201900450,0,0.18181818181818182,0.18181818181818182,EN201900450,EN201900450,1,0.0,0.0,11,11,0
+7,PNG,clean,degree_name,Bachelor of Technology in Electrical Engineering,B.Tech in ECE,0,0.7708333333333334,0.7708333333333334,Bachelor of Technology in Electrical Engineering,Bachelor of Technology,0,0.5416666666666666,0.5416666666666666,48,13,0
+7,PNG,clean,branch_name,Electrical Engineering,Electrical Engineering,1,0.0,0.0,Electrical Engineering,Electrical Engineering,1,0.0,0.0,22,22,0
+7,PNG,clean,batch_years,2019 - 2023,2019 - 2023,1,0.0,0.0,2019 - 2023,2019 - 2023,1,0.0,0.0,11,11,0
+7,PNG,clean,father_name,Akash Kulkarni,Akash Kulkarni,1,0.0,0.0,Akash Kulkarni,Akash Kulkarni,1,0.0,0.0,14,14,0
+7,PNG,clean,mother_name,Anjali Kulkarni,Anjali Kulkarni,1,0.0,0.0,Anjali Kulkarni,Anjali Kulkarni,1,0.0,0.0,15,15,0
+7,PNG,clean,date_of_birth,2003-09-19,2003/09/19,0,0.2,0.2,2003-09-19,2003-09-19,1,0.0,0.0,10,10,0
+7,PNG,clean,email,prashant.kulkarni450@vtu.edu.in,prashant.kulkarni450@vtu.edu.in,1,0.0,0.0,prashant.kulkarni450@vtu.edu.in,prashant.kulkarni450@vtu.edu.in,1,0.0,0.0,31,31,0
+7,PNG,clean,phone,+91 9861968328,+91 9861968328,1,0.0,0.0,+91 9861968328,+91 9861968328,1,0.0,0.0,14,14,0
+7,PNG,clean,address,"House No. 38, Sector 49, New Delhi","House No. 38, Sector 49, New Delhi",1,0.0,0.0,"House No. 38, Sector 49, New Delhi","House No. 38, Sector 49, New Delhi",1,0.0,0.0,34,34,0
+7,PNG,clean,blood_group,O-,O-,1,0.0,0.0,O-,O-,1,0.0,0.0,2,2,0
+7,PNG,clean,university_name,Vivekananda Technical University,Vivekananda Technical University,1,0.0,0.0,Vivekananda Technical University,Vivekananda Technical University,1,0.0,0.0,32,32,0
+7,PNG,clean,university_code,VTU,VTU,1,0.0,0.0,Vivekananda Technical University,Vivekananda Technical University,1,0.0,0.0,3,3,0
+7,PNG,clean,issue_date,2023-12-21,2023/12/21,0,0.2,0.2,2023-12-21,2023-12-21,1,0.0,0.0,10,10,0
+7,PNG,clean,cgpa,8.59,8.59 CGPA,0,1.25,1.25,8.59,8.59,1,0.0,0.0,4,9,0
+7,PNG,clean,document_type,certificate,certificate,1,0.0,0.0,certificate,certificate,1,0.0,0.0,11,11,0
+7,PNG,clean,template_id,certificate_alpha,certificate_alpha,1,0.0,0.0,certificate_alpha,certificate_alpha,1,0.0,0.0,17,17,0
+7,PNG,clean,locale,en_IN,en_IN,1,0.0,0.0,en_IN,en_IN,1,0.0,0.0,5,5,0
+8,PNG,clean,student_name,Harsh Patel,Harsh Patel,1,0.0,0.0,Harsh Patel,Harsh Patel,1,0.0,0.0,11,11,0
+8,PNG,clean,roll_number,21BTME0584,21BTME0584,1,0.0,0.0,21BTME0584,21BTME0584,1,0.0,0.0,10,10,0
+8,PNG,clean,enrollment_number,EN202100584,EN202100584,1,0.0,0.0,EN202100584,EN202100584,1,0.0,0.0,11,11,0
+8,PNG,clean,degree_name,Bachelor of Technology in Mechanical Engineering,B.Tech in ECE,0,0.7916666666666666,0.7916666666666666,Bachelor of Technology in Mechanical Engineering,Bachelor of Technology,0,0.5416666666666666,0.5416666666666666,48,13,0
+8,PNG,clean,branch_name,Mechanical Engineering,Mechanical Engineering,1,0.0,0.0,Mechanical Engineering,Mechanical Engineering,1,0.0,0.0,22,22,0
+8,PNG,clean,batch_years,2021 - 2025,2021 - 2025,1,0.0,0.0,2021 - 2025,2021 - 2025,1,0.0,0.0,11,11,0
+8,PNG,clean,father_name,Arjun Patel,Arjun Patel,1,0.0,0.0,Arjun Patel,Arjun Patel,1,0.0,0.0,11,11,0
+8,PNG,clean,mother_name,Meera Patel,Meera Patel,1,0.0,0.0,Meera Patel,Meera Patel,1,0.0,0.0,11,11,0
+8,PNG,clean,date_of_birth,2001-06-21,2001-06-21,1,0.0,0.0,2001-06-21,2001-06-21,1,0.0,0.0,10,10,0
+8,PNG,clean,email,harsh.patel584@srit.edu.in,harsh.patel584@srit.edu.in,1,0.0,0.0,harsh.patel584@srit.edu.in,harsh.patel584@srit.edu.in,1,0.0,0.0,26,26,0
+8,PNG,clean,phone,+91 9853586581,+91 985358658x,0,0.07142857142857142,0.07142857142857142,+91 9853586581,+91 985358658x,0,0.07142857142857142,0.07142857142857142,14,14,0
+8,PNG,clean,address,"House No. 49, Sector 49, Bengaluru","House No. 49, Sector 49, Bengaluru",1,0.0,0.0,"House No. 49, Sector 49, Bengaluru","House No. 49, Sector 49, Bengaluru",1,0.0,0.0,34,34,0
+8,PNG,clean,blood_group,O+,O+,1,0.0,0.0,O+,O+,1,0.0,0.0,2,2,0
+8,PNG,clean,university_name,Sri Ramanujan Institute of Technology,Sri Ramanujan Institute of Technology,1,0.0,0.0,Sri Ramanujan Institute of Technology,Sri Ramanujan Institute of Technology,1,0.0,0.0,37,37,0
+8,PNG,clean,university_code,SRIT,SRIT,1,0.0,0.0,Sri Ramanujan Institute of Technology,Sri Ramanujan Institute of Technology,1,0.0,0.0,4,4,0
+8,PNG,clean,issue_date,2025-07-02,2025-07-02,1,0.0,0.0,2025-07-02,2025-07-02,1,0.0,0.0,10,10,0
+8,PNG,clean,cgpa,8.65,8.65,1,0.0,0.0,8.65,8.65,1,0.0,0.0,4,4,0
+8,PNG,clean,document_type,certificate,certificatx,0,0.09090909090909091,0.09090909090909091,certificate,certificatx,0,0.09090909090909091,0.09090909090909091,11,11,0
+8,PNG,clean,template_id,certificate_alpha,certificate_alpha,1,0.0,0.0,certificate_alpha,certificate_alpha,1,0.0,0.0,17,17,0
+8,PNG,clean,locale,en_IN,en_IN,1,0.0,0.0,en_IN,en_IN,1,0.0,0.0,5,5,0
+9,PNG,clean,student_name,Siddharth Nair,Siddharth Nair,1,0.0,0.0,Siddharth Nair,Siddharth Nair,1,0.0,0.0,14,14,0
+9,PNG,clean,roll_number,2018CE000529,2018CE000529,1,0.0,0.0,2018CE000529,2018CE000529,1,0.0,0.0,12,12,0
+9,PNG,clean,enrollment_number,EN201800529,EN201800529,1,0.0,0.0,EN201800529,EN201800529,1,0.0,0.0,11,11,0
+9,PNG,clean,degree_name,Bachelor of Technology in Civil Engineering,B.Tech in ECE,0,0.7674418604651163,0.7674418604651163,Bachelor of Technology in Civil Engineering,Bachelor of Technology,0,0.4883720930232558,0.4883720930232558,43,13,0
+9,PNG,clean,branch_name,Civil Engineering,Civil Engineering,1,0.0,0.0,Civil Engineering,Civil Engineering,1,0.0,0.0,17,17,0
+9,PNG,clean,batch_years,2018 - 2022,2018 - 2022,1,0.0,0.0,2018 - 2022,2018 - 2022,1,0.0,0.0,11,11,0
+9,PNG,clean,father_name,Nikhil Nair,Nikhil Nair,1,0.0,0.0,Nikhil Nair,Nikhil Nair,1,0.0,0.0,11,11,0
+9,PNG,clean,mother_name,Aditi Nair,Aditi Nair,1,0.0,0.0,Aditi Nair,Aditi Nair,1,0.0,0.0,10,10,0
+9,PNG,clean,date_of_birth,2000-01-08,2000/01/08,0,0.2,0.2,2000-01-08,2000-01-08,1,0.0,0.0,10,10,0
+9,PNG,clean,email,siddharth.nair529@igce.edu.in,siddharth.nair529@igce.edu.in,1,0.0,0.0,siddharth.nair529@igce.edu.in,siddharth.nair529@igce.edu.in,1,0.0,0.0,29,29,0
+9,PNG,clean,phone,+91 9840480491,+91 9840480491,1,0.0,0.0,+91 9840480491,+91 9840480491,1,0.0,0.0,14,14,0
+9,PNG,clean,address,"House No. 400, Sector 43, Mumbai","House No. 400, Sector 43, Mumbai",1,0.0,0.0,"House No. 400, Sector 43, Mumbai","House No. 400, Sector 43, Mumbai",1,0.0,0.0,32,32,0
+9,PNG,clean,blood_group,AB+,AB+,1,0.0,0.0,AB+,AB+,1,0.0,0.0,3,3,0
+9,PNG,clean,university_name,Indira Gandhi College of Engineering,Indira Gandhi College of Engineering,1,0.0,0.0,Indira Gandhi College of Engineering,Indira Gandhi College of Engineering,1,0.0,0.0,36,36,0
+9,PNG,clean,university_code,IGCE,IGCE,1,0.0,0.0,Indira Gandhi College of Engineering,Indira Gandhi College of Engineering,1,0.0,0.0,4,4,0
+9,PNG,clean,issue_date,2022-01-27,2022/01/27,0,0.2,0.2,2022-01-27,2022-01-27,1,0.0,0.0,10,10,0
+9,PNG,clean,cgpa,8.5,8.5 CGPA,0,1.6666666666666667,1.6666666666666667,8.50,8.50,1,0.0,0.0,3,8,0
+9,PNG,clean,document_type,certificate,certificate,1,0.0,0.0,certificate,certificate,1,0.0,0.0,11,11,0
+9,PNG,clean,template_id,certificate_alpha,certificate_alpha,1,0.0,0.0,certificate_alpha,certificate_alpha,1,0.0,0.0,17,17,0
+9,PNG,clean,locale,en_IN,en_IN,1,0.0,0.0,en_IN,en_IN,1,0.0,0.0,5,5,0
+10,PNG,clean,student_name,Kavya Sharma,Kavya Sharma,1,0.0,0.0,Kavya Sharma,Kavya Sharma,1,0.0,0.0,12,12,0
+10,PNG,clean,roll_number,2021ECE000187,2021ece000187,0,0.23076923076923078,0.23076923076923078,2021ECE000187,2021ECE000187,1,0.0,0.0,13,13,0
+10,PNG,clean,enrollment_number,EN202100187,en202100187,0,0.18181818181818182,0.18181818181818182,EN202100187,EN202100187,1,0.0,0.0,11,11,0
+10,PNG,clean,degree_name,Bachelor of Technology in Electronics and Communication Engineering,B.Tech in ECE,0,0.8208955223880597,0.8208955223880597,Bachelor of Technology in Electronics and Communication Engineering,Bachelor of Technology,0,0.6716417910447762,0.6716417910447762,67,13,0
+10,PNG,clean,branch_name,Electronics and Communication Engineering,Electronics and Communication Engineering,1,0.0,0.0,Electronics and Communication Engineering,Electronics and Communication Engineering,1,0.0,0.0,41,41,0
+10,PNG,clean,batch_years,2021 - 2025,2021 - 2025,1,0.0,0.0,2021 - 2025,2021 - 2025,1,0.0,0.0,11,11,0
+10,PNG,clean,father_name,Tarun Sharma,Tarun Sharma,1,0.0,0.0,Tarun Sharma,Tarun Sharma,1,0.0,0.0,12,12,0
+10,PNG,clean,mother_name,Sonali Sharma,Sonali Sharma,1,0.0,0.0,Sonali Sharma,Sonali Sharma,1,0.0,0.0,13,13,0
+10,PNG,clean,date_of_birth,2004-05-30,2004-05-30,1,0.0,0.0,2004-05-30,2004-05-30,1,0.0,0.0,10,10,0
+10,PNG,clean,email,kavya.sharma187@igce.edu.in,kavya.sharma187@igce.edu.in,1,0.0,0.0,kavya.sharma187@igce.edu.in,kavya.sharma187@igce.edu.in,1,0.0,0.0,27,27,0
+10,PNG,clean,phone,+91 9888717099,+91 9888717099,1,0.0,0.0,+91 9888717099,+91 9888717099,1,0.0,0.0,14,14,0
+10,PNG,clean,address,"House No. 314, Sector 26, Mumbai","House No. 314, Sector 26, Mumbai",1,0.0,0.0,"House No. 314, Sector 26, Mumbai","House No. 314, Sector 26, Mumbai",1,0.0,0.0,32,32,0
+10,PNG,clean,blood_group,O-,O-,1,0.0,0.0,O-,O-,1,0.0,0.0,2,2,0
+10,PNG,clean,university_name,Indira Gandhi College of Engineering,Indira Gandhi College of Engineering,1,0.0,0.0,Indira Gandhi College of Engineering,Indira Gandhi College of Engineering,1,0.0,0.0,36,36,0
+10,PNG,clean,university_code,IGCE,IGCE,1,0.0,0.0,Indira Gandhi College of Engineering,Indira Gandhi College of Engineering,1,0.0,0.0,4,4,0
+10,PNG,clean,issue_date,2025-06-03,2025-06-03,1,0.0,0.0,2025-06-03,2025-06-03,1,0.0,0.0,10,10,0
+10,PNG,clean,cgpa,7.31,7.31,1,0.0,0.0,7.31,7.31,1,0.0,0.0,4,4,0
+10,PNG,clean,document_type,certificate,certificate,1,0.0,0.0,certificate,certificate,1,0.0,0.0,11,11,0
+10,PNG,clean,template_id,certificate_alpha,certificate_alpha,1,0.0,0.0,certificate_alpha,certificate_alpha,1,0.0,0.0,17,17,0
+10,PNG,clean,locale,en_IN,en_IN,1,0.0,0.0,en_IN,en_IN,1,0.0,0.0,5,5,0
+11,PNG,scanner_copy,student_name,Lakshay Sinha,Lakshay Sinha,1,0.0,0.0,Lakshay Sinha,Lakshay Sinha,1,0.0,0.0,13,13,0
+11,PNG,scanner_copy,roll_number,2020ECE000725,2020ECE000725,1,0.0,0.0,2020ECE000725,2020ECE000725,1,0.0,0.0,13,13,0
+11,PNG,scanner_copy,enrollment_number,EN202000725,EN202000725,1,0.0,0.0,EN202000725,EN202000725,1,0.0,0.0,11,11,0
+11,PNG,scanner_copy,degree_name,Bachelor of Technology in Electronics and Communication Engineering,B.Tech in ECE,0,0.8208955223880597,0.8208955223880597,Bachelor of Technology in Electronics and Communication Engineering,Bachelor of Technology,0,0.6716417910447762,0.6716417910447762,67,13,0
+11,PNG,scanner_copy,branch_name,Electronics and Communication Engineering,Electronics and Communication Engineering,1,0.0,0.0,Electronics and Communication Engineering,Electronics and Communication Engineering,1,0.0,0.0,41,41,0
+11,PNG,scanner_copy,batch_years,2020 - 2024,2020 - 2024,1,0.0,0.0,2020 - 2024,2020 - 2024,1,0.0,0.0,11,11,0
+11,PNG,scanner_copy,father_name,Deepak Sinha,Deepak Sinha,1,0.0,0.0,Deepak Sinha,Deepak Sinha,1,0.0,0.0,12,12,0
+11,PNG,scanner_copy,mother_name,Surbhi Sinha,Surbhi Sinha,1,0.0,0.0,Surbhi Sinha,Surbhi Sinha,1,0.0,0.0,12,12,0
+11,PNG,scanner_copy,date_of_birth,2001-12-15,2001/12/15,0,0.2,0.2,2001-12-15,2001-12-15,1,0.0,0.0,10,10,0
+11,PNG,scanner_copy,email,lakshay.sinha725@igce.edu.in,lakshay.sinha725@igce.edu.in,1,0.0,0.0,lakshay.sinha725@igce.edu.in,lakshay.sinha725@igce.edu.in,1,0.0,0.0,28,28,0
+11,PNG,scanner_copy,phone,+91 9881044392,+91 9881044392,1,0.0,0.0,+91 9881044392,+91 9881044392,1,0.0,0.0,14,14,0
+11,PNG,scanner_copy,address,"House No. 263, Sector 26, Mumbai","House No. 263, Sector 26, Mumbai",1,0.0,0.0,"House No. 263, Sector 26, Mumbai","House No. 263, Sector 26, Mumbai",1,0.0,0.0,32,32,0
+11,PNG,scanner_copy,blood_group,B-,B-,1,0.0,0.0,B-,B-,1,0.0,0.0,2,2,0
+11,PNG,scanner_copy,university_name,Indira Gandhi College of Engineering,Indira Gandhi College of Engineering,1,0.0,0.0,Indira Gandhi College of Engineering,Indira Gandhi College of Engineering,1,0.0,0.0,36,36,0
+11,PNG,scanner_copy,university_code,IGCE,IGCE,1,0.0,0.0,Indira Gandhi College of Engineering,Indira Gandhi College of Engineering,1,0.0,0.0,4,4,0
+11,PNG,scanner_copy,issue_date,2024-04-27,2024/04/27,0,0.2,0.2,2024-04-27,2024-04-27,1,0.0,0.0,10,10,0
+11,PNG,scanner_copy,cgpa,5.94,5.94 CGPA,0,1.25,1.25,5.94,5.94,1,0.0,0.0,4,9,0
+11,PNG,scanner_copy,document_type,certificate,certificate,1,0.0,0.0,certificate,certificate,1,0.0,0.0,11,11,0
+11,PNG,scanner_copy,template_id,certificate_alpha,certificate_alpha,1,0.0,0.0,certificate_alpha,certificate_alpha,1,0.0,0.0,17,17,0
+11,PNG,scanner_copy,locale,en_IN,en_IN,1,0.0,0.0,en_IN,en_IN,1,0.0,0.0,5,5,0
+12,PNG,scanner_copy,student_name,Prashant Kulkarni,Prashant Kulkarni,1,0.0,0.0,Prashant Kulkarni,Prashant Kulkarni,1,0.0,0.0,17,17,0
+12,PNG,scanner_copy,roll_number,2019EE000450,2019EE000450,1,0.0,0.0,2019EE000450,2019EE000450,1,0.0,0.0,12,12,0
+12,PNG,scanner_copy,enrollment_number,EN201900450,EN201900450,1,0.0,0.0,EN201900450,EN201900450,1,0.0,0.0,11,11,0
+12,PNG,scanner_copy,degree_name,Bachelor of Technology in Electrical Engineering,B.Tech in ECE,0,0.7708333333333334,0.7708333333333334,Bachelor of Technology in Electrical Engineering,Bachelor of Technology,0,0.5416666666666666,0.5416666666666666,48,13,0
+12,PNG,scanner_copy,branch_name,Electrical Engineering,Electrical Engineering,1,0.0,0.0,Electrical Engineering,Electrical Engineering,1,0.0,0.0,22,22,0
+12,PNG,scanner_copy,batch_years,2019 - 2023,2019 - 2023,1,0.0,0.0,2019 - 2023,2019 - 2023,1,0.0,0.0,11,11,0
+12,PNG,scanner_copy,father_name,Akash Kulkarni,Akash Kulkarni,1,0.0,0.0,Akash Kulkarni,Akash Kulkarni,1,0.0,0.0,14,14,0
+12,PNG,scanner_copy,mother_name,Anjali Kulkarni,Anjali Kulkarni,1,0.0,0.0,Anjali Kulkarni,Anjali Kulkarni,1,0.0,0.0,15,15,0
+12,PNG,scanner_copy,date_of_birth,2003-09-19,2003-09-19,1,0.0,0.0,2003-09-19,2003-09-19,1,0.0,0.0,10,10,0
+12,PNG,scanner_copy,email,prashant.kulkarni450@vtu.edu.in,prashant.kulkarni450@vtu.edu.in,1,0.0,0.0,prashant.kulkarni450@vtu.edu.in,prashant.kulkarni450@vtu.edu.in,1,0.0,0.0,31,31,0
+12,PNG,scanner_copy,phone,+91 9861968328,+91 9861968328,1,0.0,0.0,+91 9861968328,+91 9861968328,1,0.0,0.0,14,14,0
+12,PNG,scanner_copy,address,"House No. 38, Sector 49, New Delhi","House No. 38, Sector 49, New Delhi",1,0.0,0.0,"House No. 38, Sector 49, New Delhi","House No. 38, Sector 49, New Delhi",1,0.0,0.0,34,34,0
+12,PNG,scanner_copy,blood_group,O-,O-,1,0.0,0.0,O-,O-,1,0.0,0.0,2,2,0
+12,PNG,scanner_copy,university_name,Vivekananda Technical University,Vivekananda Technical University,1,0.0,0.0,Vivekananda Technical University,Vivekananda Technical University,1,0.0,0.0,32,32,0
+12,PNG,scanner_copy,university_code,VTU,VTU,1,0.0,0.0,Vivekananda Technical University,Vivekananda Technical University,1,0.0,0.0,3,3,0
+12,PNG,scanner_copy,issue_date,2023-12-21,2023-12-21,1,0.0,0.0,2023-12-21,2023-12-21,1,0.0,0.0,10,10,0
+12,PNG,scanner_copy,cgpa,8.59,8.59,1,0.0,0.0,8.59,8.59,1,0.0,0.0,4,4,0
+12,PNG,scanner_copy,document_type,certificate,certificate,1,0.0,0.0,certificate,certificate,1,0.0,0.0,11,11,0
+12,PNG,scanner_copy,template_id,certificate_alpha,certificate_alpha,1,0.0,0.0,certificate_alpha,certificate_alpha,1,0.0,0.0,17,17,0
+12,PNG,scanner_copy,locale,en_IN,en_IN,1,0.0,0.0,en_IN,en_IN,1,0.0,0.0,5,5,0
+13,PNG,scanner_copy,student_name,Harsh Patel,Harsh Patel,1,0.0,0.0,Harsh Patel,Harsh Patel,1,0.0,0.0,11,11,0
+13,PNG,scanner_copy,roll_number,21BTME0584,21btme0584,0,0.4,0.4,21BTME0584,21BTME0584,1,0.0,0.0,10,10,0
+13,PNG,scanner_copy,enrollment_number,EN202100584,en202100584,0,0.18181818181818182,0.18181818181818182,EN202100584,EN202100584,1,0.0,0.0,11,11,0
+13,PNG,scanner_copy,degree_name,Bachelor of Technology in Mechanical Engineering,B.Tech in ECE,0,0.7916666666666666,0.7916666666666666,Bachelor of Technology in Mechanical Engineering,Bachelor of Technology,0,0.5416666666666666,0.5416666666666666,48,13,0
+13,PNG,scanner_copy,branch_name,Mechanical Engineering,Mechanical Engineering,1,0.0,0.0,Mechanical Engineering,Mechanical Engineering,1,0.0,0.0,22,22,0
+13,PNG,scanner_copy,batch_years,2021 - 2025,2021 - 2025,1,0.0,0.0,2021 - 2025,2021 - 2025,1,0.0,0.0,11,11,0
+13,PNG,scanner_copy,father_name,Arjun Patel,Arjun Patel,1,0.0,0.0,Arjun Patel,Arjun Patel,1,0.0,0.0,11,11,0
+13,PNG,scanner_copy,mother_name,Meera Patel,Meera Patel,1,0.0,0.0,Meera Patel,Meera Patel,1,0.0,0.0,11,11,0
+13,PNG,scanner_copy,date_of_birth,2001-06-21,2001/06/21,0,0.2,0.2,2001-06-21,2001-06-21,1,0.0,0.0,10,10,0
+13,PNG,scanner_copy,email,harsh.patel584@srit.edu.in,harsh.patel584@srit.edu.in,1,0.0,0.0,harsh.patel584@srit.edu.in,harsh.patel584@srit.edu.in,1,0.0,0.0,26,26,0
+13,PNG,scanner_copy,phone,+91 9853586581,+91 9853586581,1,0.0,0.0,+91 9853586581,+91 9853586581,1,0.0,0.0,14,14,0
+13,PNG,scanner_copy,address,"House No. 49, Sector 49, Bengaluru","House No. 49, Sector 49, Bengaluru",1,0.0,0.0,"House No. 49, Sector 49, Bengaluru","House No. 49, Sector 49, Bengaluru",1,0.0,0.0,34,34,0
+13,PNG,scanner_copy,blood_group,O+,O+,1,0.0,0.0,O+,O+,1,0.0,0.0,2,2,0
+13,PNG,scanner_copy,university_name,Sri Ramanujan Institute of Technology,Sri Ramanujan Institute of Technology,1,0.0,0.0,Sri Ramanujan Institute of Technology,Sri Ramanujan Institute of Technology,1,0.0,0.0,37,37,0
+13,PNG,scanner_copy,university_code,SRIT,SRIx,0,0.25,0.25,Sri Ramanujan Institute of Technology,SRIx,0,0.918918918918919,0.918918918918919,4,4,0
+13,PNG,scanner_copy,issue_date,2025-07-02,2025/07/02,0,0.2,0.2,2025-07-02,2025-07-02,1,0.0,0.0,10,10,0
+13,PNG,scanner_copy,cgpa,8.65,8.65 CGPA,0,1.25,1.25,8.65,8.65,1,0.0,0.0,4,9,0
+13,PNG,scanner_copy,document_type,certificate,certificate,1,0.0,0.0,certificate,certificate,1,0.0,0.0,11,11,0
+13,PNG,scanner_copy,template_id,certificate_alpha,certificate_alpha,1,0.0,0.0,certificate_alpha,certificate_alpha,1,0.0,0.0,17,17,0
+13,PNG,scanner_copy,locale,en_IN,en_IN,1,0.0,0.0,en_IN,en_IN,1,0.0,0.0,5,5,0
+14,PNG,scanner_copy,student_name,Siddharth Nair,Siddharth Nair,1,0.0,0.0,Siddharth Nair,Siddharth Nair,1,0.0,0.0,14,14,0
+14,PNG,scanner_copy,roll_number,2018CE000529,2018CE000529,1,0.0,0.0,2018CE000529,2018CE000529,1,0.0,0.0,12,12,0
+14,PNG,scanner_copy,enrollment_number,EN201800529,EN201800529,1,0.0,0.0,EN201800529,EN201800529,1,0.0,0.0,11,11,0
+14,PNG,scanner_copy,degree_name,Bachelor of Technology in Civil Engineering,B.Tech in ECE,0,0.7674418604651163,0.7674418604651163,Bachelor of Technology in Civil Engineering,Bachelor of Technology,0,0.4883720930232558,0.4883720930232558,43,13,0
+14,PNG,scanner_copy,branch_name,Civil Engineering,Civil Engineering,1,0.0,0.0,Civil Engineering,Civil Engineering,1,0.0,0.0,17,17,0
+14,PNG,scanner_copy,batch_years,2018 - 2022,2018 - 2022,1,0.0,0.0,2018 - 2022,2018 - 2022,1,0.0,0.0,11,11,0
+14,PNG,scanner_copy,father_name,Nikhil Nair,Nikhil Nair,1,0.0,0.0,Nikhil Nair,Nikhil Nair,1,0.0,0.0,11,11,0
+14,PNG,scanner_copy,mother_name,Aditi Nair,Aditi Nair,1,0.0,0.0,Aditi Nair,Aditi Nair,1,0.0,0.0,10,10,0
+14,PNG,scanner_copy,date_of_birth,2000-01-08,2000-01-08,1,0.0,0.0,2000-01-08,2000-01-08,1,0.0,0.0,10,10,0
+14,PNG,scanner_copy,email,siddharth.nair529@igce.edu.in,siddharth.nair529@igce.edu.in,1,0.0,0.0,siddharth.nair529@igce.edu.in,siddharth.nair529@igce.edu.in,1,0.0,0.0,29,29,0
+14,PNG,scanner_copy,phone,+91 9840480491,+91 9840480491,1,0.0,0.0,+91 9840480491,+91 9840480491,1,0.0,0.0,14,14,0
+14,PNG,scanner_copy,address,"House No. 400, Sector 43, Mumbai","House No. 400, Sector 43, Mumbai",1,0.0,0.0,"House No. 400, Sector 43, Mumbai","House No. 400, Sector 43, Mumbai",1,0.0,0.0,32,32,0
+14,PNG,scanner_copy,blood_group,AB+,AB+,1,0.0,0.0,AB+,AB+,1,0.0,0.0,3,3,0
+14,PNG,scanner_copy,university_name,Indira Gandhi College of Engineering,Indira Gandhi College of Engineering,1,0.0,0.0,Indira Gandhi College of Engineering,Indira Gandhi College of Engineering,1,0.0,0.0,36,36,0
+14,PNG,scanner_copy,university_code,IGCE,IGCE,1,0.0,0.0,Indira Gandhi College of Engineering,Indira Gandhi College of Engineering,1,0.0,0.0,4,4,0
+14,PNG,scanner_copy,issue_date,2022-01-27,2022-01-27,1,0.0,0.0,2022-01-27,2022-01-27,1,0.0,0.0,10,10,0
+14,PNG,scanner_copy,cgpa,8.5,8.5,1,0.0,0.0,8.50,8.50,1,0.0,0.0,3,3,0
+14,PNG,scanner_copy,document_type,certificate,certificate,1,0.0,0.0,certificate,certificate,1,0.0,0.0,11,11,0
+14,PNG,scanner_copy,template_id,certificate_alpha,certificate_alpha,1,0.0,0.0,certificate_alpha,certificate_alpha,1,0.0,0.0,17,17,0
+14,PNG,scanner_copy,locale,en_IN,en_IN,1,0.0,0.0,en_IN,en_IN,1,0.0,0.0,5,5,0
+15,PNG,scanner_copy,student_name,Kavya Sharma,Kavya Sharma,1,0.0,0.0,Kavya Sharma,Kavya Sharma,1,0.0,0.0,12,12,0
+15,PNG,scanner_copy,roll_number,2021ECE000187,2021ECE000187,1,0.0,0.0,2021ECE000187,2021ECE000187,1,0.0,0.0,13,13,0
+15,PNG,scanner_copy,enrollment_number,EN202100187,EN202100187,1,0.0,0.0,EN202100187,EN202100187,1,0.0,0.0,11,11,0
+15,PNG,scanner_copy,degree_name,Bachelor of Technology in Electronics and Communication Engineering,B.Tech in ECE,0,0.8208955223880597,0.8208955223880597,Bachelor of Technology in Electronics and Communication Engineering,Bachelor of Technology,0,0.6716417910447762,0.6716417910447762,67,13,0
+15,PNG,scanner_copy,branch_name,Electronics and Communication Engineering,Electronics and Communication Engineering,1,0.0,0.0,Electronics and Communication Engineering,Electronics and Communication Engineering,1,0.0,0.0,41,41,0
+15,PNG,scanner_copy,batch_years,2021 - 2025,2021 - 2025,1,0.0,0.0,2021 - 2025,2021 - 2025,1,0.0,0.0,11,11,0
+15,PNG,scanner_copy,father_name,Tarun Sharma,Tarun Sharma,1,0.0,0.0,Tarun Sharma,Tarun Sharma,1,0.0,0.0,12,12,0
+15,PNG,scanner_copy,mother_name,Sonali Sharma,Sonali Sharma,1,0.0,0.0,Sonali Sharma,Sonali Sharma,1,0.0,0.0,13,13,0
+15,PNG,scanner_copy,date_of_birth,2004-05-30,2004/05/30,0,0.2,0.2,2004-05-30,2004-05-30,1,0.0,0.0,10,10,0
+15,PNG,scanner_copy,email,kavya.sharma187@igce.edu.in,kavya.sharma187@igce.edu.ix,0,0.037037037037037035,0.037037037037037035,kavya.sharma187@igce.edu.in,kavya.sharma187@igce.edu.ix,0,0.037037037037037035,0.037037037037037035,27,27,0
+15,PNG,scanner_copy,phone,+91 9888717099,+91 9888717099,1,0.0,0.0,+91 9888717099,+91 9888717099,1,0.0,0.0,14,14,0
+15,PNG,scanner_copy,address,"House No. 314, Sector 26, Mumbai","House No. 314, Sector 26, Mumbai",1,0.0,0.0,"House No. 314, Sector 26, Mumbai","House No. 314, Sector 26, Mumbai",1,0.0,0.0,32,32,0
+15,PNG,scanner_copy,blood_group,O-,O-,1,0.0,0.0,O-,O-,1,0.0,0.0,2,2,0
+15,PNG,scanner_copy,university_name,Indira Gandhi College of Engineering,Indira Gandhi College of Engineering,1,0.0,0.0,Indira Gandhi College of Engineering,Indira Gandhi College of Engineering,1,0.0,0.0,36,36,0
+15,PNG,scanner_copy,university_code,IGCE,IGCE,1,0.0,0.0,Indira Gandhi College of Engineering,Indira Gandhi College of Engineering,1,0.0,0.0,4,4,0
+15,PNG,scanner_copy,issue_date,2025-06-03,2025/06/03,0,0.2,0.2,2025-06-03,2025-06-03,1,0.0,0.0,10,10,0
+15,PNG,scanner_copy,cgpa,7.31,7.31 CGPA,0,1.25,1.25,7.31,7.31,1,0.0,0.0,4,9,0
+15,PNG,scanner_copy,document_type,certificate,certificate,1,0.0,0.0,certificate,certificate,1,0.0,0.0,11,11,0
+15,PNG,scanner_copy,template_id,certificate_alpha,certificate_alpha,1,0.0,0.0,certificate_alpha,certificate_alpha,1,0.0,0.0,17,17,0
+15,PNG,scanner_copy,locale,en_IN,en_IN,1,0.0,0.0,en_IN,en_IN,1,0.0,0.0,5,5,0
+16,PNG,mobile_camera,student_name,Lakshay Sinha,Lakshay Sinha,1,0.0,0.0,Lakshay Sinha,Lakshay Sinha,1,0.0,0.0,13,13,0
+16,PNG,mobile_camera,roll_number,2020ECE000725,2020ece000725,0,0.23076923076923078,0.23076923076923078,2020ECE000725,2020ECE000725,1,0.0,0.0,13,13,0
+16,PNG,mobile_camera,enrollment_number,EN202000725,en202000725,0,0.18181818181818182,0.18181818181818182,EN202000725,EN202000725,1,0.0,0.0,11,11,0
+16,PNG,mobile_camera,degree_name,Bachelor of Technology in Electronics and Communication Engineering,B.Tech in ECE,0,0.8208955223880597,0.8208955223880597,Bachelor of Technology in Electronics and Communication Engineering,Bachelor of Technology,0,0.6716417910447762,0.6716417910447762,67,13,0
+16,PNG,mobile_camera,branch_name,Electronics and Communication Engineering,Electronics and Communication Engineering,1,0.0,0.0,Electronics and Communication Engineering,Electronics and Communication Engineering,1,0.0,0.0,41,41,0
+16,PNG,mobile_camera,batch_years,2020 - 2024,2020 - 2024,1,0.0,0.0,2020 - 2024,2020 - 2024,1,0.0,0.0,11,11,0
+16,PNG,mobile_camera,father_name,Deepak Sinha,Deepak Sinha,1,0.0,0.0,Deepak Sinha,Deepak Sinha,1,0.0,0.0,12,12,0
+16,PNG,mobile_camera,mother_name,Surbhi Sinha,Surbhi Sinha,1,0.0,0.0,Surbhi Sinha,Surbhi Sinha,1,0.0,0.0,12,12,0
+16,PNG,mobile_camera,date_of_birth,2001-12-15,2001-12-15,1,0.0,0.0,2001-12-15,2001-12-15,1,0.0,0.0,10,10,0
+16,PNG,mobile_camera,email,lakshay.sinha725@igce.edu.in,lakshay.sinha725@igce.edu.in,1,0.0,0.0,lakshay.sinha725@igce.edu.in,lakshay.sinha725@igce.edu.in,1,0.0,0.0,28,28,0
+16,PNG,mobile_camera,phone,+91 9881044392,+91 9881044392,1,0.0,0.0,+91 9881044392,+91 9881044392,1,0.0,0.0,14,14,0
+16,PNG,mobile_camera,address,"House No. 263, Sector 26, Mumbai","House No. 263, Sector 26, Mumbai",1,0.0,0.0,"House No. 263, Sector 26, Mumbai","House No. 263, Sector 26, Mumbai",1,0.0,0.0,32,32,0
+16,PNG,mobile_camera,blood_group,B-,B-,1,0.0,0.0,B-,B-,1,0.0,0.0,2,2,0
+16,PNG,mobile_camera,university_name,Indira Gandhi College of Engineering,Indira Gandhi College of Engineering,1,0.0,0.0,Indira Gandhi College of Engineering,Indira Gandhi College of Engineering,1,0.0,0.0,36,36,0
+16,PNG,mobile_camera,university_code,IGCE,IGCE,1,0.0,0.0,Indira Gandhi College of Engineering,Indira Gandhi College of Engineering,1,0.0,0.0,4,4,0
+16,PNG,mobile_camera,issue_date,2024-04-27,2024-04-27,1,0.0,0.0,2024-04-27,2024-04-27,1,0.0,0.0,10,10,0
+16,PNG,mobile_camera,cgpa,5.94,5.94,1,0.0,0.0,5.94,5.94,1,0.0,0.0,4,4,0
+16,PNG,mobile_camera,document_type,certificate,certificate,1,0.0,0.0,certificate,certificate,1,0.0,0.0,11,11,0
+16,PNG,mobile_camera,template_id,certificate_alpha,certificate_alpha,1,0.0,0.0,certificate_alpha,certificate_alpha,1,0.0,0.0,17,17,0
+16,PNG,mobile_camera,locale,en_IN,en_IN,1,0.0,0.0,en_IN,en_IN,1,0.0,0.0,5,5,0
+17,PNG,mobile_camera,student_name,Prashant Kulkarni,Prashant Kulkarni,1,0.0,0.0,Prashant Kulkarni,Prashant Kulkarni,1,0.0,0.0,17,17,0
+17,PNG,mobile_camera,roll_number,2019EE000450,2019EE000450,1,0.0,0.0,2019EE000450,2019EE000450,1,0.0,0.0,12,12,0
+17,PNG,mobile_camera,enrollment_number,EN201900450,EN201900450,1,0.0,0.0,EN201900450,EN201900450,1,0.0,0.0,11,11,0
+17,PNG,mobile_camera,degree_name,Bachelor of Technology in Electrical Engineering,B.Tech in ECE,0,0.7708333333333334,0.7708333333333334,Bachelor of Technology in Electrical Engineering,Bachelor of Technology,0,0.5416666666666666,0.5416666666666666,48,13,0
+17,PNG,mobile_camera,branch_name,Electrical Engineering,Electrical Engineering,1,0.0,0.0,Electrical Engineering,Electrical Engineering,1,0.0,0.0,22,22,0
+17,PNG,mobile_camera,batch_years,2019 - 2023,2019 - 2023,1,0.0,0.0,2019 - 2023,2019 - 2023,1,0.0,0.0,11,11,0
+17,PNG,mobile_camera,father_name,Akash Kulkarni,Akash Kulkarnx,0,0.07142857142857142,0.07142857142857142,Akash Kulkarni,Akash Kulkarnx,0,0.07142857142857142,0.07142857142857142,14,14,0
+17,PNG,mobile_camera,mother_name,Anjali Kulkarni,Anjali Kulkarni,1,0.0,0.0,Anjali Kulkarni,Anjali Kulkarni,1,0.0,0.0,15,15,0
+17,PNG,mobile_camera,date_of_birth,2003-09-19,2003/09/19,0,0.2,0.2,2003-09-19,2003-09-19,1,0.0,0.0,10,10,0
+17,PNG,mobile_camera,email,prashant.kulkarni450@vtu.edu.in,prashant.kulkarni450@vtu.edu.in,1,0.0,0.0,prashant.kulkarni450@vtu.edu.in,prashant.kulkarni450@vtu.edu.in,1,0.0,0.0,31,31,0
+17,PNG,mobile_camera,phone,+91 9861968328,+91 9861968328,1,0.0,0.0,+91 9861968328,+91 9861968328,1,0.0,0.0,14,14,0
+17,PNG,mobile_camera,address,"House No. 38, Sector 49, New Delhi","House No. 38, Sector 49, New Delhx",0,0.029411764705882353,0.029411764705882353,"House No. 38, Sector 49, New Delhi","House No. 38, Sector 49, New Delhx",0,0.029411764705882353,0.029411764705882353,34,34,0
+17,PNG,mobile_camera,blood_group,O-,O-,1,0.0,0.0,O-,O-,1,0.0,0.0,2,2,0
+17,PNG,mobile_camera,university_name,Vivekananda Technical University,Vivekananda Technical University,1,0.0,0.0,Vivekananda Technical University,Vivekananda Technical University,1,0.0,0.0,32,32,0
+17,PNG,mobile_camera,university_code,VTU,VTU,1,0.0,0.0,Vivekananda Technical University,Vivekananda Technical University,1,0.0,0.0,3,3,0
+17,PNG,mobile_camera,issue_date,2023-12-21,2023/12/21,0,0.2,0.2,2023-12-21,2023-12-21,1,0.0,0.0,10,10,0
+17,PNG,mobile_camera,cgpa,8.59,8.59 CGPA,0,1.25,1.25,8.59,8.59,1,0.0,0.0,4,9,0
+17,PNG,mobile_camera,document_type,certificate,certificate,1,0.0,0.0,certificate,certificate,1,0.0,0.0,11,11,0
+17,PNG,mobile_camera,template_id,certificate_alpha,certificate_alpha,1,0.0,0.0,certificate_alpha,certificate_alpha,1,0.0,0.0,17,17,0
+17,PNG,mobile_camera,locale,en_IN,en_IN,1,0.0,0.0,en_IN,en_IN,1,0.0,0.0,5,5,0
+18,PNG,mobile_camera,student_name,Harsh Patel,Harsh Patel,1,0.0,0.0,Harsh Patel,Harsh Patel,1,0.0,0.0,11,11,0
+18,PNG,mobile_camera,roll_number,21BTME0584,21BTME0584,1,0.0,0.0,21BTME0584,21BTME0584,1,0.0,0.0,10,10,0
+18,PNG,mobile_camera,enrollment_number,EN202100584,EN202100584,1,0.0,0.0,EN202100584,EN202100584,1,0.0,0.0,11,11,0
+18,PNG,mobile_camera,degree_name,Bachelor of Technology in Mechanical Engineering,B.Tech in ECE,0,0.7916666666666666,0.7916666666666666,Bachelor of Technology in Mechanical Engineering,Bachelor of Technology,0,0.5416666666666666,0.5416666666666666,48,13,0
+18,PNG,mobile_camera,branch_name,Mechanical Engineering,Mechanical Engineering,1,0.0,0.0,Mechanical Engineering,Mechanical Engineering,1,0.0,0.0,22,22,0
+18,PNG,mobile_camera,batch_years,2021 - 2025,2021 - 2025,1,0.0,0.0,2021 - 2025,2021 - 2025,1,0.0,0.0,11,11,0
+18,PNG,mobile_camera,father_name,Arjun Patel,Arjun Patex,0,0.09090909090909091,0.09090909090909091,Arjun Patel,Arjun Patex,0,0.09090909090909091,0.09090909090909091,11,11,0
+18,PNG,mobile_camera,mother_name,Meera Patel,Meera Patel,1,0.0,0.0,Meera Patel,Meera Patel,1,0.0,0.0,11,11,0
+18,PNG,mobile_camera,date_of_birth,2001-06-21,2001-06-21,1,0.0,0.0,2001-06-21,2001-06-21,1,0.0,0.0,10,10,0
+18,PNG,mobile_camera,email,harsh.patel584@srit.edu.in,harsh.patel584@srit.edu.in,1,0.0,0.0,harsh.patel584@srit.edu.in,harsh.patel584@srit.edu.in,1,0.0,0.0,26,26,0
+18,PNG,mobile_camera,phone,+91 9853586581,+91 9853586581,1,0.0,0.0,+91 9853586581,+91 9853586581,1,0.0,0.0,14,14,0
+18,PNG,mobile_camera,address,"House No. 49, Sector 49, Bengaluru","House No. 49, Sector 49, Bengalurx",0,0.029411764705882353,0.029411764705882353,"House No. 49, Sector 49, Bengaluru","House No. 49, Sector 49, Bengalurx",0,0.029411764705882353,0.029411764705882353,34,34,0
+18,PNG,mobile_camera,blood_group,O+,O+,1,0.0,0.0,O+,O+,1,0.0,0.0,2,2,0
+18,PNG,mobile_camera,university_name,Sri Ramanujan Institute of Technology,IGCE College,0,0.8918918918918919,0.8918918918918919,Sri Ramanujan Institute of Technology,Indira Gandhi College of Engineering,0,0.7837837837837838,0.7837837837837838,37,12,0
+18,PNG,mobile_camera,university_code,SRIT,SRIT,1,0.0,0.0,Sri Ramanujan Institute of Technology,Sri Ramanujan Institute of Technology,1,0.0,0.0,4,4,0
+18,PNG,mobile_camera,issue_date,2025-07-02,2025-07-02,1,0.0,0.0,2025-07-02,2025-07-02,1,0.0,0.0,10,10,0
+18,PNG,mobile_camera,cgpa,8.65,8.65,1,0.0,0.0,8.65,8.65,1,0.0,0.0,4,4,0
+18,PNG,mobile_camera,document_type,certificate,certificate,1,0.0,0.0,certificate,certificate,1,0.0,0.0,11,11,0
+18,PNG,mobile_camera,template_id,certificate_alpha,certificate_alpha,1,0.0,0.0,certificate_alpha,certificate_alpha,1,0.0,0.0,17,17,0
+18,PNG,mobile_camera,locale,en_IN,en_IN,1,0.0,0.0,en_IN,en_IN,1,0.0,0.0,5,5,0
+19,PNG,mobile_camera,student_name,Siddharth Nair,Siddharth Nair,1,0.0,0.0,Siddharth Nair,Siddharth Nair,1,0.0,0.0,14,14,0
+19,PNG,mobile_camera,roll_number,2018CE000529,2018ce000529,0,0.16666666666666666,0.16666666666666666,2018CE000529,2018CE000529,1,0.0,0.0,12,12,0
+19,PNG,mobile_camera,enrollment_number,EN201800529,en201800529,0,0.18181818181818182,0.18181818181818182,EN201800529,EN201800529,1,0.0,0.0,11,11,0
+19,PNG,mobile_camera,degree_name,Bachelor of Technology in Civil Engineering,B.Tech in ECE,0,0.7674418604651163,0.7674418604651163,Bachelor of Technology in Civil Engineering,Bachelor of Technology,0,0.4883720930232558,0.4883720930232558,43,13,0
+19,PNG,mobile_camera,branch_name,Civil Engineering,Civil Engineering,1,0.0,0.0,Civil Engineering,Civil Engineering,1,0.0,0.0,17,17,0
+19,PNG,mobile_camera,batch_years,2018 - 2022,2018 - 2022,1,0.0,0.0,2018 - 2022,2018 - 2022,1,0.0,0.0,11,11,0
+19,PNG,mobile_camera,father_name,Nikhil Nair,Nikhil Nair,1,0.0,0.0,Nikhil Nair,Nikhil Nair,1,0.0,0.0,11,11,0
+19,PNG,mobile_camera,mother_name,Aditi Nair,Aditi Nair,1,0.0,0.0,Aditi Nair,Aditi Nair,1,0.0,0.0,10,10,0
+19,PNG,mobile_camera,date_of_birth,2000-01-08,2000/01/08,0,0.2,0.2,2000-01-08,2000-01-08,1,0.0,0.0,10,10,0
+19,PNG,mobile_camera,email,siddharth.nair529@igce.edu.in,siddharth.nair529@igce.edu.in,1,0.0,0.0,siddharth.nair529@igce.edu.in,siddharth.nair529@igce.edu.in,1,0.0,0.0,29,29,0
+19,PNG,mobile_camera,phone,+91 9840480491,+91 984048049x,0,0.07142857142857142,0.07142857142857142,+91 9840480491,+91 984048049x,0,0.07142857142857142,0.07142857142857142,14,14,0
+19,PNG,mobile_camera,address,"House No. 400, Sector 43, Mumbai","House No. 400, Sector 43, Mumbai",1,0.0,0.0,"House No. 400, Sector 43, Mumbai","House No. 400, Sector 43, Mumbai",1,0.0,0.0,32,32,0
+19,PNG,mobile_camera,blood_group,AB+,AB+,1,0.0,0.0,AB+,AB+,1,0.0,0.0,3,3,0
+19,PNG,mobile_camera,university_name,Indira Gandhi College of Engineering,Indira Gandhi College of Engineering,1,0.0,0.0,Indira Gandhi College of Engineering,Indira Gandhi College of Engineering,1,0.0,0.0,36,36,0
+19,PNG,mobile_camera,university_code,IGCE,IGCE,1,0.0,0.0,Indira Gandhi College of Engineering,Indira Gandhi College of Engineering,1,0.0,0.0,4,4,0
+19,PNG,mobile_camera,issue_date,2022-01-27,2022/01/27,0,0.2,0.2,2022-01-27,2022-01-27,1,0.0,0.0,10,10,0
+19,PNG,mobile_camera,cgpa,8.5,8.5 CGPA,0,1.6666666666666667,1.6666666666666667,8.50,8.50,1,0.0,0.0,3,8,0
+19,PNG,mobile_camera,document_type,certificate,certificate,1,0.0,0.0,certificate,certificate,1,0.0,0.0,11,11,0
+19,PNG,mobile_camera,template_id,certificate_alpha,certificate_alpha,1,0.0,0.0,certificate_alpha,certificate_alpha,1,0.0,0.0,17,17,0
+19,PNG,mobile_camera,locale,en_IN,en_IN,1,0.0,0.0,en_IN,en_IN,1,0.0,0.0,5,5,0
+20,PNG,mobile_camera,student_name,Kavya Sharma,Kavya Sharma,1,0.0,0.0,Kavya Sharma,Kavya Sharma,1,0.0,0.0,12,12,0
+20,PNG,mobile_camera,roll_number,2021ECE000187,2021ECE000187,1,0.0,0.0,2021ECE000187,2021ECE000187,1,0.0,0.0,13,13,0
+20,PNG,mobile_camera,enrollment_number,EN202100187,EN202100187,1,0.0,0.0,EN202100187,EN202100187,1,0.0,0.0,11,11,0
+20,PNG,mobile_camera,degree_name,Bachelor of Technology in Electronics and Communication Engineering,B.Tech in ECE,0,0.8208955223880597,0.8208955223880597,Bachelor of Technology in Electronics and Communication Engineering,Bachelor of Technology,0,0.6716417910447762,0.6716417910447762,67,13,0
+20,PNG,mobile_camera,branch_name,Electronics and Communication Engineering,Electronics and Communication Engineering,1,0.0,0.0,Electronics and Communication Engineering,Electronics and Communication Engineering,1,0.0,0.0,41,41,0
+20,PNG,mobile_camera,batch_years,2021 - 2025,2021 - 2025,1,0.0,0.0,2021 - 2025,2021 - 2025,1,0.0,0.0,11,11,0
+20,PNG,mobile_camera,father_name,Tarun Sharma,Tarun Sharma,1,0.0,0.0,Tarun Sharma,Tarun Sharma,1,0.0,0.0,12,12,0
+20,PNG,mobile_camera,mother_name,Sonali Sharma,Sonali Sharma,1,0.0,0.0,Sonali Sharma,Sonali Sharma,1,0.0,0.0,13,13,0
+20,PNG,mobile_camera,date_of_birth,2004-05-30,2004-05-30,1,0.0,0.0,2004-05-30,2004-05-30,1,0.0,0.0,10,10,0
+20,PNG,mobile_camera,email,kavya.sharma187@igce.edu.in,kavya.sharma187@igce.edu.in,1,0.0,0.0,kavya.sharma187@igce.edu.in,kavya.sharma187@igce.edu.in,1,0.0,0.0,27,27,0
+20,PNG,mobile_camera,phone,+91 9888717099,+91 9888717099,1,0.0,0.0,+91 9888717099,+91 9888717099,1,0.0,0.0,14,14,0
+20,PNG,mobile_camera,address,"House No. 314, Sector 26, Mumbai","House No. 314, Sector 26, Mumbai",1,0.0,0.0,"House No. 314, Sector 26, Mumbai","House No. 314, Sector 26, Mumbai",1,0.0,0.0,32,32,0
+20,PNG,mobile_camera,blood_group,O-,O-,1,0.0,0.0,O-,O-,1,0.0,0.0,2,2,0
+20,PNG,mobile_camera,university_name,Indira Gandhi College of Engineering,Indira Gandhi College of Engineering,1,0.0,0.0,Indira Gandhi College of Engineering,Indira Gandhi College of Engineering,1,0.0,0.0,36,36,0
+20,PNG,mobile_camera,university_code,IGCE,IGCE,1,0.0,0.0,Indira Gandhi College of Engineering,Indira Gandhi College of Engineering,1,0.0,0.0,4,4,0
+20,PNG,mobile_camera,issue_date,2025-06-03,2025-06-03,1,0.0,0.0,2025-06-03,2025-06-03,1,0.0,0.0,10,10,0
+20,PNG,mobile_camera,cgpa,7.31,7.31,1,0.0,0.0,7.31,7.31,1,0.0,0.0,4,4,0
+20,PNG,mobile_camera,document_type,certificate,certificate,1,0.0,0.0,certificate,certificate,1,0.0,0.0,11,11,0
+20,PNG,mobile_camera,template_id,certificate_alpha,certificate_alpha,1,0.0,0.0,certificate_alpha,certificate_alpha,1,0.0,0.0,17,17,0
+20,PNG,mobile_camera,locale,en_IN,en_IN,1,0.0,0.0,en_IN,en_IN,1,0.0,0.0,5,5,0
+21,PNG,rotated_90,student_name,Lakshay Sinha,Lakshay Sinha,1,0.0,0.0,Lakshay Sinha,Lakshay Sinha,1,0.0,0.0,13,13,0
+21,PNG,rotated_90,roll_number,2020ECE000725,2020ECE000725,1,0.0,0.0,2020ECE000725,2020ECE000725,1,0.0,0.0,13,13,0
+21,PNG,rotated_90,enrollment_number,EN202000725,EN202000725,1,0.0,0.0,EN202000725,EN202000725,1,0.0,0.0,11,11,0
+21,PNG,rotated_90,degree_name,Bachelor of Technology in Electronics and Communication Engineering,B.Tech in ECE,0,0.8208955223880597,0.8208955223880597,Bachelor of Technology in Electronics and Communication Engineering,Bachelor of Technology,0,0.6716417910447762,0.6716417910447762,67,13,0
+21,PNG,rotated_90,branch_name,Electronics and Communication Engineering,Electronics and Communication Engineering,1,0.0,0.0,Electronics and Communication Engineering,Electronics and Communication Engineering,1,0.0,0.0,41,41,0
+21,PNG,rotated_90,batch_years,2020 - 2024,2020 - 2024,1,0.0,0.0,2020 - 2024,2020 - 2024,1,0.0,0.0,11,11,0
+21,PNG,rotated_90,father_name,Deepak Sinha,Deepak Sinha,1,0.0,0.0,Deepak Sinha,Deepak Sinha,1,0.0,0.0,12,12,0
+21,PNG,rotated_90,mother_name,Surbhi Sinha,Surbhi Sinha,1,0.0,0.0,Surbhi Sinha,Surbhi Sinha,1,0.0,0.0,12,12,0
+21,PNG,rotated_90,date_of_birth,2001-12-15,2001/12/15,0,0.2,0.2,2001-12-15,2001-12-15,1,0.0,0.0,10,10,0
+21,PNG,rotated_90,email,lakshay.sinha725@igce.edu.in,lakshay.sinha725@igce.edu.in,1,0.0,0.0,lakshay.sinha725@igce.edu.in,lakshay.sinha725@igce.edu.in,1,0.0,0.0,28,28,0
+21,PNG,rotated_90,phone,+91 9881044392,+91 988104439x,0,0.07142857142857142,0.07142857142857142,+91 9881044392,+91 988104439x,0,0.07142857142857142,0.07142857142857142,14,14,0
+21,PNG,rotated_90,address,"House No. 263, Sector 26, Mumbai","House No. 263, Sector 26, Mumbai",1,0.0,0.0,"House No. 263, Sector 26, Mumbai","House No. 263, Sector 26, Mumbai",1,0.0,0.0,32,32,0
+21,PNG,rotated_90,blood_group,B-,B-,1,0.0,0.0,B-,B-,1,0.0,0.0,2,2,0
+21,PNG,rotated_90,university_name,Indira Gandhi College of Engineering,Indira Gandhi College of Engineering,1,0.0,0.0,Indira Gandhi College of Engineering,Indira Gandhi College of Engineering,1,0.0,0.0,36,36,0
+21,PNG,rotated_90,university_code,IGCE,IGCE,1,0.0,0.0,Indira Gandhi College of Engineering,Indira Gandhi College of Engineering,1,0.0,0.0,4,4,0
+21,PNG,rotated_90,issue_date,2024-04-27,2024/04/27,0,0.2,0.2,2024-04-27,2024-04-27,1,0.0,0.0,10,10,0
+21,PNG,rotated_90,cgpa,5.94,5.94 CGPA,0,1.25,1.25,5.94,5.94,1,0.0,0.0,4,9,0
+21,PNG,rotated_90,document_type,certificate,certificatx,0,0.09090909090909091,0.09090909090909091,certificate,certificatx,0,0.09090909090909091,0.09090909090909091,11,11,0
+21,PNG,rotated_90,template_id,certificate_alpha,certificate_alphx,0,0.058823529411764705,0.058823529411764705,certificate_alpha,certificate_alphx,0,0.058823529411764705,0.058823529411764705,17,17,0
+21,PNG,rotated_90,locale,en_IN,en_IN,1,0.0,0.0,en_IN,en_IN,1,0.0,0.0,5,5,0
+22,PNG,rotated_90,student_name,Prashant Kulkarni,Prashant Kulkarni,1,0.0,0.0,Prashant Kulkarni,Prashant Kulkarni,1,0.0,0.0,17,17,0
+22,PNG,rotated_90,roll_number,2019EE000450,2019ee000450,0,0.16666666666666666,0.16666666666666666,2019EE000450,2019EE000450,1,0.0,0.0,12,12,0
+22,PNG,rotated_90,enrollment_number,EN201900450,en201900450,0,0.18181818181818182,0.18181818181818182,EN201900450,EN201900450,1,0.0,0.0,11,11,0
+22,PNG,rotated_90,degree_name,Bachelor of Technology in Electrical Engineering,B.Tech in ECE,0,0.7708333333333334,0.7708333333333334,Bachelor of Technology in Electrical Engineering,Bachelor of Technology,0,0.5416666666666666,0.5416666666666666,48,13,0
+22,PNG,rotated_90,branch_name,Electrical Engineering,Electrical Engineerinx,0,0.045454545454545456,0.045454545454545456,Electrical Engineering,Electrical Engineerinx,0,0.045454545454545456,0.045454545454545456,22,22,0
+22,PNG,rotated_90,batch_years,2019 - 2023,2019 - 2023,1,0.0,0.0,2019 - 2023,2019 - 2023,1,0.0,0.0,11,11,0
+22,PNG,rotated_90,father_name,Akash Kulkarni,Akash Kulkarni,1,0.0,0.0,Akash Kulkarni,Akash Kulkarni,1,0.0,0.0,14,14,0
+22,PNG,rotated_90,mother_name,Anjali Kulkarni,Anjali Kulkarni,1,0.0,0.0,Anjali Kulkarni,Anjali Kulkarni,1,0.0,0.0,15,15,0
+22,PNG,rotated_90,date_of_birth,2003-09-19,2003-09-19,1,0.0,0.0,2003-09-19,2003-09-19,1,0.0,0.0,10,10,0
+22,PNG,rotated_90,email,prashant.kulkarni450@vtu.edu.in,prashant.kulkarni450@vtu.edu.in,1,0.0,0.0,prashant.kulkarni450@vtu.edu.in,prashant.kulkarni450@vtu.edu.in,1,0.0,0.0,31,31,0
+22,PNG,rotated_90,phone,+91 9861968328,+91 9861968328,1,0.0,0.0,+91 9861968328,+91 9861968328,1,0.0,0.0,14,14,0
+22,PNG,rotated_90,address,"House No. 38, Sector 49, New Delhi","House No. 38, Sector 49, New Delhi",1,0.0,0.0,"House No. 38, Sector 49, New Delhi","House No. 38, Sector 49, New Delhi",1,0.0,0.0,34,34,0
+22,PNG,rotated_90,blood_group,O-,O-,1,0.0,0.0,O-,O-,1,0.0,0.0,2,2,0
+22,PNG,rotated_90,university_name,Vivekananda Technical University,Vivekananda Technical University,1,0.0,0.0,Vivekananda Technical University,Vivekananda Technical University,1,0.0,0.0,32,32,0
+22,PNG,rotated_90,university_code,VTU,VTU,1,0.0,0.0,Vivekananda Technical University,Vivekananda Technical University,1,0.0,0.0,3,3,0
+22,PNG,rotated_90,issue_date,2023-12-21,2023-12-21,1,0.0,0.0,2023-12-21,2023-12-21,1,0.0,0.0,10,10,0
+22,PNG,rotated_90,cgpa,8.59,8.59,1,0.0,0.0,8.59,8.59,1,0.0,0.0,4,4,0
+22,PNG,rotated_90,document_type,certificate,certificate,1,0.0,0.0,certificate,certificate,1,0.0,0.0,11,11,0
+22,PNG,rotated_90,template_id,certificate_alpha,certificate_alpha,1,0.0,0.0,certificate_alpha,certificate_alpha,1,0.0,0.0,17,17,0
+22,PNG,rotated_90,locale,en_IN,en_IN,1,0.0,0.0,en_IN,en_IN,1,0.0,0.0,5,5,0
+23,PNG,rotated_90,student_name,Harsh Patel,Harsh Patel,1,0.0,0.0,Harsh Patel,Harsh Patel,1,0.0,0.0,11,11,0
+23,PNG,rotated_90,roll_number,21BTME0584,21BTME0584,1,0.0,0.0,21BTME0584,21BTME0584,1,0.0,0.0,10,10,0
+23,PNG,rotated_90,enrollment_number,EN202100584,EN202100584,1,0.0,0.0,EN202100584,EN202100584,1,0.0,0.0,11,11,0
+23,PNG,rotated_90,degree_name,Bachelor of Technology in Mechanical Engineering,B.Tech in ECE,0,0.7916666666666666,0.7916666666666666,Bachelor of Technology in Mechanical Engineering,Bachelor of Technology,0,0.5416666666666666,0.5416666666666666,48,13,0
+23,PNG,rotated_90,branch_name,Mechanical Engineering,Mechanical Engineering,1,0.0,0.0,Mechanical Engineering,Mechanical Engineering,1,0.0,0.0,22,22,0
+23,PNG,rotated_90,batch_years,2021 - 2025,2021 - 2025,1,0.0,0.0,2021 - 2025,2021 - 2025,1,0.0,0.0,11,11,0
+23,PNG,rotated_90,father_name,Arjun Patel,Arjun Patel,1,0.0,0.0,Arjun Patel,Arjun Patel,1,0.0,0.0,11,11,0
+23,PNG,rotated_90,mother_name,Meera Patel,Meera Patex,0,0.09090909090909091,0.09090909090909091,Meera Patel,Meera Patex,0,0.09090909090909091,0.09090909090909091,11,11,0
+23,PNG,rotated_90,date_of_birth,2001-06-21,2001/06/21,0,0.2,0.2,2001-06-21,2001-06-21,1,0.0,0.0,10,10,0
+23,PNG,rotated_90,email,harsh.patel584@srit.edu.in,harsh.patel584@srit.edu.in,1,0.0,0.0,harsh.patel584@srit.edu.in,harsh.patel584@srit.edu.in,1,0.0,0.0,26,26,0
+23,PNG,rotated_90,phone,+91 9853586581,+91 9853586581,1,0.0,0.0,+91 9853586581,+91 9853586581,1,0.0,0.0,14,14,0
+23,PNG,rotated_90,address,"House No. 49, Sector 49, Bengaluru","House No. 49, Sector 49, Bengalurx",0,0.029411764705882353,0.029411764705882353,"House No. 49, Sector 49, Bengaluru","House No. 49, Sector 49, Bengalurx",0,0.029411764705882353,0.029411764705882353,34,34,0
+23,PNG,rotated_90,blood_group,O+,O+,1,0.0,0.0,O+,O+,1,0.0,0.0,2,2,0
+23,PNG,rotated_90,university_name,Sri Ramanujan Institute of Technology,IGCE College,0,0.8918918918918919,0.8918918918918919,Sri Ramanujan Institute of Technology,Indira Gandhi College of Engineering,0,0.7837837837837838,0.7837837837837838,37,12,0
+23,PNG,rotated_90,university_code,SRIT,SRIT,1,0.0,0.0,Sri Ramanujan Institute of Technology,Sri Ramanujan Institute of Technology,1,0.0,0.0,4,4,0
+23,PNG,rotated_90,issue_date,2025-07-02,2025/07/02,0,0.2,0.2,2025-07-02,2025-07-02,1,0.0,0.0,10,10,0
+23,PNG,rotated_90,cgpa,8.65,8.65 CGPA,0,1.25,1.25,8.65,8.65,1,0.0,0.0,4,9,0
+23,PNG,rotated_90,document_type,certificate,certificate,1,0.0,0.0,certificate,certificate,1,0.0,0.0,11,11,0
+23,PNG,rotated_90,template_id,certificate_alpha,certificate_alpha,1,0.0,0.0,certificate_alpha,certificate_alpha,1,0.0,0.0,17,17,0
+23,PNG,rotated_90,locale,en_IN,en_IN,1,0.0,0.0,en_IN,en_IN,1,0.0,0.0,5,5,0
+24,PNG,rotated_90,student_name,Siddharth Nair,Siddharth Nair,1,0.0,0.0,Siddharth Nair,Siddharth Nair,1,0.0,0.0,14,14,0
+24,PNG,rotated_90,roll_number,2018CE000529,2018CE000529,1,0.0,0.0,2018CE000529,2018CE000529,1,0.0,0.0,12,12,0
+24,PNG,rotated_90,enrollment_number,EN201800529,EN201800529,1,0.0,0.0,EN201800529,EN201800529,1,0.0,0.0,11,11,0
+24,PNG,rotated_90,degree_name,Bachelor of Technology in Civil Engineering,B.Tech in ECE,0,0.7674418604651163,0.7674418604651163,Bachelor of Technology in Civil Engineering,Bachelor of Technology,0,0.4883720930232558,0.4883720930232558,43,13,0
+24,PNG,rotated_90,branch_name,Civil Engineering,Civil Engineering,1,0.0,0.0,Civil Engineering,Civil Engineering,1,0.0,0.0,17,17,0
+24,PNG,rotated_90,batch_years,2018 - 2022,2018 - 2022,1,0.0,0.0,2018 - 2022,2018 - 2022,1,0.0,0.0,11,11,0
+24,PNG,rotated_90,father_name,Nikhil Nair,Nikhil Nair,1,0.0,0.0,Nikhil Nair,Nikhil Nair,1,0.0,0.0,11,11,0
+24,PNG,rotated_90,mother_name,Aditi Nair,Aditi Nair,1,0.0,0.0,Aditi Nair,Aditi Nair,1,0.0,0.0,10,10,0
+24,PNG,rotated_90,date_of_birth,2000-01-08,2000-01-08,1,0.0,0.0,2000-01-08,2000-01-08,1,0.0,0.0,10,10,0
+24,PNG,rotated_90,email,siddharth.nair529@igce.edu.in,siddharth.nair529@igce.edu.in,1,0.0,0.0,siddharth.nair529@igce.edu.in,siddharth.nair529@igce.edu.in,1,0.0,0.0,29,29,0
+24,PNG,rotated_90,phone,+91 9840480491,+91 9840480491,1,0.0,0.0,+91 9840480491,+91 9840480491,1,0.0,0.0,14,14,0
+24,PNG,rotated_90,address,"House No. 400, Sector 43, Mumbai","House No. 400, Sector 43, Mumbai",1,0.0,0.0,"House No. 400, Sector 43, Mumbai","House No. 400, Sector 43, Mumbai",1,0.0,0.0,32,32,0
+24,PNG,rotated_90,blood_group,AB+,AB+,1,0.0,0.0,AB+,AB+,1,0.0,0.0,3,3,0
+24,PNG,rotated_90,university_name,Indira Gandhi College of Engineering,Indira Gandhi College of Engineering,1,0.0,0.0,Indira Gandhi College of Engineering,Indira Gandhi College of Engineering,1,0.0,0.0,36,36,0
+24,PNG,rotated_90,university_code,IGCE,IGCE,1,0.0,0.0,Indira Gandhi College of Engineering,Indira Gandhi College of Engineering,1,0.0,0.0,4,4,0
+24,PNG,rotated_90,issue_date,2022-01-27,2022-01-27,1,0.0,0.0,2022-01-27,2022-01-27,1,0.0,0.0,10,10,0
+24,PNG,rotated_90,cgpa,8.5,8.5,1,0.0,0.0,8.50,8.50,1,0.0,0.0,3,3,0
+24,PNG,rotated_90,document_type,certificate,certificatx,0,0.09090909090909091,0.09090909090909091,certificate,certificatx,0,0.09090909090909091,0.09090909090909091,11,11,0
+24,PNG,rotated_90,template_id,certificate_alpha,certificate_alpha,1,0.0,0.0,certificate_alpha,certificate_alpha,1,0.0,0.0,17,17,0
+24,PNG,rotated_90,locale,en_IN,en_IN,1,0.0,0.0,en_IN,en_IN,1,0.0,0.0,5,5,0
+25,PNG,rotated_90,student_name,Kavya Sharma,Kavya Sharma,1,0.0,0.0,Kavya Sharma,Kavya Sharma,1,0.0,0.0,12,12,0
+25,PNG,rotated_90,roll_number,2021ECE000187,2021ece000187,0,0.23076923076923078,0.23076923076923078,2021ECE000187,2021ECE000187,1,0.0,0.0,13,13,0
+25,PNG,rotated_90,enrollment_number,EN202100187,en202100187,0,0.18181818181818182,0.18181818181818182,EN202100187,EN202100187,1,0.0,0.0,11,11,0
+25,PNG,rotated_90,degree_name,Bachelor of Technology in Electronics and Communication Engineering,B.Tech in ECE,0,0.8208955223880597,0.8208955223880597,Bachelor of Technology in Electronics and Communication Engineering,Bachelor of Technology,0,0.6716417910447762,0.6716417910447762,67,13,0
+25,PNG,rotated_90,branch_name,Electronics and Communication Engineering,Electronics and Communication Engineering,1,0.0,0.0,Electronics and Communication Engineering,Electronics and Communication Engineering,1,0.0,0.0,41,41,0
+25,PNG,rotated_90,batch_years,2021 - 2025,2021 - 2025,1,0.0,0.0,2021 - 2025,2021 - 2025,1,0.0,0.0,11,11,0
+25,PNG,rotated_90,father_name,Tarun Sharma,Tarun Sharma,1,0.0,0.0,Tarun Sharma,Tarun Sharma,1,0.0,0.0,12,12,0
+25,PNG,rotated_90,mother_name,Sonali Sharma,Sonali Sharmx,0,0.07692307692307693,0.07692307692307693,Sonali Sharma,Sonali Sharmx,0,0.07692307692307693,0.07692307692307693,13,13,0
+25,PNG,rotated_90,date_of_birth,2004-05-30,2004/05/30,0,0.2,0.2,2004-05-30,2004-05-30,1,0.0,0.0,10,10,0
+25,PNG,rotated_90,email,kavya.sharma187@igce.edu.in,kavya.sharma187@igce.edu.in,1,0.0,0.0,kavya.sharma187@igce.edu.in,kavya.sharma187@igce.edu.in,1,0.0,0.0,27,27,0
+25,PNG,rotated_90,phone,+91 9888717099,+91 988871709x,0,0.07142857142857142,0.07142857142857142,+91 9888717099,+91 988871709x,0,0.07142857142857142,0.07142857142857142,14,14,0
+25,PNG,rotated_90,address,"House No. 314, Sector 26, Mumbai","House No. 314, Sector 26, Mumbai",1,0.0,0.0,"House No. 314, Sector 26, Mumbai","House No. 314, Sector 26, Mumbai",1,0.0,0.0,32,32,0
+25,PNG,rotated_90,blood_group,O-,O-,1,0.0,0.0,O-,O-,1,0.0,0.0,2,2,0
+25,PNG,rotated_90,university_name,Indira Gandhi College of Engineering,Indira Gandhi College of Engineering,1,0.0,0.0,Indira Gandhi College of Engineering,Indira Gandhi College of Engineering,1,0.0,0.0,36,36,0
+25,PNG,rotated_90,university_code,IGCE,IGCE,1,0.0,0.0,Indira Gandhi College of Engineering,Indira Gandhi College of Engineering,1,0.0,0.0,4,4,0
+25,PNG,rotated_90,issue_date,2025-06-03,2025/06/03,0,0.2,0.2,2025-06-03,2025-06-03,1,0.0,0.0,10,10,0
+25,PNG,rotated_90,cgpa,7.31,7.31 CGPA,0,1.25,1.25,7.31,7.31,1,0.0,0.0,4,9,0
+25,PNG,rotated_90,document_type,certificate,certificate,1,0.0,0.0,certificate,certificate,1,0.0,0.0,11,11,0
+25,PNG,rotated_90,template_id,certificate_alpha,certificate_alpha,1,0.0,0.0,certificate_alpha,certificate_alpha,1,0.0,0.0,17,17,0
+25,PNG,rotated_90,locale,en_IN,en_IN,1,0.0,0.0,en_IN,en_IN,1,0.0,0.0,5,5,0
+26,JPEG,clean,student_name,Lakshay Sinha,Lakshay Sinha,1,0.0,0.0,Lakshay Sinha,Lakshay Sinha,1,0.0,0.0,13,13,0
+26,JPEG,clean,roll_number,2020ECE000725,2020ECE000725,1,0.0,0.0,2020ECE000725,2020ECE000725,1,0.0,0.0,13,13,0
+26,JPEG,clean,enrollment_number,EN202000725,EN202000725,1,0.0,0.0,EN202000725,EN202000725,1,0.0,0.0,11,11,0
+26,JPEG,clean,degree_name,Bachelor of Technology in Electronics and Communication Engineering,B.Tech in ECE,0,0.8208955223880597,0.8208955223880597,Bachelor of Technology in Electronics and Communication Engineering,Bachelor of Technology,0,0.6716417910447762,0.6716417910447762,67,13,0
+26,JPEG,clean,branch_name,Electronics and Communication Engineering,Electronics and Communication Engineering,1,0.0,0.0,Electronics and Communication Engineering,Electronics and Communication Engineering,1,0.0,0.0,41,41,0
+26,JPEG,clean,batch_years,2020 - 2024,2020 - 2024,1,0.0,0.0,2020 - 2024,2020 - 2024,1,0.0,0.0,11,11,0
+26,JPEG,clean,father_name,Deepak Sinha,Deepak Sinha,1,0.0,0.0,Deepak Sinha,Deepak Sinha,1,0.0,0.0,12,12,0
+26,JPEG,clean,mother_name,Surbhi Sinha,Surbhi Sinha,1,0.0,0.0,Surbhi Sinha,Surbhi Sinha,1,0.0,0.0,12,12,0
+26,JPEG,clean,date_of_birth,2001-12-15,2001-12-15,1,0.0,0.0,2001-12-15,2001-12-15,1,0.0,0.0,10,10,0
+26,JPEG,clean,email,lakshay.sinha725@igce.edu.in,lakshay.sinha725@igce.edu.in,1,0.0,0.0,lakshay.sinha725@igce.edu.in,lakshay.sinha725@igce.edu.in,1,0.0,0.0,28,28,0
+26,JPEG,clean,phone,+91 9881044392,+91 9881044392,1,0.0,0.0,+91 9881044392,+91 9881044392,1,0.0,0.0,14,14,0
+26,JPEG,clean,address,"House No. 263, Sector 26, Mumbai","House No. 263, Sector 26, Mumbai",1,0.0,0.0,"House No. 263, Sector 26, Mumbai","House No. 263, Sector 26, Mumbai",1,0.0,0.0,32,32,0
+26,JPEG,clean,blood_group,B-,B-,1,0.0,0.0,B-,B-,1,0.0,0.0,2,2,0
+26,JPEG,clean,university_name,Indira Gandhi College of Engineering,Indira Gandhi College of Engineering,1,0.0,0.0,Indira Gandhi College of Engineering,Indira Gandhi College of Engineering,1,0.0,0.0,36,36,0
+26,JPEG,clean,university_code,IGCE,IGCE,1,0.0,0.0,Indira Gandhi College of Engineering,Indira Gandhi College of Engineering,1,0.0,0.0,4,4,0
+26,JPEG,clean,issue_date,2024-04-27,2024-04-27,1,0.0,0.0,2024-04-27,2024-04-27,1,0.0,0.0,10,10,0
+26,JPEG,clean,cgpa,5.94,5.94,1,0.0,0.0,5.94,5.94,1,0.0,0.0,4,4,0
+26,JPEG,clean,document_type,certificate,certificate,1,0.0,0.0,certificate,certificate,1,0.0,0.0,11,11,0
+26,JPEG,clean,template_id,certificate_alpha,certificate_alpha,1,0.0,0.0,certificate_alpha,certificate_alpha,1,0.0,0.0,17,17,0
+26,JPEG,clean,locale,en_IN,en_IN,1,0.0,0.0,en_IN,en_IN,1,0.0,0.0,5,5,0
+27,JPEG,clean,student_name,Prashant Kulkarni,Prashant Kulkarni,1,0.0,0.0,Prashant Kulkarni,Prashant Kulkarni,1,0.0,0.0,17,17,0
+27,JPEG,clean,roll_number,2019EE000450,2019EE000450,1,0.0,0.0,2019EE000450,2019EE000450,1,0.0,0.0,12,12,0
+27,JPEG,clean,enrollment_number,EN201900450,EN201900450,1,0.0,0.0,EN201900450,EN201900450,1,0.0,0.0,11,11,0
+27,JPEG,clean,degree_name,Bachelor of Technology in Electrical Engineering,B.Tech in ECE,0,0.7708333333333334,0.7708333333333334,Bachelor of Technology in Electrical Engineering,Bachelor of Technology,0,0.5416666666666666,0.5416666666666666,48,13,0
+27,JPEG,clean,branch_name,Electrical Engineering,Electrical Engineering,1,0.0,0.0,Electrical Engineering,Electrical Engineering,1,0.0,0.0,22,22,0
+27,JPEG,clean,batch_years,2019 - 2023,2019 - 2023,1,0.0,0.0,2019 - 2023,2019 - 2023,1,0.0,0.0,11,11,0
+27,JPEG,clean,father_name,Akash Kulkarni,Akash Kulkarni,1,0.0,0.0,Akash Kulkarni,Akash Kulkarni,1,0.0,0.0,14,14,0
+27,JPEG,clean,mother_name,Anjali Kulkarni,Anjali Kulkarni,1,0.0,0.0,Anjali Kulkarni,Anjali Kulkarni,1,0.0,0.0,15,15,0
+27,JPEG,clean,date_of_birth,2003-09-19,2003/09/19,0,0.2,0.2,2003-09-19,2003-09-19,1,0.0,0.0,10,10,0
+27,JPEG,clean,email,prashant.kulkarni450@vtu.edu.in,prashant.kulkarni450@vtu.edu.in,1,0.0,0.0,prashant.kulkarni450@vtu.edu.in,prashant.kulkarni450@vtu.edu.in,1,0.0,0.0,31,31,0
+27,JPEG,clean,phone,+91 9861968328,+91 9861968328,1,0.0,0.0,+91 9861968328,+91 9861968328,1,0.0,0.0,14,14,0
+27,JPEG,clean,address,"House No. 38, Sector 49, New Delhi","House No. 38, Sector 49, New Delhi",1,0.0,0.0,"House No. 38, Sector 49, New Delhi","House No. 38, Sector 49, New Delhi",1,0.0,0.0,34,34,0
+27,JPEG,clean,blood_group,O-,O-,1,0.0,0.0,O-,O-,1,0.0,0.0,2,2,0
+27,JPEG,clean,university_name,Vivekananda Technical University,Vivekananda Technical University,1,0.0,0.0,Vivekananda Technical University,Vivekananda Technical University,1,0.0,0.0,32,32,0
+27,JPEG,clean,university_code,VTU,VTU,1,0.0,0.0,Vivekananda Technical University,Vivekananda Technical University,1,0.0,0.0,3,3,0
+27,JPEG,clean,issue_date,2023-12-21,2023/12/21,0,0.2,0.2,2023-12-21,2023-12-21,1,0.0,0.0,10,10,0
+27,JPEG,clean,cgpa,8.59,8.59 CGPA,0,1.25,1.25,8.59,8.59,1,0.0,0.0,4,9,0
+27,JPEG,clean,document_type,certificate,certificate,1,0.0,0.0,certificate,certificate,1,0.0,0.0,11,11,0
+27,JPEG,clean,template_id,certificate_alpha,certificate_alpha,1,0.0,0.0,certificate_alpha,certificate_alpha,1,0.0,0.0,17,17,0
+27,JPEG,clean,locale,en_IN,en_IN,1,0.0,0.0,en_IN,en_IN,1,0.0,0.0,5,5,0
+28,JPEG,clean,student_name,Harsh Patel,Harsh Patel,1,0.0,0.0,Harsh Patel,Harsh Patel,1,0.0,0.0,11,11,0
+28,JPEG,clean,roll_number,21BTME0584,21btme0584,0,0.4,0.4,21BTME0584,21BTME0584,1,0.0,0.0,10,10,0
+28,JPEG,clean,enrollment_number,EN202100584,en202100584,0,0.18181818181818182,0.18181818181818182,EN202100584,EN202100584,1,0.0,0.0,11,11,0
+28,JPEG,clean,degree_name,Bachelor of Technology in Mechanical Engineering,B.Tech in ECE,0,0.7916666666666666,0.7916666666666666,Bachelor of Technology in Mechanical Engineering,Bachelor of Technology,0,0.5416666666666666,0.5416666666666666,48,13,0
+28,JPEG,clean,branch_name,Mechanical Engineering,Mechanical Engineering,1,0.0,0.0,Mechanical Engineering,Mechanical Engineering,1,0.0,0.0,22,22,0
+28,JPEG,clean,batch_years,2021 - 2025,2021 - 2025,1,0.0,0.0,2021 - 2025,2021 - 2025,1,0.0,0.0,11,11,0
+28,JPEG,clean,father_name,Arjun Patel,Arjun Patel,1,0.0,0.0,Arjun Patel,Arjun Patel,1,0.0,0.0,11,11,0
+28,JPEG,clean,mother_name,Meera Patel,Meera Patel,1,0.0,0.0,Meera Patel,Meera Patel,1,0.0,0.0,11,11,0
+28,JPEG,clean,date_of_birth,2001-06-21,2001-06-21,1,0.0,0.0,2001-06-21,2001-06-21,1,0.0,0.0,10,10,0
+28,JPEG,clean,email,harsh.patel584@srit.edu.in,harsh.patel584@srit.edu.in,1,0.0,0.0,harsh.patel584@srit.edu.in,harsh.patel584@srit.edu.in,1,0.0,0.0,26,26,0
+28,JPEG,clean,phone,+91 9853586581,+91 985358658x,0,0.07142857142857142,0.07142857142857142,+91 9853586581,+91 985358658x,0,0.07142857142857142,0.07142857142857142,14,14,0
+28,JPEG,clean,address,"House No. 49, Sector 49, Bengaluru","House No. 49, Sector 49, Bengaluru",1,0.0,0.0,"House No. 49, Sector 49, Bengaluru","House No. 49, Sector 49, Bengaluru",1,0.0,0.0,34,34,0
+28,JPEG,clean,blood_group,O+,O+,1,0.0,0.0,O+,O+,1,0.0,0.0,2,2,0
+28,JPEG,clean,university_name,Sri Ramanujan Institute of Technology,Sri Ramanujan Institute of Technology,1,0.0,0.0,Sri Ramanujan Institute of Technology,Sri Ramanujan Institute of Technology,1,0.0,0.0,37,37,0
+28,JPEG,clean,university_code,SRIT,SRIT,1,0.0,0.0,Sri Ramanujan Institute of Technology,Sri Ramanujan Institute of Technology,1,0.0,0.0,4,4,0
+28,JPEG,clean,issue_date,2025-07-02,2025-07-02,1,0.0,0.0,2025-07-02,2025-07-02,1,0.0,0.0,10,10,0
+28,JPEG,clean,cgpa,8.65,8.65,1,0.0,0.0,8.65,8.65,1,0.0,0.0,4,4,0
+28,JPEG,clean,document_type,certificate,certificatx,0,0.09090909090909091,0.09090909090909091,certificate,certificatx,0,0.09090909090909091,0.09090909090909091,11,11,0
+28,JPEG,clean,template_id,certificate_alpha,certificate_alpha,1,0.0,0.0,certificate_alpha,certificate_alpha,1,0.0,0.0,17,17,0
+28,JPEG,clean,locale,en_IN,en_IN,1,0.0,0.0,en_IN,en_IN,1,0.0,0.0,5,5,0
+29,JPEG,clean,student_name,Siddharth Nair,Siddharth Nair,1,0.0,0.0,Siddharth Nair,Siddharth Nair,1,0.0,0.0,14,14,0
+29,JPEG,clean,roll_number,2018CE000529,2018CE000529,1,0.0,0.0,2018CE000529,2018CE000529,1,0.0,0.0,12,12,0
+29,JPEG,clean,enrollment_number,EN201800529,EN201800529,1,0.0,0.0,EN201800529,EN201800529,1,0.0,0.0,11,11,0
+29,JPEG,clean,degree_name,Bachelor of Technology in Civil Engineering,B.Tech in ECE,0,0.7674418604651163,0.7674418604651163,Bachelor of Technology in Civil Engineering,Bachelor of Technology,0,0.4883720930232558,0.4883720930232558,43,13,0
+29,JPEG,clean,branch_name,Civil Engineering,Civil Engineering,1,0.0,0.0,Civil Engineering,Civil Engineering,1,0.0,0.0,17,17,0
+29,JPEG,clean,batch_years,2018 - 2022,2018 - 2022,1,0.0,0.0,2018 - 2022,2018 - 2022,1,0.0,0.0,11,11,0
+29,JPEG,clean,father_name,Nikhil Nair,Nikhil Nair,1,0.0,0.0,Nikhil Nair,Nikhil Nair,1,0.0,0.0,11,11,0
+29,JPEG,clean,mother_name,Aditi Nair,Aditi Nair,1,0.0,0.0,Aditi Nair,Aditi Nair,1,0.0,0.0,10,10,0
+29,JPEG,clean,date_of_birth,2000-01-08,2000/01/08,0,0.2,0.2,2000-01-08,2000-01-08,1,0.0,0.0,10,10,0
+29,JPEG,clean,email,siddharth.nair529@igce.edu.in,siddharth.nair529@igce.edu.in,1,0.0,0.0,siddharth.nair529@igce.edu.in,siddharth.nair529@igce.edu.in,1,0.0,0.0,29,29,0
+29,JPEG,clean,phone,+91 9840480491,+91 9840480491,1,0.0,0.0,+91 9840480491,+91 9840480491,1,0.0,0.0,14,14,0
+29,JPEG,clean,address,"House No. 400, Sector 43, Mumbai","House No. 400, Sector 43, Mumbai",1,0.0,0.0,"House No. 400, Sector 43, Mumbai","House No. 400, Sector 43, Mumbai",1,0.0,0.0,32,32,0
+29,JPEG,clean,blood_group,AB+,AB+,1,0.0,0.0,AB+,AB+,1,0.0,0.0,3,3,0
+29,JPEG,clean,university_name,Indira Gandhi College of Engineering,Indira Gandhi College of Engineering,1,0.0,0.0,Indira Gandhi College of Engineering,Indira Gandhi College of Engineering,1,0.0,0.0,36,36,0
+29,JPEG,clean,university_code,IGCE,IGCE,1,0.0,0.0,Indira Gandhi College of Engineering,Indira Gandhi College of Engineering,1,0.0,0.0,4,4,0
+29,JPEG,clean,issue_date,2022-01-27,2022/01/27,0,0.2,0.2,2022-01-27,2022-01-27,1,0.0,0.0,10,10,0
+29,JPEG,clean,cgpa,8.5,8.5 CGPA,0,1.6666666666666667,1.6666666666666667,8.50,8.50,1,0.0,0.0,3,8,0
+29,JPEG,clean,document_type,certificate,certificate,1,0.0,0.0,certificate,certificate,1,0.0,0.0,11,11,0
+29,JPEG,clean,template_id,certificate_alpha,certificate_alpha,1,0.0,0.0,certificate_alpha,certificate_alpha,1,0.0,0.0,17,17,0
+29,JPEG,clean,locale,en_IN,en_IN,1,0.0,0.0,en_IN,en_IN,1,0.0,0.0,5,5,0
+30,JPEG,clean,student_name,Kavya Sharma,Kavya Sharma,1,0.0,0.0,Kavya Sharma,Kavya Sharma,1,0.0,0.0,12,12,0
+30,JPEG,clean,roll_number,2021ECE000187,2021ECE000187,1,0.0,0.0,2021ECE000187,2021ECE000187,1,0.0,0.0,13,13,0
+30,JPEG,clean,enrollment_number,EN202100187,EN202100187,1,0.0,0.0,EN202100187,EN202100187,1,0.0,0.0,11,11,0
+30,JPEG,clean,degree_name,Bachelor of Technology in Electronics and Communication Engineering,B.Tech in ECE,0,0.8208955223880597,0.8208955223880597,Bachelor of Technology in Electronics and Communication Engineering,Bachelor of Technology,0,0.6716417910447762,0.6716417910447762,67,13,0
+30,JPEG,clean,branch_name,Electronics and Communication Engineering,Electronics and Communication Engineering,1,0.0,0.0,Electronics and Communication Engineering,Electronics and Communication Engineering,1,0.0,0.0,41,41,0
+30,JPEG,clean,batch_years,2021 - 2025,2021 - 2025,1,0.0,0.0,2021 - 2025,2021 - 2025,1,0.0,0.0,11,11,0
+30,JPEG,clean,father_name,Tarun Sharma,Tarun Sharma,1,0.0,0.0,Tarun Sharma,Tarun Sharma,1,0.0,0.0,12,12,0
+30,JPEG,clean,mother_name,Sonali Sharma,Sonali Sharma,1,0.0,0.0,Sonali Sharma,Sonali Sharma,1,0.0,0.0,13,13,0
+30,JPEG,clean,date_of_birth,2004-05-30,2004-05-30,1,0.0,0.0,2004-05-30,2004-05-30,1,0.0,0.0,10,10,0
+30,JPEG,clean,email,kavya.sharma187@igce.edu.in,kavya.sharma187@igce.edu.in,1,0.0,0.0,kavya.sharma187@igce.edu.in,kavya.sharma187@igce.edu.in,1,0.0,0.0,27,27,0
+30,JPEG,clean,phone,+91 9888717099,+91 9888717099,1,0.0,0.0,+91 9888717099,+91 9888717099,1,0.0,0.0,14,14,0
+30,JPEG,clean,address,"House No. 314, Sector 26, Mumbai","House No. 314, Sector 26, Mumbai",1,0.0,0.0,"House No. 314, Sector 26, Mumbai","House No. 314, Sector 26, Mumbai",1,0.0,0.0,32,32,0
+30,JPEG,clean,blood_group,O-,O-,1,0.0,0.0,O-,O-,1,0.0,0.0,2,2,0
+30,JPEG,clean,university_name,Indira Gandhi College of Engineering,Indira Gandhi College of Engineering,1,0.0,0.0,Indira Gandhi College of Engineering,Indira Gandhi College of Engineering,1,0.0,0.0,36,36,0
+30,JPEG,clean,university_code,IGCE,IGCE,1,0.0,0.0,Indira Gandhi College of Engineering,Indira Gandhi College of Engineering,1,0.0,0.0,4,4,0
+30,JPEG,clean,issue_date,2025-06-03,2025-06-03,1,0.0,0.0,2025-06-03,2025-06-03,1,0.0,0.0,10,10,0
+30,JPEG,clean,cgpa,7.31,7.31,1,0.0,0.0,7.31,7.31,1,0.0,0.0,4,4,0
+30,JPEG,clean,document_type,certificate,certificate,1,0.0,0.0,certificate,certificate,1,0.0,0.0,11,11,0
+30,JPEG,clean,template_id,certificate_alpha,certificate_alpha,1,0.0,0.0,certificate_alpha,certificate_alpha,1,0.0,0.0,17,17,0
+30,JPEG,clean,locale,en_IN,en_IN,1,0.0,0.0,en_IN,en_IN,1,0.0,0.0,5,5,0
+31,JPEG,scanner_copy,student_name,Lakshay Sinha,Lakshay Sinha,1,0.0,0.0,Lakshay Sinha,Lakshay Sinha,1,0.0,0.0,13,13,0
+31,JPEG,scanner_copy,roll_number,2020ECE000725,2020ece000725,0,0.23076923076923078,0.23076923076923078,2020ECE000725,2020ECE000725,1,0.0,0.0,13,13,0
+31,JPEG,scanner_copy,enrollment_number,EN202000725,en202000725,0,0.18181818181818182,0.18181818181818182,EN202000725,EN202000725,1,0.0,0.0,11,11,0
+31,JPEG,scanner_copy,degree_name,Bachelor of Technology in Electronics and Communication Engineering,B.Tech in ECE,0,0.8208955223880597,0.8208955223880597,Bachelor of Technology in Electronics and Communication Engineering,Bachelor of Technology,0,0.6716417910447762,0.6716417910447762,67,13,0
+31,JPEG,scanner_copy,branch_name,Electronics and Communication Engineering,Electronics and Communication Engineering,1,0.0,0.0,Electronics and Communication Engineering,Electronics and Communication Engineering,1,0.0,0.0,41,41,0
+31,JPEG,scanner_copy,batch_years,2020 - 2024,2020 - 2024,1,0.0,0.0,2020 - 2024,2020 - 2024,1,0.0,0.0,11,11,0
+31,JPEG,scanner_copy,father_name,Deepak Sinha,Deepak Sinha,1,0.0,0.0,Deepak Sinha,Deepak Sinha,1,0.0,0.0,12,12,0
+31,JPEG,scanner_copy,mother_name,Surbhi Sinha,Surbhi Sinha,1,0.0,0.0,Surbhi Sinha,Surbhi Sinha,1,0.0,0.0,12,12,0
+31,JPEG,scanner_copy,date_of_birth,2001-12-15,2001/12/15,0,0.2,0.2,2001-12-15,2001-12-15,1,0.0,0.0,10,10,0
+31,JPEG,scanner_copy,email,lakshay.sinha725@igce.edu.in,lakshay.sinha725@igce.edu.in,1,0.0,0.0,lakshay.sinha725@igce.edu.in,lakshay.sinha725@igce.edu.in,1,0.0,0.0,28,28,0
+31,JPEG,scanner_copy,phone,+91 9881044392,+91 9881044392,1,0.0,0.0,+91 9881044392,+91 9881044392,1,0.0,0.0,14,14,0
+31,JPEG,scanner_copy,address,"House No. 263, Sector 26, Mumbai","House No. 263, Sector 26, Mumbai",1,0.0,0.0,"House No. 263, Sector 26, Mumbai","House No. 263, Sector 26, Mumbai",1,0.0,0.0,32,32,0
+31,JPEG,scanner_copy,blood_group,B-,B-,1,0.0,0.0,B-,B-,1,0.0,0.0,2,2,0
+31,JPEG,scanner_copy,university_name,Indira Gandhi College of Engineering,Indira Gandhi College of Engineering,1,0.0,0.0,Indira Gandhi College of Engineering,Indira Gandhi College of Engineering,1,0.0,0.0,36,36,0
+31,JPEG,scanner_copy,university_code,IGCE,IGCE,1,0.0,0.0,Indira Gandhi College of Engineering,Indira Gandhi College of Engineering,1,0.0,0.0,4,4,0
+31,JPEG,scanner_copy,issue_date,2024-04-27,2024/04/27,0,0.2,0.2,2024-04-27,2024-04-27,1,0.0,0.0,10,10,0
+31,JPEG,scanner_copy,cgpa,5.94,5.94 CGPA,0,1.25,1.25,5.94,5.94,1,0.0,0.0,4,9,0
+31,JPEG,scanner_copy,document_type,certificate,certificate,1,0.0,0.0,certificate,certificate,1,0.0,0.0,11,11,0
+31,JPEG,scanner_copy,template_id,certificate_alpha,certificate_alpha,1,0.0,0.0,certificate_alpha,certificate_alpha,1,0.0,0.0,17,17,0
+31,JPEG,scanner_copy,locale,en_IN,en_IN,1,0.0,0.0,en_IN,en_IN,1,0.0,0.0,5,5,0
+32,JPEG,scanner_copy,student_name,Prashant Kulkarni,Prashant Kulkarni,1,0.0,0.0,Prashant Kulkarni,Prashant Kulkarni,1,0.0,0.0,17,17,0
+32,JPEG,scanner_copy,roll_number,2019EE000450,2019EE000450,1,0.0,0.0,2019EE000450,2019EE000450,1,0.0,0.0,12,12,0
+32,JPEG,scanner_copy,enrollment_number,EN201900450,EN201900450,1,0.0,0.0,EN201900450,EN201900450,1,0.0,0.0,11,11,0
+32,JPEG,scanner_copy,degree_name,Bachelor of Technology in Electrical Engineering,B.Tech in ECE,0,0.7708333333333334,0.7708333333333334,Bachelor of Technology in Electrical Engineering,Bachelor of Technology,0,0.5416666666666666,0.5416666666666666,48,13,0
+32,JPEG,scanner_copy,branch_name,Electrical Engineering,Electrical Engineering,1,0.0,0.0,Electrical Engineering,Electrical Engineering,1,0.0,0.0,22,22,0
+32,JPEG,scanner_copy,batch_years,2019 - 2023,2019 - 2023,1,0.0,0.0,2019 - 2023,2019 - 2023,1,0.0,0.0,11,11,0
+32,JPEG,scanner_copy,father_name,Akash Kulkarni,Akash Kulkarni,1,0.0,0.0,Akash Kulkarni,Akash Kulkarni,1,0.0,0.0,14,14,0
+32,JPEG,scanner_copy,mother_name,Anjali Kulkarni,Anjali Kulkarni,1,0.0,0.0,Anjali Kulkarni,Anjali Kulkarni,1,0.0,0.0,15,15,0
+32,JPEG,scanner_copy,date_of_birth,2003-09-19,2003-09-19,1,0.0,0.0,2003-09-19,2003-09-19,1,0.0,0.0,10,10,0
+32,JPEG,scanner_copy,email,prashant.kulkarni450@vtu.edu.in,prashant.kulkarni450@vtu.edu.in,1,0.0,0.0,prashant.kulkarni450@vtu.edu.in,prashant.kulkarni450@vtu.edu.in,1,0.0,0.0,31,31,0
+32,JPEG,scanner_copy,phone,+91 9861968328,+91 9861968328,1,0.0,0.0,+91 9861968328,+91 9861968328,1,0.0,0.0,14,14,0
+32,JPEG,scanner_copy,address,"House No. 38, Sector 49, New Delhi","House No. 38, Sector 49, New Delhi",1,0.0,0.0,"House No. 38, Sector 49, New Delhi","House No. 38, Sector 49, New Delhi",1,0.0,0.0,34,34,0
+32,JPEG,scanner_copy,blood_group,O-,O-,1,0.0,0.0,O-,O-,1,0.0,0.0,2,2,0
+32,JPEG,scanner_copy,university_name,Vivekananda Technical University,Vivekananda Technical University,1,0.0,0.0,Vivekananda Technical University,Vivekananda Technical University,1,0.0,0.0,32,32,0
+32,JPEG,scanner_copy,university_code,VTU,VTU,1,0.0,0.0,Vivekananda Technical University,Vivekananda Technical University,1,0.0,0.0,3,3,0
+32,JPEG,scanner_copy,issue_date,2023-12-21,2023-12-21,1,0.0,0.0,2023-12-21,2023-12-21,1,0.0,0.0,10,10,0
+32,JPEG,scanner_copy,cgpa,8.59,8.59,1,0.0,0.0,8.59,8.59,1,0.0,0.0,4,4,0
+32,JPEG,scanner_copy,document_type,certificate,certificate,1,0.0,0.0,certificate,certificate,1,0.0,0.0,11,11,0
+32,JPEG,scanner_copy,template_id,certificate_alpha,certificate_alpha,1,0.0,0.0,certificate_alpha,certificate_alpha,1,0.0,0.0,17,17,0
+32,JPEG,scanner_copy,locale,en_IN,en_IN,1,0.0,0.0,en_IN,en_IN,1,0.0,0.0,5,5,0
+33,JPEG,scanner_copy,student_name,Harsh Patel,Harsh Patel,1,0.0,0.0,Harsh Patel,Harsh Patel,1,0.0,0.0,11,11,0
+33,JPEG,scanner_copy,roll_number,21BTME0584,21BTME0584,1,0.0,0.0,21BTME0584,21BTME0584,1,0.0,0.0,10,10,0
+33,JPEG,scanner_copy,enrollment_number,EN202100584,EN202100584,1,0.0,0.0,EN202100584,EN202100584,1,0.0,0.0,11,11,0
+33,JPEG,scanner_copy,degree_name,Bachelor of Technology in Mechanical Engineering,B.Tech in ECE,0,0.7916666666666666,0.7916666666666666,Bachelor of Technology in Mechanical Engineering,Bachelor of Technology,0,0.5416666666666666,0.5416666666666666,48,13,0
+33,JPEG,scanner_copy,branch_name,Mechanical Engineering,Mechanical Engineering,1,0.0,0.0,Mechanical Engineering,Mechanical Engineering,1,0.0,0.0,22,22,0
+33,JPEG,scanner_copy,batch_years,2021 - 2025,2021 - 2025,1,0.0,0.0,2021 - 2025,2021 - 2025,1,0.0,0.0,11,11,0
+33,JPEG,scanner_copy,father_name,Arjun Patel,Arjun Patel,1,0.0,0.0,Arjun Patel,Arjun Patel,1,0.0,0.0,11,11,0
+33,JPEG,scanner_copy,mother_name,Meera Patel,Meera Patel,1,0.0,0.0,Meera Patel,Meera Patel,1,0.0,0.0,11,11,0
+33,JPEG,scanner_copy,date_of_birth,2001-06-21,2001/06/21,0,0.2,0.2,2001-06-21,2001-06-21,1,0.0,0.0,10,10,0
+33,JPEG,scanner_copy,email,harsh.patel584@srit.edu.in,harsh.patel584@srit.edu.in,1,0.0,0.0,harsh.patel584@srit.edu.in,harsh.patel584@srit.edu.in,1,0.0,0.0,26,26,0
+33,JPEG,scanner_copy,phone,+91 9853586581,+91 9853586581,1,0.0,0.0,+91 9853586581,+91 9853586581,1,0.0,0.0,14,14,0
+33,JPEG,scanner_copy,address,"House No. 49, Sector 49, Bengaluru","House No. 49, Sector 49, Bengaluru",1,0.0,0.0,"House No. 49, Sector 49, Bengaluru","House No. 49, Sector 49, Bengaluru",1,0.0,0.0,34,34,0
+33,JPEG,scanner_copy,blood_group,O+,O+,1,0.0,0.0,O+,O+,1,0.0,0.0,2,2,0
+33,JPEG,scanner_copy,university_name,Sri Ramanujan Institute of Technology,Sri Ramanujan Institute of Technology,1,0.0,0.0,Sri Ramanujan Institute of Technology,Sri Ramanujan Institute of Technology,1,0.0,0.0,37,37,0
+33,JPEG,scanner_copy,university_code,SRIT,SRIx,0,0.25,0.25,Sri Ramanujan Institute of Technology,SRIx,0,0.918918918918919,0.918918918918919,4,4,0
+33,JPEG,scanner_copy,issue_date,2025-07-02,2025/07/02,0,0.2,0.2,2025-07-02,2025-07-02,1,0.0,0.0,10,10,0
+33,JPEG,scanner_copy,cgpa,8.65,8.65 CGPA,0,1.25,1.25,8.65,8.65,1,0.0,0.0,4,9,0
+33,JPEG,scanner_copy,document_type,certificate,certificate,1,0.0,0.0,certificate,certificate,1,0.0,0.0,11,11,0
+33,JPEG,scanner_copy,template_id,certificate_alpha,certificate_alpha,1,0.0,0.0,certificate_alpha,certificate_alpha,1,0.0,0.0,17,17,0
+33,JPEG,scanner_copy,locale,en_IN,en_IN,1,0.0,0.0,en_IN,en_IN,1,0.0,0.0,5,5,0
+34,JPEG,scanner_copy,student_name,Siddharth Nair,Siddharth Nair,1,0.0,0.0,Siddharth Nair,Siddharth Nair,1,0.0,0.0,14,14,0
+34,JPEG,scanner_copy,roll_number,2018CE000529,2018ce000529,0,0.16666666666666666,0.16666666666666666,2018CE000529,2018CE000529,1,0.0,0.0,12,12,0
+34,JPEG,scanner_copy,enrollment_number,EN201800529,en201800529,0,0.18181818181818182,0.18181818181818182,EN201800529,EN201800529,1,0.0,0.0,11,11,0
+34,JPEG,scanner_copy,degree_name,Bachelor of Technology in Civil Engineering,B.Tech in ECE,0,0.7674418604651163,0.7674418604651163,Bachelor of Technology in Civil Engineering,Bachelor of Technology,0,0.4883720930232558,0.4883720930232558,43,13,0
+34,JPEG,scanner_copy,branch_name,Civil Engineering,Civil Engineering,1,0.0,0.0,Civil Engineering,Civil Engineering,1,0.0,0.0,17,17,0
+34,JPEG,scanner_copy,batch_years,2018 - 2022,2018 - 2022,1,0.0,0.0,2018 - 2022,2018 - 2022,1,0.0,0.0,11,11,0
+34,JPEG,scanner_copy,father_name,Nikhil Nair,Nikhil Nair,1,0.0,0.0,Nikhil Nair,Nikhil Nair,1,0.0,0.0,11,11,0
+34,JPEG,scanner_copy,mother_name,Aditi Nair,Aditi Nair,1,0.0,0.0,Aditi Nair,Aditi Nair,1,0.0,0.0,10,10,0
+34,JPEG,scanner_copy,date_of_birth,2000-01-08,2000-01-08,1,0.0,0.0,2000-01-08,2000-01-08,1,0.0,0.0,10,10,0
+34,JPEG,scanner_copy,email,siddharth.nair529@igce.edu.in,siddharth.nair529@igce.edu.in,1,0.0,0.0,siddharth.nair529@igce.edu.in,siddharth.nair529@igce.edu.in,1,0.0,0.0,29,29,0
+34,JPEG,scanner_copy,phone,+91 9840480491,+91 9840480491,1,0.0,0.0,+91 9840480491,+91 9840480491,1,0.0,0.0,14,14,0
+34,JPEG,scanner_copy,address,"House No. 400, Sector 43, Mumbai","House No. 400, Sector 43, Mumbai",1,0.0,0.0,"House No. 400, Sector 43, Mumbai","House No. 400, Sector 43, Mumbai",1,0.0,0.0,32,32,0
+34,JPEG,scanner_copy,blood_group,AB+,AB+,1,0.0,0.0,AB+,AB+,1,0.0,0.0,3,3,0
+34,JPEG,scanner_copy,university_name,Indira Gandhi College of Engineering,Indira Gandhi College of Engineering,1,0.0,0.0,Indira Gandhi College of Engineering,Indira Gandhi College of Engineering,1,0.0,0.0,36,36,0
+34,JPEG,scanner_copy,university_code,IGCE,IGCE,1,0.0,0.0,Indira Gandhi College of Engineering,Indira Gandhi College of Engineering,1,0.0,0.0,4,4,0
+34,JPEG,scanner_copy,issue_date,2022-01-27,2022-01-27,1,0.0,0.0,2022-01-27,2022-01-27,1,0.0,0.0,10,10,0
+34,JPEG,scanner_copy,cgpa,8.5,8.5,1,0.0,0.0,8.50,8.50,1,0.0,0.0,3,3,0
+34,JPEG,scanner_copy,document_type,certificate,certificate,1,0.0,0.0,certificate,certificate,1,0.0,0.0,11,11,0
+34,JPEG,scanner_copy,template_id,certificate_alpha,certificate_alpha,1,0.0,0.0,certificate_alpha,certificate_alpha,1,0.0,0.0,17,17,0
+34,JPEG,scanner_copy,locale,en_IN,en_IN,1,0.0,0.0,en_IN,en_IN,1,0.0,0.0,5,5,0
+35,JPEG,scanner_copy,student_name,Kavya Sharma,Kavya Sharma,1,0.0,0.0,Kavya Sharma,Kavya Sharma,1,0.0,0.0,12,12,0
+35,JPEG,scanner_copy,roll_number,2021ECE000187,2021ECE000187,1,0.0,0.0,2021ECE000187,2021ECE000187,1,0.0,0.0,13,13,0
+35,JPEG,scanner_copy,enrollment_number,EN202100187,EN202100187,1,0.0,0.0,EN202100187,EN202100187,1,0.0,0.0,11,11,0
+35,JPEG,scanner_copy,degree_name,Bachelor of Technology in Electronics and Communication Engineering,B.Tech in ECE,0,0.8208955223880597,0.8208955223880597,Bachelor of Technology in Electronics and Communication Engineering,Bachelor of Technology,0,0.6716417910447762,0.6716417910447762,67,13,0
+35,JPEG,scanner_copy,branch_name,Electronics and Communication Engineering,Electronics and Communication Engineering,1,0.0,0.0,Electronics and Communication Engineering,Electronics and Communication Engineering,1,0.0,0.0,41,41,0
+35,JPEG,scanner_copy,batch_years,2021 - 2025,2021 - 2025,1,0.0,0.0,2021 - 2025,2021 - 2025,1,0.0,0.0,11,11,0
+35,JPEG,scanner_copy,father_name,Tarun Sharma,Tarun Sharma,1,0.0,0.0,Tarun Sharma,Tarun Sharma,1,0.0,0.0,12,12,0
+35,JPEG,scanner_copy,mother_name,Sonali Sharma,Sonali Sharma,1,0.0,0.0,Sonali Sharma,Sonali Sharma,1,0.0,0.0,13,13,0
+35,JPEG,scanner_copy,date_of_birth,2004-05-30,2004/05/30,0,0.2,0.2,2004-05-30,2004-05-30,1,0.0,0.0,10,10,0
+35,JPEG,scanner_copy,email,kavya.sharma187@igce.edu.in,kavya.sharma187@igce.edu.ix,0,0.037037037037037035,0.037037037037037035,kavya.sharma187@igce.edu.in,kavya.sharma187@igce.edu.ix,0,0.037037037037037035,0.037037037037037035,27,27,0
+35,JPEG,scanner_copy,phone,+91 9888717099,+91 9888717099,1,0.0,0.0,+91 9888717099,+91 9888717099,1,0.0,0.0,14,14,0
+35,JPEG,scanner_copy,address,"House No. 314, Sector 26, Mumbai","House No. 314, Sector 26, Mumbai",1,0.0,0.0,"House No. 314, Sector 26, Mumbai","House No. 314, Sector 26, Mumbai",1,0.0,0.0,32,32,0
+35,JPEG,scanner_copy,blood_group,O-,O-,1,0.0,0.0,O-,O-,1,0.0,0.0,2,2,0
+35,JPEG,scanner_copy,university_name,Indira Gandhi College of Engineering,Indira Gandhi College of Engineering,1,0.0,0.0,Indira Gandhi College of Engineering,Indira Gandhi College of Engineering,1,0.0,0.0,36,36,0
+35,JPEG,scanner_copy,university_code,IGCE,IGCE,1,0.0,0.0,Indira Gandhi College of Engineering,Indira Gandhi College of Engineering,1,0.0,0.0,4,4,0
+35,JPEG,scanner_copy,issue_date,2025-06-03,2025/06/03,0,0.2,0.2,2025-06-03,2025-06-03,1,0.0,0.0,10,10,0
+35,JPEG,scanner_copy,cgpa,7.31,7.31 CGPA,0,1.25,1.25,7.31,7.31,1,0.0,0.0,4,9,0
+35,JPEG,scanner_copy,document_type,certificate,certificate,1,0.0,0.0,certificate,certificate,1,0.0,0.0,11,11,0
+35,JPEG,scanner_copy,template_id,certificate_alpha,certificate_alpha,1,0.0,0.0,certificate_alpha,certificate_alpha,1,0.0,0.0,17,17,0
+35,JPEG,scanner_copy,locale,en_IN,en_IN,1,0.0,0.0,en_IN,en_IN,1,0.0,0.0,5,5,0
+36,JPEG,mobile_camera,student_name,Lakshay Sinha,Lakshay Sinha,1,0.0,0.0,Lakshay Sinha,Lakshay Sinha,1,0.0,0.0,13,13,0
+36,JPEG,mobile_camera,roll_number,2020ECE000725,2020ECE000725,1,0.0,0.0,2020ECE000725,2020ECE000725,1,0.0,0.0,13,13,0
+36,JPEG,mobile_camera,enrollment_number,EN202000725,EN202000725,1,0.0,0.0,EN202000725,EN202000725,1,0.0,0.0,11,11,0
+36,JPEG,mobile_camera,degree_name,Bachelor of Technology in Electronics and Communication Engineering,B.Tech in ECE,0,0.8208955223880597,0.8208955223880597,Bachelor of Technology in Electronics and Communication Engineering,Bachelor of Technology,0,0.6716417910447762,0.6716417910447762,67,13,0
+36,JPEG,mobile_camera,branch_name,Electronics and Communication Engineering,Electronics and Communication Engineering,1,0.0,0.0,Electronics and Communication Engineering,Electronics and Communication Engineering,1,0.0,0.0,41,41,0
+36,JPEG,mobile_camera,batch_years,2020 - 2024,2020 - 2024,1,0.0,0.0,2020 - 2024,2020 - 2024,1,0.0,0.0,11,11,0
+36,JPEG,mobile_camera,father_name,Deepak Sinha,Deepak Sinha,1,0.0,0.0,Deepak Sinha,Deepak Sinha,1,0.0,0.0,12,12,0
+36,JPEG,mobile_camera,mother_name,Surbhi Sinha,Surbhi Sinha,1,0.0,0.0,Surbhi Sinha,Surbhi Sinha,1,0.0,0.0,12,12,0
+36,JPEG,mobile_camera,date_of_birth,2001-12-15,2001-12-15,1,0.0,0.0,2001-12-15,2001-12-15,1,0.0,0.0,10,10,0
+36,JPEG,mobile_camera,email,lakshay.sinha725@igce.edu.in,lakshay.sinha725@igce.edu.in,1,0.0,0.0,lakshay.sinha725@igce.edu.in,lakshay.sinha725@igce.edu.in,1,0.0,0.0,28,28,0
+36,JPEG,mobile_camera,phone,+91 9881044392,+91 9881044392,1,0.0,0.0,+91 9881044392,+91 9881044392,1,0.0,0.0,14,14,0
+36,JPEG,mobile_camera,address,"House No. 263, Sector 26, Mumbai","House No. 263, Sector 26, Mumbai",1,0.0,0.0,"House No. 263, Sector 26, Mumbai","House No. 263, Sector 26, Mumbai",1,0.0,0.0,32,32,0
+36,JPEG,mobile_camera,blood_group,B-,B-,1,0.0,0.0,B-,B-,1,0.0,0.0,2,2,0
+36,JPEG,mobile_camera,university_name,Indira Gandhi College of Engineering,Indira Gandhi College of Engineering,1,0.0,0.0,Indira Gandhi College of Engineering,Indira Gandhi College of Engineering,1,0.0,0.0,36,36,0
+36,JPEG,mobile_camera,university_code,IGCE,IGCE,1,0.0,0.0,Indira Gandhi College of Engineering,Indira Gandhi College of Engineering,1,0.0,0.0,4,4,0
+36,JPEG,mobile_camera,issue_date,2024-04-27,2024-04-27,1,0.0,0.0,2024-04-27,2024-04-27,1,0.0,0.0,10,10,0
+36,JPEG,mobile_camera,cgpa,5.94,5.94,1,0.0,0.0,5.94,5.94,1,0.0,0.0,4,4,0
+36,JPEG,mobile_camera,document_type,certificate,certificate,1,0.0,0.0,certificate,certificate,1,0.0,0.0,11,11,0
+36,JPEG,mobile_camera,template_id,certificate_alpha,certificate_alpha,1,0.0,0.0,certificate_alpha,certificate_alpha,1,0.0,0.0,17,17,0
+36,JPEG,mobile_camera,locale,en_IN,en_IN,1,0.0,0.0,en_IN,en_IN,1,0.0,0.0,5,5,0
+37,JPEG,mobile_camera,student_name,Prashant Kulkarni,Prashant Kulkarni,1,0.0,0.0,Prashant Kulkarni,Prashant Kulkarni,1,0.0,0.0,17,17,0
+37,JPEG,mobile_camera,roll_number,2019EE000450,2019ee000450,0,0.16666666666666666,0.16666666666666666,2019EE000450,2019EE000450,1,0.0,0.0,12,12,0
+37,JPEG,mobile_camera,enrollment_number,EN201900450,en201900450,0,0.18181818181818182,0.18181818181818182,EN201900450,EN201900450,1,0.0,0.0,11,11,0
+37,JPEG,mobile_camera,degree_name,Bachelor of Technology in Electrical Engineering,B.Tech in ECE,0,0.7708333333333334,0.7708333333333334,Bachelor of Technology in Electrical Engineering,Bachelor of Technology,0,0.5416666666666666,0.5416666666666666,48,13,0
+37,JPEG,mobile_camera,branch_name,Electrical Engineering,Electrical Engineering,1,0.0,0.0,Electrical Engineering,Electrical Engineering,1,0.0,0.0,22,22,0
+37,JPEG,mobile_camera,batch_years,2019 - 2023,2019 - 2023,1,0.0,0.0,2019 - 2023,2019 - 2023,1,0.0,0.0,11,11,0
+37,JPEG,mobile_camera,father_name,Akash Kulkarni,Akash Kulkarnx,0,0.07142857142857142,0.07142857142857142,Akash Kulkarni,Akash Kulkarnx,0,0.07142857142857142,0.07142857142857142,14,14,0
+37,JPEG,mobile_camera,mother_name,Anjali Kulkarni,Anjali Kulkarni,1,0.0,0.0,Anjali Kulkarni,Anjali Kulkarni,1,0.0,0.0,15,15,0
+37,JPEG,mobile_camera,date_of_birth,2003-09-19,2003/09/19,0,0.2,0.2,2003-09-19,2003-09-19,1,0.0,0.0,10,10,0
+37,JPEG,mobile_camera,email,prashant.kulkarni450@vtu.edu.in,prashant.kulkarni450@vtu.edu.in,1,0.0,0.0,prashant.kulkarni450@vtu.edu.in,prashant.kulkarni450@vtu.edu.in,1,0.0,0.0,31,31,0
+37,JPEG,mobile_camera,phone,+91 9861968328,+91 9861968328,1,0.0,0.0,+91 9861968328,+91 9861968328,1,0.0,0.0,14,14,0
+37,JPEG,mobile_camera,address,"House No. 38, Sector 49, New Delhi","House No. 38, Sector 49, New Delhx",0,0.029411764705882353,0.029411764705882353,"House No. 38, Sector 49, New Delhi","House No. 38, Sector 49, New Delhx",0,0.029411764705882353,0.029411764705882353,34,34,0
+37,JPEG,mobile_camera,blood_group,O-,O-,1,0.0,0.0,O-,O-,1,0.0,0.0,2,2,0
+37,JPEG,mobile_camera,university_name,Vivekananda Technical University,Vivekananda Technical University,1,0.0,0.0,Vivekananda Technical University,Vivekananda Technical University,1,0.0,0.0,32,32,0
+37,JPEG,mobile_camera,university_code,VTU,VTU,1,0.0,0.0,Vivekananda Technical University,Vivekananda Technical University,1,0.0,0.0,3,3,0
+37,JPEG,mobile_camera,issue_date,2023-12-21,2023/12/21,0,0.2,0.2,2023-12-21,2023-12-21,1,0.0,0.0,10,10,0
+37,JPEG,mobile_camera,cgpa,8.59,8.59 CGPA,0,1.25,1.25,8.59,8.59,1,0.0,0.0,4,9,0
+37,JPEG,mobile_camera,document_type,certificate,certificate,1,0.0,0.0,certificate,certificate,1,0.0,0.0,11,11,0
+37,JPEG,mobile_camera,template_id,certificate_alpha,certificate_alpha,1,0.0,0.0,certificate_alpha,certificate_alpha,1,0.0,0.0,17,17,0
+37,JPEG,mobile_camera,locale,en_IN,en_IN,1,0.0,0.0,en_IN,en_IN,1,0.0,0.0,5,5,0
+38,JPEG,mobile_camera,student_name,Harsh Patel,Harsh Patel,1,0.0,0.0,Harsh Patel,Harsh Patel,1,0.0,0.0,11,11,0
+38,JPEG,mobile_camera,roll_number,21BTME0584,21BTME0584,1,0.0,0.0,21BTME0584,21BTME0584,1,0.0,0.0,10,10,0
+38,JPEG,mobile_camera,enrollment_number,EN202100584,EN202100584,1,0.0,0.0,EN202100584,EN202100584,1,0.0,0.0,11,11,0
+38,JPEG,mobile_camera,degree_name,Bachelor of Technology in Mechanical Engineering,B.Tech in ECE,0,0.7916666666666666,0.7916666666666666,Bachelor of Technology in Mechanical Engineering,Bachelor of Technology,0,0.5416666666666666,0.5416666666666666,48,13,0
+38,JPEG,mobile_camera,branch_name,Mechanical Engineering,Mechanical Engineering,1,0.0,0.0,Mechanical Engineering,Mechanical Engineering,1,0.0,0.0,22,22,0
+38,JPEG,mobile_camera,batch_years,2021 - 2025,2021 - 2025,1,0.0,0.0,2021 - 2025,2021 - 2025,1,0.0,0.0,11,11,0
+38,JPEG,mobile_camera,father_name,Arjun Patel,Arjun Patex,0,0.09090909090909091,0.09090909090909091,Arjun Patel,Arjun Patex,0,0.09090909090909091,0.09090909090909091,11,11,0
+38,JPEG,mobile_camera,mother_name,Meera Patel,Meera Patel,1,0.0,0.0,Meera Patel,Meera Patel,1,0.0,0.0,11,11,0
+38,JPEG,mobile_camera,date_of_birth,2001-06-21,2001-06-21,1,0.0,0.0,2001-06-21,2001-06-21,1,0.0,0.0,10,10,0
+38,JPEG,mobile_camera,email,harsh.patel584@srit.edu.in,harsh.patel584@srit.edu.in,1,0.0,0.0,harsh.patel584@srit.edu.in,harsh.patel584@srit.edu.in,1,0.0,0.0,26,26,0
+38,JPEG,mobile_camera,phone,+91 9853586581,+91 9853586581,1,0.0,0.0,+91 9853586581,+91 9853586581,1,0.0,0.0,14,14,0
+38,JPEG,mobile_camera,address,"House No. 49, Sector 49, Bengaluru","House No. 49, Sector 49, Bengalurx",0,0.029411764705882353,0.029411764705882353,"House No. 49, Sector 49, Bengaluru","House No. 49, Sector 49, Bengalurx",0,0.029411764705882353,0.029411764705882353,34,34,0
+38,JPEG,mobile_camera,blood_group,O+,O+,1,0.0,0.0,O+,O+,1,0.0,0.0,2,2,0
+38,JPEG,mobile_camera,university_name,Sri Ramanujan Institute of Technology,Sri Ramanujan Institute of Technology,1,0.0,0.0,Sri Ramanujan Institute of Technology,Sri Ramanujan Institute of Technology,1,0.0,0.0,37,37,0
+38,JPEG,mobile_camera,university_code,SRIT,SRIT,1,0.0,0.0,Sri Ramanujan Institute of Technology,Sri Ramanujan Institute of Technology,1,0.0,0.0,4,4,0
+38,JPEG,mobile_camera,issue_date,2025-07-02,2025-07-02,1,0.0,0.0,2025-07-02,2025-07-02,1,0.0,0.0,10,10,0
+38,JPEG,mobile_camera,cgpa,8.65,8.65,1,0.0,0.0,8.65,8.65,1,0.0,0.0,4,4,0
+38,JPEG,mobile_camera,document_type,certificate,certificate,1,0.0,0.0,certificate,certificate,1,0.0,0.0,11,11,0
+38,JPEG,mobile_camera,template_id,certificate_alpha,certificate_alpha,1,0.0,0.0,certificate_alpha,certificate_alpha,1,0.0,0.0,17,17,0
+38,JPEG,mobile_camera,locale,en_IN,en_IN,1,0.0,0.0,en_IN,en_IN,1,0.0,0.0,5,5,0
+39,JPEG,mobile_camera,student_name,Siddharth Nair,Siddharth Nair,1,0.0,0.0,Siddharth Nair,Siddharth Nair,1,0.0,0.0,14,14,0
+39,JPEG,mobile_camera,roll_number,2018CE000529,2018CE000529,1,0.0,0.0,2018CE000529,2018CE000529,1,0.0,0.0,12,12,0
+39,JPEG,mobile_camera,enrollment_number,EN201800529,EN201800529,1,0.0,0.0,EN201800529,EN201800529,1,0.0,0.0,11,11,0
+39,JPEG,mobile_camera,degree_name,Bachelor of Technology in Civil Engineering,B.Tech in ECE,0,0.7674418604651163,0.7674418604651163,Bachelor of Technology in Civil Engineering,Bachelor of Technology,0,0.4883720930232558,0.4883720930232558,43,13,0
+39,JPEG,mobile_camera,branch_name,Civil Engineering,Civil Engineering,1,0.0,0.0,Civil Engineering,Civil Engineering,1,0.0,0.0,17,17,0
+39,JPEG,mobile_camera,batch_years,2018 - 2022,2018 - 2022,1,0.0,0.0,2018 - 2022,2018 - 2022,1,0.0,0.0,11,11,0
+39,JPEG,mobile_camera,father_name,Nikhil Nair,Nikhil Nair,1,0.0,0.0,Nikhil Nair,Nikhil Nair,1,0.0,0.0,11,11,0
+39,JPEG,mobile_camera,mother_name,Aditi Nair,Aditi Nair,1,0.0,0.0,Aditi Nair,Aditi Nair,1,0.0,0.0,10,10,0
+39,JPEG,mobile_camera,date_of_birth,2000-01-08,2000/01/08,0,0.2,0.2,2000-01-08,2000-01-08,1,0.0,0.0,10,10,0
+39,JPEG,mobile_camera,email,siddharth.nair529@igce.edu.in,siddharth.nair529@igce.edu.in,1,0.0,0.0,siddharth.nair529@igce.edu.in,siddharth.nair529@igce.edu.in,1,0.0,0.0,29,29,0
+39,JPEG,mobile_camera,phone,+91 9840480491,+91 984048049x,0,0.07142857142857142,0.07142857142857142,+91 9840480491,+91 984048049x,0,0.07142857142857142,0.07142857142857142,14,14,0
+39,JPEG,mobile_camera,address,"House No. 400, Sector 43, Mumbai","House No. 400, Sector 43, Mumbai",1,0.0,0.0,"House No. 400, Sector 43, Mumbai","House No. 400, Sector 43, Mumbai",1,0.0,0.0,32,32,0
+39,JPEG,mobile_camera,blood_group,AB+,AB+,1,0.0,0.0,AB+,AB+,1,0.0,0.0,3,3,0
+39,JPEG,mobile_camera,university_name,Indira Gandhi College of Engineering,Indira Gandhi College of Engineering,1,0.0,0.0,Indira Gandhi College of Engineering,Indira Gandhi College of Engineering,1,0.0,0.0,36,36,0
+39,JPEG,mobile_camera,university_code,IGCE,IGCE,1,0.0,0.0,Indira Gandhi College of Engineering,Indira Gandhi College of Engineering,1,0.0,0.0,4,4,0
+39,JPEG,mobile_camera,issue_date,2022-01-27,2022/01/27,0,0.2,0.2,2022-01-27,2022-01-27,1,0.0,0.0,10,10,0
+39,JPEG,mobile_camera,cgpa,8.5,8.5 CGPA,0,1.6666666666666667,1.6666666666666667,8.50,8.50,1,0.0,0.0,3,8,0
+39,JPEG,mobile_camera,document_type,certificate,certificate,1,0.0,0.0,certificate,certificate,1,0.0,0.0,11,11,0
+39,JPEG,mobile_camera,template_id,certificate_alpha,certificate_alpha,1,0.0,0.0,certificate_alpha,certificate_alpha,1,0.0,0.0,17,17,0
+39,JPEG,mobile_camera,locale,en_IN,en_IN,1,0.0,0.0,en_IN,en_IN,1,0.0,0.0,5,5,0
+40,JPEG,mobile_camera,student_name,Kavya Sharma,Kavya Sharma,1,0.0,0.0,Kavya Sharma,Kavya Sharma,1,0.0,0.0,12,12,0
+40,JPEG,mobile_camera,roll_number,2021ECE000187,2021ece000187,0,0.23076923076923078,0.23076923076923078,2021ECE000187,2021ECE000187,1,0.0,0.0,13,13,0
+40,JPEG,mobile_camera,enrollment_number,EN202100187,en202100187,0,0.18181818181818182,0.18181818181818182,EN202100187,EN202100187,1,0.0,0.0,11,11,0
+40,JPEG,mobile_camera,degree_name,Bachelor of Technology in Electronics and Communication Engineering,B.Tech in ECE,0,0.8208955223880597,0.8208955223880597,Bachelor of Technology in Electronics and Communication Engineering,Bachelor of Technology,0,0.6716417910447762,0.6716417910447762,67,13,0
+40,JPEG,mobile_camera,branch_name,Electronics and Communication Engineering,Electronics and Communication Engineering,1,0.0,0.0,Electronics and Communication Engineering,Electronics and Communication Engineering,1,0.0,0.0,41,41,0
+40,JPEG,mobile_camera,batch_years,2021 - 2025,2021 - 2025,1,0.0,0.0,2021 - 2025,2021 - 2025,1,0.0,0.0,11,11,0
+40,JPEG,mobile_camera,father_name,Tarun Sharma,Tarun Sharma,1,0.0,0.0,Tarun Sharma,Tarun Sharma,1,0.0,0.0,12,12,0
+40,JPEG,mobile_camera,mother_name,Sonali Sharma,Sonali Sharma,1,0.0,0.0,Sonali Sharma,Sonali Sharma,1,0.0,0.0,13,13,0
+40,JPEG,mobile_camera,date_of_birth,2004-05-30,2004-05-30,1,0.0,0.0,2004-05-30,2004-05-30,1,0.0,0.0,10,10,0
+40,JPEG,mobile_camera,email,kavya.sharma187@igce.edu.in,kavya.sharma187@igce.edu.in,1,0.0,0.0,kavya.sharma187@igce.edu.in,kavya.sharma187@igce.edu.in,1,0.0,0.0,27,27,0
+40,JPEG,mobile_camera,phone,+91 9888717099,+91 9888717099,1,0.0,0.0,+91 9888717099,+91 9888717099,1,0.0,0.0,14,14,0
+40,JPEG,mobile_camera,address,"House No. 314, Sector 26, Mumbai","House No. 314, Sector 26, Mumbai",1,0.0,0.0,"House No. 314, Sector 26, Mumbai","House No. 314, Sector 26, Mumbai",1,0.0,0.0,32,32,0
+40,JPEG,mobile_camera,blood_group,O-,O-,1,0.0,0.0,O-,O-,1,0.0,0.0,2,2,0
+40,JPEG,mobile_camera,university_name,Indira Gandhi College of Engineering,Indira Gandhi College of Engineering,1,0.0,0.0,Indira Gandhi College of Engineering,Indira Gandhi College of Engineering,1,0.0,0.0,36,36,0
+40,JPEG,mobile_camera,university_code,IGCE,IGCE,1,0.0,0.0,Indira Gandhi College of Engineering,Indira Gandhi College of Engineering,1,0.0,0.0,4,4,0
+40,JPEG,mobile_camera,issue_date,2025-06-03,2025-06-03,1,0.0,0.0,2025-06-03,2025-06-03,1,0.0,0.0,10,10,0
+40,JPEG,mobile_camera,cgpa,7.31,7.31,1,0.0,0.0,7.31,7.31,1,0.0,0.0,4,4,0
+40,JPEG,mobile_camera,document_type,certificate,certificate,1,0.0,0.0,certificate,certificate,1,0.0,0.0,11,11,0
+40,JPEG,mobile_camera,template_id,certificate_alpha,certificate_alpha,1,0.0,0.0,certificate_alpha,certificate_alpha,1,0.0,0.0,17,17,0
+40,JPEG,mobile_camera,locale,en_IN,en_IN,1,0.0,0.0,en_IN,en_IN,1,0.0,0.0,5,5,0
+41,JPEG,rotated_90,student_name,Lakshay Sinha,Lakshay Sinha,1,0.0,0.0,Lakshay Sinha,Lakshay Sinha,1,0.0,0.0,13,13,0
+41,JPEG,rotated_90,roll_number,2020ECE000725,2020ECE000725,1,0.0,0.0,2020ECE000725,2020ECE000725,1,0.0,0.0,13,13,0
+41,JPEG,rotated_90,enrollment_number,EN202000725,EN202000725,1,0.0,0.0,EN202000725,EN202000725,1,0.0,0.0,11,11,0
+41,JPEG,rotated_90,degree_name,Bachelor of Technology in Electronics and Communication Engineering,B.Tech in ECE,0,0.8208955223880597,0.8208955223880597,Bachelor of Technology in Electronics and Communication Engineering,Bachelor of Technology,0,0.6716417910447762,0.6716417910447762,67,13,0
+41,JPEG,rotated_90,branch_name,Electronics and Communication Engineering,Electronics and Communication Engineering,1,0.0,0.0,Electronics and Communication Engineering,Electronics and Communication Engineering,1,0.0,0.0,41,41,0
+41,JPEG,rotated_90,batch_years,2020 - 2024,2020 - 2024,1,0.0,0.0,2020 - 2024,2020 - 2024,1,0.0,0.0,11,11,0
+41,JPEG,rotated_90,father_name,Deepak Sinha,Deepak Sinha,1,0.0,0.0,Deepak Sinha,Deepak Sinha,1,0.0,0.0,12,12,0
+41,JPEG,rotated_90,mother_name,Surbhi Sinha,Surbhi Sinha,1,0.0,0.0,Surbhi Sinha,Surbhi Sinha,1,0.0,0.0,12,12,0
+41,JPEG,rotated_90,date_of_birth,2001-12-15,2001/12/15,0,0.2,0.2,2001-12-15,2001-12-15,1,0.0,0.0,10,10,0
+41,JPEG,rotated_90,email,lakshay.sinha725@igce.edu.in,lakshay.sinha725@igce.edu.in,1,0.0,0.0,lakshay.sinha725@igce.edu.in,lakshay.sinha725@igce.edu.in,1,0.0,0.0,28,28,0
+41,JPEG,rotated_90,phone,+91 9881044392,+91 988104439x,0,0.07142857142857142,0.07142857142857142,+91 9881044392,+91 988104439x,0,0.07142857142857142,0.07142857142857142,14,14,0
+41,JPEG,rotated_90,address,"House No. 263, Sector 26, Mumbai","House No. 263, Sector 26, Mumbai",1,0.0,0.0,"House No. 263, Sector 26, Mumbai","House No. 263, Sector 26, Mumbai",1,0.0,0.0,32,32,0
+41,JPEG,rotated_90,blood_group,B-,B-,1,0.0,0.0,B-,B-,1,0.0,0.0,2,2,0
+41,JPEG,rotated_90,university_name,Indira Gandhi College of Engineering,Indira Gandhi College of Engineering,1,0.0,0.0,Indira Gandhi College of Engineering,Indira Gandhi College of Engineering,1,0.0,0.0,36,36,0
+41,JPEG,rotated_90,university_code,IGCE,IGCE,1,0.0,0.0,Indira Gandhi College of Engineering,Indira Gandhi College of Engineering,1,0.0,0.0,4,4,0
+41,JPEG,rotated_90,issue_date,2024-04-27,2024/04/27,0,0.2,0.2,2024-04-27,2024-04-27,1,0.0,0.0,10,10,0
+41,JPEG,rotated_90,cgpa,5.94,5.94 CGPA,0,1.25,1.25,5.94,5.94,1,0.0,0.0,4,9,0
+41,JPEG,rotated_90,document_type,certificate,certificatx,0,0.09090909090909091,0.09090909090909091,certificate,certificatx,0,0.09090909090909091,0.09090909090909091,11,11,0
+41,JPEG,rotated_90,template_id,certificate_alpha,certificate_alphx,0,0.058823529411764705,0.058823529411764705,certificate_alpha,certificate_alphx,0,0.058823529411764705,0.058823529411764705,17,17,0
+41,JPEG,rotated_90,locale,en_IN,en_IN,1,0.0,0.0,en_IN,en_IN,1,0.0,0.0,5,5,0
+42,JPEG,rotated_90,student_name,Prashant Kulkarni,Prashant Kulkarni,1,0.0,0.0,Prashant Kulkarni,Prashant Kulkarni,1,0.0,0.0,17,17,0
+42,JPEG,rotated_90,roll_number,2019EE000450,2019EE000450,1,0.0,0.0,2019EE000450,2019EE000450,1,0.0,0.0,12,12,0
+42,JPEG,rotated_90,enrollment_number,EN201900450,EN201900450,1,0.0,0.0,EN201900450,EN201900450,1,0.0,0.0,11,11,0
+42,JPEG,rotated_90,degree_name,Bachelor of Technology in Electrical Engineering,B.Tech in ECE,0,0.7708333333333334,0.7708333333333334,Bachelor of Technology in Electrical Engineering,Bachelor of Technology,0,0.5416666666666666,0.5416666666666666,48,13,0
+42,JPEG,rotated_90,branch_name,Electrical Engineering,Electrical Engineerinx,0,0.045454545454545456,0.045454545454545456,Electrical Engineering,Electrical Engineerinx,0,0.045454545454545456,0.045454545454545456,22,22,0
+42,JPEG,rotated_90,batch_years,2019 - 2023,2019 - 2023,1,0.0,0.0,2019 - 2023,2019 - 2023,1,0.0,0.0,11,11,0
+42,JPEG,rotated_90,father_name,Akash Kulkarni,Akash Kulkarni,1,0.0,0.0,Akash Kulkarni,Akash Kulkarni,1,0.0,0.0,14,14,0
+42,JPEG,rotated_90,mother_name,Anjali Kulkarni,Anjali Kulkarni,1,0.0,0.0,Anjali Kulkarni,Anjali Kulkarni,1,0.0,0.0,15,15,0
+42,JPEG,rotated_90,date_of_birth,2003-09-19,2003-09-19,1,0.0,0.0,2003-09-19,2003-09-19,1,0.0,0.0,10,10,0
+42,JPEG,rotated_90,email,prashant.kulkarni450@vtu.edu.in,prashant.kulkarni450@vtu.edu.in,1,0.0,0.0,prashant.kulkarni450@vtu.edu.in,prashant.kulkarni450@vtu.edu.in,1,0.0,0.0,31,31,0
+42,JPEG,rotated_90,phone,+91 9861968328,+91 9861968328,1,0.0,0.0,+91 9861968328,+91 9861968328,1,0.0,0.0,14,14,0
+42,JPEG,rotated_90,address,"House No. 38, Sector 49, New Delhi","House No. 38, Sector 49, New Delhi",1,0.0,0.0,"House No. 38, Sector 49, New Delhi","House No. 38, Sector 49, New Delhi",1,0.0,0.0,34,34,0
+42,JPEG,rotated_90,blood_group,O-,O-,1,0.0,0.0,O-,O-,1,0.0,0.0,2,2,0
+42,JPEG,rotated_90,university_name,Vivekananda Technical University,Vivekananda Technical University,1,0.0,0.0,Vivekananda Technical University,Vivekananda Technical University,1,0.0,0.0,32,32,0
+42,JPEG,rotated_90,university_code,VTU,VTU,1,0.0,0.0,Vivekananda Technical University,Vivekananda Technical University,1,0.0,0.0,3,3,0
+42,JPEG,rotated_90,issue_date,2023-12-21,2023-12-21,1,0.0,0.0,2023-12-21,2023-12-21,1,0.0,0.0,10,10,0
+42,JPEG,rotated_90,cgpa,8.59,8.59,1,0.0,0.0,8.59,8.59,1,0.0,0.0,4,4,0
+42,JPEG,rotated_90,document_type,certificate,certificate,1,0.0,0.0,certificate,certificate,1,0.0,0.0,11,11,0
+42,JPEG,rotated_90,template_id,certificate_alpha,certificate_alpha,1,0.0,0.0,certificate_alpha,certificate_alpha,1,0.0,0.0,17,17,0
+42,JPEG,rotated_90,locale,en_IN,en_IN,1,0.0,0.0,en_IN,en_IN,1,0.0,0.0,5,5,0
+43,JPEG,rotated_90,student_name,Harsh Patel,Harsh Patel,1,0.0,0.0,Harsh Patel,Harsh Patel,1,0.0,0.0,11,11,0
+43,JPEG,rotated_90,roll_number,21BTME0584,21btme0584,0,0.4,0.4,21BTME0584,21BTME0584,1,0.0,0.0,10,10,0
+43,JPEG,rotated_90,enrollment_number,EN202100584,en202100584,0,0.18181818181818182,0.18181818181818182,EN202100584,EN202100584,1,0.0,0.0,11,11,0
+43,JPEG,rotated_90,degree_name,Bachelor of Technology in Mechanical Engineering,B.Tech in ECE,0,0.7916666666666666,0.7916666666666666,Bachelor of Technology in Mechanical Engineering,Bachelor of Technology,0,0.5416666666666666,0.5416666666666666,48,13,0
+43,JPEG,rotated_90,branch_name,Mechanical Engineering,Mechanical Engineering,1,0.0,0.0,Mechanical Engineering,Mechanical Engineering,1,0.0,0.0,22,22,0
+43,JPEG,rotated_90,batch_years,2021 - 2025,2021 - 2025,1,0.0,0.0,2021 - 2025,2021 - 2025,1,0.0,0.0,11,11,0
+43,JPEG,rotated_90,father_name,Arjun Patel,Arjun Patel,1,0.0,0.0,Arjun Patel,Arjun Patel,1,0.0,0.0,11,11,0
+43,JPEG,rotated_90,mother_name,Meera Patel,Meera Patex,0,0.09090909090909091,0.09090909090909091,Meera Patel,Meera Patex,0,0.09090909090909091,0.09090909090909091,11,11,0
+43,JPEG,rotated_90,date_of_birth,2001-06-21,2001/06/21,0,0.2,0.2,2001-06-21,2001-06-21,1,0.0,0.0,10,10,0
+43,JPEG,rotated_90,email,harsh.patel584@srit.edu.in,harsh.patel584@srit.edu.in,1,0.0,0.0,harsh.patel584@srit.edu.in,harsh.patel584@srit.edu.in,1,0.0,0.0,26,26,0
+43,JPEG,rotated_90,phone,+91 9853586581,+91 9853586581,1,0.0,0.0,+91 9853586581,+91 9853586581,1,0.0,0.0,14,14,0
+43,JPEG,rotated_90,address,"House No. 49, Sector 49, Bengaluru","House No. 49, Sector 49, Bengalurx",0,0.029411764705882353,0.029411764705882353,"House No. 49, Sector 49, Bengaluru","House No. 49, Sector 49, Bengalurx",0,0.029411764705882353,0.029411764705882353,34,34,0
+43,JPEG,rotated_90,blood_group,O+,O+,1,0.0,0.0,O+,O+,1,0.0,0.0,2,2,0
+43,JPEG,rotated_90,university_name,Sri Ramanujan Institute of Technology,IGCE College,0,0.8918918918918919,0.8918918918918919,Sri Ramanujan Institute of Technology,Indira Gandhi College of Engineering,0,0.7837837837837838,0.7837837837837838,37,12,0
+43,JPEG,rotated_90,university_code,SRIT,SRIT,1,0.0,0.0,Sri Ramanujan Institute of Technology,Sri Ramanujan Institute of Technology,1,0.0,0.0,4,4,0
+43,JPEG,rotated_90,issue_date,2025-07-02,2025/07/02,0,0.2,0.2,2025-07-02,2025-07-02,1,0.0,0.0,10,10,0
+43,JPEG,rotated_90,cgpa,8.65,8.65 CGPA,0,1.25,1.25,8.65,8.65,1,0.0,0.0,4,9,0
+43,JPEG,rotated_90,document_type,certificate,certificate,1,0.0,0.0,certificate,certificate,1,0.0,0.0,11,11,0
+43,JPEG,rotated_90,template_id,certificate_alpha,certificate_alpha,1,0.0,0.0,certificate_alpha,certificate_alpha,1,0.0,0.0,17,17,0
+43,JPEG,rotated_90,locale,en_IN,en_IN,1,0.0,0.0,en_IN,en_IN,1,0.0,0.0,5,5,0
+44,JPEG,rotated_90,student_name,Siddharth Nair,Siddharth Nair,1,0.0,0.0,Siddharth Nair,Siddharth Nair,1,0.0,0.0,14,14,0
+44,JPEG,rotated_90,roll_number,2018CE000529,2018CE000529,1,0.0,0.0,2018CE000529,2018CE000529,1,0.0,0.0,12,12,0
+44,JPEG,rotated_90,enrollment_number,EN201800529,EN201800529,1,0.0,0.0,EN201800529,EN201800529,1,0.0,0.0,11,11,0
+44,JPEG,rotated_90,degree_name,Bachelor of Technology in Civil Engineering,B.Tech in ECE,0,0.7674418604651163,0.7674418604651163,Bachelor of Technology in Civil Engineering,Bachelor of Technology,0,0.4883720930232558,0.4883720930232558,43,13,0
+44,JPEG,rotated_90,branch_name,Civil Engineering,Civil Engineering,1,0.0,0.0,Civil Engineering,Civil Engineering,1,0.0,0.0,17,17,0
+44,JPEG,rotated_90,batch_years,2018 - 2022,2018 - 2022,1,0.0,0.0,2018 - 2022,2018 - 2022,1,0.0,0.0,11,11,0
+44,JPEG,rotated_90,father_name,Nikhil Nair,Nikhil Nair,1,0.0,0.0,Nikhil Nair,Nikhil Nair,1,0.0,0.0,11,11,0
+44,JPEG,rotated_90,mother_name,Aditi Nair,Aditi Nair,1,0.0,0.0,Aditi Nair,Aditi Nair,1,0.0,0.0,10,10,0
+44,JPEG,rotated_90,date_of_birth,2000-01-08,2000-01-08,1,0.0,0.0,2000-01-08,2000-01-08,1,0.0,0.0,10,10,0
+44,JPEG,rotated_90,email,siddharth.nair529@igce.edu.in,siddharth.nair529@igce.edu.in,1,0.0,0.0,siddharth.nair529@igce.edu.in,siddharth.nair529@igce.edu.in,1,0.0,0.0,29,29,0
+44,JPEG,rotated_90,phone,+91 9840480491,+91 9840480491,1,0.0,0.0,+91 9840480491,+91 9840480491,1,0.0,0.0,14,14,0
+44,JPEG,rotated_90,address,"House No. 400, Sector 43, Mumbai","House No. 400, Sector 43, Mumbai",1,0.0,0.0,"House No. 400, Sector 43, Mumbai","House No. 400, Sector 43, Mumbai",1,0.0,0.0,32,32,0
+44,JPEG,rotated_90,blood_group,AB+,AB+,1,0.0,0.0,AB+,AB+,1,0.0,0.0,3,3,0
+44,JPEG,rotated_90,university_name,Indira Gandhi College of Engineering,Indira Gandhi College of Engineering,1,0.0,0.0,Indira Gandhi College of Engineering,Indira Gandhi College of Engineering,1,0.0,0.0,36,36,0
+44,JPEG,rotated_90,university_code,IGCE,IGCE,1,0.0,0.0,Indira Gandhi College of Engineering,Indira Gandhi College of Engineering,1,0.0,0.0,4,4,0
+44,JPEG,rotated_90,issue_date,2022-01-27,2022-01-27,1,0.0,0.0,2022-01-27,2022-01-27,1,0.0,0.0,10,10,0
+44,JPEG,rotated_90,cgpa,8.5,8.5,1,0.0,0.0,8.50,8.50,1,0.0,0.0,3,3,0
+44,JPEG,rotated_90,document_type,certificate,certificatx,0,0.09090909090909091,0.09090909090909091,certificate,certificatx,0,0.09090909090909091,0.09090909090909091,11,11,0
+44,JPEG,rotated_90,template_id,certificate_alpha,certificate_alpha,1,0.0,0.0,certificate_alpha,certificate_alpha,1,0.0,0.0,17,17,0
+44,JPEG,rotated_90,locale,en_IN,en_IN,1,0.0,0.0,en_IN,en_IN,1,0.0,0.0,5,5,0
+45,JPEG,rotated_90,student_name,Kavya Sharma,Kavya Sharma,1,0.0,0.0,Kavya Sharma,Kavya Sharma,1,0.0,0.0,12,12,0
+45,JPEG,rotated_90,roll_number,2021ECE000187,2021ECE000187,1,0.0,0.0,2021ECE000187,2021ECE000187,1,0.0,0.0,13,13,0
+45,JPEG,rotated_90,enrollment_number,EN202100187,EN202100187,1,0.0,0.0,EN202100187,EN202100187,1,0.0,0.0,11,11,0
+45,JPEG,rotated_90,degree_name,Bachelor of Technology in Electronics and Communication Engineering,B.Tech in ECE,0,0.8208955223880597,0.8208955223880597,Bachelor of Technology in Electronics and Communication Engineering,Bachelor of Technology,0,0.6716417910447762,0.6716417910447762,67,13,0
+45,JPEG,rotated_90,branch_name,Electronics and Communication Engineering,Electronics and Communication Engineering,1,0.0,0.0,Electronics and Communication Engineering,Electronics and Communication Engineering,1,0.0,0.0,41,41,0
+45,JPEG,rotated_90,batch_years,2021 - 2025,2021 - 2025,1,0.0,0.0,2021 - 2025,2021 - 2025,1,0.0,0.0,11,11,0
+45,JPEG,rotated_90,father_name,Tarun Sharma,Tarun Sharma,1,0.0,0.0,Tarun Sharma,Tarun Sharma,1,0.0,0.0,12,12,0
+45,JPEG,rotated_90,mother_name,Sonali Sharma,Sonali Sharmx,0,0.07692307692307693,0.07692307692307693,Sonali Sharma,Sonali Sharmx,0,0.07692307692307693,0.07692307692307693,13,13,0
+45,JPEG,rotated_90,date_of_birth,2004-05-30,2004/05/30,0,0.2,0.2,2004-05-30,2004-05-30,1,0.0,0.0,10,10,0
+45,JPEG,rotated_90,email,kavya.sharma187@igce.edu.in,kavya.sharma187@igce.edu.in,1,0.0,0.0,kavya.sharma187@igce.edu.in,kavya.sharma187@igce.edu.in,1,0.0,0.0,27,27,0
+45,JPEG,rotated_90,phone,+91 9888717099,+91 988871709x,0,0.07142857142857142,0.07142857142857142,+91 9888717099,+91 988871709x,0,0.07142857142857142,0.07142857142857142,14,14,0
+45,JPEG,rotated_90,address,"House No. 314, Sector 26, Mumbai","House No. 314, Sector 26, Mumbai",1,0.0,0.0,"House No. 314, Sector 26, Mumbai","House No. 314, Sector 26, Mumbai",1,0.0,0.0,32,32,0
+45,JPEG,rotated_90,blood_group,O-,O-,1,0.0,0.0,O-,O-,1,0.0,0.0,2,2,0
+45,JPEG,rotated_90,university_name,Indira Gandhi College of Engineering,Indira Gandhi College of Engineering,1,0.0,0.0,Indira Gandhi College of Engineering,Indira Gandhi College of Engineering,1,0.0,0.0,36,36,0
+45,JPEG,rotated_90,university_code,IGCE,IGCE,1,0.0,0.0,Indira Gandhi College of Engineering,Indira Gandhi College of Engineering,1,0.0,0.0,4,4,0
+45,JPEG,rotated_90,issue_date,2025-06-03,2025/06/03,0,0.2,0.2,2025-06-03,2025-06-03,1,0.0,0.0,10,10,0
+45,JPEG,rotated_90,cgpa,7.31,7.31 CGPA,0,1.25,1.25,7.31,7.31,1,0.0,0.0,4,9,0
+45,JPEG,rotated_90,document_type,certificate,certificate,1,0.0,0.0,certificate,certificate,1,0.0,0.0,11,11,0
+45,JPEG,rotated_90,template_id,certificate_alpha,certificate_alpha,1,0.0,0.0,certificate_alpha,certificate_alpha,1,0.0,0.0,17,17,0
+45,JPEG,rotated_90,locale,en_IN,en_IN,1,0.0,0.0,en_IN,en_IN,1,0.0,0.0,5,5,0

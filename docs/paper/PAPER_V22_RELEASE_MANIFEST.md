@@ -11,9 +11,9 @@
 
 | Artifact File | Size (Bytes) | SHA-256 Checksum | Verification Status |
 | :--- | :---: | :--- | :---: |
-| `docs/paper/PaperV22_Ollama_Primary.docx` | 2,181,571 | `c0e5d4be548fcf6ada853b0841d26733ac4b2f6eb9c16674b0c2a79f0c34fc54` | **VERIFIED** |
-| `docs/paper/PaperV22_Ollama_Primary.pdf` | 1,505,790 | `7845526b7b72d17f06d8de53e00d792a47bcde91acc43956f7d06f0b6056968e` | **VERIFIED (19 Pages)** |
-| `docs/paper/Paper_V22.md` | 46,065 | `d951caca1d777a1945397ef6fa4139141bef1c3365d7434a0d770930f4fca15a` | **VERIFIED** |
+| `docs/paper/PaperV22_Ollama_Primary.docx` | 2,186,311 | `efe15c5c8d651f6c8d3f3595f19cc9717f76ba3df988ce283ebab85429a33b64` | **VERIFIED** |
+| `docs/paper/PaperV22_Ollama_Primary.pdf` | 1,474,898 | `68dc94b20b88556eb9f2f060730c067dd64062dddab692a4c3b3880d12556295` | **VERIFIED (20 Pages)** |
+| `docs/paper/Paper_V22.md` | 45,952 | `3a367fc9a199dd3c37de7ba1b36fc232f14b9eb5ccd50126c918b93da5583747` | **VERIFIED** |
 
 ---
 
