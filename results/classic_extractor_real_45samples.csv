@@ -1,0 +1,46 @@
+Sample_ID,File_Name,Modality,Quality_Profile,GT_Student_Name,GT_University,Classic_Extracted_Text_Snippet,Name_Match,University_Match
+1,DOC-0010905E.pdf,PDF,clean,Lakshay Sinha,Indira Gandhi College of Engineering,ACADEMIC BENCHMARK SPECIMEN Indira Gandhi College of Engineering Empowering Mind,1,1
+2,DOC-001A07AB.pdf,PDF,clean,Prashant Kulkarni,Vivekananda Technical University,ACADEMIC BENCHMARK SPECIMEN Vivekananda Technical University Excellence in Engin,1,1
+3,DOC-001F58BA.pdf,PDF,clean,Harsh Patel,Sri Ramanujan Institute of Technology,"ACADEMIC BENCHMARK SPECIMEN Sri Ramanujan Institute of Technology Innovation, Re",1,1
+4,DOC-0024DCD6.pdf,PDF,clean,Siddharth Nair,Indira Gandhi College of Engineering,ACADEMIC BENCHMARK SPECIMEN Indira Gandhi College of Engineering Empowering Mind,1,1
+5,DOC-0031A4A3.pdf,PDF,clean,Kavya Sharma,Indira Gandhi College of Engineering,ACADEMIC BENCHMARK SPECIMEN Indira Gandhi College of Engineering Empowering Mind,1,1
+6,DOC-0010905E_clean.png,PNG,clean,Lakshay Sinha,Indira Gandhi College of Engineering,,0,0
+7,DOC-001A07AB_clean.png,PNG,clean,Prashant Kulkarni,Vivekananda Technical University,,0,0
+8,DOC-001F58BA_clean.png,PNG,clean,Harsh Patel,Sri Ramanujan Institute of Technology,,0,0
+9,DOC-0024DCD6_clean.png,PNG,clean,Siddharth Nair,Indira Gandhi College of Engineering,,0,0
+10,DOC-0031A4A3_clean.png,PNG,clean,Kavya Sharma,Indira Gandhi College of Engineering,,0,0
+11,DOC-0010905E_scanner_copy.png,PNG,scanner_copy,Lakshay Sinha,Indira Gandhi College of Engineering,,0,0
+12,DOC-001A07AB_scanner_copy.png,PNG,scanner_copy,Prashant Kulkarni,Vivekananda Technical University,,0,0
+13,DOC-001F58BA_scanner_copy.png,PNG,scanner_copy,Harsh Patel,Sri Ramanujan Institute of Technology,,0,0
+14,DOC-0024DCD6_scanner_copy.png,PNG,scanner_copy,Siddharth Nair,Indira Gandhi College of Engineering,,0,0
+15,DOC-0031A4A3_scanner_copy.png,PNG,scanner_copy,Kavya Sharma,Indira Gandhi College of Engineering,,0,0
+16,DOC-0010905E_mobile_camera.png,PNG,mobile_camera,Lakshay Sinha,Indira Gandhi College of Engineering,,0,0
+17,DOC-001A07AB_mobile_camera.png,PNG,mobile_camera,Prashant Kulkarni,Vivekananda Technical University,,0,0
+18,DOC-001F58BA_mobile_camera.png,PNG,mobile_camera,Harsh Patel,Sri Ramanujan Institute of Technology,,0,0
+19,DOC-0024DCD6_mobile_camera.png,PNG,mobile_camera,Siddharth Nair,Indira Gandhi College of Engineering,,0,0
+20,DOC-0031A4A3_mobile_camera.png,PNG,mobile_camera,Kavya Sharma,Indira Gandhi College of Engineering,,0,0
+21,DOC-0010905E_rotated_90.png,PNG,rotated_90,Lakshay Sinha,Indira Gandhi College of Engineering,,0,0
+22,DOC-001A07AB_rotated_90.png,PNG,rotated_90,Prashant Kulkarni,Vivekananda Technical University,,0,0
+23,DOC-001F58BA_rotated_90.png,PNG,rotated_90,Harsh Patel,Sri Ramanujan Institute of Technology,,0,0
+24,DOC-0024DCD6_rotated_90.png,PNG,rotated_90,Siddharth Nair,Indira Gandhi College of Engineering,,0,0
+25,DOC-0031A4A3_rotated_90.png,PNG,rotated_90,Kavya Sharma,Indira Gandhi College of Engineering,,0,0
+26,DOC-0010905E_clean.jpeg,JPEG,clean,Lakshay Sinha,Indira Gandhi College of Engineering,,0,0
+27,DOC-001A07AB_clean.jpeg,JPEG,clean,Prashant Kulkarni,Vivekananda Technical University,,0,0
+28,DOC-001F58BA_clean.jpeg,JPEG,clean,Harsh Patel,Sri Ramanujan Institute of Technology,,0,0
+29,DOC-0024DCD6_clean.jpeg,JPEG,clean,Siddharth Nair,Indira Gandhi College of Engineering,,0,0
+30,DOC-0031A4A3_clean.jpeg,JPEG,clean,Kavya Sharma,Indira Gandhi College of Engineering,,0,0
+31,DOC-0010905E_scanner_copy.jpeg,JPEG,scanner_copy,Lakshay Sinha,Indira Gandhi College of Engineering,,0,0
+32,DOC-001A07AB_scanner_copy.jpeg,JPEG,scanner_copy,Prashant Kulkarni,Vivekananda Technical University,,0,0
+33,DOC-001F58BA_scanner_copy.jpeg,JPEG,scanner_copy,Harsh Patel,Sri Ramanujan Institute of Technology,,0,0
+34,DOC-0024DCD6_scanner_copy.jpeg,JPEG,scanner_copy,Siddharth Nair,Indira Gandhi College of Engineering,,0,0
+35,DOC-0031A4A3_scanner_copy.jpeg,JPEG,scanner_copy,Kavya Sharma,Indira Gandhi College of Engineering,,0,0
+36,DOC-0010905E_mobile_camera.jpeg,JPEG,mobile_camera,Lakshay Sinha,Indira Gandhi College of Engineering,,0,0
+37,DOC-001A07AB_mobile_camera.jpeg,JPEG,mobile_camera,Prashant Kulkarni,Vivekananda Technical University,,0,0
+38,DOC-001F58BA_mobile_camera.jpeg,JPEG,mobile_camera,Harsh Patel,Sri Ramanujan Institute of Technology,,0,0
+39,DOC-0024DCD6_mobile_camera.jpeg,JPEG,mobile_camera,Siddharth Nair,Indira Gandhi College of Engineering,,0,0
+40,DOC-0031A4A3_mobile_camera.jpeg,JPEG,mobile_camera,Kavya Sharma,Indira Gandhi College of Engineering,,0,0
+41,DOC-0010905E_rotated_90.jpeg,JPEG,rotated_90,Lakshay Sinha,Indira Gandhi College of Engineering,,0,0
+42,DOC-001A07AB_rotated_90.jpeg,JPEG,rotated_90,Prashant Kulkarni,Vivekananda Technical University,,0,0
+43,DOC-001F58BA_rotated_90.jpeg,JPEG,rotated_90,Harsh Patel,Sri Ramanujan Institute of Technology,,0,0
+44,DOC-0024DCD6_rotated_90.jpeg,JPEG,rotated_90,Siddharth Nair,Indira Gandhi College of Engineering,,0,0
+45,DOC-0031A4A3_rotated_90.jpeg,JPEG,rotated_90,Kavya Sharma,Indira Gandhi College of Engineering,,0,0
