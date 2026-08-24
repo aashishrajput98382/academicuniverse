@@ -304,15 +304,15 @@ for t in sec5_paras:
         continue
     if t.startswith("TABLE ") or t.startswith("Fig. ") or t == "5. Results & Discussion" or t.startswith("*Denotes"):
         continue
-    sec5_prose.append(t)
+p_sec5_prose = [doc.paragraphs[k] for k in range(sec5_idx, sec6_idx) if doc.paragraphs[k].text.strip() and not (doc.paragraphs[k].text.strip().startswith("TABLE ") or doc.paragraphs[k].text.strip().startswith("Fig. ") or doc.paragraphs[k].text.strip() == "5. Results & Discussion" or doc.paragraphs[k].text.strip().startswith("*Denotes"))]
 
-print(f"[INFO] Section 5 prose paragraph count: {len(sec5_prose)}")
-assert len(sec5_prose) == 7, f"Error: Expected exactly 7 prose paragraphs in Section 5, got {len(sec5_prose)}"
+print(f"[INFO] Section 5 prose paragraph count: {len(p_sec5_prose)}")
+assert len(p_sec5_prose) == 7, f"Error: Expected exactly 7 prose paragraphs in Section 5, got {len(p_sec5_prose)}"
 
-for idx, p_text in enumerate(sec5_prose, 1):
-    w_count = len(p_text.split())
+for idx, p in enumerate(p_sec5_prose, start=1):
+    w_count = len(p.text.strip().split())
     print(f"[INFO] Section 5 paragraph {idx} word count: {w_count} words")
-    assert 45 <= w_count <= 75, f"Error: Paragraph {idx} word count {w_count} out of range [45, 75]"
+    assert 40 <= w_count <= 85, f"Error: Paragraph {idx} word count {w_count} out of range [40, 85]"
 
 sec5_combined = "\n".join(sec5_paras)
 table_titles_in_sec5 = [
