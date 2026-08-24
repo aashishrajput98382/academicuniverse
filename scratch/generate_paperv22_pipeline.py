@@ -1780,9 +1780,45 @@ for p in doc.paragraphs:
                     cy = int(a_ext.get('cy', 0))
                     if cy > 7 * 914400:
                         new_cy = int(5.8 * 914400)
-                        new_cx = int(cx * (new_cy / cy))
-                        a_ext.set('cx', str(new_cx))
-                        a_ext.set('cy', str(new_cy))
+# Format Table 3 (Multi-Modal Dataset and Benchmark Composition)
+if len(doc.tables) > 2:
+    t3 = doc.tables[2]
+    table_3_data = [
+        ['Document Category', 'Vector PDFs (Clean)', 'Lossless PNGs (4 Profiles)', 'Compressed JPEGs (4 Profiles)', 'Total Evaluated Specimens'],
+        ['Academic Certificate', '2 PDFs', '7 PNGs (Clean/Scan/Mob/Rot)', '7 JPEGs (Clean/Scan/Mob/Rot)', '16 Specimens (1,088 Fields)'],
+        ['Semester Marksheet', '2 PDFs', '7 PNGs (Clean/Scan/Mob/Rot)', '7 JPEGs (Clean/Scan/Mob/Rot)', '16 Specimens (4,554 Fields)'],
+        ['Student ID Card', '1 PDF', '6 PNGs (Clean/Scan/Mob/Rot)', '6 JPEGs (Clean/Scan/Mob/Rot)', '13 Specimens (884 Fields)'],
+        ['Total Multi-Modal Suite', '5 Vector PDFs', '20 Lossless PNGs', '20 Compressed JPEGs', '45 Physical Specimens (6,526 Fields)']
+    ]
+
+    for r_idx, row_data in enumerate(table_3_data):
+        for c_idx, text_val in enumerate(row_data):
+            cell = t3.rows[r_idx].cells[c_idx]
+            cell.text = text_val
+            p = cell.paragraphs[0]
+            p.alignment = WD_ALIGN_PARAGRAPH.LEFT if c_idx == 0 else WD_ALIGN_PARAGRAPH.CENTER
+            p.paragraph_format.space_before = Pt(2)
+            p.paragraph_format.space_after = Pt(2)
+            if p.runs:
+                r = p.runs[0]
+                r.font.name = "Times New Roman"
+                r.font.size = Pt(8.5)
+                if r_idx == 0 or r_idx == 4 or c_idx == 0:
+                    r.bold = True
+            if r_idx == 0:
+                set_cell_shading(cell, "E0E0E0")
+            elif r_idx == 4:
+                set_cell_shading(cell, "F2F2F2")
+            set_cell_margins(cell, top=40, bottom=40, left=50, right=50)
+
+for p in doc.paragraphs:
+    if "TABLE 3:" in p.text:
+        p.text = "TABLE 3: MULTI-MODAL DATASET AND BENCHMARK COMPOSITION (AU_DIC_BENCHMARK_V1.0)"
+        p.alignment = WD_ALIGN_PARAGRAPH.CENTER
+        for r in p.runs:
+            r.font.name = "Times New Roman"
+            r.font.size = Pt(10)
+            r.bold = True
 
 doc.save(v22_docx_path)
 print(f"[SUCCESS] Saved clean PaperV22_Ollama_Primary.docx with Conclusion & Future Work swapped & enhanced!")

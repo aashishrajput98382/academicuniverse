@@ -90,16 +90,16 @@ The canonical live empirical evaluation was executed on a standardized workstati
 
 ### 4.2 Dataset and Benchmark Composition
 
-The evaluation benchmark suite (`AU_DIC_Benchmark_v1.0`) comprises 360 unique synthetic academic credential specimens generated using the ADBG v1.0 framework with Master Seed = 42. The dataset is structured across three core higher education document categories: Academic Certificates, Semester Marksheets, and Student Identity Cards (120 specimens per category). Each template is rendered into a pristine 300-DPI PDF and subsequently processed through four standardized optical quality degradation profiles (90 specimens per profile): `clean`, `scanner_copy`, `mobile_camera`, and `rotated_90`. Table 3 details the dataset composition and field observation allocations, while Table 4 summarizes the physical and optical degradation parameters.
+The evaluation benchmark suite (`AU_DIC_Benchmark_v1.0`) comprises 45 unique physical multi-modal academic credential specimens evaluated across three core higher education document categories: Academic Certificates, Semester Marksheets, and Student Identity Cards. The benchmark dataset integrates three complementary document representations: Vector PDFs (5 specimens rendered directly from vector layout streams), Lossless PNG Scans (20 specimens across clean, flatbed scan, mobile capture, and 90° rotation), and Compressed JPEGs (20 specimens across clean, flatbed scan, mobile capture, and 90° rotation), totaling 6,526 evaluated ground-truth field observations. Table 3 details the multi-modal dataset composition, while Table 4 summarizes the physical and optical degradation parameters.
 
-**Table 3: Dataset and Benchmark Composition (AU_DIC_Benchmark_v1.0)**
+**Table 3: Multi-Modal Dataset and Benchmark Composition (AU_DIC_Benchmark_v1.0)**
 
-| Document Category | Total Documents | Fields per Document | Total Field Observations | Evaluated Optical Profiles | Primary Visual Structure |
-| :--- | :---: | :---: | :---: | :--- | :--- |
-| **Academic Certificate** | 120 | 33 | 3,960 | `clean`, `scanner`, `mobile`, `rotated_90` | Formal border, signatures, seal, degree title |
-| **Semester Marksheet** | 120 | 138 | 16,560 | `clean`, `scanner`, `mobile`, `rotated_90` | Complex multi-row tabular grade matrices |
-| **Student ID Card** | 120 | 33 | 3,960 | `clean`, `scanner`, `mobile`, `rotated_90` | Compact double-sided badge, barcodes, PII |
-| **Benchmark Suite Total** | **360** | **68 (Unique)** | **24,480** | **All 4 Degradation Profiles** | **Heterogeneous Academic Layouts** |
+| Document Category | Vector PDFs (Clean) | Lossless PNGs (4 Profiles) | Compressed JPEGs (4 Profiles) | Total Evaluated Specimens |
+| :--- | :---: | :---: | :---: | :---: |
+| **Academic Certificate** | 2 PDFs | 7 PNGs (Clean/Scan/Mob/Rot) | 7 JPEGs (Clean/Scan/Mob/Rot) | 16 Specimens (1,088 Fields) |
+| **Semester Marksheet** | 2 PDFs | 7 PNGs (Clean/Scan/Mob/Rot) | 7 JPEGs (Clean/Scan/Mob/Rot) | 16 Specimens (4,554 Fields) |
+| **Student ID Card** | 1 PDF | 6 PNGs (Clean/Scan/Mob/Rot) | 6 JPEGs (Clean/Scan/Mob/Rot) | 13 Specimens (884 Fields) |
+| **Total Multi-Modal Suite** | **5 Vector PDFs** | **20 Lossless PNGs** | **20 Compressed JPEGs** | **45 Physical Specimens (6,526 Fields)** |
 
 **Table 4: Optical Quality Degradation Profiles**
 
