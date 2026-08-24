@@ -2043,6 +2043,29 @@ if len(doc.tables) > 12:
                             p.runs[0].bold = True
 
 
+
+# Update Table 1 (Related Work Strategy cell)
+if len(doc.tables) > 0 and len(doc.tables[0].rows) > 10:
+    for cell in doc.tables[0].rows[10].cells:
+        if "24,480" in cell.text:
+            cell.text = cell.text.replace("24,480", "900")
+
+# Update Table 4 / 5 (Canonical Configuration Parameters)
+if len(doc.tables) > 3:
+    t5 = doc.tables[3]
+    for r_idx, row in enumerate(t5.rows):
+        param_name = row.cells[0].text.strip()
+        if "Total Evaluated Specimens" in param_name:
+            row.cells[1].text = "45 Physical Specimens (5 Vector PDFs + 20 Lossless PNGs + 20 Compressed JPEGs)"
+        elif "Total Paired Observations" in param_name:
+            row.cells[1].text = "900 Paired Field Observations (20 Atomic Fields / Specimen)"
+        elif "Canonical Execution Run ID" in param_name:
+            row.cells[1].text = "run_1785959173886 (Duration: 2917.90s / 48.63 mins)"
+        elif "Git Repository Commit" in param_name:
+            row.cells[1].text = "Commit 0cb27be (https://github.com/aashishrajput9838/academicuniverse.git)"
+        elif "Benchmark Suite Version" in param_name:
+            row.cells[1].text = "AU DIC Benchmark v1.0 (45 Physical Specimens Suite)"
+
 doc.save(v22_docx_path)
 print(f"[SUCCESS] Saved clean PaperV22_Ollama_Primary.docx with Conclusion & Future Work swapped & enhanced!")
 
