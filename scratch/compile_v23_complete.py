@@ -16,16 +16,20 @@ fig_dir = workspace / "docs" / "paper" / "extracted_figures"
 # 1. Run pipeline
 subprocess.run(["python", "scratch/generate_paperv23_pipeline.py"], check=True)
 
-# 2. Replace figure image blobs with 300 DPI plots
+# 2. Replace figure image blobs with 300 DPI plots and crystal-clear flowcharts
 doc = docx.Document(v23_docx_path)
+replaced_count = 0
 for r_id, rel in doc.part.rels.items():
     ref = rel.target_ref
-    for img_name in ["image4.png", "image5.png", "image6.png", "image7.png", "image8.png", "image9.png"]:
+    for img_name in ["image1.png", "image2.png", "image3.png", "image4.png", "image5.png", "image6.png", "image7.png", "image8.png", "image9.png"]:
         if img_name in ref:
             img_file = fig_dir / img_name
             if img_file.exists():
                 with open(img_file, "rb") as f:
                     rel.target_part._blob = f.read()
+                replaced_count += 1
+                print(f"[REPLACED] {r_id} ({ref}) -> {img_name}")
+print(f"[INFO] Total replaced image blobs: {replaced_count}")
 
 # 3. Compact tables and drawings for <= 20 pages
 for tbl in doc.tables:

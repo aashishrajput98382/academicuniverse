@@ -9,6 +9,6 @@
 
 | Artifact File | Size (Bytes) | SHA-256 Hash |
 | :--- | :--- | :--- |
-| `PaperV23_Ollama_Primary.pdf` | 1,658,546 | `8eb27a1ec2e7d960dc482309d9eee33592392c05a47d6278c1d7e369e68b3764` |
-| `PaperV23_Ollama_Primary.docx` | 2,196,891 | `95a18fd4215128dcc0f08e101c02d776a12051730f288ca68d4d8527df93cc08` |
+| `PaperV23_Ollama_Primary.pdf` | 1,709,581 | `7e6a49b940861be99ea0c42f4bc01dc789e11bf913c3cd38b64a749fdf902ca4` |
+| `PaperV23_Ollama_Primary.docx` | 1,705,211 | `107647a5608489bd8630299b37d9eeec4185a97fea5988e57a5c371f12b118b6` |
 | `Paper_V23.md` | 46,381 | `f77c7a7c61ffb59dca2b399ee17e971fb20d25b0bc23e983d6d75e8f9b01601a` |
