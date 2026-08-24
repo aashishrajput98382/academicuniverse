@@ -1,0 +1,136 @@
+Sample_ID,Modality,Quality_Profile,File_Name,Latency_Sec,GT_Student_Name,Name_Match,GT_University,University_Match,Model_Raw_Response
+1,PDF,clean,DOC-0010905E.pdf,5.818057099997532,Lakshay Sinha,True,Indira Gandhi College of Engineering,True,"Student Name: Lakshay Sinha
+Institution: Indira Gandhi College of Engineering
+Document Type: Bachelor of Technology"
+2,PDF,clean,DOC-001A07AB.pdf,7.190995599998132,Prashant Kulkarni,True,Vivekananda Technical University,True,"Student Name: Prashant Kulkarni
+Institution: Vivekananda Technical University
+Document Type: Bachelor of Technology"
+3,PDF,clean,DOC-001F58BA.pdf,68.97948890000043,Harsh Patel,True,Sri Ramanujan Institute of Technology,True,"Student Name: Harsh Patel
+Institution: Sri Ramanujan Institute of Technology
+Document Type: Bachelor of Technology"
+4,PDF,clean,DOC-0024DCD6.pdf,66.12293200000204,Siddharth Nair,True,Indira Gandhi College of Engineering,True,"Student Name: Siddharth Nair
+Institution: Indira Gandhi College of Engineering
+Document Type: Bachelor of Technology"
+5,PDF,clean,DOC-0031A4A3.pdf,67.25893130000259,Kavya Sharma,False,Indira Gandhi College of Engineering,True,"Student Name: Kayya Sharma
+Institution: Indira Gandhi College of Engineering
+Document Type: Bachelor of Technology"
+6,PNG,clean,DOC-0010905E_clean.png,46.43842319999749,Lakshay Sinha,True,Indira Gandhi College of Engineering,True,"Student Name: Lakshay Sinha
+Institution: Indira Gandhi College of Engineering
+Document Type: Bachelor of Technology"
+7,PNG,clean,DOC-001A07AB_clean.png,67.40320050000082,Prashant Kulkarni,True,Vivekananda Technical University,True,"Student Name: Prashant Kulkarni
+Institution: Vivekananda Technical University
+Document Type: Bachelor of Technology of Technology in Electrical Engineering"
+8,PNG,clean,DOC-001F58BA_clean.png,66.64362150000306,Harsh Patel,True,Sri Ramanujan Institute of Technology,True,"Student Name: Harsh Patel
+Institution: Sri Ramanujan Institute of Technology
+Document Type: Bachelor of Technology"
+9,PNG,clean,DOC-0024DCD6_clean.png,67.14691630000016,Siddharth Nair,True,Indira Gandhi College of Engineering,True,"Student Name: Siddharth Nair
+Institution: Indira Gandhi College of Engineering
+Document Type: Bachelor of Technology"
+10,PNG,clean,DOC-0031A4A3_clean.png,65.89553729999898,Kavya Sharma,True,Indira Gandhi College of Engineering,True,"Student Name: Kavya Sharma
+Institution: Indira Gandhi College of Engineering
+Document Type: Bachelor of Technology"
+11,PNG,scanner_copy,DOC-0010905E_scanner_copy.png,67.14462389999971,Lakshay Sinha,True,Indira Gandhi College of Engineering,True,"Student Name: Lakshay Sinha
+Institution: Indira Gandhi College of Engineering
+Document Type: Bachelor of Technology"
+12,PNG,scanner_copy,DOC-001A07AB_scanner_copy.png,69.8785370000005,Prashant Kulkarni,True,Vivekananda Technical University,True,"Student Name: Prashant Kulkarni
+Institution: Vivekananda Technical University
+Document Type: Bachelor of Technology of Excellence in Engineering and Research"
+13,PNG,scanner_copy,DOC-001F58BA_scanner_copy.png,65.77465630000006,Harsh Patel,True,Sri Ramanujan Institute of Technology,True,"Student Name: Harsh Patel
+Institution: Sri Ramanujan Institute of Technology
+Document Type: Bachelor of Technology in Mechanical Engineering"
+14,PNG,scanner_copy,DOC-0024DCD6_scanner_copy.png,66.05602700000236,Siddharth Nair,True,Indira Gandhi College of Engineering,True,"Student Name: Siddharth Nair
+Institution: Indira Gandhi College of Engineering
+Document Type: Bachelor of Technology"
+15,PNG,scanner_copy,DOC-0031A4A3_scanner_copy.png,67.51689220000117,Kavya Sharma,True,Indira Gandhi College of Engineering,True,"Student Name: Kavya Sharma
+Institution: Indira Gandhi College of Engineering
+Document Type: Bachelor of Technology"
+16,PNG,mobile_camera,DOC-0010905E_mobile_camera.png,65.35248520000096,Lakshay Sinha,True,Indira Gandhi College of Engineering,True,"Student Name: Lakshay Sinha
+Institution: Indira Gandhi College of Engineering
+Document Type: Bachelor of Technology"
+17,PNG,mobile_camera,DOC-001A07AB_mobile_camera.png,66.07153069999913,Prashant Kulkarni,True,Vivekananda Technical University,True,"Student Name: Prashant Kulkarni
+Institution: Vivekananda Technical University
+Document Type: Bachelor of Technology"
+18,PNG,mobile_camera,DOC-001F58BA_mobile_camera.png,67.55487540000104,Harsh Patel,True,Sri Ramanujan Institute of Technology,False,"Student Name: Harsh Patel
+Institution: Sri Ramanujam Institute of Technology
+Document Type: Bachelor of Technology"
+19,PNG,mobile_camera,DOC-0024DCD6_mobile_camera.png,66.15114939999694,Siddharth Nair,True,Indira Gandhi College of Engineering,True,"Student Name: Siddharth Nair
+Institution: Indira Gandhi College of Engineering
+Document Type: Bachelor of Technology"
+20,PNG,mobile_camera,DOC-0031A4A3_mobile_camera.png,65.09015820000059,Kavya Sharma,True,Indira Gandhi College of Engineering,True,"Student Name: Kavya Sharma
+Institution: Indira Gandhi College of Engineering
+Document Type: Bachelor of Technology"
+21,PNG,rotated_90,DOC-0010905E_rotated_90.png,66.04613340000287,Lakshay Sinha,True,Indira Gandhi College of Engineering,True,"Student Name: Lakshay Sinha
+Institution: Indira Gandhi College of Engineering
+Document Type: Bachelor of Technology"
+22,PNG,rotated_90,DOC-001A07AB_rotated_90.png,67.31824609999967,Prashant Kulkarni,True,Vivekananda Technical University,True,"Student Name: Prashant Kulkarni
+Institution: Vivekananda Technical University
+Document Type: Bachelor of Technology in Electrical Engineering"
+23,PNG,rotated_90,DOC-001F58BA_rotated_90.png,66.77662749999945,Harsh Patel,True,Sri Ramanujan Institute of Technology,False,"Student Name: Harsh Patel
+Institution: Sri Ramanaian Institute of Technology
+Document Type: Bachelor of Technology"
+24,PNG,rotated_90,DOC-0024DCD6_rotated_90.png,68.27709130000221,Siddharth Nair,True,Indira Gandhi College of Engineering,True,"Student Name: Siddharth Nair
+Institution: Indira Gandhi College of Engineering
+Document Type: Bachelor of Technology in Civil Engineering"
+25,PNG,rotated_90,DOC-0031A4A3_rotated_90.png,78.18392230000245,Kavya Sharma,True,Indira Gandhi College of Engineering,True,"Student Name: Kavya Sharma
+Institution: Indira Gandhi College of Engineering
+Document Type: Bachelor of Technology"
+26,JPEG,clean,DOC-0010905E_clean.jpeg,64.94519169999694,Lakshay Sinha,True,Indira Gandhi College of Engineering,True,"Student Name: Lakshay Sinha
+Institution: Indira Gandhi College of Engineering
+Document Type: Bachelor of Technology"
+27,JPEG,clean,DOC-001A07AB_clean.jpeg,73.52460160000192,Prashant Kulkarni,True,Vivekananda Technical University,True,"Student Name: Prashant Kulkarni
+Institution: Vivekananda Technical University
+Document Type: Bachelor of Technology of Technology in Electrical Engineering"
+28,JPEG,clean,DOC-001F58BA_clean.jpeg,72.56863220000014,Harsh Patel,True,Sri Ramanujan Institute of Technology,True,"Student Name: Harsh Patel
+Institution: Sri Ramanujan Institute of Technology
+Document Type: Bachelor of Technology"
+29,JPEG,clean,DOC-0024DCD6_clean.jpeg,68.45555310000054,Siddharth Nair,True,Indira Gandhi College of Engineering,True,"Student Name: Siddharth Nair
+Institution: Indira Gandhi College of Engineering
+Document Type: Bachelor of Technology"
+30,JPEG,clean,DOC-0031A4A3_clean.jpeg,70.26397120000183,Kavya Sharma,True,Indira Gandhi College of Engineering,True,"Student Name: Kavya Sharma
+Institution: Indira Gandhi College of Engineering
+Document Type: Bachelor of Technology"
+31,JPEG,scanner_copy,DOC-0010905E_scanner_copy.jpeg,66.65549939999983,Lakshay Sinha,True,Indira Gandhi College of Engineering,True,"Student Name: Lakshay Sinha
+Institution: Indira Gandhi College of Engineering
+Document Type: Bachelor of Technology"
+32,JPEG,scanner_copy,DOC-001A07AB_scanner_copy.jpeg,67.21396019999884,Prashant Kulkarni,True,Vivekananda Technical University,True,"Student Name: Prashant Kulkarni
+Institution: Vivekananda Technical University
+Document Type: Bachelor of Technology of Excellence in Engineering and Research"
+33,JPEG,scanner_copy,DOC-001F58BA_scanner_copy.jpeg,65.95588839999982,Harsh Patel,True,Sri Ramanujan Institute of Technology,True,"Student Name: Harsh Patel
+Institution: Sri Ramanujan Institute of Technology
+Document Type: Bachelor of Technology"
+34,JPEG,scanner_copy,DOC-0024DCD6_scanner_copy.jpeg,72.76839010000185,Siddharth Nair,True,Indira Gandhi College of Engineering,True,"Student Name: Siddharth Nair
+Institution: Indira Gandhi College of Engineering
+Document Type: Bachelor of Technology in Civil Engineering"
+35,JPEG,scanner_copy,DOC-0031A4A3_scanner_copy.jpeg,66.57828420000078,Kavya Sharma,True,Indira Gandhi College of Engineering,True,"Student Name: Kavya Sharma
+Institution: Indira Gandhi College of Engineering
+Document Type: Bachelor of Technology"
+36,JPEG,mobile_camera,DOC-0010905E_mobile_camera.jpeg,65.54604860000109,Lakshay Sinha,True,Indira Gandhi College of Engineering,True,"Student Name: Lakshay Sinha
+Institution: Indira Gandhi College of Engineering
+Document Type: Bachelor of Technology"
+37,JPEG,mobile_camera,DOC-001A07AB_mobile_camera.jpeg,69.06177430000025,Prashant Kulkarni,True,Vivekananda Technical University,True,"Student Name: Prashant Kulkarni
+Institution: Vivekananda Technical University
+Document Type: Bachelor of Technology"
+38,JPEG,mobile_camera,DOC-001F58BA_mobile_camera.jpeg,70.21210960000099,Harsh Patel,True,Sri Ramanujan Institute of Technology,True,"Student Name: Harsh Patel
+Institution: Sri Ramanujan Institute of Technology
+Document Type: Bachelor of Technology"
+39,JPEG,mobile_camera,DOC-0024DCD6_mobile_camera.jpeg,64.4907314000011,Siddharth Nair,True,Indira Gandhi College of Engineering,True,"Student Name: Siddharth Nair
+Institution: Indira Gandhi College of Engineering
+Document Type: Bachelor of Technology"
+40,JPEG,mobile_camera,DOC-0031A4A3_mobile_camera.jpeg,68.05224309999903,Kavya Sharma,True,Indira Gandhi College of Engineering,True,"Student Name: Kavya Sharma
+Institution: Indira Gandhi College of Engineering
+Document Type: Bachelor of Technology"
+41,JPEG,rotated_90,DOC-0010905E_rotated_90.jpeg,66.73475359999793,Lakshay Sinha,True,Indira Gandhi College of Engineering,True,"Student Name: Lakshay Sinha
+Institution: Indira Gandhi College of Engineering
+Document Type: Bachelor of Technology"
+42,JPEG,rotated_90,DOC-001A07AB_rotated_90.jpeg,68.89289129999815,Prashant Kulkarni,True,Vivekananda Technical University,True,"Student Name: Prashant Kulkarni
+Institution: Vivekananda Technical University
+Document Type: Bachelor of Technology"
+43,JPEG,rotated_90,DOC-001F58BA_rotated_90.jpeg,69.09870109999974,Harsh Patel,True,Sri Ramanujan Institute of Technology,False,"Student Name: Harsh Patel
+Institution: Sri Ramanaian Institute of Technology
+Document Type: Bachelor of Technology"
+44,JPEG,rotated_90,DOC-0024DCD6_rotated_90.jpeg,60.736421400000836,Siddharth Nair,True,Indira Gandhi College of Engineering,True,"Student Name: Siddharth Nair
+Institution: Indira Gandhi College of Engineering
+Document Type: Bachelor of Technology in Civil Engineering"
+45,JPEG,rotated_90,DOC-0031A4A3_rotated_90.jpeg,61.06511849999879,Kavya Sharma,True,Indira Gandhi College of Engineering,True,"Student Name: Kavya Sharma
+Institution: Indira Gandhi College of Engineering
+Document Type: Bachelor of Technology"
