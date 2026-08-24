@@ -1,6 +1,6 @@
 import docx
 
-doc = docx.Document('docs/paper/PaperV26_Ollama_Primary.docx')
+doc = docx.Document('docs/paper/PaperV27_Ollama_Primary.docx')
 print(f"Total tables: {len(doc.tables)}")
 for i, t in enumerate(doc.tables):
     headers = [c.text.strip().replace('\n', ' ') for c in t.rows[0].cells]
