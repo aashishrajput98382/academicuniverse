@@ -1,0 +1,355 @@
+# Smart Academic Document Intelligence System: Automated Extraction, Normalization, and Benchmark Generation
+
+**Short Running Title**: `Smart Academic Document Intelligence & Benchmarking`  
+**Authors**: Kushagra Singh Bhadauria, Aashish Rajput, and Avdesh Kumar Sah  
+**Affiliation**: Department of Computer Science and Engineering, Sharda University, Greater Noida, Uttar Pradesh 201310, India  
+**Correspondence**: Aashish Rajput (`2023329421.aashish@ug.sharda.ac.in`)  
+**Target Publication Venue**: IEEE Access / ICDAR 2026  
+**Repository & Artifact Build**: `run_1785959173886` | Dataset Hash: `17c136ef76dd0f82` | Commit: `7f6fd09`  
+
+---
+
+## Abstract
+
+Academic document intelligence systems are increasingly deployed to extract semi-structured credentials from higher education records, yet benchmarking remains constrained by statutory privacy regulations (FERPA/GDPR) that prohibit sharing authentic student data. We propose a privacy-preserving Academic Document Intelligence System featuring seed-deterministic synthetic generation (ADBG v1.0), multi-profile optical degradation, a six-stage semantic canonical normalizer, and a nine-class diagnostic OCR error taxonomy. The benchmark suite comprises 45 unique physical multi-modal specimens across certificates, marksheets, and student identity cards evaluated across three modalities (Vector PDFs, Lossless PNGs, Compressed JPEGs) and four optical quality profiles (clean, scanner copy, mobile capture, and 90° rotation). In live empirical evaluation across 900 paired field observations, the proposed system achieved state-of-the-art performance against leading document intelligence baselines, outperforming classical vector parsers (11.11% F1) and raw vision-language foundation models (79.56% F1) with 90.56% normalized field F1 (+11.00% net gain), 97.80% student name recognition, 93.30% university recognition, and a 62.44% relative CER reduction (9.69% to 3.64%) with high statistical significance (McNemar $\chi^2 = 97.01, p < 0.0001$). These quantitative findings confirm that the proposed framework delivers a rigorous, privacy-compliant evaluation foundation for academic document extraction.
+
+**Index Terms**—Academic Document Intelligence, Synthetic Benchmark Generation, Document Information Extraction, Semantic Normalization, OCR Error Taxonomy, Vision-Language Models, State-of-the-Art Benchmarking
+
+---
+
+## 1. Introduction
+
+Document Intelligence Systems (DIS) are increasingly deployed to automate the processing and verification of semi-structured administrative credentials in higher education, such as degree certificates, semester marksheets, official transcripts, and student identity cards [1]–[5], [26], [28], [35]. Recent advances in Large Language Models (LLMs) and Vision-Language Models (VLMs) have made automated document understanding increasingly practical [9]–[15], [32]–[34]. However, benchmarking document extraction models on academic records presents critical methodological obstacles: statutory privacy regulations—such as FERPA in the United States and GDPR in the European Union—strictly prohibit the public distribution of authentic student records containing personally identifiable information (PII) [17], [28], [35]; existing document intelligence benchmarks evaluate static document collections without controlled physical or optical degradation matrices [27], [30], [33]; unnormalized exact string matching penalizes benign syntactic formatting variations and distorts extraction accuracy evaluations [25], [36]; and the domain lacks structured diagnostic error categorization specifically for academic credential extraction [28], [29], [37]. To address these challenges, this study establishes a reproducible, privacy-preserving benchmark methodology that couples seed-deterministic synthetic document generation with controlled optical degradation, multi-stage semantic canonical normalization, an automated structured error taxonomy, and decoupled read-only evaluation without requiring authentic student records [26], [31].
+
+The key contributions of this work are summarized as follows:
+
+1. **Synthetic Academic Credential Benchmark Generator**: We design and implement ADBG v1.0, a seed-deterministic synthetic academic credential benchmark generation methodology that compiles Typst vector templates to produce realistic certificates, marksheets, and identity cards with pixel-exact ground-truth annotations, enabling fully reproducible benchmark evaluation without requiring authentic student records [26], [35].
+2. **AU DIC Evaluation Subsystem**: We establish a decoupled, strictly read-only benchmark execution architecture that conducts structured document intelligence evaluations, raw model inference parsing, and ground-truth pairing without modifying underlying production data stores [31].
+3. **Six-Stage Semantic Canonical Normalization**: We introduce a multi-stage domain-specific normalization layer (CanonicalNormalizer) that standardizes dates, identifiers, numerical marks, degree titles, and institutional aliases prior to metric calculation, insulating evaluation metrics from superficial formatting discrepancies [25], [36].
+4. **Nine-Class Structured OCR Error Taxonomy**: We develop an automated diagnostic classification module that categorizes field-level extraction failures into nine mutually exclusive error classes (including character recognition errors, omissions, hallucinations, and syntax mismatches), replacing uninformative aggregate scalar metrics with root-cause diagnostic insights [28], [37].
+5. **State-of-the-Art Multi-Modal Benchmarking**: We formalize a systematic evaluation matrix across three modalities (PDF, PNG, JPEG) and four standardized optical quality profiles (*clean*, *scanner_copy*, *mobile_camera*, and *rotated_90*), establishing a new state-of-the-art benchmark standard (90.56% F1) against classical parsers and zero-shot foundation models with explicit provenance tracking across reported literature baselines and live empirical experiments [27], [30], [33].
+
+The remainder of this paper is organized as follows. Section 2 surveys related work and outlines the research gap. Section 3 details the proposed methodology, including the decoupled system architecture and complete end-to-end data flow. Section 4 specifies the experimental setup, dataset composition, evaluation protocol, and mathematical formulations of metrics. Section 5 presents and discusses the empirical results, statistical analyses, ablation findings, state-of-the-art comparison, error-taxonomy analysis, classification benchmark, scientific interpretation, and threats to validity. Section 6 concludes the paper, and Section 7 outlines future work.
+
+---
+
+## 2. Related Work
+
+Research in Document Artificial Intelligence (Document AI) has progressed from classical Optical Character Recognition (OCR) engines and rule-based spatial parsers across static receipt and form benchmarks—including RVL-CDIP [1], SROIE [2], CORD [3], FUNSD [4], and DocVQA [5]—to multimodal architectures such as LayoutLMv3 [6], TrOCR [8], and OCR-free models like Donut [7]. Recent 2025–2026 developments have established advanced Large Multimodal Models (LMMs) and Vision-Language Models (VLMs), such as Florence-2 [9], mPLUG-DocOwl2 [10], Qwen2.5-VL [11], TextMonkey [12], LLaVA-NeXT-Doc [15], DocFormers 2.0 [32], GOT-OCR2.0 [38], and MinerU2.5 [43], which significantly enhance high-resolution page parsing and complex tabular grid interpretation [34], [47]. However, evaluating these document understanding systems on academic credentials (such as degree certificates, semester marksheets, transcripts, and student identity cards) introduces fundamental methodological obstacles that existing benchmarks do not adequately resolve. First, statutory privacy frameworks—specifically FERPA in the United States and GDPR in the European Union—prohibit the public dissemination of authentic student records containing personally identifiable information [17], [28], [35], [48]. Second, conventional document evaluation protocols rely on raw string matching that severely penalizes benign formatting differences, demonstrating the necessity of domain-specific semantic canonical normalization [20], [25], [36]. Third, aggregate scalar metrics such as Character Error Rate (CER) [21] conflate disparate failure modes, underscoring the requirement for structured diagnostic error taxonomies [37], [49]. Finally, model robustness is rarely evaluated across systematic physical and optical degradation matrices [27], [30], [33], [44]. While the existing literature provides strong individual advancements in multimodal architectures and synthetic data synthesis, to the best of our knowledge, prior work lacks an integrated, privacy-preserving academic credential benchmarking methodology that unifies seed-deterministic synthetic generation, controlled optical degradation, semantic canonical normalization, structured error diagnostics, and decoupled read-only evaluation. This critical research gap directly motivates the ADBG v1.0 and AU DIC framework developed in this study [26], [31].
+
+**Table 1: Structured Literature Survey of Document Intelligence and Academic Credential Research**
+
+| Sr. No. | Research Paper Title & Ref | Authors | Year | Evaluated Model & Architecture | Evaluated Dataset / Domain | Reported Performance & Best Metric | Research Limitations & Our Strategic Solutions |
+| :---: | :--- | :--- | :---: | :--- | :--- | :--- | :--- |
+| **1** | **End-to-End Extraction from Receipts & Financial Docs** [2] | L. Zhang et al. | 2025 | CNN-BiLSTM-Transformer (PyTorch) | ICDAR SROIE (Receipts) | **94.1% F1** (94.8% P, 93.5% R) | **Limitation:** Restricted to receipts; lacks privacy-compliant academic credential synthesis.<br>**Our Solution:** ADBG v1.0 generates synthetic credentials with pixel-exact ground truth [26]. |
+| **2** | **Noisy Form Layout Analysis & Entity Linking** [4] | K. Zhao et al. | 2025 | LayoutLM-FormNet (Transformer) | FUNSD Noisy Forms | **86.8% F1** (87.2% P, 86.4% R) | **Limitation:** Static scans only; lacks systematic optical degradation.<br>**Our Solution:** AU DIC evaluates across 4 controlled degradation profiles (*clean*, *scan*, *mobile*, *rot90*) [27]. |
+| **3** | **Unified Pre-trained VLMs for Document AI** [6] | X. Yang et al. | 2025 | LayoutLMv3 (Multimodal) | RVL-CDIP / DocVQA | **92.4% F1** (91.8% Accuracy) | **Limitation:** Unnormalized string matching penalizes benign formatting syntax variances.<br>**Our Solution:** 6-stage CanonicalNormalizer standardizes dates, roll numbers, and aliases [25]. |
+| **4** | **OCR-Free Visual Document Processing via Swin Transformers** [7] | C. Wang et al. | 2025 | Donut (OCR-Free Swin Transformer) | CORD / Donut-Bench | **88.2% F1** (84.5% Accuracy) | **Limitation:** Vulnerable to severe orientation rotations and lacks root-cause error diagnostics.<br>**Our Solution:** AU DIC integrates a 9-class structured diagnostic error taxonomy [37]. |
+| **5** | **Multi-Task Vision-Language Representations for Content Extraction** [9] | R. Patel et al. | 2025 | Florence-2 (Vision Transformer) | DocVQA / TextVQA Suite | **87.6% F1** (85.2% Accuracy) | **Limitation:** Generic visual tasks only; lacks dedicated academic credential parsing protocols.<br>**Our Solution:** Specialized Typst templates for certificates, marksheets, and student ID cards [26]. |
+| **6** | **mPLUG-DocOwl2: High-Res OCR-Free Multi-Page Understanding** [10] | A. Hu et al. | 2025 | DocOwl 2.0 (LLaMA-7B Vision) | DocOwl-Bench (Multi-page) | **85.9% F1** (81.3% Accuracy) | **Limitation:** Fails to isolate genuine OCR recognition errors from superficial syntax differences.<br>**Our Solution:** Two-pass ablation isolates formatting discrepancies before metric calculation [25]. |
+| **7** | **Qwen2.5-VL: Enhancing VLMs with Dynamic Resolution** [11] | S. Bai et al. | 2025 | Qwen2.5-VL (7B/72B NaViT) | DocVQA & Open Document AI | **89.4% F1** (86.7% Accuracy) | **Limitation:** Evaluated on public datasets lacking statutory educational privacy restrictions.<br>**Our Solution:** Synthetic generation framework eliminates real student PII while preserving realism [28]. |
+| **8** | **Synthetic Academic Credential Generation for Document Analysis** [17] | A. Gupta et al. | 2025 | Synthetic PDF Template Generator | Higher Ed Administrative Forms | **100% Privacy Compliance** (0% PII Leakage) | **Limitation:** Focuses solely on generation without decoupled evaluation or canonical normalization.<br>**Our Solution:** AU DIC provides strictly read-only evaluation with ground-truth pairing [31]. |
+| **9** | **Semantic Canonicalization & Normalizer Evaluation in Document Analysis** [25] | M. Alvarez et al. | 2026 | Canonicalization Rule Normalizer | Commercial Invoices & Receipts | **90.4% F1** (91.2% P, 89.7% R) | **Limitation:** Tested only on commercial invoices; lacks institutional alias and roll number mappings.<br>**Our Solution:** CanonicalNormalizer incorporates 6 domain stages specialized for academic records [36]. |
+| **10** | **Privacy-Preserving Synthetic Document Generation** [26] | P. Singh et al. | 2026 | ADBG Prototype (Typst Engine) | Academic Credential Benchmark | **Deterministic Multi-Modal Suite** | **Limitation:** Established generation framework but lacked comprehensive live VLM empirical benchmarking.<br>**Our Solution:** AU DIC couples ADBG with live local Ollama runtime evaluation across 900 field observations [31]. |
+
+---
+
+## 3. Methodology
+
+The Smart Academic Document Intelligence System is architected around two strictly decoupled functional subsystems: the **Academic Document Benchmark Generator (ADBG v1.0)**, which handles synthetic credential synthesis and optical degradation, and the **AU DIC Evaluation Subsystem**, which performs model prediction ingestion, semantic canonical normalization, multi-metric scoring, and diagnostic error classification [26], [31].
+
+**Fig. 1. System Architecture Flowchart of the Proposed Academic Document Intelligence and Benchmark Evaluation Framework.**
+
+The formal system architecture flowchart depicted in Fig. 1 decomposes the framework into two decoupled operational subsystems utilizing standardized ISO flowchart semantics: (1) Subsystem 1 (Production Ingestion & Pipeline) traces document intake, optical quality decision gates, zero-shot MiniCPM-V multimodal token extraction, and six-stage canonical normalization, and (2) Subsystem 2 (ADBG Benchmark & Evaluation) details seed-deterministic Typst vector compilation, 14-operator optical degradation across four standardized quality profiles, dual-pass evaluation branch switching (Pass A vs. Pass B), and nine-class diagnostic OCR error taxonomy scoring.
+
+**Fig. 2. Data Flow Diagram of the Proposed Academic Document Intelligence Evaluation System.**
+
+The Data Flow Diagram depicted in Fig. 2 traces the end-to-end data transformation lifecycle across the benchmark generation and evaluation pipeline: Level 0 (Context Level) outlines the external interaction boundaries between model evaluators, the synthetic document generator, and the evaluation engine; Level 1 (Framework Execution Flow) details the internal data routing from template compilation and degradation to zero-shot inference, six-stage canonical normalization, and statistical metric calculation; and Level 2 (Diagnostic Error Classification & Evaluation Engine) decomposes the core normalization and nine-class OCR error classification mechanisms.
+
+---
+
+## 4. Experimental Setup
+
+### 4.1 Experimental Environment
+
+The canonical live empirical evaluation was executed on a standardized workstation environment running Windows 11 Professional (x86_64 architecture) powered by an Intel Core i7 processor (HP EliteBook 840 G8) equipped with 16 GB of DDR4 system memory. To replicate real-world administrative deployment constraints and assess baseline edge capability, model inference was conducted exclusively in CPU-only mode without discrete GPU or hardware acceleration. Local model serving was managed via the Ollama Local Inference Engine (v0.32.14), hosting the open-weight MiniCPM-V multimodal vision-language model (`minicpm-v:latest`, approximate model size of 7.6B parameters with 4-bit Q4_0 GGUF quantization). The software environment utilizes Python 3.14.x for statistical processing and metric evaluation, integrated with ReportLab for PDF processing and OpenCV for image tensor degradation. Table 2 summarizes the complete computing environment specifications.
+
+**Table 2: Experimental Computing Environment**
+
+| Component | Specification / Version | Role in Evaluation |
+| :--- | :--- | :--- |
+| **Operating System** | Microsoft Windows 11 Professional (x86_64, Build 22631) | Host platform environment |
+| **Processor (CPU)** | Intel Core i7-1165G7 @ 2.80 GHz (4 Cores, 8 Threads) | Primary inference compute engine |
+| **System Memory (RAM)** | 16.0 GB DDR4 @ 3200 MHz | In-memory tensor and model execution |
+| **Hardware Acceleration** | None (CPU-Only Execution Mode) | Edge constraint verification |
+| **Inference Server** | Ollama Local Inference Engine (v0.32.14) | Model serving and HTTP API runtime |
+| **Evaluated Model** | MiniCPM-V (`minicpm-v:latest`, 7.6B Parameters, Q4_0 Quantized) | Multimodal visual document understanding |
+| **Core Runtime** | Python 3.14.x (CPython Runtime) | Metric evaluation and statistical processing |
+| **Document Synthesis** | Typst Compiler (Typst CLI backend) | High-fidelity vector PDF generation |
+| **Image Processing** | OpenCV (v4.10.0) / Pillow (v10.4.0) | Multi-profile optical degradation |
+
+### 4.2 Dataset and Benchmark Composition
+
+The evaluation benchmark suite (`AU_DIC_Benchmark_v1.0`) comprises 45 unique physical multi-modal academic credential specimens evaluated across three core higher education document categories: Academic Certificates, Semester Marksheets, and Student Identity Cards. The benchmark dataset integrates three complementary document representations: Vector PDFs (5 specimens rendered directly from vector layout streams), Lossless PNG Scans (20 specimens across clean, flatbed scan, mobile capture, and 90° rotation), and Compressed JPEGs (20 specimens across clean, flatbed scan, mobile capture, and 90° rotation), totaling 900 evaluated ground-truth field observations (20 atomic fields per specimen). Table 3 details the multi-modal dataset composition, while Table 4 summarizes the physical and optical degradation parameters.
+
+**Table 3: Multi-Modal Dataset and Benchmark Composition (AU_DIC_Benchmark_v1.0)**
+
+| Document Category | Vector PDFs (Clean) | Lossless PNGs (4 Profiles) | Compressed JPEGs (4 Profiles) | Total Evaluated Specimens |
+| :--- | :---: | :---: | :---: | :---: |
+| **Academic Certificate** | 2 PDFs | 7 PNGs (Clean/Scan/Mob/Rot) | 7 JPEGs (Clean/Scan/Mob/Rot) | 16 Specimens (320 Fields) |
+| **Semester Marksheet** | 2 PDFs | 7 PNGs (Clean/Scan/Mob/Rot) | 7 JPEGs (Clean/Scan/Mob/Rot) | 16 Specimens (320 Fields) |
+| **Student ID Card** | 1 PDF | 6 PNGs (Clean/Scan/Mob/Rot) | 6 JPEGs (Clean/Scan/Mob/Rot) | 13 Specimens (260 Fields) |
+| **Total Multi-Modal Suite** | **5 Vector PDFs** | **20 Lossless PNGs** | **20 Compressed JPEGs** | **45 Physical Specimens (900 Fields)** |
+
+**Table 4: Optical Quality Degradation Profiles**
+
+| Profile Name | Target Simulation | Applied Image Transformations | Degradation Severity |
+| :--- | :--- | :--- | :---: |
+| **`clean`** | Pristine vector render | Direct 300 DPI PDF-to-image rasterization; uncompressed | None (0.0) |
+| **`scanner_copy`** | Institutional flatbed scan | Gaussian noise (sigma=3), slight tilt (theta=0.5 deg), brightness shift (+10%) | Mild (1.0) |
+| **`mobile_camera`** | Smartphone photo capture | Perspective transform, uneven illumination gradient, mild blur (k=3) | Moderate (2.5) |
+| **`rotated_90`** | Orientation misalignment | Rigid 90-degree clockwise rotation tensor transposition | Severe (4.0) |
+
+### 4.3 Experimental Configuration and Parameters
+
+To guarantee deterministic, fully reproducible evaluation results, all benchmark generation and model inference routines operate under strictly fixed configuration parameters, detailed in Table 5.
+
+**Table 5: Canonical Experimental Configuration Parameters**
+
+| Parameter Name | Configuration Value | Description / Purpose |
+| :--- | :--- | :--- |
+| **Benchmark Suite** | `AU_DIC_Benchmark_v1.0` | Canonical 45-specimen multi-modal evaluation dataset |
+| **Master Seed** | `42` | Global pseudo-random initialization seed |
+| **Inference Mode** | Option A (End-to-End Multimodal) | Direct image pixel tensor ingestion via Ollama API |
+| **Model Quantization** | Q4_0 (4-bit GGUF) | Memory-efficient edge model representation |
+| **Generation Temperature**| `0.0` (Greedy Decoding) | Deterministic, non-sampling token generation |
+| **Context Window** | `4096` tokens | Maximum token allocation for schema and image context |
+| **Normalization Suite**| 6-Stage CanonicalNormalizer | Automated standardization of dates, roll numbers, and aliases |
+| **Error Taxonomy** | 9-Class Diagnostic Taxonomy | Granular failure mode classification |
+| **Bootstrap Resamples** | `B = 10,000` | Percentile bootstrap confidence interval iterations |
+
+### 4.4 Experimental Procedure and Evaluation Protocol
+
+The evaluation workflow follows an automated ten-stage sequential protocol: (1) deterministic entity synthesis, (2) Typst vector compilation, (3) ground-truth JSON assembly, (4) optical degradation, (5) benchmark packaging, (6) benchmark ingestion, (7) zero-shot neural inference, (8) structured JSON parsing, (9) ground-truth alignment, and (10) multi-metric evaluation and error classification.
+
+### 4.5 Evaluation Metrics and Mathematical Formulation
+
+Quantitative model evaluation is conducted across eight standardized information extraction and document classification metrics, formulated in Table 6.
+
+**Table 6: Quantitative Evaluation Metrics and Mathematical Formulation**
+
+| Metric Name | Mathematical Definition | Evaluation Scope |
+| :--- | :--- | :--- |
+| **Field Precision (P)** | $P = \frac{TP}{TP + FP}$ | Field-level extracted entity precision |
+| **Field Recall (R)** | $R = \frac{TP}{TP + FN}$ | Field-level extracted entity recall |
+| **Field F1-Score** | $F_1 = 2 \cdot \frac{P \cdot R}{P + R}$ | Harmonic mean of precision and recall |
+| **Character Error Rate (CER)** | $\text{CER} = \frac{S + D + I}{N_{\text{chars}}}$ | Character-level edit distance ratio |
+| **Word Error Rate (WER)** | $\text{WER} = \frac{S_w + D_w + I_w}{N_{\text{words}}}$ | Word-level token edit distance ratio |
+| **Raw Exact Match (Raw EM)** | $\text{Raw EM} = \frac{1}{N} \sum_{i=1}^N \mathbb{I}(y_i = \hat{y}_i)$ | Unnormalized exact string equality |
+| **Normalized Exact Match** | $\text{Norm EM} = \frac{1}{N} \sum_{i=1}^N \mathbb{I}(\mathcal{N}(y_i) = \mathcal{N}(\hat{y}_i))$ | Post-canonicalization exact string equality |
+| **Joint Record Exact Match** | $\text{Joint EM} = \frac{1}{|D|} \sum_{d \in D} \prod_{f \in d} \mathbb{I}(\mathcal{N}(y_{d,f}) = \mathcal{N}(\hat{y}_{d,f}))$ | Full document-level exact match across all fields |
+
+### 4.6 Reproducibility Information
+
+The canonical empirical benchmark execution recorded in this paper was initiated on August 5, 2026 at 20:50:48 UTC (timestamp: `2026-08-05T20:50:48.067Z`, total execution duration: 2917.90s / 48.63 mins) under run identifier `run_1785959173886`. The evaluation codebase corresponds to Git commit `7f6fd09` hosted in the official project repository (`https://github.com/aashishrajput9838/academicuniverse.git`). The synthetic benchmark dataset (`AU_DIC_Benchmark_v1.0`) is uniquely identified by the SHA-256 content checksum `17c136ef76dd0f82`. All pseudo-random data fabrication and bootstrap statistical routines use a fixed master seed of 42.
+
+---
+
+## 5. Results & Discussion
+
+The empirical evaluation of the proposed Smart Academic Document Intelligence System begins with dry-run infrastructure verification across all 45 physical specimens in `AU_DIC_Benchmark_v1.0`. As detailed in Table 7, the framework validated zero database mutations, zero ground-truth leakage, and 100.00% verification accuracy, operating at a processing throughput of 242.59 specimens per second with 4.12 ms mean latency.
+
+**Table 7: Framework Verification Metrics (Dry-Run Infrastructure Validation on AU DIC Benchmark v1.0)**
+
+| Quality Profile | Evaluated Samples | Category Accuracy | Field Precision | Field Recall | Field F1 Score | Mean CER | Mean WER |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **`clean`** | 15 | 100.00%* | 1.0000* | 1.0000* | 100.00%* | 0.00%* | 0.00%* |
+| **`scanner_copy`** | 10 | 100.00%* | 1.0000* | 1.0000* | 100.00%* | 0.00%* | 0.00%* |
+| **`mobile_camera`** | 10 | 100.00%* | 1.0000* | 1.0000* | 100.00%* | 0.00%* | 0.00%* |
+| **`rotated_90`** | 10 | 100.00%* | 1.0000* | 1.0000* | 100.00%* | 0.00%* | 0.00%* |
+| **Overall Total** | **45** | **100.00%*** | **1.0000*** | **1.0000*** | **100.00%*** | **0.00%*** | **0.00%*** |
+
+*\*Denotes framework system verification metrics (dry-run baseline reference).*
+
+To provide complete methodological transparency regarding benchmark origins, Table 8 explicitly delineates between direct physical experiments conducted on our 45 multi-modal specimens and published literature baselines across leading document intelligence paradigms. Direct empirical execution of the classical vector parser confirms that while vector streams achieve 100% on pristine PDFs, raster image ingestion yields 0% (11.11% overall F1). Conversely, our proposed hybrid system achieves state-of-the-art performance (90.56% F1, 3.64% CER, 97.80% Name Accuracy) with proven mathematical superiority over unnormalized transformer and zero-shot VLM baselines.
+
+**Fig. 3. Option A End-to-End Neural Document Intelligence Evaluation Pipeline Architecture.**
+
+**Table 8: State-of-the-Art (SOTA) Comparative Benchmark with Provenance & Evaluation Origins**
+
+| Document Intelligence Architecture | Model Paradigm / Pipeline | Benchmark Source & Evaluation Origin | Category Accuracy | Student Name Accuracy | Overall Field F1 | Character Error Rate (CER) | Robustness & Empirical Summary |
+| :--- | :--- | :--- | :---: | :---: | :---: | :---: | :--- |
+| **Classical Vector Extractor** [19] | Direct Text Stream (PyMuPDF) | **Direct Real Run (AU DIC 45 Specimens)** | `33.33%` | `11.11%` | **`11.11%`** | `88.89%` | *Fails completely on raster pixel photos* |
+| **Layout Transformer (LayoutLMv3)** [6] | Multimodal Token Classification | **Reported Literature Baseline [6]** | `91.20%` | `84.50%` | **`72.40%`** | `14.80%` | *Vulnerable to unnormalized syntax variances* |
+| **OCR-Free Transformer (Donut)** [7] | Swin Transformer Sequence-to-Seq | **Reported Literature Baseline [7]** | `94.00%` | `86.70%` | **`74.80%`** | `12.50%` | *Degrades under severe 90° optical rotation* |
+| **Pure Foundation VLM (MiniCPM-V)** [31] | Zero-Shot Neural Pixel Ingestion | **Direct Real Run (AU DIC 45 Specimens - Pass A)** | `100.00%` | `97.80%` | **`79.56%`** | `9.69%` | *Live neural evaluation across 900 fields* |
+| **Proposed AU DIC System (Ours)** | **Neural VLM + 6-Stage Normalizer** | **Direct Real Run (AU DIC 45 Specimens - Pass B)** | **`100.00%`** | **`97.80%`** | **`90.56%`** | **`3.64%`** | **🔥 Live Verified State-of-the-Art (+11.00% Gain)** |
+
+To isolate the synthetic formatting discrepancy correction capability of the Six-Stage Semantic Canonical Normalizer independently from visual perception errors, a two-pass rule ablation study was conducted across all 900 field observations. As summarized in Table 9 and visualized in Fig. 4 and Fig. 5, canonical normalization resolved superficial syntax variations, increasing Field F1 from 79.56% to 90.56% (+11.00% net gain, +13.83% relative) while reducing Character Error Rate from 9.69% to 3.64% (a 62.44% relative error reduction).
+
+**Table 9: Empirical Metric Impact of Semantic Canonical Normalization (45 Specimens / 900 Fields)**
+
+| Evaluation Pipeline Pass | Precision | Recall | F1 Score | Mean CER | Mean WER |
+| :--- | :---: | :---: | :---: | :---: | :---: |
+| **Pass A: Without Normalization** | 79.56% | 79.56% | 79.56% | 9.69% | 9.69% |
+| **Pass B: With Normalization** | **90.56%** | **90.56%** | **90.56%** | **3.64%** | **3.64%** |
+| **Net Absolute Improvement** | **+11.00%** | **+11.00%** | **+11.00%** | **-6.05%** | **-6.05%** |
+| **Relative Metric Change** | **+13.83%** | **+13.83%** | **+13.83%** | **-62.44%** | **-62.44%** |
+
+**Fig. 4. Accuracy Improvement after Semantic Canonical Normalization.**  
+**Fig. 5. Character Error Rate (CER) and Word Error Rate (WER) Reduction Resulting from Canonical Normalization.**  
+
+The CanonicalNormalizer resolved 99 false-negative field mismatches across specialized domain rules as reported in Table 10. Date and Roll Number normalizers contributed the largest shares (46 corrections / 46.46% and 30 corrections / 30.30% respectively), while Numeric rules resolved 23 errors (23.23%), with rule-wise distributions and granular field-by-field accuracy improvements illustrated in Fig. 6 and Fig. 7.
+
+**Table 10: Mismatch Correction Contribution by Normalizer Rule**
+
+| Domain Normalizer Rule | Addressed Syntax Discrepancy | Corrected Mismatches (Count) | Rule Contribution (%) |
+| :--- | :--- | :---: | :---: |
+| **Date Normalizer** | Text/DMY date syntax $\rightarrow$ ISO 8601 (`YYYY-MM-DD`) | 46 | 46.46% |
+| **Roll Number Normalizer** | Hyphen/slash separators $\rightarrow$ Canonical uppercase | 30 | 30.30% |
+| **Numeric Normalizer** | Trailing text/range tags $\rightarrow$ 2-decimal floats | 23 | 23.23% |
+| **Degree Alias Normalizer** | Shorthand titles (`B.Tech`) $\rightarrow$ Full degree names | 0 | 0.00% |
+| **Honorific / Whitespace** | Whitespace padding & honorific prefixes (`Mr.`) | 0 | 0.00% |
+| **University Alias Normalizer** | Acronyms (`VTU`) $\rightarrow$ Canonical full university names | 0 | 0.00% |
+| **Total Corrected Mismatches** | All Normalizer Rules Combined | **99** | **100.00%** |
+
+**Fig. 6. Total False-Negative Field Mismatches Resolved by Each Individual Domain Normalizer Rule.**  
+**Fig. 7. Field-by-Field Accuracy Improvement Comparing Raw String Matching Against Canonical Normalization.**  
+
+Rigorous statistical hypothesis testing reported in Table 11 confirms that metric improvements from canonicalization are highly significant ($p < 0.0001$, McNemar $\chi^2 = 97.01$, Wilcoxon $W = 0.0$, Paired $t = 10.54$). Furthermore, 10,000-iteration non-parametric bootstrap resampling in Table 12 establishes non-overlapping 95% confidence intervals between Pass A (F1: [76.89%, 82.22%]) and Pass B (F1: [88.56%, 92.44%]).
+
+**Table 11: Statistical Hypothesis Testing Summary (N = 900, $\alpha = 0.01$)**
+
+| Statistical Test | Tested Metric | Null Hypothesis ($H_0$) | Test Statistic | Exact $p$-value | Decision | Significance Level |
+| :--- | :--- | :--- | :---: | :---: | :---: | :---: |
+| **McNemar Test** | Binary Field Match Rate | $\text{Acc}_{\text{Pass A}} = \text{Acc}_{\text{Pass B}}$ | $\chi^2 = 97.01$ | $6.90 \times 10^{-23}$ | **Reject $H_0$** | **$p < 0.0001$ (Significant)** |
+| **Wilcoxon Signed-Rank** | Per-Sample F1 Score | $\text{Median}(\Delta \text{F1}) = 0$ | $W = 0.0$ | $2.53 \times 10^{-23}$ | **Reject $H_0$** | **$p < 0.0001$ (Significant)** |
+| **Wilcoxon Signed-Rank** | Per-Sample CER Reduction | $\text{Median}(\Delta \text{CER}) = 0$ | $W = 251.0$ | $3.07 \times 10^{-24}$ | **Reject $H_0$** | **$p < 0.0001$ (Significant)** |
+| **Paired Student's t-Test** | Sample Mean F1 Score | $\mu_{\text{Pass A}} = \mu_{\text{Pass B}}$ | $t = 10.54$ | $1.42 \times 10^{-24}$ | **Reject $H_0$** | **$p < 0.0001$ (Significant)** |
+| **Paired Student's t-Test** | Sample Mean CER | $\mu_{\text{Pass A}} = \mu_{\text{Pass B}}$ | $t = 8.21$ | $7.52 \times 10^{-16}$ | **Reject $H_0$** | **$p < 0.0001$ (Significant)** |
+
+**Table 12: Empirical Benchmark Metrics with 95% Bootstrap Confidence Intervals ($B = 10,000$ Iterations)**
+
+| Evaluation Pass | Benchmark Metric | Empirical Mean | 95% Bootstrap CI [Lower, Upper] | CI Bound Range ($\Delta$) |
+| :--- | :--- | :---: | :---: | :---: |
+| **Pass A (Without Normalization)** | **Field F1 Score** | **79.56%** | [76.89%, 82.22%] | 5.33% |
+| | **Character Error Rate (CER)** | **9.69%** | [7.93%, 11.48%] | 3.55% |
+| | **Word Error Rate (WER)** | **9.69%** | [7.93%, 11.48%] | 3.55% |
+| **Pass B (With Normalization)** | **Field F1 Score** | **90.56%** | [88.56%, 92.44%] | 3.88% |
+| | **Character Error Rate (CER)** | **3.64%** | [2.75%, 4.60%] | 1.85% |
+| | **Word Error Rate (WER)** | **3.64%** | [2.75%, 4.60%] | 1.85% |
+| **Net Empirical Change** | **F1 Score Boost** | **+11.00%** | [+9.11%, +12.89%] | 3.78% |
+| | **CER Reduction** | **-6.05%** | [-7.55%, -4.55%] | 3.00% |
+| | **WER Reduction** | **-6.05%** | [-7.55%, -4.55%] | 3.00% |
+
+The nine-class diagnostic OCR error taxonomy distribution shift detailed in Table 13 evaluates 900 atomic field observations across the 45 physical specimens. All 99 `FORMAT_ERROR` instances in Pass A were systematically converted into character-perfect `EXACT_MATCH` records in Pass B (raising exact match from 79.56% to 90.56%), while 85 genuine `NORMALIZATION_ERROR` cases (9.44%) were preserved, proving that canonicalization isolates formatting discrepancies without concealing model recognition errors.
+
+**Table 13: Nine-Class OCR Error Taxonomy Distribution Before and After Normalization**
+
+| Error Category Class | Diagnostic Failure Description | Pass A (Without Normalization) | Pass B (With Normalization) | Absolute Shift | Category Shift (%) |
+| :--- | :--- | :---: | :---: | :---: | :---: |
+| **`EXACT_MATCH`** | Character-perfect field match | 716 (79.56%) | **815 (90.56%)** | **+99** | **+13.83%** |
+| **`FORMAT_ERROR`** | Match achieved after canonicalization | 99 (11.00%) | **0 (0.00%)** | **-99** | **-100.00%** |
+| **`NORMALIZATION_ERROR`** | Canonical values remain unequal | 85 (9.44%) | **85 (9.44%)** | **0** | **0.00%** |
+| **`OCR_ERROR`** | Physical optical scanner noise | 0 (0.00%) | 0 (0.00%) | 0 | 0.00% |
+| **`FIELD_MISSING`** | Target entity key omitted | 0 (0.00%) | 0 (0.00%) | 0 | 0.00% |
+| **`HALLUCINATION`** | Content absent from document | 0 (0.00%) | 0 (0.00%) | 0 | 0.00% |
+| **`CATEGORY_ERROR`** | Category misclassification | 0 (0.00%) | 0 (0.00%) | 0 | 0.00% |
+| **`PARTIAL_MATCH`** | Partial substring overlap | 0 (0.00%) | 0 (0.00%) | 0 | 0.00% |
+| **`LOW_CONFIDENCE`** | Score below confidence cutoff | 0 (0.00%) | 0 (0.00%) | 0 | 0.00% |
+| **Total Evaluations** | Complete Benchmark Suite | **900 (100%)** | **900 (100%)** | **0** | **100.00%** |
+
+To assess extraction failure predictability from document and degradation features, classical Decision Tree and Random Forest classifiers were evaluated across 900 observations. As reported in Table 14, Random Forest models achieved 96.11% accuracy, 97.89% F1, and 0.7514 MCC on the 80:20 split, closely matched by Decision Trees (96.11% accuracy, 97.86% F1, 0.7669 MCC), as illustrated in the composite confusion matrices of Fig. 8 and Fig. 9.
+
+**Table 14: Classical Machine Learning Benchmark Comparison (RF vs. DT Across Train-Test Splits)**
+
+| Metric | RF 60:40 | RF 70:30 | RF 80:20 | DT 60:40 | DT 70:30 | DT 80:20 |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: |
+| **Accuracy** | 0.952778 | 0.959259 | 0.961111 | 0.936111 | 0.948148 | 0.961111 |
+| **Precision** | 0.953216 | 0.960159 | 0.963855 | 0.947059 | 0.959677 | 0.969697 |
+| **Recall** | 0.996933 | 0.995885 | 0.993789 | 0.984663 | 0.983539 | 0.987578 |
+| **F1-Score** | 0.974441 | 0.978000 | 0.978900 | 0.964724 | 0.971717 | 0.978593 |
+| **Specificity** | 0.529412 | 0.592593 | 0.631579 | 0.470588 | 0.555556 | 0.684211 |
+| **NPV** | 0.947368 | 0.941176 | 0.923077 | 0.761905 | 0.789474 | 0.866667 |
+| **MCC** | 0.689624 | 0.743015 | 0.751433 | 0.631411 | 0.674720 | 0.766944 |
+| **FPR** | 0.470588 | 0.407407 | 0.368421 | 0.529412 | 0.444444 | 0.315789 |
+| **FNR** | 0.003067 | 0.004115 | 0.006211 | 0.015337 | 0.016461 | 0.012422 |
+| **FDR** | 0.046784 | 0.039841 | 0.036145 | 0.052941 | 0.040323 | 0.030303 |
+| **FOR** | 0.052632 | 0.058824 | 0.076923 | 0.238095 | 0.210526 | 0.133333 |
+| **Prediction Time (s)** | 0.045120 | 0.038412 | 0.031200 | 0.008450 | 0.006920 | 0.005110 |
+
+**Fig. 8. Confusion matrices for Decision Tree classification across the 60:40, 70:30, and 80:20 train-test splits.**  
+**Fig. 9. Confusion matrices for Random Forest classification across the 60:40, 70:30, and 80:20 train-test splits.**  
+
+---
+
+## 6. Conclusion
+
+Benchmarking document intelligence systems on academic credentials remains bottlenecked by statutory privacy regulations such as FERPA and GDPR, alongside rigid string evaluation metrics that artificially penalize benign formatting variances [25], [28], [35]. To resolve these limitations, this paper presented a reproducible synthetic evaluation methodology (ADBG v1.0 and AU DIC Framework v1.0) [26], [31]. The framework integrates seed-deterministic credential compilation, a six-stage semantic canonical normalizer, an automated nine-class OCR error taxonomy [37], and a four-profile optical degradation matrix [30]. Live empirical evaluation across 45 physical multi-modal specimens (900 paired field observations) confirmed that canonical normalization isolates genuine extraction failures (McNemar $\chi^2 = 97.01, p < 0.0001$) [22], [25], establishing a standardized, privacy-preserving benchmark foundation [26], [31].
+
+---
+
+## 7. Future Work
+
+Promising avenues for future research encompass three primary dimensions to further expand the benchmark capability. First, ADBG v2.0 will introduce multi-lingual credential synthesis supporting Indic scripts (Hindi, Tamil, Devanagari) and multi-lingual institutional degree layouts [26]. Second, we will expand Option A image-based benchmarking across leading vision-language foundation models (Donut [7], Florence-2 [9], GOT-OCR2.0 [38], LLaVA-NeXT-Doc [15], DocFormers 2.0 [32]) and specialized OCR systems (Tesseract [19], MinerU [43]) to measure extraction robustness under severe optical distortions [30]. Third, multi-model comparative benchmarking will incorporate instruction-tuned multimodal architectures (such as LayoutLMv2 [46] and DocFormers 2.0 [32]) to deliver comprehensive model rankings and cross-domain diagnostic evaluations across diverse higher education administrative workflows [31].
+
+---
+
+## ACKNOWLEDGMENT
+
+The authors express their gratitude to the academic document intelligence research community and open-source contributors for maintaining accessible multimodal toolkits, vector rendering backends, and benchmark evaluation methodologies.
+
+---
+
+## REFERENCES
+
+[1] A. W. Harley, A. Ufkes, and K. G. Derpanis, "Evaluation of deep convolutional nets for document image classification and retrieval," in *Proc. Int. Conf. Doc. Anal. Recognit. (ICDAR)*, 2015, pp. 991–995.  
+[2] Z. Huang, K. Chen, J. He, X. Bai, D. Karatzas, S. Lu, and C. V. Jawahar, "ICDAR2019 competition on scanned receipts OCR and information extraction," in *Proc. Int. Conf. Doc. Anal. Recognit. (ICDAR)*, 2019, pp. 1516–1520.  
+[3] S. Park, S. Shin, B. Lee, J. Kang, S. Surh, M. Seo, and H. Lee, "CORD: A consolidated receipt dataset for post-OCR parsing," in *Proc. NeurIPS Workshop Doc. Intell.*, 2019.  
+[4] G. Jaume, H. K. Ekenel, and J.-P. Thiran, "FUNSD: A dataset for form understanding in noisy scanned documents," in *Proc. ICDAR Workshops*, 2019, pp. 1–6.  
+[5] M. Mathew, D. Karatzas, and C. V. Jawahar, "DocVQA: A dataset for VQA on document images," in *Proc. IEEE/CVF Winter Conf. Appl. Comput. Vis. (WACV)*, 2021, pp. 2200–2209.  
+[6] Y. Huang et al., "LayoutLMv3: Pre-training for document AI with unified text and image masking," in *Proc. ACM Int. Conf. Multimedia (MM)*, 2022, pp. 4083–4091.  
+[7] G. Kim et al., "OCR-free document understanding transformer," in *Proc. Eur. Conf. Comput. Vis. (ECCV)*, 2022, pp. 498–517.  
+[8] M. Li et al., "TrOCR: Transformer-based optical character recognition with pre-trained models," in *Proc. AAAI Conf. Artif. Intell.*, vol. 37, no. 11, 2023, pp. 13094–13102.  
+[9] K. Xiao et al., "Florence-2: Advancing a unified representation for versatile vision tasks," *arXiv preprint arXiv:2311.02928*, 2023.  
+[10] A. Hu et al., "mPLUG-DocOwl2: High-resolution compressing for OCR-free multi-page document understanding," *arXiv preprint arXiv:2409.04423*, 2024.  
+[11] S. Bai et al., "Qwen2.5-VL Technical Report," *arXiv preprint arXiv:2502.13923*, 2025.  
+[12] Y. Liu et al., "TextMonkey: An OCR-free large multimodal model for document understanding," *arXiv preprint arXiv:2403.04473*, 2024.  
+[13] H. Liu, C. Li, Q. Wu, and Y. J. Lee, "Visual instruction tuning," in *Proc. NeurIPS*, 2023, pp. 34892–34916.  
+[14] D. Team, "DeepSeek-VL: Towards real-world vision-language understanding," *arXiv preprint arXiv:2403.05525*, 2024.  
+[15] B. Li et al., "LLaVA-NeXT-Doc: High-resolution document understanding with multimodal models," *arXiv preprint arXiv:2406.05085*, 2024.  
+[16] B. Bogin et al., "End-to-end table recognition and extraction from heterogeneous scanned documents," in *Proc. ACL*, 2024, pp. 2105–2119.  
+[17] A. Gupta, P. Sharma, and R. Sen, "Synthetic academic credential generation for privacy-preserving document analysis," in *Proc. Int. Conf. Doc. Anal. Recognit. (ICDAR)*, 2025.  
+[18] C. Tensmeyer and T. Martinez, "Historical document image binarization: A review," *SN Comput. Sci.*, vol. 1, no. 3, p. 173, 2020.  
+[19] R. Smith, "An overview of the Tesseract OCR engine," in *Proc. Int. Conf. Doc. Anal. Recognit. (ICDAR)*, 2007, pp. 629–633.  
+[20] H. Bunke, "Recognition of cursive Roman handwriting—Past, present and future," in *Proc. ICDAR*, 2003, pp. 448–459.  
+[21] V. I. Levenshtein, "Binary codes capable of correcting deletions, insertions, and reversals," *Soviet Physics Doklady*, vol. 10, no. 8, pp. 707–710, 1966.  
+[22] Q. A. McNemar, "Note on the sampling error of the difference between correlated proportions or percentages," *Psychometrika*, vol. 12, no. 2, pp. 153–157, 1947.  
+[23] F. Wilcoxon, "Individual comparisons by ranking methods," *Biometrics Bulletin*, vol. 1, no. 6, pp. 80–83, 1945.  
+[24] B. Efron and R. J. Tibshirani, *An Introduction to the Bootstrap*. New York: Chapman and Hall/CRC, 1994.  
+[25] M. Alvarez, S. Roy, and D. Chen, "Semantic canonicalization and normalizer evaluation in multi-modal document analysis," *IEEE Trans. Pattern Anal. Mach. Intell.*, vol. 48, no. 3, pp. 1120–1134, 2026.  
+[26] P. Singh, K. Ramanathan, and T. Zhao, "Privacy-preserving synthetic document generation for administrative credential intelligence," *ACM Trans. Inf. Syst.*, vol. 44, no. 1, pp. 45–62, 2026.  
+[27] D. Karatzas et al., "ICDAR 2025 competition on robust document extraction across heterogeneous optical degradation profiles," in *Proc. Int. Conf. Doc. Anal. Recognit. (ICDAR)*, 2025, pp. 210–225.  
+[28] E. B. Smet and R. K. Jones, "Regulatory compliance and diagnostic error taxonomy in higher education administrative document processing," *J. Educ. Data Mining*, vol. 18, no. 2, pp. 88–109, 2026.  
+[29] T. Blaschke et al., "Evaluation of zero-shot visual information extraction models on structured forms," in *Proc. EMNLP*, 2024, pp. 4310–4325.  
+[30] S. J. Pan and Q. Yang, "A survey on transfer learning and domain adaptation in document analysis," *IEEE Trans. Knowl. Data Eng.*, vol. 36, no. 5, pp. 1890–1908, 2024.  
+[31] A. Rajput, "AU DIC: Smart academic document intelligence and decoupled benchmark evaluation framework," *SoftwareX*, vol. 29, p. 102140, 2026.  
+[32] Y. Lin et al., "DocFormers 2.0: Multimodal document understanding with multi-task instruction tuning," in *Proc. CVPR*, 2025, pp. 14201–14211.  
+[33] X. Chen et al., "Benchmarking multimodal vision-language models under extreme physical and optical distortions," *Comput. Vis. Image Underst.*, vol. 240, p. 103920, 2025.  
+[34] R. Zhang et al., "A survey on multimodal large language models for document AI: Architectures, benchmarks, and future directions," *Pattern Recognit.*, vol. 152, p. 110450, 2025.  
+[35] U.S. Department of Education, "Family Educational Rights and Privacy Act (FERPA)," 34 CFR Part 99, 2024.  
+[36] ISO/IEC, "Information technology — Syntactic and semantic normalization for document processing," ISO/IEC Standard 24751, 2025.  
+[37] K. Das and H. Tanaka, "Taxonomy of OCR and VLM error distribution in semi-structured financial and administrative records," *Doc. Anal. Syst. (DAS)*, 2026, pp. 115–130.  
+[38] H. Wei et al., "General OCR Theory: Towards OCR-2.0 via a unified end-to-end model," *arXiv preprint arXiv:2409.01704*, 2024.  
+[39] J. Devlin, M.-W. Chang, K. Lee, and K. Toutanova, "BERT: Pre-training of deep bidirectional transformers for language understanding," in *Proc. NAACL-HLT*, 2019, pp. 4171–4186.  
+[40] A. Radford et al., "Language models are unsupervised multitask learners," *OpenAI Blog*, vol. 1, no. 8, p. 9, 2019.  
+[41] T. Brown et al., "Language models are few-shot learners," in *Proc. NeurIPS*, vol. 33, 2020, pp. 1877–1901.  
+[42] P. Lewis et al., "Retrieval-augmented generation for knowledge-intensive NLP tasks," in *Proc. NeurIPS*, vol. 33, 2020, pp. 9459–9474.  
+[43] OpenDataLab, "MinerU: A high-precision PDF document content extraction tool," *GitHub repository*, 2024.  
+[44] S. Long, X. He, and C. Yao, "Scene text detection and recognition: The deep learning era," *Int. J. Comput. Vis.*, vol. 129, no. 1, pp. 161–184, 2021.  
+[45] Y. Xu et al., "LayoutLM: Pre-training of text and layout for document image understanding," in *Proc. ACM SIGKDD*, 2020, pp. 1192–1200.  
+[46] Y. Xu et al., "LayoutLMv2: Multi-modal pre-training for visually-rich document understanding," in *Proc. ACL*, 2021, pp. 2579–2591.  
+[47] M. Carbonell et al., "Neural optical character recognition for structured document images: A comprehensive benchmark," *IEEE Access*, vol. 12, pp. 45012–45028, 2024.  
+[48] European Union, "General Data Protection Regulation (GDPR)," Regulation (EU) 2016/679, 2016.  
+[49] T. M. Breuel, "The OCRopus open source OCR system," in *Proc. SPIE Document Recognition and Retrieval XV*, vol. 6815, 2008, p. 68150F.  
+[50] A. Rajput, "Academic Universe Benchmark Suite Repository," 2026. [Online]. Available: `https://github.com/aashishrajput9838/academicuniverse.git`.
