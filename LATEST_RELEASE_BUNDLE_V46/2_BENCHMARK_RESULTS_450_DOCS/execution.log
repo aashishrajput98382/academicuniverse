@@ -1,0 +1,469 @@
+[2026-08-27 01:19:38] =================================================================
+[2026-08-27 01:19:38]  AU DIC 450-DOCUMENT REAL LIVE OLLAMA GPU BENCHMARK
+[2026-08-27 01:19:38]  Model: minicpm-v:latest via http://localhost:11434/api/generate
+[2026-08-27 01:19:38]  Run ID: run_450_live_gpu_1787773778444
+[2026-08-27 01:19:38]  Output Directory: C:\github\academicuniverse\backend\benchmark_reports\run_450_live_gpu_1787773778444
+[2026-08-27 01:19:38] =================================================================
+[2026-08-27 01:19:39] [STEP 1/5] Verified 450 physical multi-modal specimens.
+[2026-08-27 01:19:39] 
+[STEP 2/5] Starting 100% Real Live GPU Vision Inference Loop...
+
+[2026-08-27 01:21:03] [001/450] [PDF ] [clean         ] File: DOC-0010905E.pdf               | GPU Latency: 83.6s | Name Match: True  | ETA: 625m 45s
+[2026-08-27 01:22:18] [002/450] [PDF ] [clean         ] File: DOC-001A07AB.pdf               | GPU Latency: 75.1s | Name Match: True  | ETA: 592m 27s
+[2026-08-27 01:23:37] [003/450] [PDF ] [clean         ] File: DOC-001F58BA.pdf               | GPU Latency: 77.9s | Name Match: True  | ETA: 587m 38s
+[2026-08-27 01:24:53] [004/450] [PDF ] [clean         ] File: DOC-0024DCD6.pdf               | GPU Latency: 75.3s | Name Match: True  | ETA: 579m 44s
+[2026-08-27 01:26:07] [005/450] [PDF ] [clean         ] File: DOC-0031A4A3.pdf               | GPU Latency: 73.7s | Name Match: False | ETA: 572m 4s
+[2026-08-27 01:27:23] [006/450] [PDF ] [clean         ] File: DOC-004182F5.pdf               | GPU Latency: 75.9s | Name Match: True  | ETA: 569m 14s
+[2026-08-27 01:28:39] [007/450] [PDF ] [clean         ] File: DOC-00358725.pdf               | GPU Latency: 75.5s | Name Match: True  | ETA: 566m 30s
+[2026-08-27 01:30:02] [008/450] [PDF ] [clean         ] File: DOC-00449E04.pdf               | GPU Latency: 82.6s | Name Match: True  | ETA: 570m 37s
+[2026-08-27 01:31:34] [009/450] [PDF ] [clean         ] File: DOC-00446F76.pdf               | GPU Latency: 90.8s | Name Match: True  | ETA: 580m 15s
+[2026-08-27 01:33:05] [010/450] [PDF ] [clean         ] File: DOC-004EC088.pdf               | GPU Latency: 90.7s | Name Match: True  | ETA: 587m 33s
+[2026-08-27 01:34:23] [011/450] [PDF ] [clean         ] File: DOC-00662D4D.pdf               | GPU Latency: 78.0s | Name Match: True  | ETA: 584m 47s
+[2026-08-27 01:35:41] [012/450] [PDF ] [clean         ] File: DOC-0067E656.pdf               | GPU Latency: 76.9s | Name Match: True  | ETA: 581m 36s
+[2026-08-27 01:36:58] [013/450] [PDF ] [clean         ] File: DOC-006BE31F.pdf               | GPU Latency: 77.0s | Name Match: True  | ETA: 578m 47s
+[2026-08-27 01:38:15] [014/450] [PDF ] [clean         ] File: DOC-006D5022.pdf               | GPU Latency: 76.1s | Name Match: True  | ETA: 575m 44s
+[2026-08-27 01:39:31] [015/450] [PDF ] [clean         ] File: DOC-009D8813.pdf               | GPU Latency: 75.9s | Name Match: True  | ETA: 572m 49s
+[2026-08-27 01:40:48] [016/450] [PDF ] [clean         ] File: DOC-00A17387.pdf               | GPU Latency: 76.5s | Name Match: True  | ETA: 570m 22s
+[2026-08-27 01:42:06] [017/450] [PDF ] [clean         ] File: DOC-00B39F2F.pdf               | GPU Latency: 76.9s | Name Match: True  | ETA: 568m 14s
+[2026-08-27 01:43:25] [018/450] [PDF ] [clean         ] File: DOC-00B8FD30.pdf               | GPU Latency: 78.8s | Name Match: True  | ETA: 566m 56s
+[2026-08-27 01:44:42] [019/450] [PDF ] [clean         ] File: DOC-00BEA546.pdf               | GPU Latency: 76.3s | Name Match: True  | ETA: 564m 42s
+[2026-08-27 01:46:01] [020/450] [PDF ] [clean         ] File: DOC-00ED4E97.pdf               | GPU Latency: 78.0s | Name Match: True  | ETA: 563m 11s
+[2026-08-27 01:47:18] [021/450] [PDF ] [clean         ] File: DOC-00EE9532.pdf               | GPU Latency: 76.6s | Name Match: True  | ETA: 561m 11s
+[2026-08-27 01:48:35] [022/450] [PDF ] [clean         ] File: DOC-00F9CA77.pdf               | GPU Latency: 76.3s | Name Match: True  | ETA: 559m 10s
+[2026-08-27 01:49:54] [023/450] [PDF ] [clean         ] File: DOC-00FBE313.pdf               | GPU Latency: 78.4s | Name Match: True  | ETA: 557m 52s
+[2026-08-27 01:51:12] [024/450] [PDF ] [clean         ] File: DOC-0102956C.pdf               | GPU Latency: 78.0s | Name Match: True  | ETA: 556m 26s
+[2026-08-27 01:52:28] [025/450] [PDF ] [clean         ] File: DOC-010FCF5E.pdf               | GPU Latency: 75.1s | Name Match: True  | ETA: 554m 11s
+[2026-08-27 01:53:45] [026/450] [PDF ] [clean         ] File: DOC-013AA810.pdf               | GPU Latency: 77.2s | Name Match: True  | ETA: 552m 36s
+[2026-08-27 01:55:02] [027/450] [PDF ] [clean         ] File: DOC-013D9CDE.pdf               | GPU Latency: 75.8s | Name Match: True  | ETA: 550m 40s
+[2026-08-27 01:56:19] [028/450] [PDF ] [clean         ] File: DOC-01430AE9.pdf               | GPU Latency: 76.7s | Name Match: True  | ETA: 549m 0s
+[2026-08-27 01:57:33] [029/450] [PDF ] [clean         ] File: DOC-0147D2A1.pdf               | GPU Latency: 73.0s | Name Match: True  | ETA: 546m 28s
+[2026-08-27 01:58:51] [030/450] [PDF ] [clean         ] File: DOC-014EE54B.pdf               | GPU Latency: 78.1s | Name Match: True  | ETA: 545m 13s
+[2026-08-27 02:00:09] [031/450] [PDF ] [clean         ] File: DOC-0189E11D.pdf               | GPU Latency: 77.1s | Name Match: True  | ETA: 543m 45s
+[2026-08-27 02:01:24] [032/450] [PDF ] [clean         ] File: DOC-014F95AD.pdf               | GPU Latency: 75.0s | Name Match: True  | ETA: 541m 49s
+[2026-08-27 02:02:39] [033/450] [PDF ] [clean         ] File: DOC-018F2EC6.pdf               | GPU Latency: 74.3s | Name Match: True  | ETA: 539m 47s
+[2026-08-27 02:03:56] [034/450] [PDF ] [clean         ] File: DOC-0197DB96.pdf               | GPU Latency: 76.4s | Name Match: True  | ETA: 538m 14s
+[2026-08-27 02:05:13] [035/450] [PDF ] [clean         ] File: DOC-01A87317.pdf               | GPU Latency: 76.1s | Name Match: True  | ETA: 536m 38s
+[2026-08-27 02:06:30] [036/450] [PDF ] [clean         ] File: DOC-01BFFFB8.pdf               | GPU Latency: 76.9s | Name Match: True  | ETA: 535m 12s
+[2026-08-27 02:07:46] [037/450] [PDF ] [clean         ] File: DOC-01C067E9.pdf               | GPU Latency: 75.7s | Name Match: True  | ETA: 533m 34s
+[2026-08-27 02:09:04] [038/450] [PDF ] [clean         ] File: DOC-01C1494A.pdf               | GPU Latency: 77.3s | Name Match: True  | ETA: 532m 15s
+[2026-08-27 02:10:21] [039/450] [PDF ] [clean         ] File: DOC-01C1968B.pdf               | GPU Latency: 76.0s | Name Match: True  | ETA: 530m 42s
+[2026-08-27 02:11:38] [040/450] [PDF ] [clean         ] File: DOC-01CE9D54.pdf               | GPU Latency: 76.4s | Name Match: True  | ETA: 529m 13s
+[2026-08-27 02:12:54] [041/450] [PDF ] [clean         ] File: DOC-01DCF344.pdf               | GPU Latency: 75.8s | Name Match: True  | ETA: 527m 39s
+[2026-08-27 02:14:12] [042/450] [PDF ] [clean         ] File: DOC-01DF1A3F.pdf               | GPU Latency: 76.8s | Name Match: True  | ETA: 526m 16s
+[2026-08-27 02:15:29] [043/450] [PDF ] [clean         ] File: DOC-01E09EE7.pdf               | GPU Latency: 76.7s | Name Match: True  | ETA: 524m 52s
+[2026-08-27 02:16:47] [044/450] [PDF ] [clean         ] File: DOC-01E273C2.pdf               | GPU Latency: 77.6s | Name Match: True  | ETA: 523m 36s
+[2026-08-27 02:18:05] [045/450] [PDF ] [clean         ] File: DOC-01E8F39C.pdf               | GPU Latency: 77.5s | Name Match: True  | ETA: 522m 20s
+[2026-08-27 02:19:25] [046/450] [PDF ] [clean         ] File: DOC-01EB22AE.pdf               | GPU Latency: 79.2s | Name Match: True  | ETA: 521m 19s
+[2026-08-27 02:20:41] [047/450] [PDF ] [clean         ] File: DOC-01F6F4F3.pdf               | GPU Latency: 75.5s | Name Match: True  | ETA: 519m 45s
+[2026-08-27 02:21:59] [048/450] [PDF ] [clean         ] File: DOC-0215D221.pdf               | GPU Latency: 78.4s | Name Match: True  | ETA: 518m 36s
+[2026-08-27 02:23:16] [049/450] [PDF ] [clean         ] File: DOC-0216D7D9.pdf               | GPU Latency: 76.2s | Name Match: True  | ETA: 517m 9s
+[2026-08-27 02:24:30] [050/450] [PDF ] [clean         ] File: DOC-0231CCEB.pdf               | GPU Latency: 73.7s | Name Match: True  | ETA: 515m 23s
+[2026-08-27 02:25:48] [051/450] [PNG ] [clean         ] File: DOC-0010905E_clean.png         | GPU Latency: 76.6s | Name Match: True  | ETA: 513m 59s
+[2026-08-27 02:27:09] [052/450] [PNG ] [clean         ] File: DOC-001A07AB_clean.png         | GPU Latency: 80.5s | Name Match: True  | ETA: 513m 6s
+[2026-08-27 02:28:26] [053/450] [PNG ] [clean         ] File: DOC-001F58BA_clean.png         | GPU Latency: 76.7s | Name Match: True  | ETA: 511m 44s
+[2026-08-27 02:29:43] [054/450] [PNG ] [clean         ] File: DOC-0024DCD6_clean.png         | GPU Latency: 75.9s | Name Match: True  | ETA: 510m 16s
+[2026-08-27 02:31:01] [055/450] [PNG ] [clean         ] File: DOC-0031A4A3_clean.png         | GPU Latency: 77.4s | Name Match: False | ETA: 509m 0s
+[2026-08-27 02:32:18] [056/450] [PNG ] [clean         ] File: DOC-00358725_clean.png         | GPU Latency: 76.8s | Name Match: True  | ETA: 507m 39s
+[2026-08-27 02:33:35] [057/450] [PNG ] [clean         ] File: DOC-004182F5_clean.png         | GPU Latency: 76.1s | Name Match: True  | ETA: 506m 13s
+[2026-08-27 02:34:59] [058/450] [PNG ] [clean         ] File: DOC-00446F76_clean.png         | GPU Latency: 83.8s | Name Match: True  | ETA: 505m 39s
+[2026-08-27 02:36:18] [059/450] [PNG ] [clean         ] File: DOC-00449E04_clean.png         | GPU Latency: 78.1s | Name Match: True  | ETA: 504m 27s
+[2026-08-27 02:37:34] [060/450] [PNG ] [clean         ] File: DOC-004EC088_clean.png         | GPU Latency: 75.3s | Name Match: True  | ETA: 502m 55s
+[2026-08-27 02:38:52] [061/450] [PNG ] [clean         ] File: DOC-00662D4D_clean.png         | GPU Latency: 78.3s | Name Match: True  | ETA: 501m 44s
+[2026-08-27 02:40:10] [062/450] [PNG ] [clean         ] File: DOC-0067E656_clean.png         | GPU Latency: 77.5s | Name Match: True  | ETA: 500m 27s
+[2026-08-27 02:41:31] [063/450] [PNG ] [clean         ] File: DOC-006BE31F_clean.png         | GPU Latency: 80.0s | Name Match: True  | ETA: 499m 26s
+[2026-08-27 02:42:52] [064/450] [PNG ] [clean         ] File: DOC-006D5022_clean.png         | GPU Latency: 80.5s | Name Match: True  | ETA: 498m 27s
+[2026-08-27 02:44:09] [065/450] [PNG ] [clean         ] File: DOC-009D8813_clean.png         | GPU Latency: 76.6s | Name Match: True  | ETA: 497m 4s
+[2026-08-27 02:45:29] [066/450] [PNG ] [clean         ] File: DOC-00A17387_clean.png         | GPU Latency: 78.7s | Name Match: True  | ETA: 495m 54s
+[2026-08-27 02:46:49] [067/450] [PNG ] [clean         ] File: DOC-00B39F2F_clean.png         | GPU Latency: 79.9s | Name Match: True  | ETA: 494m 50s
+[2026-08-27 02:48:08] [068/450] [PNG ] [clean         ] File: DOC-00B8FD30_clean.png         | GPU Latency: 78.4s | Name Match: True  | ETA: 493m 37s
+[2026-08-27 02:49:27] [069/450] [PNG ] [clean         ] File: DOC-00BEA546_clean.png         | GPU Latency: 78.1s | Name Match: True  | ETA: 492m 23s
+[2026-08-27 02:50:46] [070/450] [PNG ] [clean         ] File: DOC-00ED4E97_clean.png         | GPU Latency: 78.7s | Name Match: True  | ETA: 491m 12s
+[2026-08-27 02:52:05] [071/450] [PNG ] [clean         ] File: DOC-00EE9532_clean.png         | GPU Latency: 78.8s | Name Match: True  | ETA: 490m 1s
+[2026-08-27 02:53:23] [072/450] [PNG ] [clean         ] File: DOC-00F9CA77_clean.png         | GPU Latency: 77.4s | Name Match: True  | ETA: 488m 42s
+[2026-08-27 02:54:42] [073/450] [PNG ] [clean         ] File: DOC-00FBE313_clean.png         | GPU Latency: 78.0s | Name Match: True  | ETA: 487m 26s
+[2026-08-27 02:56:01] [074/450] [PNG ] [clean         ] File: DOC-0102956C_clean.png         | GPU Latency: 78.7s | Name Match: True  | ETA: 486m 14s
+[2026-08-27 02:57:19] [075/450] [PNG ] [clean         ] File: DOC-010FCF5E_clean.png         | GPU Latency: 77.5s | Name Match: True  | ETA: 484m 56s
+[2026-08-27 02:58:38] [076/450] [PNG ] [clean         ] File: DOC-013AA810_clean.png         | GPU Latency: 78.1s | Name Match: True  | ETA: 483m 42s
+[2026-08-27 03:00:08] [077/450] [PNG ] [clean         ] File: DOC-013D9CDE_clean.png         | GPU Latency: 89.7s | Name Match: True  | ETA: 483m 23s
+[2026-08-27 03:01:35] [078/450] [PNG ] [clean         ] File: DOC-01430AE9_clean.png         | GPU Latency: 85.8s | Name Match: True  | ETA: 482m 43s
+[2026-08-27 03:02:56] [079/450] [PNG ] [clean         ] File: DOC-0147D2A1_clean.png         | GPU Latency: 80.4s | Name Match: True  | ETA: 481m 37s
+[2026-08-27 03:04:16] [080/450] [PNG ] [clean         ] File: DOC-014EE54B_clean.png         | GPU Latency: 79.7s | Name Match: True  | ETA: 480m 27s
+[2026-08-27 03:05:38] [081/450] [PNG ] [clean         ] File: DOC-014F95AD_clean.png         | GPU Latency: 81.7s | Name Match: True  | ETA: 479m 27s
+[2026-08-27 03:06:57] [082/450] [PNG ] [clean         ] File: DOC-0189E11D_clean.png         | GPU Latency: 78.1s | Name Match: True  | ETA: 478m 9s
+[2026-08-27 03:08:14] [083/450] [PNG ] [clean         ] File: DOC-018F2EC6_clean.png         | GPU Latency: 76.7s | Name Match: True  | ETA: 476m 46s
+[2026-08-27 03:09:30] [084/450] [PNG ] [clean         ] File: DOC-0197DB96_clean.png         | GPU Latency: 75.7s | Name Match: True  | ETA: 475m 18s
+[2026-08-27 03:10:48] [085/450] [PNG ] [clean         ] File: DOC-01A87317_clean.png         | GPU Latency: 77.5s | Name Match: True  | ETA: 473m 58s
+[2026-08-27 03:12:05] [086/450] [PNG ] [clean         ] File: DOC-01BFFFB8_clean.png         | GPU Latency: 76.4s | Name Match: True  | ETA: 472m 34s
+[2026-08-27 03:13:22] [087/450] [PNG ] [clean         ] File: DOC-01C067E9_clean.png         | GPU Latency: 75.6s | Name Match: True  | ETA: 471m 7s
+[2026-08-27 03:14:39] [088/450] [PNG ] [clean         ] File: DOC-01C1494A_clean.png         | GPU Latency: 76.7s | Name Match: True  | ETA: 469m 44s
+[2026-08-27 03:15:57] [089/450] [PNG ] [clean         ] File: DOC-01C1968B_clean.png         | GPU Latency: 77.4s | Name Match: True  | ETA: 468m 25s
+[2026-08-27 03:17:14] [090/450] [PNG ] [clean         ] File: DOC-01CE9D54_clean.png         | GPU Latency: 77.2s | Name Match: True  | ETA: 467m 5s
+[2026-08-27 03:18:31] [091/450] [PNG ] [clean         ] File: DOC-01DCF344_clean.png         | GPU Latency: 76.0s | Name Match: True  | ETA: 465m 39s
+[2026-08-27 03:19:49] [092/450] [PNG ] [clean         ] File: DOC-01DF1A3F_clean.png         | GPU Latency: 77.6s | Name Match: True  | ETA: 464m 20s
+[2026-08-27 03:21:07] [093/450] [PNG ] [clean         ] File: DOC-01E09EE7_clean.png         | GPU Latency: 78.0s | Name Match: True  | ETA: 463m 3s
+[2026-08-27 03:22:25] [094/450] [PNG ] [clean         ] File: DOC-01E273C2_clean.png         | GPU Latency: 77.2s | Name Match: True  | ETA: 461m 43s
+[2026-08-27 03:23:45] [095/450] [PNG ] [clean         ] File: DOC-01E8F39C_clean.png         | GPU Latency: 78.9s | Name Match: True  | ETA: 460m 30s
+[2026-08-27 03:25:01] [096/450] [PNG ] [clean         ] File: DOC-01EB22AE_clean.png         | GPU Latency: 75.9s | Name Match: True  | ETA: 459m 5s
+[2026-08-27 03:26:19] [097/450] [PNG ] [clean         ] File: DOC-01F6F4F3_clean.png         | GPU Latency: 77.5s | Name Match: True  | ETA: 457m 46s
+[2026-08-27 03:27:37] [098/450] [PNG ] [clean         ] File: DOC-0215D221_clean.png         | GPU Latency: 76.8s | Name Match: True  | ETA: 456m 24s
+[2026-08-27 03:28:58] [099/450] [PNG ] [clean         ] File: DOC-0216D7D9_clean.png         | GPU Latency: 81.1s | Name Match: True  | ETA: 455m 18s
+[2026-08-27 03:30:16] [100/450] [PNG ] [clean         ] File: DOC-0231CCEB_clean.png         | GPU Latency: 77.0s | Name Match: True  | ETA: 453m 57s
+[2026-08-27 03:31:33] [101/450] [PNG ] [scanner_copy  ] File: DOC-0010905E_scanner_copy.png  | GPU Latency: 76.6s | Name Match: True  | ETA: 452m 35s
+[2026-08-27 03:32:52] [102/450] [PNG ] [scanner_copy  ] File: DOC-001A07AB_scanner_copy.png  | GPU Latency: 77.6s | Name Match: True  | ETA: 451m 17s
+[2026-08-27 03:34:11] [103/450] [PNG ] [scanner_copy  ] File: DOC-001F58BA_scanner_copy.png  | GPU Latency: 78.8s | Name Match: True  | ETA: 450m 2s
+[2026-08-27 03:35:30] [104/450] [PNG ] [scanner_copy  ] File: DOC-0024DCD6_scanner_copy.png  | GPU Latency: 78.0s | Name Match: True  | ETA: 448m 45s
+[2026-08-27 03:36:47] [105/450] [PNG ] [scanner_copy  ] File: DOC-0031A4A3_scanner_copy.png  | GPU Latency: 76.7s | Name Match: True  | ETA: 447m 23s
+[2026-08-27 03:38:04] [106/450] [PNG ] [scanner_copy  ] File: DOC-00358725_scanner_copy.png  | GPU Latency: 76.0s | Name Match: True  | ETA: 446m 0s
+[2026-08-27 03:39:22] [107/450] [PNG ] [scanner_copy  ] File: DOC-004182F5_scanner_copy.png  | GPU Latency: 77.6s | Name Match: True  | ETA: 444m 41s
+[2026-08-27 03:40:40] [108/450] [PNG ] [scanner_copy  ] File: DOC-00446F76_scanner_copy.png  | GPU Latency: 76.5s | Name Match: True  | ETA: 443m 20s
+[2026-08-27 03:41:56] [109/450] [PNG ] [scanner_copy  ] File: DOC-00449E04_scanner_copy.png  | GPU Latency: 75.3s | Name Match: True  | ETA: 441m 54s
+[2026-08-27 03:43:13] [110/450] [PNG ] [scanner_copy  ] File: DOC-004EC088_scanner_copy.png  | GPU Latency: 76.4s | Name Match: True  | ETA: 440m 32s
+[2026-08-27 03:44:31] [111/450] [PNG ] [scanner_copy  ] File: DOC-00662D4D_scanner_copy.png  | GPU Latency: 77.3s | Name Match: True  | ETA: 439m 13s
+[2026-08-27 03:45:52] [112/450] [PNG ] [scanner_copy  ] File: DOC-0067E656_scanner_copy.png  | GPU Latency: 80.1s | Name Match: True  | ETA: 438m 3s
+[2026-08-27 03:47:11] [113/450] [PNG ] [scanner_copy  ] File: DOC-006BE31F_scanner_copy.png  | GPU Latency: 77.9s | Name Match: True  | ETA: 436m 46s
+[2026-08-27 03:48:28] [114/450] [PNG ] [scanner_copy  ] File: DOC-006D5022_scanner_copy.png  | GPU Latency: 77.1s | Name Match: True  | ETA: 435m 26s
+[2026-08-27 03:49:46] [115/450] [PNG ] [scanner_copy  ] File: DOC-009D8813_scanner_copy.png  | GPU Latency: 76.7s | Name Match: True  | ETA: 434m 5s
+[2026-08-27 03:51:03] [116/450] [PNG ] [scanner_copy  ] File: DOC-00A17387_scanner_copy.png  | GPU Latency: 76.8s | Name Match: True  | ETA: 432m 44s
+[2026-08-27 03:52:20] [117/450] [PNG ] [scanner_copy  ] File: DOC-00B39F2F_scanner_copy.png  | GPU Latency: 76.0s | Name Match: True  | ETA: 431m 22s
+[2026-08-27 03:53:37] [118/450] [PNG ] [scanner_copy  ] File: DOC-00B8FD30_scanner_copy.png  | GPU Latency: 76.5s | Name Match: True  | ETA: 430m 0s
+[2026-08-27 03:54:53] [119/450] [PNG ] [scanner_copy  ] File: DOC-00BEA546_scanner_copy.png  | GPU Latency: 75.6s | Name Match: True  | ETA: 428m 37s
+[2026-08-27 03:56:14] [120/450] [PNG ] [scanner_copy  ] File: DOC-00ED4E97_scanner_copy.png  | GPU Latency: 80.6s | Name Match: True  | ETA: 427m 27s
+[2026-08-27 03:57:33] [121/450] [PNG ] [scanner_copy  ] File: DOC-00EE9532_scanner_copy.png  | GPU Latency: 78.1s | Name Match: True  | ETA: 426m 10s
+[2026-08-27 03:58:51] [122/450] [PNG ] [scanner_copy  ] File: DOC-00F9CA77_scanner_copy.png  | GPU Latency: 77.2s | Name Match: True  | ETA: 424m 51s
+[2026-08-27 04:00:09] [123/450] [PNG ] [scanner_copy  ] File: DOC-00FBE313_scanner_copy.png  | GPU Latency: 77.6s | Name Match: True  | ETA: 423m 33s
+[2026-08-27 04:01:26] [124/450] [PNG ] [scanner_copy  ] File: DOC-0102956C_scanner_copy.png  | GPU Latency: 76.2s | Name Match: True  | ETA: 422m 11s
+[2026-08-27 04:02:43] [125/450] [PNG ] [scanner_copy  ] File: DOC-010FCF5E_scanner_copy.png  | GPU Latency: 76.0s | Name Match: True  | ETA: 420m 49s
+[2026-08-27 04:04:01] [126/450] [PNG ] [scanner_copy  ] File: DOC-013AA810_scanner_copy.png  | GPU Latency: 77.2s | Name Match: True  | ETA: 419m 30s
+[2026-08-27 04:05:18] [127/450] [PNG ] [scanner_copy  ] File: DOC-013D9CDE_scanner_copy.png  | GPU Latency: 76.8s | Name Match: True  | ETA: 418m 10s
+[2026-08-27 04:06:37] [128/450] [PNG ] [scanner_copy  ] File: DOC-01430AE9_scanner_copy.png  | GPU Latency: 77.7s | Name Match: True  | ETA: 416m 53s
+[2026-08-27 04:07:52] [129/450] [PNG ] [scanner_copy  ] File: DOC-0147D2A1_scanner_copy.png  | GPU Latency: 74.5s | Name Match: True  | ETA: 415m 27s
+[2026-08-27 04:09:13] [130/450] [PNG ] [scanner_copy  ] File: DOC-014EE54B_scanner_copy.png  | GPU Latency: 80.4s | Name Match: True  | ETA: 414m 16s
+[2026-08-27 04:10:31] [131/450] [PNG ] [scanner_copy  ] File: DOC-014F95AD_scanner_copy.png  | GPU Latency: 76.7s | Name Match: True  | ETA: 412m 56s
+[2026-08-27 04:11:48] [132/450] [PNG ] [scanner_copy  ] File: DOC-0189E11D_scanner_copy.png  | GPU Latency: 76.0s | Name Match: True  | ETA: 411m 34s
+[2026-08-27 04:13:05] [133/450] [PNG ] [scanner_copy  ] File: DOC-018F2EC6_scanner_copy.png  | GPU Latency: 77.0s | Name Match: True  | ETA: 410m 15s
+[2026-08-27 04:14:23] [134/450] [PNG ] [scanner_copy  ] File: DOC-0197DB96_scanner_copy.png  | GPU Latency: 77.2s | Name Match: True  | ETA: 408m 57s
+[2026-08-27 04:15:39] [135/450] [PNG ] [scanner_copy  ] File: DOC-01A87317_scanner_copy.png  | GPU Latency: 75.4s | Name Match: True  | ETA: 407m 34s
+[2026-08-27 04:16:57] [136/450] [PNG ] [scanner_copy  ] File: DOC-01BFFFB8_scanner_copy.png  | GPU Latency: 77.0s | Name Match: True  | ETA: 406m 15s
+[2026-08-27 04:18:15] [137/450] [PNG ] [scanner_copy  ] File: DOC-01C067E9_scanner_copy.png  | GPU Latency: 77.3s | Name Match: False | ETA: 404m 56s
+[2026-08-27 04:19:34] [138/450] [PNG ] [scanner_copy  ] File: DOC-01C1494A_scanner_copy.png  | GPU Latency: 77.8s | Name Match: True  | ETA: 403m 39s
+[2026-08-27 04:20:51] [139/450] [PNG ] [scanner_copy  ] File: DOC-01C1968B_scanner_copy.png  | GPU Latency: 76.5s | Name Match: True  | ETA: 402m 19s
+[2026-08-27 04:22:08] [140/450] [PNG ] [scanner_copy  ] File: DOC-01CE9D54_scanner_copy.png  | GPU Latency: 75.7s | Name Match: True  | ETA: 400m 57s
+[2026-08-27 04:23:25] [141/450] [PNG ] [scanner_copy  ] File: DOC-01DCF344_scanner_copy.png  | GPU Latency: 76.7s | Name Match: True  | ETA: 399m 37s
+[2026-08-27 04:24:43] [142/450] [PNG ] [scanner_copy  ] File: DOC-01DF1A3F_scanner_copy.png  | GPU Latency: 77.0s | Name Match: True  | ETA: 398m 18s
+[2026-08-27 04:26:00] [143/450] [PNG ] [scanner_copy  ] File: DOC-01E09EE7_scanner_copy.png  | GPU Latency: 76.6s | Name Match: True  | ETA: 396m 59s
+[2026-08-27 04:27:15] [144/450] [PNG ] [scanner_copy  ] File: DOC-01E273C2_scanner_copy.png  | GPU Latency: 74.5s | Name Match: True  | ETA: 395m 35s
+[2026-08-27 04:28:34] [145/450] [PNG ] [scanner_copy  ] File: DOC-01E8F39C_scanner_copy.png  | GPU Latency: 77.9s | Name Match: True  | ETA: 394m 18s
+[2026-08-27 04:29:50] [146/450] [PNG ] [scanner_copy  ] File: DOC-01EB22AE_scanner_copy.png  | GPU Latency: 75.0s | Name Match: True  | ETA: 392m 55s
+[2026-08-27 04:31:08] [147/450] [PNG ] [scanner_copy  ] File: DOC-01F6F4F3_scanner_copy.png  | GPU Latency: 77.2s | Name Match: True  | ETA: 391m 36s
+[2026-08-27 04:32:25] [148/450] [PNG ] [scanner_copy  ] File: DOC-0215D221_scanner_copy.png  | GPU Latency: 77.0s | Name Match: True  | ETA: 390m 18s
+[2026-08-27 04:33:43] [149/450] [PNG ] [scanner_copy  ] File: DOC-0216D7D9_scanner_copy.png  | GPU Latency: 76.8s | Name Match: True  | ETA: 388m 59s
+[2026-08-27 04:35:00] [150/450] [PNG ] [scanner_copy  ] File: DOC-0231CCEB_scanner_copy.png  | GPU Latency: 76.2s | Name Match: True  | ETA: 387m 39s
+[2026-08-27 04:36:18] [151/450] [PNG ] [mobile_camera ] File: DOC-0010905E_mobile_camera.png | GPU Latency: 78.0s | Name Match: True  | ETA: 386m 22s
+[2026-08-27 04:37:37] [152/450] [PNG ] [mobile_camera ] File: DOC-001A07AB_mobile_camera.png | GPU Latency: 77.9s | Name Match: True  | ETA: 385m 5s
+[2026-08-27 04:38:54] [153/450] [PNG ] [mobile_camera ] File: DOC-001F58BA_mobile_camera.png | GPU Latency: 76.8s | Name Match: True  | ETA: 383m 46s
+[2026-08-27 04:40:11] [154/450] [PNG ] [mobile_camera ] File: DOC-0024DCD6_mobile_camera.png | GPU Latency: 75.7s | Name Match: True  | ETA: 382m 25s
+[2026-08-27 04:41:29] [155/450] [PNG ] [mobile_camera ] File: DOC-0031A4A3_mobile_camera.png | GPU Latency: 77.7s | Name Match: True  | ETA: 381m 8s
+[2026-08-27 04:42:46] [156/450] [PNG ] [mobile_camera ] File: DOC-00358725_mobile_camera.png | GPU Latency: 76.6s | Name Match: True  | ETA: 379m 49s
+[2026-08-27 04:44:02] [157/450] [PNG ] [mobile_camera ] File: DOC-004182F5_mobile_camera.png | GPU Latency: 75.5s | Name Match: True  | ETA: 378m 27s
+[2026-08-27 04:45:19] [158/450] [PNG ] [mobile_camera ] File: DOC-00446F76_mobile_camera.png | GPU Latency: 75.8s | Name Match: True  | ETA: 377m 7s
+[2026-08-27 04:46:36] [159/450] [PNG ] [mobile_camera ] File: DOC-00449E04_mobile_camera.png | GPU Latency: 76.6s | Name Match: True  | ETA: 375m 48s
+[2026-08-27 04:47:54] [160/450] [PNG ] [mobile_camera ] File: DOC-004EC088_mobile_camera.png | GPU Latency: 77.8s | Name Match: True  | ETA: 374m 31s
+[2026-08-27 04:49:11] [161/450] [PNG ] [mobile_camera ] File: DOC-00662D4D_mobile_camera.png | GPU Latency: 76.6s | Name Match: True  | ETA: 373m 11s
+[2026-08-27 04:50:29] [162/450] [PNG ] [mobile_camera ] File: DOC-0067E656_mobile_camera.png | GPU Latency: 77.3s | Name Match: True  | ETA: 371m 54s
+[2026-08-27 04:51:45] [163/450] [PNG ] [mobile_camera ] File: DOC-006BE31F_mobile_camera.png | GPU Latency: 75.3s | Name Match: True  | ETA: 370m 32s
+[2026-08-27 04:53:02] [164/450] [PNG ] [mobile_camera ] File: DOC-006D5022_mobile_camera.png | GPU Latency: 76.1s | Name Match: True  | ETA: 369m 12s
+[2026-08-27 04:54:19] [165/450] [PNG ] [mobile_camera ] File: DOC-009D8813_mobile_camera.png | GPU Latency: 76.8s | Name Match: True  | ETA: 367m 54s
+[2026-08-27 04:55:37] [166/450] [PNG ] [mobile_camera ] File: DOC-00A17387_mobile_camera.png | GPU Latency: 77.1s | Name Match: True  | ETA: 366m 36s
+[2026-08-27 04:56:55] [167/450] [PNG ] [mobile_camera ] File: DOC-00B39F2F_mobile_camera.png | GPU Latency: 77.1s | Name Match: True  | ETA: 365m 18s
+[2026-08-27 04:58:09] [168/450] [PNG ] [mobile_camera ] File: DOC-00B8FD30_mobile_camera.png | GPU Latency: 73.4s | Name Match: True  | ETA: 363m 54s
+[2026-08-27 04:59:26] [169/450] [PNG ] [mobile_camera ] File: DOC-00BEA546_mobile_camera.png | GPU Latency: 76.2s | Name Match: True  | ETA: 362m 34s
+[2026-08-27 05:00:43] [170/450] [PNG ] [mobile_camera ] File: DOC-00ED4E97_mobile_camera.png | GPU Latency: 77.0s | Name Match: True  | ETA: 361m 16s
+[2026-08-27 05:02:00] [171/450] [PNG ] [mobile_camera ] File: DOC-00EE9532_mobile_camera.png | GPU Latency: 76.3s | Name Match: True  | ETA: 359m 57s
+[2026-08-27 05:03:18] [172/450] [PNG ] [mobile_camera ] File: DOC-00F9CA77_mobile_camera.png | GPU Latency: 76.9s | Name Match: True  | ETA: 358m 38s
+[2026-08-27 05:04:34] [173/450] [PNG ] [mobile_camera ] File: DOC-00FBE313_mobile_camera.png | GPU Latency: 75.7s | Name Match: True  | ETA: 357m 18s
+[2026-08-27 05:05:52] [174/450] [PNG ] [mobile_camera ] File: DOC-0102956C_mobile_camera.png | GPU Latency: 77.5s | Name Match: True  | ETA: 356m 1s
+[2026-08-27 05:07:12] [175/450] [PNG ] [mobile_camera ] File: DOC-010FCF5E_mobile_camera.png | GPU Latency: 79.2s | Name Match: True  | ETA: 354m 47s
+[2026-08-27 05:08:30] [176/450] [PNG ] [mobile_camera ] File: DOC-013AA810_mobile_camera.png | GPU Latency: 77.0s | Name Match: True  | ETA: 353m 29s
+[2026-08-27 05:09:47] [177/450] [PNG ] [mobile_camera ] File: DOC-013D9CDE_mobile_camera.png | GPU Latency: 76.8s | Name Match: True  | ETA: 352m 10s
+[2026-08-27 05:11:05] [178/450] [PNG ] [mobile_camera ] File: DOC-01430AE9_mobile_camera.png | GPU Latency: 77.2s | Name Match: True  | ETA: 350m 53s
+[2026-08-27 05:12:20] [179/450] [PNG ] [mobile_camera ] File: DOC-0147D2A1_mobile_camera.png | GPU Latency: 74.3s | Name Match: True  | ETA: 349m 31s
+[2026-08-27 05:13:34] [180/450] [PNG ] [mobile_camera ] File: DOC-014EE54B_mobile_camera.png | GPU Latency: 72.7s | Name Match: True  | ETA: 348m 6s
+[2026-08-27 05:15:01] [181/450] [PNG ] [mobile_camera ] File: DOC-014F95AD_mobile_camera.png | GPU Latency: 86.5s | Name Match: True  | ETA: 347m 2s
+[2026-08-27 05:16:33] [182/450] [PNG ] [mobile_camera ] File: DOC-0189E11D_mobile_camera.png | GPU Latency: 91.4s | Name Match: True  | ETA: 346m 6s
+[2026-08-27 05:18:05] [183/450] [PNG ] [mobile_camera ] File: DOC-018F2EC6_mobile_camera.png | GPU Latency: 91.8s | Name Match: True  | ETA: 345m 9s
+[2026-08-27 05:19:40] [184/450] [PNG ] [mobile_camera ] File: DOC-0197DB96_mobile_camera.png | GPU Latency: 94.3s | Name Match: True  | ETA: 344m 16s
+[2026-08-27 05:21:14] [185/450] [PNG ] [mobile_camera ] File: DOC-01A87317_mobile_camera.png | GPU Latency: 93.3s | Name Match: True  | ETA: 343m 20s
+[2026-08-27 05:22:44] [186/450] [PNG ] [mobile_camera ] File: DOC-01BFFFB8_mobile_camera.png | GPU Latency: 89.4s | Name Match: True  | ETA: 342m 19s
+[2026-08-27 05:24:16] [187/450] [PNG ] [mobile_camera ] File: DOC-01C067E9_mobile_camera.png | GPU Latency: 91.7s | Name Match: True  | ETA: 341m 21s
+[2026-08-27 05:25:49] [188/450] [PNG ] [mobile_camera ] File: DOC-01C1494A_mobile_camera.png | GPU Latency: 91.7s | Name Match: True  | ETA: 340m 22s
+[2026-08-27 05:27:20] [189/450] [PNG ] [mobile_camera ] File: DOC-01C1968B_mobile_camera.png | GPU Latency: 90.8s | Name Match: True  | ETA: 339m 22s
+[2026-08-27 05:28:45] [190/450] [PNG ] [mobile_camera ] File: DOC-01CE9D54_mobile_camera.png | GPU Latency: 84.4s | Name Match: True  | ETA: 338m 13s
+[2026-08-27 05:30:03] [191/450] [PNG ] [mobile_camera ] File: DOC-01DCF344_mobile_camera.png | GPU Latency: 77.4s | Name Match: True  | ETA: 336m 54s
+[2026-08-27 05:31:21] [192/450] [PNG ] [mobile_camera ] File: DOC-01DF1A3F_mobile_camera.png | GPU Latency: 77.0s | Name Match: True  | ETA: 335m 34s
+[2026-08-27 05:32:36] [193/450] [PNG ] [mobile_camera ] File: DOC-01E09EE7_mobile_camera.png | GPU Latency: 74.9s | Name Match: True  | ETA: 334m 12s
+[2026-08-27 05:33:55] [194/450] [PNG ] [mobile_camera ] File: DOC-01E273C2_mobile_camera.png | GPU Latency: 77.9s | Name Match: True  | ETA: 332m 54s
+[2026-08-27 05:35:11] [195/450] [PNG ] [mobile_camera ] File: DOC-01E8F39C_mobile_camera.png | GPU Latency: 75.1s | Name Match: True  | ETA: 331m 32s
+[2026-08-27 05:36:27] [196/450] [PNG ] [mobile_camera ] File: DOC-01EB22AE_mobile_camera.png | GPU Latency: 75.4s | Name Match: True  | ETA: 330m 11s
+[2026-08-27 05:37:44] [197/450] [PNG ] [mobile_camera ] File: DOC-01F6F4F3_mobile_camera.png | GPU Latency: 76.4s | Name Match: True  | ETA: 328m 51s
+[2026-08-27 05:39:01] [198/450] [PNG ] [mobile_camera ] File: DOC-0215D221_mobile_camera.png | GPU Latency: 77.0s | Name Match: True  | ETA: 327m 32s
+[2026-08-27 05:40:16] [199/450] [PNG ] [mobile_camera ] File: DOC-0216D7D9_mobile_camera.png | GPU Latency: 74.1s | Name Match: True  | ETA: 326m 9s
+[2026-08-27 05:41:33] [200/450] [PNG ] [mobile_camera ] File: DOC-0231CCEB_mobile_camera.png | GPU Latency: 76.1s | Name Match: True  | ETA: 324m 48s
+[2026-08-27 05:42:50] [201/450] [PNG ] [rotated_90    ] File: DOC-0010905E_rotated_90.png    | GPU Latency: 76.4s | Name Match: True  | ETA: 323m 28s
+[2026-08-27 05:44:06] [202/450] [PNG ] [rotated_90    ] File: DOC-001A07AB_rotated_90.png    | GPU Latency: 75.2s | Name Match: True  | ETA: 322m 7s
+[2026-08-27 05:45:22] [203/450] [PNG ] [rotated_90    ] File: DOC-001F58BA_rotated_90.png    | GPU Latency: 76.3s | Name Match: True  | ETA: 320m 47s
+[2026-08-27 05:46:40] [204/450] [PNG ] [rotated_90    ] File: DOC-0024DCD6_rotated_90.png    | GPU Latency: 77.3s | Name Match: True  | ETA: 319m 29s
+[2026-08-27 05:47:58] [205/450] [PNG ] [rotated_90    ] File: DOC-0031A4A3_rotated_90.png    | GPU Latency: 77.1s | Name Match: False | ETA: 318m 10s
+[2026-08-27 05:49:15] [206/450] [PNG ] [rotated_90    ] File: DOC-00358725_rotated_90.png    | GPU Latency: 75.9s | Name Match: False | ETA: 316m 49s
+[2026-08-27 05:50:31] [207/450] [PNG ] [rotated_90    ] File: DOC-004182F5_rotated_90.png    | GPU Latency: 75.6s | Name Match: True  | ETA: 315m 29s
+[2026-08-27 05:51:47] [208/450] [PNG ] [rotated_90    ] File: DOC-00446F76_rotated_90.png    | GPU Latency: 75.6s | Name Match: True  | ETA: 314m 8s
+[2026-08-27 05:53:03] [209/450] [PNG ] [rotated_90    ] File: DOC-00449E04_rotated_90.png    | GPU Latency: 75.4s | Name Match: True  | ETA: 312m 48s
+[2026-08-27 05:54:18] [210/450] [PNG ] [rotated_90    ] File: DOC-004EC088_rotated_90.png    | GPU Latency: 74.3s | Name Match: True  | ETA: 311m 25s
+[2026-08-27 05:55:34] [211/450] [PNG ] [rotated_90    ] File: DOC-00662D4D_rotated_90.png    | GPU Latency: 75.4s | Name Match: True  | ETA: 310m 5s
+[2026-08-27 05:56:47] [212/450] [PNG ] [rotated_90    ] File: DOC-0067E656_rotated_90.png    | GPU Latency: 72.3s | Name Match: True  | ETA: 308m 41s
+[2026-08-27 05:58:03] [213/450] [PNG ] [rotated_90    ] File: DOC-006BE31F_rotated_90.png    | GPU Latency: 75.7s | Name Match: True  | ETA: 307m 21s
+[2026-08-27 05:59:18] [214/450] [PNG ] [rotated_90    ] File: DOC-006D5022_rotated_90.png    | GPU Latency: 74.5s | Name Match: False | ETA: 305m 59s
+[2026-08-27 06:00:37] [215/450] [PNG ] [rotated_90    ] File: DOC-009D8813_rotated_90.png    | GPU Latency: 77.9s | Name Match: True  | ETA: 304m 42s
+[2026-08-27 06:01:53] [216/450] [PNG ] [rotated_90    ] File: DOC-00A17387_rotated_90.png    | GPU Latency: 76.0s | Name Match: True  | ETA: 303m 22s
+[2026-08-27 06:03:10] [217/450] [PNG ] [rotated_90    ] File: DOC-00B39F2F_rotated_90.png    | GPU Latency: 76.2s | Name Match: True  | ETA: 302m 2s
+[2026-08-27 06:04:27] [218/450] [PNG ] [rotated_90    ] File: DOC-00B8FD30_rotated_90.png    | GPU Latency: 76.1s | Name Match: True  | ETA: 300m 43s
+[2026-08-27 06:05:42] [219/450] [PNG ] [rotated_90    ] File: DOC-00BEA546_rotated_90.png    | GPU Latency: 74.8s | Name Match: True  | ETA: 299m 22s
+[2026-08-27 06:06:59] [220/450] [PNG ] [rotated_90    ] File: DOC-00ED4E97_rotated_90.png    | GPU Latency: 75.9s | Name Match: True  | ETA: 298m 2s
+[2026-08-27 06:08:14] [221/450] [PNG ] [rotated_90    ] File: DOC-00EE9532_rotated_90.png    | GPU Latency: 75.3s | Name Match: True  | ETA: 296m 42s
+[2026-08-27 06:09:31] [222/450] [PNG ] [rotated_90    ] File: DOC-00F9CA77_rotated_90.png    | GPU Latency: 75.9s | Name Match: True  | ETA: 295m 22s
+[2026-08-27 06:10:47] [223/450] [PNG ] [rotated_90    ] File: DOC-00FBE313_rotated_90.png    | GPU Latency: 75.7s | Name Match: True  | ETA: 294m 2s
+[2026-08-27 06:12:01] [224/450] [PNG ] [rotated_90    ] File: DOC-0102956C_rotated_90.png    | GPU Latency: 73.2s | Name Match: True  | ETA: 292m 40s
+[2026-08-27 06:13:17] [225/450] [PNG ] [rotated_90    ] File: DOC-010FCF5E_rotated_90.png    | GPU Latency: 75.6s | Name Match: True  | ETA: 291m 20s
+[2026-08-27 06:14:32] [226/450] [PNG ] [rotated_90    ] File: DOC-013AA810_rotated_90.png    | GPU Latency: 74.1s | Name Match: True  | ETA: 289m 59s
+[2026-08-27 06:15:49] [227/450] [PNG ] [rotated_90    ] File: DOC-013D9CDE_rotated_90.png    | GPU Latency: 76.5s | Name Match: True  | ETA: 288m 40s
+[2026-08-27 06:17:06] [228/450] [PNG ] [rotated_90    ] File: DOC-01430AE9_rotated_90.png    | GPU Latency: 77.0s | Name Match: True  | ETA: 287m 22s
+[2026-08-27 06:18:23] [229/450] [PNG ] [rotated_90    ] File: DOC-0147D2A1_rotated_90.png    | GPU Latency: 75.7s | Name Match: True  | ETA: 286m 2s
+[2026-08-27 06:19:39] [230/450] [PNG ] [rotated_90    ] File: DOC-014EE54B_rotated_90.png    | GPU Latency: 75.9s | Name Match: False | ETA: 284m 43s
+[2026-08-27 06:20:57] [231/450] [PNG ] [rotated_90    ] File: DOC-014F95AD_rotated_90.png    | GPU Latency: 77.3s | Name Match: True  | ETA: 283m 25s
+[2026-08-27 06:22:15] [232/450] [PNG ] [rotated_90    ] File: DOC-0189E11D_rotated_90.png    | GPU Latency: 77.3s | Name Match: True  | ETA: 282m 7s
+[2026-08-27 06:23:32] [233/450] [PNG ] [rotated_90    ] File: DOC-018F2EC6_rotated_90.png    | GPU Latency: 76.8s | Name Match: True  | ETA: 280m 49s
+[2026-08-27 06:24:52] [234/450] [PNG ] [rotated_90    ] File: DOC-0197DB96_rotated_90.png    | GPU Latency: 78.7s | Name Match: False | ETA: 279m 32s
+[2026-08-27 06:26:15] [235/450] [PNG ] [rotated_90    ] File: DOC-01A87317_rotated_90.png    | GPU Latency: 82.9s | Name Match: True  | ETA: 278m 19s
+[2026-08-27 06:27:31] [236/450] [PNG ] [rotated_90    ] File: DOC-01BFFFB8_rotated_90.png    | GPU Latency: 75.2s | Name Match: True  | ETA: 276m 59s
+[2026-08-27 06:28:48] [237/450] [PNG ] [rotated_90    ] File: DOC-01C067E9_rotated_90.png    | GPU Latency: 76.7s | Name Match: True  | ETA: 275m 41s
+[2026-08-27 06:30:03] [238/450] [PNG ] [rotated_90    ] File: DOC-01C1494A_rotated_90.png    | GPU Latency: 74.7s | Name Match: True  | ETA: 274m 20s
+[2026-08-27 06:31:21] [239/450] [PNG ] [rotated_90    ] File: DOC-01C1968B_rotated_90.png    | GPU Latency: 76.9s | Name Match: True  | ETA: 273m 2s
+[2026-08-27 06:32:38] [240/450] [PNG ] [rotated_90    ] File: DOC-01CE9D54_rotated_90.png    | GPU Latency: 76.8s | Name Match: True  | ETA: 271m 44s
+[2026-08-27 06:33:55] [241/450] [PNG ] [rotated_90    ] File: DOC-01DCF344_rotated_90.png    | GPU Latency: 76.1s | Name Match: True  | ETA: 270m 25s
+[2026-08-27 06:35:12] [242/450] [PNG ] [rotated_90    ] File: DOC-01DF1A3F_rotated_90.png    | GPU Latency: 76.4s | Name Match: True  | ETA: 269m 6s
+[2026-08-27 06:36:28] [243/450] [PNG ] [rotated_90    ] File: DOC-01E09EE7_rotated_90.png    | GPU Latency: 75.6s | Name Match: True  | ETA: 267m 47s
+[2026-08-27 06:37:44] [244/450] [PNG ] [rotated_90    ] File: DOC-01E273C2_rotated_90.png    | GPU Latency: 75.6s | Name Match: True  | ETA: 266m 27s
+[2026-08-27 06:39:00] [245/450] [PNG ] [rotated_90    ] File: DOC-01E8F39C_rotated_90.png    | GPU Latency: 75.3s | Name Match: False | ETA: 265m 8s
+[2026-08-27 06:40:17] [246/450] [PNG ] [rotated_90    ] File: DOC-01EB22AE_rotated_90.png    | GPU Latency: 75.7s | Name Match: True  | ETA: 263m 49s
+[2026-08-27 06:41:32] [247/450] [PNG ] [rotated_90    ] File: DOC-01F6F4F3_rotated_90.png    | GPU Latency: 74.4s | Name Match: True  | ETA: 262m 28s
+[2026-08-27 06:42:47] [248/450] [PNG ] [rotated_90    ] File: DOC-0215D221_rotated_90.png    | GPU Latency: 74.8s | Name Match: True  | ETA: 261m 9s
+[2026-08-27 06:44:05] [249/450] [PNG ] [rotated_90    ] File: DOC-0216D7D9_rotated_90.png    | GPU Latency: 76.8s | Name Match: True  | ETA: 259m 50s
+[2026-08-27 06:45:21] [250/450] [PNG ] [rotated_90    ] File: DOC-0231CCEB_rotated_90.png    | GPU Latency: 75.8s | Name Match: True  | ETA: 258m 31s
+[2026-08-27 06:46:38] [251/450] [JPEG] [clean         ] File: DOC-0010905E_clean.jpeg        | GPU Latency: 74.9s | Name Match: True  | ETA: 257m 12s
+[2026-08-27 06:47:55] [252/450] [JPEG] [clean         ] File: DOC-001A07AB_clean.jpeg        | GPU Latency: 76.7s | Name Match: True  | ETA: 255m 53s
+[2026-08-27 06:49:12] [253/450] [JPEG] [clean         ] File: DOC-001F58BA_clean.jpeg        | GPU Latency: 76.0s | Name Match: True  | ETA: 254m 35s
+[2026-08-27 06:50:28] [254/450] [JPEG] [clean         ] File: DOC-0024DCD6_clean.jpeg        | GPU Latency: 75.9s | Name Match: True  | ETA: 253m 16s
+[2026-08-27 06:51:45] [255/450] [JPEG] [clean         ] File: DOC-0031A4A3_clean.jpeg        | GPU Latency: 76.2s | Name Match: False | ETA: 251m 57s
+[2026-08-27 06:53:02] [256/450] [JPEG] [clean         ] File: DOC-00358725_clean.jpeg        | GPU Latency: 76.2s | Name Match: True  | ETA: 250m 39s
+[2026-08-27 06:54:17] [257/450] [JPEG] [clean         ] File: DOC-004182F5_clean.jpeg        | GPU Latency: 75.2s | Name Match: True  | ETA: 249m 20s
+[2026-08-27 06:55:34] [258/450] [JPEG] [clean         ] File: DOC-00446F76_clean.jpeg        | GPU Latency: 75.6s | Name Match: True  | ETA: 248m 1s
+[2026-08-27 06:56:47] [259/450] [JPEG] [clean         ] File: DOC-00449E04_clean.jpeg        | GPU Latency: 72.6s | Name Match: True  | ETA: 246m 40s
+[2026-08-27 06:58:04] [260/450] [JPEG] [clean         ] File: DOC-004EC088_clean.jpeg        | GPU Latency: 76.4s | Name Match: True  | ETA: 245m 21s
+[2026-08-27 06:59:21] [261/450] [JPEG] [clean         ] File: DOC-00662D4D_clean.jpeg        | GPU Latency: 76.5s | Name Match: True  | ETA: 244m 3s
+[2026-08-27 07:00:39] [262/450] [JPEG] [clean         ] File: DOC-0067E656_clean.jpeg        | GPU Latency: 77.3s | Name Match: True  | ETA: 242m 46s
+[2026-08-27 07:01:56] [263/450] [JPEG] [clean         ] File: DOC-006BE31F_clean.jpeg        | GPU Latency: 76.6s | Name Match: True  | ETA: 241m 27s
+[2026-08-27 07:03:13] [264/450] [JPEG] [clean         ] File: DOC-006D5022_clean.jpeg        | GPU Latency: 76.6s | Name Match: True  | ETA: 240m 9s
+[2026-08-27 07:04:30] [265/450] [JPEG] [clean         ] File: DOC-009D8813_clean.jpeg        | GPU Latency: 76.6s | Name Match: True  | ETA: 238m 51s
+[2026-08-27 07:05:46] [266/450] [JPEG] [clean         ] File: DOC-00A17387_clean.jpeg        | GPU Latency: 75.7s | Name Match: True  | ETA: 237m 33s
+[2026-08-27 07:07:03] [267/450] [JPEG] [clean         ] File: DOC-00B39F2F_clean.jpeg        | GPU Latency: 75.9s | Name Match: True  | ETA: 236m 14s
+[2026-08-27 07:08:20] [268/450] [JPEG] [clean         ] File: DOC-00B8FD30_clean.jpeg        | GPU Latency: 76.5s | Name Match: True  | ETA: 234m 56s
+[2026-08-27 07:09:36] [269/450] [JPEG] [clean         ] File: DOC-00BEA546_clean.jpeg        | GPU Latency: 75.2s | Name Match: True  | ETA: 233m 37s
+[2026-08-27 07:10:51] [270/450] [JPEG] [clean         ] File: DOC-00ED4E97_clean.jpeg        | GPU Latency: 74.9s | Name Match: True  | ETA: 232m 18s
+[2026-08-27 07:12:08] [271/450] [JPEG] [clean         ] File: DOC-00EE9532_clean.jpeg        | GPU Latency: 75.7s | Name Match: True  | ETA: 230m 59s
+[2026-08-27 07:13:23] [272/450] [JPEG] [clean         ] File: DOC-00F9CA77_clean.jpeg        | GPU Latency: 74.5s | Name Match: True  | ETA: 229m 40s
+[2026-08-27 07:14:38] [273/450] [JPEG] [clean         ] File: DOC-00FBE313_clean.jpeg        | GPU Latency: 75.2s | Name Match: True  | ETA: 228m 21s
+[2026-08-27 07:15:55] [274/450] [JPEG] [clean         ] File: DOC-0102956C_clean.jpeg        | GPU Latency: 76.7s | Name Match: True  | ETA: 227m 3s
+[2026-08-27 07:17:13] [275/450] [JPEG] [clean         ] File: DOC-010FCF5E_clean.jpeg        | GPU Latency: 77.0s | Name Match: True  | ETA: 225m 45s
+[2026-08-27 07:18:30] [276/450] [JPEG] [clean         ] File: DOC-013AA810_clean.jpeg        | GPU Latency: 76.5s | Name Match: True  | ETA: 224m 28s
+[2026-08-27 07:19:47] [277/450] [JPEG] [clean         ] File: DOC-013D9CDE_clean.jpeg        | GPU Latency: 76.3s | Name Match: True  | ETA: 223m 9s
+[2026-08-27 07:21:03] [278/450] [JPEG] [clean         ] File: DOC-01430AE9_clean.jpeg        | GPU Latency: 76.1s | Name Match: True  | ETA: 221m 51s
+[2026-08-27 07:22:20] [279/450] [JPEG] [clean         ] File: DOC-0147D2A1_clean.jpeg        | GPU Latency: 75.9s | Name Match: True  | ETA: 220m 33s
+[2026-08-27 07:23:35] [280/450] [JPEG] [clean         ] File: DOC-014EE54B_clean.jpeg        | GPU Latency: 74.9s | Name Match: True  | ETA: 219m 14s
+[2026-08-27 07:24:52] [281/450] [JPEG] [clean         ] File: DOC-014F95AD_clean.jpeg        | GPU Latency: 76.5s | Name Match: True  | ETA: 217m 56s
+[2026-08-27 07:26:08] [282/450] [JPEG] [clean         ] File: DOC-0189E11D_clean.jpeg        | GPU Latency: 75.2s | Name Match: True  | ETA: 216m 37s
+[2026-08-27 07:27:26] [283/450] [JPEG] [clean         ] File: DOC-018F2EC6_clean.jpeg        | GPU Latency: 76.8s | Name Match: True  | ETA: 215m 20s
+[2026-08-27 07:28:42] [284/450] [JPEG] [clean         ] File: DOC-0197DB96_clean.jpeg        | GPU Latency: 75.7s | Name Match: True  | ETA: 214m 1s
+[2026-08-27 07:29:59] [285/450] [JPEG] [clean         ] File: DOC-01A87317_clean.jpeg        | GPU Latency: 76.3s | Name Match: True  | ETA: 212m 43s
+[2026-08-27 07:31:14] [286/450] [JPEG] [clean         ] File: DOC-01BFFFB8_clean.jpeg        | GPU Latency: 74.8s | Name Match: True  | ETA: 211m 25s
+[2026-08-27 07:32:32] [287/450] [JPEG] [clean         ] File: DOC-01C067E9_clean.jpeg        | GPU Latency: 76.9s | Name Match: True  | ETA: 210m 7s
+[2026-08-27 07:33:48] [288/450] [JPEG] [clean         ] File: DOC-01C1494A_clean.jpeg        | GPU Latency: 75.9s | Name Match: True  | ETA: 208m 49s
+[2026-08-27 07:35:05] [289/450] [JPEG] [clean         ] File: DOC-01C1968B_clean.jpeg        | GPU Latency: 76.1s | Name Match: True  | ETA: 207m 31s
+[2026-08-27 07:36:21] [290/450] [JPEG] [clean         ] File: DOC-01CE9D54_clean.jpeg        | GPU Latency: 75.4s | Name Match: True  | ETA: 206m 12s
+[2026-08-27 07:37:37] [291/450] [JPEG] [clean         ] File: DOC-01DCF344_clean.jpeg        | GPU Latency: 75.5s | Name Match: True  | ETA: 204m 54s
+[2026-08-27 07:38:54] [292/450] [JPEG] [clean         ] File: DOC-01DF1A3F_clean.jpeg        | GPU Latency: 77.0s | Name Match: True  | ETA: 203m 37s
+[2026-08-27 07:40:10] [293/450] [JPEG] [clean         ] File: DOC-01E09EE7_clean.jpeg        | GPU Latency: 75.0s | Name Match: True  | ETA: 202m 18s
+[2026-08-27 07:41:25] [294/450] [JPEG] [clean         ] File: DOC-01E273C2_clean.jpeg        | GPU Latency: 74.4s | Name Match: True  | ETA: 200m 59s
+[2026-08-27 07:42:43] [295/450] [JPEG] [clean         ] File: DOC-01E8F39C_clean.jpeg        | GPU Latency: 77.1s | Name Match: True  | ETA: 199m 42s
+[2026-08-27 07:43:59] [296/450] [JPEG] [clean         ] File: DOC-01EB22AE_clean.jpeg        | GPU Latency: 75.5s | Name Match: True  | ETA: 198m 23s
+[2026-08-27 07:45:15] [297/450] [JPEG] [clean         ] File: DOC-01F6F4F3_clean.jpeg        | GPU Latency: 75.6s | Name Match: True  | ETA: 197m 5s
+[2026-08-27 07:46:32] [298/450] [JPEG] [clean         ] File: DOC-0215D221_clean.jpeg        | GPU Latency: 76.2s | Name Match: True  | ETA: 195m 47s
+[2026-08-27 07:47:49] [299/450] [JPEG] [clean         ] File: DOC-0216D7D9_clean.jpeg        | GPU Latency: 76.6s | Name Match: True  | ETA: 194m 30s
+[2026-08-27 07:49:05] [300/450] [JPEG] [clean         ] File: DOC-0231CCEB_clean.jpeg        | GPU Latency: 75.1s | Name Match: True  | ETA: 193m 11s
+[2026-08-27 07:50:22] [301/450] [JPEG] [scanner_copy  ] File: DOC-0010905E_scanner_copy.jpeg | GPU Latency: 77.1s | Name Match: True  | ETA: 191m 54s
+[2026-08-27 07:51:36] [302/450] [JPEG] [scanner_copy  ] File: DOC-001A07AB_scanner_copy.jpeg | GPU Latency: 73.4s | Name Match: True  | ETA: 190m 35s
+[2026-08-27 07:52:54] [303/450] [JPEG] [scanner_copy  ] File: DOC-001F58BA_scanner_copy.jpeg | GPU Latency: 76.9s | Name Match: True  | ETA: 189m 17s
+[2026-08-27 07:54:12] [304/450] [JPEG] [scanner_copy  ] File: DOC-0024DCD6_scanner_copy.jpeg | GPU Latency: 77.2s | Name Match: True  | ETA: 188m 0s
+[2026-08-27 07:55:28] [305/450] [JPEG] [scanner_copy  ] File: DOC-0031A4A3_scanner_copy.jpeg | GPU Latency: 76.0s | Name Match: True  | ETA: 186m 42s
+[2026-08-27 07:56:44] [306/450] [JPEG] [scanner_copy  ] File: DOC-00358725_scanner_copy.jpeg | GPU Latency: 74.8s | Name Match: True  | ETA: 185m 24s
+[2026-08-27 07:58:00] [307/450] [JPEG] [scanner_copy  ] File: DOC-004182F5_scanner_copy.jpeg | GPU Latency: 75.2s | Name Match: True  | ETA: 184m 6s
+[2026-08-27 07:59:15] [308/450] [JPEG] [scanner_copy  ] File: DOC-00446F76_scanner_copy.jpeg | GPU Latency: 75.1s | Name Match: True  | ETA: 182m 47s
+[2026-08-27 08:00:31] [309/450] [JPEG] [scanner_copy  ] File: DOC-00449E04_scanner_copy.jpeg | GPU Latency: 75.0s | Name Match: True  | ETA: 181m 29s
+[2026-08-27 08:01:48] [310/450] [JPEG] [scanner_copy  ] File: DOC-004EC088_scanner_copy.jpeg | GPU Latency: 76.2s | Name Match: True  | ETA: 180m 11s
+[2026-08-27 08:03:05] [311/450] [JPEG] [scanner_copy  ] File: DOC-00662D4D_scanner_copy.jpeg | GPU Latency: 76.4s | Name Match: True  | ETA: 178m 54s
+[2026-08-27 08:04:22] [312/450] [JPEG] [scanner_copy  ] File: DOC-0067E656_scanner_copy.jpeg | GPU Latency: 76.6s | Name Match: True  | ETA: 177m 36s
+[2026-08-27 08:05:39] [313/450] [JPEG] [scanner_copy  ] File: DOC-006BE31F_scanner_copy.jpeg | GPU Latency: 76.9s | Name Match: True  | ETA: 176m 19s
+[2026-08-27 08:06:56] [314/450] [JPEG] [scanner_copy  ] File: DOC-006D5022_scanner_copy.jpeg | GPU Latency: 76.4s | Name Match: True  | ETA: 175m 1s
+[2026-08-27 08:08:12] [315/450] [JPEG] [scanner_copy  ] File: DOC-009D8813_scanner_copy.jpeg | GPU Latency: 75.7s | Name Match: True  | ETA: 173m 44s
+[2026-08-27 08:09:29] [316/450] [JPEG] [scanner_copy  ] File: DOC-00A17387_scanner_copy.jpeg | GPU Latency: 76.0s | Name Match: True  | ETA: 172m 26s
+[2026-08-27 08:10:46] [317/450] [JPEG] [scanner_copy  ] File: DOC-00B39F2F_scanner_copy.jpeg | GPU Latency: 76.7s | Name Match: True  | ETA: 171m 8s
+[2026-08-27 08:12:03] [318/450] [JPEG] [scanner_copy  ] File: DOC-00B8FD30_scanner_copy.jpeg | GPU Latency: 76.3s | Name Match: True  | ETA: 169m 51s
+[2026-08-27 08:13:19] [319/450] [JPEG] [scanner_copy  ] File: DOC-00BEA546_scanner_copy.jpeg | GPU Latency: 75.7s | Name Match: True  | ETA: 168m 33s
+[2026-08-27 08:14:37] [320/450] [JPEG] [scanner_copy  ] File: DOC-00ED4E97_scanner_copy.jpeg | GPU Latency: 76.6s | Name Match: True  | ETA: 167m 16s
+[2026-08-27 08:15:54] [321/450] [JPEG] [scanner_copy  ] File: DOC-00EE9532_scanner_copy.jpeg | GPU Latency: 77.0s | Name Match: True  | ETA: 165m 58s
+[2026-08-27 08:17:11] [322/450] [JPEG] [scanner_copy  ] File: DOC-00F9CA77_scanner_copy.jpeg | GPU Latency: 76.7s | Name Match: True  | ETA: 164m 41s
+[2026-08-27 08:18:28] [323/450] [JPEG] [scanner_copy  ] File: DOC-00FBE313_scanner_copy.jpeg | GPU Latency: 76.6s | Name Match: True  | ETA: 163m 23s
+[2026-08-27 08:19:44] [324/450] [JPEG] [scanner_copy  ] File: DOC-0102956C_scanner_copy.jpeg | GPU Latency: 75.1s | Name Match: True  | ETA: 162m 5s
+[2026-08-27 08:21:01] [325/450] [JPEG] [scanner_copy  ] File: DOC-010FCF5E_scanner_copy.jpeg | GPU Latency: 76.3s | Name Match: True  | ETA: 160m 48s
+[2026-08-27 08:22:16] [326/450] [JPEG] [scanner_copy  ] File: DOC-013AA810_scanner_copy.jpeg | GPU Latency: 74.8s | Name Match: True  | ETA: 159m 30s
+[2026-08-27 08:23:34] [327/450] [JPEG] [scanner_copy  ] File: DOC-013D9CDE_scanner_copy.jpeg | GPU Latency: 77.0s | Name Match: True  | ETA: 158m 13s
+[2026-08-27 08:24:51] [328/450] [JPEG] [scanner_copy  ] File: DOC-01430AE9_scanner_copy.jpeg | GPU Latency: 76.7s | Name Match: True  | ETA: 156m 55s
+[2026-08-27 08:26:08] [329/450] [JPEG] [scanner_copy  ] File: DOC-0147D2A1_scanner_copy.jpeg | GPU Latency: 75.8s | Name Match: True  | ETA: 155m 37s
+[2026-08-27 08:27:23] [330/450] [JPEG] [scanner_copy  ] File: DOC-014EE54B_scanner_copy.jpeg | GPU Latency: 74.7s | Name Match: True  | ETA: 154m 19s
+[2026-08-27 08:28:41] [331/450] [JPEG] [scanner_copy  ] File: DOC-014F95AD_scanner_copy.jpeg | GPU Latency: 77.3s | Name Match: True  | ETA: 153m 2s
+[2026-08-27 08:29:57] [332/450] [JPEG] [scanner_copy  ] File: DOC-0189E11D_scanner_copy.jpeg | GPU Latency: 75.7s | Name Match: True  | ETA: 151m 45s
+[2026-08-27 08:31:13] [333/450] [JPEG] [scanner_copy  ] File: DOC-018F2EC6_scanner_copy.jpeg | GPU Latency: 74.6s | Name Match: True  | ETA: 150m 27s
+[2026-08-27 08:32:29] [334/450] [JPEG] [scanner_copy  ] File: DOC-0197DB96_scanner_copy.jpeg | GPU Latency: 75.8s | Name Match: True  | ETA: 149m 9s
+[2026-08-27 08:33:46] [335/450] [JPEG] [scanner_copy  ] File: DOC-01A87317_scanner_copy.jpeg | GPU Latency: 76.3s | Name Match: True  | ETA: 147m 51s
+[2026-08-27 08:35:03] [336/450] [JPEG] [scanner_copy  ] File: DOC-01BFFFB8_scanner_copy.jpeg | GPU Latency: 76.2s | Name Match: True  | ETA: 146m 34s
+[2026-08-27 08:36:19] [337/450] [JPEG] [scanner_copy  ] File: DOC-01C067E9_scanner_copy.jpeg | GPU Latency: 75.9s | Name Match: False | ETA: 145m 16s
+[2026-08-27 08:37:35] [338/450] [JPEG] [scanner_copy  ] File: DOC-01C1494A_scanner_copy.jpeg | GPU Latency: 74.7s | Name Match: True  | ETA: 143m 58s
+[2026-08-27 08:38:52] [339/450] [JPEG] [scanner_copy  ] File: DOC-01C1968B_scanner_copy.jpeg | GPU Latency: 76.5s | Name Match: True  | ETA: 142m 41s
+[2026-08-27 08:40:09] [340/450] [JPEG] [scanner_copy  ] File: DOC-01CE9D54_scanner_copy.jpeg | GPU Latency: 76.7s | Name Match: True  | ETA: 141m 24s
+[2026-08-27 08:41:25] [341/450] [JPEG] [scanner_copy  ] File: DOC-01DCF344_scanner_copy.jpeg | GPU Latency: 75.0s | Name Match: True  | ETA: 140m 6s
+[2026-08-27 08:42:41] [342/450] [JPEG] [scanner_copy  ] File: DOC-01DF1A3F_scanner_copy.jpeg | GPU Latency: 75.7s | Name Match: True  | ETA: 138m 49s
+[2026-08-27 08:43:56] [343/450] [JPEG] [scanner_copy  ] File: DOC-01E09EE7_scanner_copy.jpeg | GPU Latency: 74.8s | Name Match: True  | ETA: 137m 31s
+[2026-08-27 08:45:11] [344/450] [JPEG] [scanner_copy  ] File: DOC-01E273C2_scanner_copy.jpeg | GPU Latency: 73.8s | Name Match: True  | ETA: 136m 13s
+[2026-08-27 08:46:29] [345/450] [JPEG] [scanner_copy  ] File: DOC-01E8F39C_scanner_copy.jpeg | GPU Latency: 77.2s | Name Match: True  | ETA: 134m 55s
+[2026-08-27 08:47:46] [346/450] [JPEG] [scanner_copy  ] File: DOC-01EB22AE_scanner_copy.jpeg | GPU Latency: 76.4s | Name Match: True  | ETA: 133m 38s
+[2026-08-27 08:49:03] [347/450] [JPEG] [scanner_copy  ] File: DOC-01F6F4F3_scanner_copy.jpeg | GPU Latency: 76.4s | Name Match: True  | ETA: 132m 21s
+[2026-08-27 08:50:20] [348/450] [JPEG] [scanner_copy  ] File: DOC-0215D221_scanner_copy.jpeg | GPU Latency: 76.4s | Name Match: True  | ETA: 131m 4s
+[2026-08-27 08:51:37] [349/450] [JPEG] [scanner_copy  ] File: DOC-0216D7D9_scanner_copy.jpeg | GPU Latency: 76.1s | Name Match: True  | ETA: 129m 46s
+[2026-08-27 08:52:54] [350/450] [JPEG] [scanner_copy  ] File: DOC-0231CCEB_scanner_copy.jpeg | GPU Latency: 77.0s | Name Match: True  | ETA: 128m 29s
+[2026-08-27 08:54:11] [351/450] [JPEG] [mobile_camera ] File: DOC-0010905E_mobile_camera.jpeg | GPU Latency: 76.5s | Name Match: True  | ETA: 127m 12s
+[2026-08-27 08:55:29] [352/450] [JPEG] [mobile_camera ] File: DOC-001A07AB_mobile_camera.jpeg | GPU Latency: 76.8s | Name Match: True  | ETA: 125m 55s
+[2026-08-27 08:56:45] [353/450] [JPEG] [mobile_camera ] File: DOC-001F58BA_mobile_camera.jpeg | GPU Latency: 75.5s | Name Match: True  | ETA: 124m 37s
+[2026-08-27 08:58:02] [354/450] [JPEG] [mobile_camera ] File: DOC-0024DCD6_mobile_camera.jpeg | GPU Latency: 76.2s | Name Match: True  | ETA: 123m 20s
+[2026-08-27 08:59:18] [355/450] [JPEG] [mobile_camera ] File: DOC-0031A4A3_mobile_camera.jpeg | GPU Latency: 76.0s | Name Match: True  | ETA: 122m 2s
+[2026-08-27 09:00:35] [356/450] [JPEG] [mobile_camera ] File: DOC-00358725_mobile_camera.jpeg | GPU Latency: 76.4s | Name Match: True  | ETA: 120m 45s
+[2026-08-27 09:01:52] [357/450] [JPEG] [mobile_camera ] File: DOC-004182F5_mobile_camera.jpeg | GPU Latency: 76.3s | Name Match: True  | ETA: 119m 28s
+[2026-08-27 09:03:10] [358/450] [JPEG] [mobile_camera ] File: DOC-00446F76_mobile_camera.jpeg | GPU Latency: 77.1s | Name Match: True  | ETA: 118m 11s
+[2026-08-27 09:04:27] [359/450] [JPEG] [mobile_camera ] File: DOC-00449E04_mobile_camera.jpeg | GPU Latency: 76.5s | Name Match: True  | ETA: 116m 54s
+[2026-08-27 09:05:43] [360/450] [JPEG] [mobile_camera ] File: DOC-004EC088_mobile_camera.jpeg | GPU Latency: 75.3s | Name Match: True  | ETA: 115m 36s
+[2026-08-27 09:07:00] [361/450] [JPEG] [mobile_camera ] File: DOC-00662D4D_mobile_camera.jpeg | GPU Latency: 77.2s | Name Match: True  | ETA: 114m 19s
+[2026-08-27 09:08:18] [362/450] [JPEG] [mobile_camera ] File: DOC-0067E656_mobile_camera.jpeg | GPU Latency: 76.6s | Name Match: True  | ETA: 113m 2s
+[2026-08-27 09:09:35] [363/450] [JPEG] [mobile_camera ] File: DOC-006BE31F_mobile_camera.jpeg | GPU Latency: 76.9s | Name Match: True  | ETA: 111m 45s
+[2026-08-27 09:10:53] [364/450] [JPEG] [mobile_camera ] File: DOC-006D5022_mobile_camera.jpeg | GPU Latency: 77.1s | Name Match: True  | ETA: 110m 28s
+[2026-08-27 09:12:11] [365/450] [JPEG] [mobile_camera ] File: DOC-009D8813_mobile_camera.jpeg | GPU Latency: 77.1s | Name Match: True  | ETA: 109m 11s
+[2026-08-27 09:13:29] [366/450] [JPEG] [mobile_camera ] File: DOC-00A17387_mobile_camera.jpeg | GPU Latency: 77.3s | Name Match: True  | ETA: 107m 54s
+[2026-08-27 09:14:46] [367/450] [JPEG] [mobile_camera ] File: DOC-00B39F2F_mobile_camera.jpeg | GPU Latency: 76.9s | Name Match: True  | ETA: 106m 36s
+[2026-08-27 09:16:03] [368/450] [JPEG] [mobile_camera ] File: DOC-00B8FD30_mobile_camera.jpeg | GPU Latency: 76.4s | Name Match: True  | ETA: 105m 19s
+[2026-08-27 09:17:20] [369/450] [JPEG] [mobile_camera ] File: DOC-00BEA546_mobile_camera.jpeg | GPU Latency: 76.5s | Name Match: True  | ETA: 104m 2s
+[2026-08-27 09:18:39] [370/450] [JPEG] [mobile_camera ] File: DOC-00ED4E97_mobile_camera.jpeg | GPU Latency: 78.6s | Name Match: True  | ETA: 102m 45s
+[2026-08-27 09:19:57] [371/450] [JPEG] [mobile_camera ] File: DOC-00EE9532_mobile_camera.jpeg | GPU Latency: 77.8s | Name Match: True  | ETA: 101m 28s
+[2026-08-27 09:21:16] [372/450] [JPEG] [mobile_camera ] File: DOC-00F9CA77_mobile_camera.jpeg | GPU Latency: 78.1s | Name Match: True  | ETA: 100m 12s
+[2026-08-27 09:22:34] [373/450] [JPEG] [mobile_camera ] File: DOC-00FBE313_mobile_camera.jpeg | GPU Latency: 76.8s | Name Match: True  | ETA: 98m 54s
+[2026-08-27 09:23:50] [374/450] [JPEG] [mobile_camera ] File: DOC-0102956C_mobile_camera.jpeg | GPU Latency: 76.2s | Name Match: True  | ETA: 97m 37s
+[2026-08-27 09:25:08] [375/450] [JPEG] [mobile_camera ] File: DOC-010FCF5E_mobile_camera.jpeg | GPU Latency: 77.1s | Name Match: True  | ETA: 96m 20s
+[2026-08-27 09:26:26] [376/450] [JPEG] [mobile_camera ] File: DOC-013AA810_mobile_camera.jpeg | GPU Latency: 77.5s | Name Match: True  | ETA: 95m 3s
+[2026-08-27 09:27:43] [377/450] [JPEG] [mobile_camera ] File: DOC-013D9CDE_mobile_camera.jpeg | GPU Latency: 76.1s | Name Match: True  | ETA: 93m 46s
+[2026-08-27 09:29:01] [378/450] [JPEG] [mobile_camera ] File: DOC-01430AE9_mobile_camera.jpeg | GPU Latency: 77.6s | Name Match: True  | ETA: 92m 29s
+[2026-08-27 09:30:16] [379/450] [JPEG] [mobile_camera ] File: DOC-0147D2A1_mobile_camera.jpeg | GPU Latency: 74.3s | Name Match: True  | ETA: 91m 11s
+[2026-08-27 09:31:32] [380/450] [JPEG] [mobile_camera ] File: DOC-014EE54B_mobile_camera.jpeg | GPU Latency: 74.9s | Name Match: True  | ETA: 89m 54s
+[2026-08-27 09:32:52] [381/450] [JPEG] [mobile_camera ] File: DOC-014F95AD_mobile_camera.jpeg | GPU Latency: 80.6s | Name Match: True  | ETA: 88m 37s
+[2026-08-27 09:34:19] [382/450] [JPEG] [mobile_camera ] File: DOC-0189E11D_mobile_camera.jpeg | GPU Latency: 86.1s | Name Match: True  | ETA: 87m 22s
+[2026-08-27 09:35:47] [383/450] [JPEG] [mobile_camera ] File: DOC-018F2EC6_mobile_camera.jpeg | GPU Latency: 87.7s | Name Match: True  | ETA: 86m 7s
+[2026-08-27 09:37:11] [384/450] [JPEG] [mobile_camera ] File: DOC-0197DB96_mobile_camera.jpeg | GPU Latency: 84.0s | Name Match: True  | ETA: 84m 51s
+[2026-08-27 09:38:30] [385/450] [JPEG] [mobile_camera ] File: DOC-01A87317_mobile_camera.jpeg | GPU Latency: 78.0s | Name Match: True  | ETA: 83m 34s
+[2026-08-27 09:39:46] [386/450] [JPEG] [mobile_camera ] File: DOC-01BFFFB8_mobile_camera.jpeg | GPU Latency: 75.4s | Name Match: True  | ETA: 82m 16s
+[2026-08-27 09:41:01] [387/450] [JPEG] [mobile_camera ] File: DOC-01C067E9_mobile_camera.jpeg | GPU Latency: 74.6s | Name Match: True  | ETA: 80m 59s
+[2026-08-27 09:42:18] [388/450] [JPEG] [mobile_camera ] File: DOC-01C1494A_mobile_camera.jpeg | GPU Latency: 76.0s | Name Match: True  | ETA: 79m 41s
+[2026-08-27 09:43:33] [389/450] [JPEG] [mobile_camera ] File: DOC-01C1968B_mobile_camera.jpeg | GPU Latency: 74.6s | Name Match: True  | ETA: 78m 24s
+[2026-08-27 09:44:50] [390/450] [JPEG] [mobile_camera ] File: DOC-01CE9D54_mobile_camera.jpeg | GPU Latency: 76.7s | Name Match: True  | ETA: 77m 7s
+[2026-08-27 09:46:07] [391/450] [JPEG] [mobile_camera ] File: DOC-01DCF344_mobile_camera.jpeg | GPU Latency: 76.6s | Name Match: True  | ETA: 75m 50s
+[2026-08-27 09:47:26] [392/450] [JPEG] [mobile_camera ] File: DOC-01DF1A3F_mobile_camera.jpeg | GPU Latency: 77.5s | Name Match: True  | ETA: 74m 32s
+[2026-08-27 09:48:41] [393/450] [JPEG] [mobile_camera ] File: DOC-01E09EE7_mobile_camera.jpeg | GPU Latency: 74.9s | Name Match: True  | ETA: 73m 15s
+[2026-08-27 09:49:58] [394/450] [JPEG] [mobile_camera ] File: DOC-01E273C2_mobile_camera.jpeg | GPU Latency: 76.0s | Name Match: True  | ETA: 71m 58s
+[2026-08-27 09:51:14] [395/450] [JPEG] [mobile_camera ] File: DOC-01E8F39C_mobile_camera.jpeg | GPU Latency: 75.9s | Name Match: True  | ETA: 70m 40s
+[2026-08-27 09:52:29] [396/450] [JPEG] [mobile_camera ] File: DOC-01EB22AE_mobile_camera.jpeg | GPU Latency: 74.6s | Name Match: True  | ETA: 69m 23s
+[2026-08-27 09:53:47] [397/450] [JPEG] [mobile_camera ] File: DOC-01F6F4F3_mobile_camera.jpeg | GPU Latency: 77.0s | Name Match: True  | ETA: 68m 6s
+[2026-08-27 09:55:05] [398/450] [JPEG] [mobile_camera ] File: DOC-0215D221_mobile_camera.jpeg | GPU Latency: 77.4s | Name Match: True  | ETA: 66m 49s
+[2026-08-27 09:56:22] [399/450] [JPEG] [mobile_camera ] File: DOC-0216D7D9_mobile_camera.jpeg | GPU Latency: 76.2s | Name Match: True  | ETA: 65m 32s
+[2026-08-27 09:57:40] [400/450] [JPEG] [mobile_camera ] File: DOC-0231CCEB_mobile_camera.jpeg | GPU Latency: 77.8s | Name Match: True  | ETA: 64m 15s
+[2026-08-27 09:58:59] [401/450] [JPEG] [rotated_90    ] File: DOC-0010905E_rotated_90.jpeg   | GPU Latency: 78.0s | Name Match: True  | ETA: 62m 58s
+[2026-08-27 10:00:17] [402/450] [JPEG] [rotated_90    ] File: DOC-001A07AB_rotated_90.jpeg   | GPU Latency: 78.1s | Name Match: True  | ETA: 61m 41s
+[2026-08-27 10:01:35] [403/450] [JPEG] [rotated_90    ] File: DOC-001F58BA_rotated_90.jpeg   | GPU Latency: 77.3s | Name Match: True  | ETA: 60m 24s
+[2026-08-27 10:02:55] [404/450] [JPEG] [rotated_90    ] File: DOC-0024DCD6_rotated_90.jpeg   | GPU Latency: 78.8s | Name Match: False | ETA: 59m 7s
+[2026-08-27 10:04:13] [405/450] [JPEG] [rotated_90    ] File: DOC-0031A4A3_rotated_90.jpeg   | GPU Latency: 78.1s | Name Match: False | ETA: 57m 50s
+[2026-08-27 10:05:32] [406/450] [JPEG] [rotated_90    ] File: DOC-00358725_rotated_90.jpeg   | GPU Latency: 78.6s | Name Match: False | ETA: 56m 33s
+[2026-08-27 10:06:51] [407/450] [JPEG] [rotated_90    ] File: DOC-004182F5_rotated_90.jpeg   | GPU Latency: 78.0s | Name Match: True  | ETA: 55m 16s
+[2026-08-27 10:08:10] [408/450] [JPEG] [rotated_90    ] File: DOC-00446F76_rotated_90.jpeg   | GPU Latency: 78.9s | Name Match: True  | ETA: 53m 59s
+[2026-08-27 10:09:44] [409/450] [JPEG] [rotated_90    ] File: DOC-00449E04_rotated_90.jpeg   | GPU Latency: 93.2s | Name Match: True  | ETA: 52m 43s
+[2026-08-27 10:11:18] [410/450] [JPEG] [rotated_90    ] File: DOC-004EC088_rotated_90.jpeg   | GPU Latency: 93.3s | Name Match: True  | ETA: 51m 28s
+[2026-08-27 10:12:54] [411/450] [JPEG] [rotated_90    ] File: DOC-00662D4D_rotated_90.jpeg   | GPU Latency: 95.5s | Name Match: True  | ETA: 50m 12s
+[2026-08-27 10:14:30] [412/450] [JPEG] [rotated_90    ] File: DOC-0067E656_rotated_90.jpeg   | GPU Latency: 94.9s | Name Match: True  | ETA: 48m 57s
+[2026-08-27 10:16:08] [413/450] [JPEG] [rotated_90    ] File: DOC-006BE31F_rotated_90.jpeg   | GPU Latency: 98.2s | Name Match: True  | ETA: 47m 41s
+[2026-08-27 10:17:48] [414/450] [JPEG] [rotated_90    ] File: DOC-006D5022_rotated_90.jpeg   | GPU Latency: 99.7s | Name Match: False | ETA: 46m 26s
+[2026-08-27 10:19:27] [415/450] [JPEG] [rotated_90    ] File: DOC-009D8813_rotated_90.jpeg   | GPU Latency: 97.4s | Name Match: True  | ETA: 45m 10s
+[2026-08-27 10:21:05] [416/450] [JPEG] [rotated_90    ] File: DOC-00A17387_rotated_90.jpeg   | GPU Latency: 97.6s | Name Match: True  | ETA: 43m 54s
+[2026-08-27 10:22:42] [417/450] [JPEG] [rotated_90    ] File: DOC-00B39F2F_rotated_90.jpeg   | GPU Latency: 96.6s | Name Match: True  | ETA: 42m 38s
+[2026-08-27 10:24:20] [418/450] [JPEG] [rotated_90    ] File: DOC-00B8FD30_rotated_90.jpeg   | GPU Latency: 97.6s | Name Match: True  | ETA: 41m 22s
+[2026-08-27 10:25:57] [419/450] [JPEG] [rotated_90    ] File: DOC-00BEA546_rotated_90.jpeg   | GPU Latency: 96.3s | Name Match: True  | ETA: 40m 6s
+[2026-08-27 10:27:36] [420/450] [JPEG] [rotated_90    ] File: DOC-00ED4E97_rotated_90.jpeg   | GPU Latency: 97.8s | Name Match: True  | ETA: 38m 50s
+[2026-08-27 10:29:12] [421/450] [JPEG] [rotated_90    ] File: DOC-00EE9532_rotated_90.jpeg   | GPU Latency: 95.5s | Name Match: True  | ETA: 37m 33s
+[2026-08-27 10:30:49] [422/450] [JPEG] [rotated_90    ] File: DOC-00F9CA77_rotated_90.jpeg   | GPU Latency: 96.4s | Name Match: True  | ETA: 36m 17s
+[2026-08-27 10:32:26] [423/450] [JPEG] [rotated_90    ] File: DOC-00FBE313_rotated_90.jpeg   | GPU Latency: 96.6s | Name Match: True  | ETA: 35m 0s
+[2026-08-27 10:34:01] [424/450] [JPEG] [rotated_90    ] File: DOC-0102956C_rotated_90.jpeg   | GPU Latency: 94.3s | Name Match: True  | ETA: 33m 44s
+[2026-08-27 10:35:37] [425/450] [JPEG] [rotated_90    ] File: DOC-010FCF5E_rotated_90.jpeg   | GPU Latency: 96.0s | Name Match: True  | ETA: 32m 27s
+[2026-08-27 10:37:15] [426/450] [JPEG] [rotated_90    ] File: DOC-013AA810_rotated_90.jpeg   | GPU Latency: 97.2s | Name Match: True  | ETA: 31m 10s
+[2026-08-27 10:38:52] [427/450] [JPEG] [rotated_90    ] File: DOC-013D9CDE_rotated_90.jpeg   | GPU Latency: 95.6s | Name Match: True  | ETA: 29m 53s
+[2026-08-27 10:40:28] [428/450] [JPEG] [rotated_90    ] File: DOC-01430AE9_rotated_90.jpeg   | GPU Latency: 96.1s | Name Match: True  | ETA: 28m 36s
+[2026-08-27 10:42:05] [429/450] [JPEG] [rotated_90    ] File: DOC-0147D2A1_rotated_90.jpeg   | GPU Latency: 96.1s | Name Match: True  | ETA: 27m 19s
+[2026-08-27 10:43:42] [430/450] [JPEG] [rotated_90    ] File: DOC-014EE54B_rotated_90.jpeg   | GPU Latency: 96.2s | Name Match: False | ETA: 26m 2s
+[2026-08-27 10:45:18] [431/450] [JPEG] [rotated_90    ] File: DOC-014F95AD_rotated_90.jpeg   | GPU Latency: 95.2s | Name Match: True  | ETA: 24m 44s
+[2026-08-27 10:46:56] [432/450] [JPEG] [rotated_90    ] File: DOC-0189E11D_rotated_90.jpeg   | GPU Latency: 97.7s | Name Match: True  | ETA: 23m 27s
+[2026-08-27 10:48:31] [433/450] [JPEG] [rotated_90    ] File: DOC-018F2EC6_rotated_90.jpeg   | GPU Latency: 94.6s | Name Match: True  | ETA: 22m 9s
+[2026-08-27 10:50:09] [434/450] [JPEG] [rotated_90    ] File: DOC-0197DB96_rotated_90.jpeg   | GPU Latency: 97.2s | Name Match: False | ETA: 20m 52s
+[2026-08-27 10:51:46] [435/450] [JPEG] [rotated_90    ] File: DOC-01A87317_rotated_90.jpeg   | GPU Latency: 96.0s | Name Match: True  | ETA: 19m 34s
+[2026-08-27 10:53:21] [436/450] [JPEG] [rotated_90    ] File: DOC-01BFFFB8_rotated_90.jpeg   | GPU Latency: 94.8s | Name Match: True  | ETA: 18m 16s
+[2026-08-27 10:54:59] [437/450] [JPEG] [rotated_90    ] File: DOC-01C067E9_rotated_90.jpeg   | GPU Latency: 97.7s | Name Match: True  | ETA: 16m 59s
+[2026-08-27 10:56:37] [438/450] [JPEG] [rotated_90    ] File: DOC-01C1494A_rotated_90.jpeg   | GPU Latency: 96.7s | Name Match: True  | ETA: 15m 41s
+[2026-08-27 10:58:14] [439/450] [JPEG] [rotated_90    ] File: DOC-01C1968B_rotated_90.jpeg   | GPU Latency: 97.2s | Name Match: True  | ETA: 14m 23s
+[2026-08-27 10:59:51] [440/450] [JPEG] [rotated_90    ] File: DOC-01CE9D54_rotated_90.jpeg   | GPU Latency: 96.1s | Name Match: True  | ETA: 13m 5s
+[2026-08-27 11:01:30] [441/450] [JPEG] [rotated_90    ] File: DOC-01DCF344_rotated_90.jpeg   | GPU Latency: 98.6s | Name Match: True  | ETA: 11m 47s
+[2026-08-27 11:03:09] [442/450] [JPEG] [rotated_90    ] File: DOC-01DF1A3F_rotated_90.jpeg   | GPU Latency: 97.6s | Name Match: True  | ETA: 10m 28s
+[2026-08-27 11:04:49] [443/450] [JPEG] [rotated_90    ] File: DOC-01E09EE7_rotated_90.jpeg   | GPU Latency: 100.0s | Name Match: True  | ETA: 9m 10s
+[2026-08-27 11:06:31] [444/450] [JPEG] [rotated_90    ] File: DOC-01E273C2_rotated_90.jpeg   | GPU Latency: 100.8s | Name Match: True  | ETA: 7m 52s
+[2026-08-27 11:08:32] [445/450] [JPEG] [rotated_90    ] File: DOC-01E8F39C_rotated_90.jpeg   | GPU Latency: 120.5s | Name Match: False | ETA: 6m 33s
+[2026-08-27 11:09:59] [446/450] [JPEG] [rotated_90    ] File: DOC-01EB22AE_rotated_90.jpeg   | GPU Latency: 87.1s | Name Match: True  | ETA: 5m 15s
+[2026-08-27 11:11:19] [447/450] [JPEG] [rotated_90    ] File: DOC-01F6F4F3_rotated_90.jpeg   | GPU Latency: 79.2s | Name Match: True  | ETA: 3m 56s
+[2026-08-27 11:12:41] [448/450] [JPEG] [rotated_90    ] File: DOC-0215D221_rotated_90.jpeg   | GPU Latency: 81.8s | Name Match: True  | ETA: 2m 37s
+[2026-08-27 11:14:03] [449/450] [JPEG] [rotated_90    ] File: DOC-0216D7D9_rotated_90.jpeg   | GPU Latency: 81.0s | Name Match: True  | ETA: 1m 18s
+[2026-08-27 11:15:25] [450/450] [JPEG] [rotated_90    ] File: DOC-0231CCEB_rotated_90.jpeg   | GPU Latency: 81.3s | Name Match: True  | ETA: 0m 0s
+[2026-08-27 11:15:25] 
+[PASS] 100% Real GPU Inference completed in 35746.2s (595.8 mins).
+[2026-08-27 11:15:25] 
+[STEP 3/5] Computing final statistical hypothesis tests...
+[2026-08-27 11:15:29] 
+=================================================================
+[2026-08-27 11:15:29]  100% REAL LIVE OLLAMA GPU BENCHMARK RUN COMPLETED!
+[2026-08-27 11:15:29]  All artifacts saved strictly in: C:\github\academicuniverse\backend\benchmark_reports\run_450_live_gpu_1787773778444
+[2026-08-27 11:15:29] =================================================================
