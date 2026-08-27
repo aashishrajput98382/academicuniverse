@@ -1,0 +1,39 @@
+{
+  "run_id": "run_450_live_gpu_1787773778444",
+  "dataset_location": "D:\\AU_DIC_Benchmark_60k",
+  "total_documents": 450,
+  "successful_documents": 450,
+  "failed_documents": 0,
+  "mean_gpu_latency_sec": 78.8356719151112,
+  "total_field_observations": 9000,
+  "execution_duration_seconds": 35746.2,
+  "pass_a_raw": {
+    "f1_score": 0.2222222222222222,
+    "cer": 0.74420675337064,
+    "ci_95_f1": [
+      0.21355555555555555,
+      0.2308888888888889
+    ]
+  },
+  "pass_b_normalized": {
+    "f1_score": 0.2461111111111111,
+    "cer": 0.6902141219280086,
+    "ci_95_f1": [
+      0.2371111111111111,
+      0.255
+    ]
+  },
+  "net_gain": {
+    "f1_gain": 0.023888888888888904,
+    "f1_gain_pct": 10.750000000000007,
+    "cer_reduction": -0.053992631442631445
+  },
+  "rule_corrections": {
+    "Date Normalizer": 0,
+    "Roll Number Normalizer": 0,
+    "Degree Alias Normalizer": 0,
+    "Numeric Normalizer": 215,
+    "Honorific / Whitespace": 0,
+    "University Alias Normalizer": 0
+  }
+}

@@ -1,0 +1,73 @@
+import subprocess
+import win32com.client
+import docx
+import fitz
+import pypdf
+from docx.shared import Inches, Pt
+from docx.oxml import parse_xml
+from docx.oxml.ns import nsdecls
+from pathlib import Path
+
+workspace = Path.cwd()
+v42_docx = workspace / "docs" / "paper" / "PaperV42_Ollama_Primary.docx"
+test_docx = workspace / "scratch" / "test_bonded.docx"
+test_pdf = workspace / "scratch" / "test_bonded.pdf"
+
+doc = docx.Document(v42_docx)
+
+# Adjust Fig 1 and Fig 2 image heights / widths if needed so they fit cleanly with their captions
+for i, p in enumerate(doc.paragraphs):
+    has_img = len(p._p.xpath('.//w:drawing')) > 0
+    is_tbl_cap = p.text.strip().startswith('TABLE ')
+    is_fig_cap = p.text.strip().startswith('Fig. ') or p.text.strip().startswith('Figure ')
+    
+    if has_img:
+        p.paragraph_format.keep_with_next = True
+        p.paragraph_format.keep_lines = True
+        p.paragraph_format.space_before = Pt(2)
+        p.paragraph_format.space_after = Pt(2)
+    if is_tbl_cap:
+        p.paragraph_format.keep_with_next = True
+        p.paragraph_format.keep_lines = True
+        p.paragraph_format.space_before = Pt(3)
+        p.paragraph_format.space_after = Pt(1.5)
+    if is_fig_cap:
+        p.paragraph_format.keep_lines = True
+        p.paragraph_format.space_before = Pt(1.5)
+        p.paragraph_format.space_after = Pt(3)
+
+for tbl in doc.tables:
+    for row in tbl.rows:
+        trPr = row._tr.get_or_add_trPr()
+        trPr.append(parse_xml(f'<w:cantSplit {nsdecls("w")}/>'))
+
+doc.save(test_docx)
+print("[SUCCESS] Saved test_bonded.docx")
+
+# Export to PDF
+subprocess.run(["taskkill", "/F", "/IM", "WINWORD.EXE"], capture_output=True)
+word = win32com.client.DispatchEx("Word.Application")
+word.Visible = False
+word.DisplayAlerts = False
+try:
+    d = word.Documents.Open(str(test_docx.resolve()))
+    d.SaveAs(str(test_pdf.resolve()), FileFormat=17)
+    d.Close(False)
+    print("[SUCCESS] Exported test_bonded.pdf")
+finally:
+    word.Quit()
+    subprocess.run(["taskkill", "/F", "/IM", "WINWORD.EXE"], capture_output=True)
+
+# Inspect pages
+pdf_doc = fitz.open(str(test_pdf))
+print(f"\nTotal PDF Pages: {len(pdf_doc)}")
+for page_num in range(len(pdf_doc)):
+    page = pdf_doc[page_num]
+    images = page.get_images()
+    text = page.get_text()
+    captions = [l.strip() for l in text.split('\n') if l.strip().startswith('Fig. ') or l.strip().startswith('Figure ')]
+    tbl_captions = [l.strip() for l in text.split('\n') if l.strip().startswith('TABLE ')]
+    if images or captions or tbl_captions:
+        print(f"Page {page_num+1:2d}: Images={len(images)} | Fig Caps={len(captions)} | Tbl Caps={len(tbl_captions)}")
+        for c in captions: print(f"    [FIG CAP] {c[:70]}")
+        for t in tbl_captions: print(f"    [TBL CAP] {t[:70]}")

@@ -1,0 +1,99 @@
+# 9,000-Document Full Benchmark Evaluation Pipeline
+
+## Background
+
+You want to run the entire AU DIC evaluation pipeline against a **9,000-document subset** from your pre-generated `D:\AU_DIC_Benchmark_60k` dataset, with a specific modality/profile distribution:
+
+| # | Format | Degradation Profile | Count |
+|---|--------|-------------------|-------|
+| 1 | PDF | Clean | 1,000 |
+| 2 | PNG | Clean | 1,000 |
+| 3 | PNG | Scanned (scanner_copy) | 1,000 |
+| 4 | PNG | Mobile Camera | 1,000 |
+| 5 | PNG | Rotated (90°) | 1,000 |
+| 6 | JPEG | Clean | 1,000 |
+| 7 | JPEG | Scanned (scanner_copy) | 1,000 |
+| 8 | JPEG | Mobile Camera | 1,000 |
+| 9 | JPEG | Rotated (90°) | 1,000 |
+| | **TOTAL** | | **9,000** |
+
+## User Review Required
+
+> [!IMPORTANT]
+> **Ollama/MiniCPM-V inference at 9,000 documents will be extremely time-consuming.** At ~10-30 seconds per image, this could take **25–75 hours** of continuous GPU inference. Each of the 9,000 specimens needs to be sent through the VLM via the Ollama API.
+
+> [!WARNING]
+> **Disk space**: 9,000 predictions + metrics JSONs + paired field observations CSV (9,000 × 20 fields = 180,000 rows) + statistical reports will consume significant disk space. The benchmark run artifacts will be stored under `backend/benchmark_reports/<runId>/` per project rules.
+
+> [!IMPORTANT]
+> **Is Ollama running with MiniCPM-V loaded?** The pipeline needs `http://localhost:11434` with `minicpm-v:latest` available. Please confirm Ollama is active before I start.
+
+## Open Questions
+
+1. **Inference Budget**: Given the ~25-75 hour runtime, should I:
+   - **(a)** Run all 9,000 sequentially (most accurate, longest)?
+   - **(b)** Run a representative sample (e.g., 100 per category = 900 total) first as a pilot, then scale up?
+   - **(c)** Run with parallelism (multiple concurrent Ollama requests)?
+
+2. **Which models to evaluate?** In the current paper (Table 8), we benchmark 4 systems:
+   - Proposed AU DIC System (MiniCPM-V + 6-Stage Normalizer)
+   - Pure Foundation VLM (MiniCPM-V raw)
+   - Tesseract OCR
+   - EasyOCR
+   
+   Should all 4 models run against all 9,000 documents? That would be **36,000 total inferences**.
+
+3. **Dataset Selection Strategy**: The `D:\AU_DIC_Benchmark_60k` has 15,000 PDFs, 60,000 PNGs, 60,000 JPEGs, and 60,000 GTs. The GTs have 4 profiles per document (clean, scanner_copy, mobile_camera, rotated_90). I need to map your requested 9 categories to the correct files. Should I select 1,000 *unique* documents per category, or can the same document appear in multiple categories (different profiles)?
+
+## Proposed Changes
+
+### Phase 1: Dataset Selection & Staging Script
+#### [NEW] [select_9k_benchmark_subset.py](file:///c:/github/academicuniverse/research/select_9k_benchmark_subset.py)
+- Scans `D:\AU_DIC_Benchmark_60k` metadata/groundtruth files
+- Selects 1,000 documents per each of the 9 categories (PDF-clean, PNG-clean, PNG-scanned, PNG-mobile, PNG-rotated, JPEG-clean, JPEG-scanned, JPEG-mobile, JPEG-rotated)
+- Creates a staging manifest JSON mapping each specimen to its file path, GT path, and expected profile
+- Validates that all 9,000 file paths exist before proceeding
+
+---
+
+### Phase 2: Live Inference Engine (9K Scale)
+#### [NEW] [run_9k_benchmark.py](file:///c:/github/academicuniverse/research/run_9k_benchmark.py)
+- Iterates through the 9,000-specimen manifest
+- For each specimen: sends image/PDF to Ollama MiniCPM-V API → receives JSON prediction → applies 6-stage CanonicalNormalizer → compares against GT → classifies error type
+- Saves per-document prediction JSON to `backend/benchmark_reports/<runId>/predictions/`
+- Implements checkpoint/resume (saves progress every 100 documents so crashes don't lose work)
+- Generates `paired_field_observations.csv` (180,000+ rows)
+- Computes aggregate metrics per category and overall
+
+---
+
+### Phase 3: Statistical Analysis & Paper Tables
+#### [NEW] [analyze_9k_results.py](file:///c:/github/academicuniverse/research/analyze_9k_results.py)
+- Reads paired field observations CSV
+- Computes per-category accuracy, CER, F1, precision, recall
+- Runs statistical tests (McNemar, Wilcoxon, paired t-test, Bootstrap CIs)
+- Generates publication-ready tables (LaTeX + Markdown)
+- Produces accuracy breakdown by format × profile matrix
+
+---
+
+### Phase 4: Benchmark Report & Artifacts
+All outputs stored in `backend/benchmark_reports/<runId>/`:
+- `metrics.json` — Overall metrics
+- `predictions.json` — Per-document predictions  
+- `comparisons.json` — Cross-model comparison
+- `paired_field_observations.csv` — 180K row statistical dataset
+- `statistical_results.json` — Hypothesis test results
+- `summary.md` — Human-readable report
+- `execution.log` — Full execution log
+
+## Verification Plan
+
+### Automated Tests
+- Validate all 9,000 file paths exist before inference starts
+- Checkpoint integrity verification every 500 documents
+- Final assertion: exactly 9,000 predictions, 180,000 field observations
+
+### Manual Verification
+- Spot-check 10 random predictions against their ground truths
+- Verify statistical results are consistent with the 45-specimen pilot data (directionally)

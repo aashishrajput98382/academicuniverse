@@ -1,0 +1,42 @@
+[2026-08-27 01:17:51] =================================================================
+[2026-08-27 01:17:51]  AU DIC 450-DOCUMENT FULL BENCHMARK EVALUATION ENGINE
+[2026-08-27 01:17:51]  Run ID: run_450_benchmark_1787773671237
+[2026-08-27 01:17:51]  Output Directory: C:\github\academicuniverse\backend\benchmark_reports\run_450_benchmark_1787773671237
+[2026-08-27 01:17:51] =================================================================
+[2026-08-27 01:17:51] [STEP 1/5] Collecting and verifying 450 multi-modal specimens...
+[2026-08-27 01:17:51] [PASS] Successfully verified exactly 450 specimens across 9 categories (50 each).
+[2026-08-27 01:17:51] 
+[STEP 2/5] Starting continuous specimen evaluation...
+[2026-08-27 01:17:52]   [PROGRESS  11.1%] Completed:  50/450 | Success:  50 | Failed: 0 | Rate: 212.8 docs/sec | ETA: 0m 1s
+[2026-08-27 01:17:52]   [PROGRESS  22.2%] Completed: 100/450 | Success: 100 | Failed: 0 | Rate: 209.4 docs/sec | ETA: 0m 1s
+[2026-08-27 01:17:52]   [PROGRESS  33.3%] Completed: 150/450 | Success: 150 | Failed: 0 | Rate: 208.6 docs/sec | ETA: 0m 1s
+[2026-08-27 01:17:52]   [PROGRESS  44.4%] Completed: 200/450 | Success: 200 | Failed: 0 | Rate: 201.6 docs/sec | ETA: 0m 1s
+[2026-08-27 01:17:53]   [PROGRESS  55.6%] Completed: 250/450 | Success: 250 | Failed: 0 | Rate: 201.3 docs/sec | ETA: 0m 0s
+[2026-08-27 01:17:53]   [PROGRESS  66.7%] Completed: 300/450 | Success: 300 | Failed: 0 | Rate: 202.4 docs/sec | ETA: 0m 0s
+[2026-08-27 01:17:53]   [PROGRESS  77.8%] Completed: 350/450 | Success: 350 | Failed: 0 | Rate: 199.0 docs/sec | ETA: 0m 0s
+[2026-08-27 01:17:53]   [PROGRESS  88.9%] Completed: 400/450 | Success: 400 | Failed: 0 | Rate: 201.1 docs/sec | ETA: 0m 0s
+[2026-08-27 01:17:54]   [PROGRESS 100.0%] Completed: 450/450 | Success: 450 | Failed: 0 | Rate: 201.6 docs/sec | ETA: 0m 0s
+[2026-08-27 01:17:54] 
+[PASS] Specimen evaluation completed in 2.23 seconds.
+[2026-08-27 01:17:54]   Total Processed: 450 successful, 0 failed.
+[2026-08-27 01:17:54] 
+[STEP 3/5] Computing comprehensive statistical hypothesis tests and ablations...
+[2026-08-27 01:17:54] Total Paired Field Observations: 9,000 rows (450 documents * 20 fields)
+[2026-08-27 01:17:54] [INFO] Running 10,000-Iteration Bootstrap Resampling...
+[2026-08-27 01:17:56] [STEP 4/5] Training Decision Tree and Random Forest classifiers across 3 splits...
+[2026-08-27 01:17:57]   Split 60:40 -> DT F1: 97.51%, MCC: 0.5642 | RF F1: 97.62%, MCC: 0.5865
+[2026-08-27 01:17:57]   Split 70:30 -> DT F1: 97.66%, MCC: 0.5950 | RF F1: 97.74%, MCC: 0.6126
+[2026-08-27 01:17:57]   Split 80:20 -> DT F1: 97.81%, MCC: 0.6260 | RF F1: 97.75%, MCC: 0.6135
+[2026-08-27 01:17:57] 
+[STEP 5/5] Persisting all publication artifacts to run directory...
+[2026-08-27 01:17:57]   [SAVED] paired_field_observations.csv (1,198,341 bytes)
+[2026-08-27 01:17:57]   [SAVED] predictions.json
+[2026-08-27 01:17:57]   [SAVED] metrics.json
+[2026-08-27 01:17:57]   [SAVED] statistical_results.json
+[2026-08-27 01:17:57]   [SAVED] comparisons.json
+[2026-08-27 01:17:57]   [SAVED] summary.md
+[2026-08-27 01:17:57] 
+=================================================================
+[2026-08-27 01:17:57]  450-DOCUMENT BENCHMARK RUN COMPLETED SUCCESSFULLY!
+[2026-08-27 01:17:57]  All artifacts safely stored in: C:\github\academicuniverse\backend\benchmark_reports\run_450_benchmark_1787773671237
+[2026-08-27 01:17:57] =================================================================

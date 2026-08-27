@@ -1,0 +1,3602 @@
+[
+  {
+    "sample_id": 1,
+    "modality": "PDF",
+    "quality_profile": "clean",
+    "file_name": "DOC-0010905E.pdf",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 2,
+    "modality": "PDF",
+    "quality_profile": "clean",
+    "file_name": "DOC-001A07AB.pdf",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 3,
+    "modality": "PDF",
+    "quality_profile": "clean",
+    "file_name": "DOC-001F58BA.pdf",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 4,
+    "modality": "PDF",
+    "quality_profile": "clean",
+    "file_name": "DOC-0024DCD6.pdf",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 5,
+    "modality": "PDF",
+    "quality_profile": "clean",
+    "file_name": "DOC-0031A4A3.pdf",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 6,
+    "modality": "PDF",
+    "quality_profile": "clean",
+    "file_name": "DOC-004182F5.pdf",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 7,
+    "modality": "PDF",
+    "quality_profile": "clean",
+    "file_name": "DOC-00358725.pdf",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 8,
+    "modality": "PDF",
+    "quality_profile": "clean",
+    "file_name": "DOC-00449E04.pdf",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 9,
+    "modality": "PDF",
+    "quality_profile": "clean",
+    "file_name": "DOC-00446F76.pdf",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 10,
+    "modality": "PDF",
+    "quality_profile": "clean",
+    "file_name": "DOC-004EC088.pdf",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 11,
+    "modality": "PDF",
+    "quality_profile": "clean",
+    "file_name": "DOC-00662D4D.pdf",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 12,
+    "modality": "PDF",
+    "quality_profile": "clean",
+    "file_name": "DOC-0067E656.pdf",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 13,
+    "modality": "PDF",
+    "quality_profile": "clean",
+    "file_name": "DOC-006BE31F.pdf",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 14,
+    "modality": "PDF",
+    "quality_profile": "clean",
+    "file_name": "DOC-006D5022.pdf",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 15,
+    "modality": "PDF",
+    "quality_profile": "clean",
+    "file_name": "DOC-009D8813.pdf",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 16,
+    "modality": "PDF",
+    "quality_profile": "clean",
+    "file_name": "DOC-00A17387.pdf",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 17,
+    "modality": "PDF",
+    "quality_profile": "clean",
+    "file_name": "DOC-00B39F2F.pdf",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 18,
+    "modality": "PDF",
+    "quality_profile": "clean",
+    "file_name": "DOC-00B8FD30.pdf",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 19,
+    "modality": "PDF",
+    "quality_profile": "clean",
+    "file_name": "DOC-00BEA546.pdf",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 20,
+    "modality": "PDF",
+    "quality_profile": "clean",
+    "file_name": "DOC-00ED4E97.pdf",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 21,
+    "modality": "PDF",
+    "quality_profile": "clean",
+    "file_name": "DOC-00EE9532.pdf",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 22,
+    "modality": "PDF",
+    "quality_profile": "clean",
+    "file_name": "DOC-00F9CA77.pdf",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 23,
+    "modality": "PDF",
+    "quality_profile": "clean",
+    "file_name": "DOC-00FBE313.pdf",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 24,
+    "modality": "PDF",
+    "quality_profile": "clean",
+    "file_name": "DOC-0102956C.pdf",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 25,
+    "modality": "PDF",
+    "quality_profile": "clean",
+    "file_name": "DOC-010FCF5E.pdf",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 26,
+    "modality": "PDF",
+    "quality_profile": "clean",
+    "file_name": "DOC-013AA810.pdf",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 27,
+    "modality": "PDF",
+    "quality_profile": "clean",
+    "file_name": "DOC-013D9CDE.pdf",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 28,
+    "modality": "PDF",
+    "quality_profile": "clean",
+    "file_name": "DOC-01430AE9.pdf",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 29,
+    "modality": "PDF",
+    "quality_profile": "clean",
+    "file_name": "DOC-0147D2A1.pdf",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 30,
+    "modality": "PDF",
+    "quality_profile": "clean",
+    "file_name": "DOC-014EE54B.pdf",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 31,
+    "modality": "PDF",
+    "quality_profile": "clean",
+    "file_name": "DOC-0189E11D.pdf",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 32,
+    "modality": "PDF",
+    "quality_profile": "clean",
+    "file_name": "DOC-014F95AD.pdf",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 33,
+    "modality": "PDF",
+    "quality_profile": "clean",
+    "file_name": "DOC-018F2EC6.pdf",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 34,
+    "modality": "PDF",
+    "quality_profile": "clean",
+    "file_name": "DOC-0197DB96.pdf",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 35,
+    "modality": "PDF",
+    "quality_profile": "clean",
+    "file_name": "DOC-01A87317.pdf",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 36,
+    "modality": "PDF",
+    "quality_profile": "clean",
+    "file_name": "DOC-01BFFFB8.pdf",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 37,
+    "modality": "PDF",
+    "quality_profile": "clean",
+    "file_name": "DOC-01C067E9.pdf",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 38,
+    "modality": "PDF",
+    "quality_profile": "clean",
+    "file_name": "DOC-01C1494A.pdf",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 39,
+    "modality": "PDF",
+    "quality_profile": "clean",
+    "file_name": "DOC-01C1968B.pdf",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 40,
+    "modality": "PDF",
+    "quality_profile": "clean",
+    "file_name": "DOC-01CE9D54.pdf",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 41,
+    "modality": "PDF",
+    "quality_profile": "clean",
+    "file_name": "DOC-01DCF344.pdf",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 42,
+    "modality": "PDF",
+    "quality_profile": "clean",
+    "file_name": "DOC-01DF1A3F.pdf",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 43,
+    "modality": "PDF",
+    "quality_profile": "clean",
+    "file_name": "DOC-01E09EE7.pdf",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 44,
+    "modality": "PDF",
+    "quality_profile": "clean",
+    "file_name": "DOC-01E273C2.pdf",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 45,
+    "modality": "PDF",
+    "quality_profile": "clean",
+    "file_name": "DOC-01E8F39C.pdf",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 46,
+    "modality": "PDF",
+    "quality_profile": "clean",
+    "file_name": "DOC-01EB22AE.pdf",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 47,
+    "modality": "PDF",
+    "quality_profile": "clean",
+    "file_name": "DOC-01F6F4F3.pdf",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 48,
+    "modality": "PDF",
+    "quality_profile": "clean",
+    "file_name": "DOC-0215D221.pdf",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 49,
+    "modality": "PDF",
+    "quality_profile": "clean",
+    "file_name": "DOC-0216D7D9.pdf",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 50,
+    "modality": "PDF",
+    "quality_profile": "clean",
+    "file_name": "DOC-0231CCEB.pdf",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 51,
+    "modality": "PNG",
+    "quality_profile": "clean",
+    "file_name": "DOC-0010905E_clean.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 52,
+    "modality": "PNG",
+    "quality_profile": "clean",
+    "file_name": "DOC-001A07AB_clean.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 53,
+    "modality": "PNG",
+    "quality_profile": "clean",
+    "file_name": "DOC-001F58BA_clean.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 54,
+    "modality": "PNG",
+    "quality_profile": "clean",
+    "file_name": "DOC-0024DCD6_clean.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 55,
+    "modality": "PNG",
+    "quality_profile": "clean",
+    "file_name": "DOC-0031A4A3_clean.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 56,
+    "modality": "PNG",
+    "quality_profile": "clean",
+    "file_name": "DOC-00358725_clean.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 57,
+    "modality": "PNG",
+    "quality_profile": "clean",
+    "file_name": "DOC-004182F5_clean.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 58,
+    "modality": "PNG",
+    "quality_profile": "clean",
+    "file_name": "DOC-00446F76_clean.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 59,
+    "modality": "PNG",
+    "quality_profile": "clean",
+    "file_name": "DOC-00449E04_clean.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 60,
+    "modality": "PNG",
+    "quality_profile": "clean",
+    "file_name": "DOC-004EC088_clean.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 61,
+    "modality": "PNG",
+    "quality_profile": "clean",
+    "file_name": "DOC-00662D4D_clean.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 62,
+    "modality": "PNG",
+    "quality_profile": "clean",
+    "file_name": "DOC-0067E656_clean.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 63,
+    "modality": "PNG",
+    "quality_profile": "clean",
+    "file_name": "DOC-006BE31F_clean.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 64,
+    "modality": "PNG",
+    "quality_profile": "clean",
+    "file_name": "DOC-006D5022_clean.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 65,
+    "modality": "PNG",
+    "quality_profile": "clean",
+    "file_name": "DOC-009D8813_clean.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 66,
+    "modality": "PNG",
+    "quality_profile": "clean",
+    "file_name": "DOC-00A17387_clean.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 67,
+    "modality": "PNG",
+    "quality_profile": "clean",
+    "file_name": "DOC-00B39F2F_clean.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 68,
+    "modality": "PNG",
+    "quality_profile": "clean",
+    "file_name": "DOC-00B8FD30_clean.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 69,
+    "modality": "PNG",
+    "quality_profile": "clean",
+    "file_name": "DOC-00BEA546_clean.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 70,
+    "modality": "PNG",
+    "quality_profile": "clean",
+    "file_name": "DOC-00ED4E97_clean.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 71,
+    "modality": "PNG",
+    "quality_profile": "clean",
+    "file_name": "DOC-00EE9532_clean.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 72,
+    "modality": "PNG",
+    "quality_profile": "clean",
+    "file_name": "DOC-00F9CA77_clean.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 73,
+    "modality": "PNG",
+    "quality_profile": "clean",
+    "file_name": "DOC-00FBE313_clean.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 74,
+    "modality": "PNG",
+    "quality_profile": "clean",
+    "file_name": "DOC-0102956C_clean.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 75,
+    "modality": "PNG",
+    "quality_profile": "clean",
+    "file_name": "DOC-010FCF5E_clean.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 76,
+    "modality": "PNG",
+    "quality_profile": "clean",
+    "file_name": "DOC-013AA810_clean.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 77,
+    "modality": "PNG",
+    "quality_profile": "clean",
+    "file_name": "DOC-013D9CDE_clean.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 78,
+    "modality": "PNG",
+    "quality_profile": "clean",
+    "file_name": "DOC-01430AE9_clean.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 79,
+    "modality": "PNG",
+    "quality_profile": "clean",
+    "file_name": "DOC-0147D2A1_clean.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 80,
+    "modality": "PNG",
+    "quality_profile": "clean",
+    "file_name": "DOC-014EE54B_clean.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 81,
+    "modality": "PNG",
+    "quality_profile": "clean",
+    "file_name": "DOC-014F95AD_clean.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 82,
+    "modality": "PNG",
+    "quality_profile": "clean",
+    "file_name": "DOC-0189E11D_clean.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 83,
+    "modality": "PNG",
+    "quality_profile": "clean",
+    "file_name": "DOC-018F2EC6_clean.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 84,
+    "modality": "PNG",
+    "quality_profile": "clean",
+    "file_name": "DOC-0197DB96_clean.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 85,
+    "modality": "PNG",
+    "quality_profile": "clean",
+    "file_name": "DOC-01A87317_clean.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 86,
+    "modality": "PNG",
+    "quality_profile": "clean",
+    "file_name": "DOC-01BFFFB8_clean.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 87,
+    "modality": "PNG",
+    "quality_profile": "clean",
+    "file_name": "DOC-01C067E9_clean.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 88,
+    "modality": "PNG",
+    "quality_profile": "clean",
+    "file_name": "DOC-01C1494A_clean.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 89,
+    "modality": "PNG",
+    "quality_profile": "clean",
+    "file_name": "DOC-01C1968B_clean.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 90,
+    "modality": "PNG",
+    "quality_profile": "clean",
+    "file_name": "DOC-01CE9D54_clean.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 91,
+    "modality": "PNG",
+    "quality_profile": "clean",
+    "file_name": "DOC-01DCF344_clean.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 92,
+    "modality": "PNG",
+    "quality_profile": "clean",
+    "file_name": "DOC-01DF1A3F_clean.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 93,
+    "modality": "PNG",
+    "quality_profile": "clean",
+    "file_name": "DOC-01E09EE7_clean.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 94,
+    "modality": "PNG",
+    "quality_profile": "clean",
+    "file_name": "DOC-01E273C2_clean.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 95,
+    "modality": "PNG",
+    "quality_profile": "clean",
+    "file_name": "DOC-01E8F39C_clean.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 96,
+    "modality": "PNG",
+    "quality_profile": "clean",
+    "file_name": "DOC-01EB22AE_clean.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 97,
+    "modality": "PNG",
+    "quality_profile": "clean",
+    "file_name": "DOC-01F6F4F3_clean.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 98,
+    "modality": "PNG",
+    "quality_profile": "clean",
+    "file_name": "DOC-0215D221_clean.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 99,
+    "modality": "PNG",
+    "quality_profile": "clean",
+    "file_name": "DOC-0216D7D9_clean.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 100,
+    "modality": "PNG",
+    "quality_profile": "clean",
+    "file_name": "DOC-0231CCEB_clean.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 101,
+    "modality": "PNG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-0010905E_scanner_copy.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 102,
+    "modality": "PNG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-001A07AB_scanner_copy.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 103,
+    "modality": "PNG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-001F58BA_scanner_copy.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 104,
+    "modality": "PNG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-0024DCD6_scanner_copy.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 105,
+    "modality": "PNG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-0031A4A3_scanner_copy.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 106,
+    "modality": "PNG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-00358725_scanner_copy.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 107,
+    "modality": "PNG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-004182F5_scanner_copy.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 108,
+    "modality": "PNG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-00446F76_scanner_copy.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 109,
+    "modality": "PNG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-00449E04_scanner_copy.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 110,
+    "modality": "PNG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-004EC088_scanner_copy.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 111,
+    "modality": "PNG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-00662D4D_scanner_copy.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 112,
+    "modality": "PNG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-0067E656_scanner_copy.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 113,
+    "modality": "PNG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-006BE31F_scanner_copy.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 114,
+    "modality": "PNG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-006D5022_scanner_copy.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 115,
+    "modality": "PNG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-009D8813_scanner_copy.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 116,
+    "modality": "PNG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-00A17387_scanner_copy.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 117,
+    "modality": "PNG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-00B39F2F_scanner_copy.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 118,
+    "modality": "PNG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-00B8FD30_scanner_copy.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 119,
+    "modality": "PNG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-00BEA546_scanner_copy.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 120,
+    "modality": "PNG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-00ED4E97_scanner_copy.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 121,
+    "modality": "PNG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-00EE9532_scanner_copy.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 122,
+    "modality": "PNG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-00F9CA77_scanner_copy.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 123,
+    "modality": "PNG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-00FBE313_scanner_copy.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 124,
+    "modality": "PNG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-0102956C_scanner_copy.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 125,
+    "modality": "PNG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-010FCF5E_scanner_copy.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 126,
+    "modality": "PNG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-013AA810_scanner_copy.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 127,
+    "modality": "PNG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-013D9CDE_scanner_copy.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 128,
+    "modality": "PNG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-01430AE9_scanner_copy.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 129,
+    "modality": "PNG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-0147D2A1_scanner_copy.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 130,
+    "modality": "PNG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-014EE54B_scanner_copy.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 131,
+    "modality": "PNG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-014F95AD_scanner_copy.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 132,
+    "modality": "PNG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-0189E11D_scanner_copy.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 133,
+    "modality": "PNG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-018F2EC6_scanner_copy.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 134,
+    "modality": "PNG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-0197DB96_scanner_copy.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 135,
+    "modality": "PNG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-01A87317_scanner_copy.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 136,
+    "modality": "PNG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-01BFFFB8_scanner_copy.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 137,
+    "modality": "PNG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-01C067E9_scanner_copy.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 138,
+    "modality": "PNG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-01C1494A_scanner_copy.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 139,
+    "modality": "PNG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-01C1968B_scanner_copy.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 140,
+    "modality": "PNG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-01CE9D54_scanner_copy.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 141,
+    "modality": "PNG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-01DCF344_scanner_copy.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 142,
+    "modality": "PNG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-01DF1A3F_scanner_copy.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 143,
+    "modality": "PNG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-01E09EE7_scanner_copy.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 144,
+    "modality": "PNG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-01E273C2_scanner_copy.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 145,
+    "modality": "PNG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-01E8F39C_scanner_copy.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 146,
+    "modality": "PNG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-01EB22AE_scanner_copy.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 147,
+    "modality": "PNG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-01F6F4F3_scanner_copy.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 148,
+    "modality": "PNG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-0215D221_scanner_copy.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 149,
+    "modality": "PNG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-0216D7D9_scanner_copy.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 150,
+    "modality": "PNG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-0231CCEB_scanner_copy.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 151,
+    "modality": "PNG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-0010905E_mobile_camera.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 152,
+    "modality": "PNG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-001A07AB_mobile_camera.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 153,
+    "modality": "PNG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-001F58BA_mobile_camera.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 154,
+    "modality": "PNG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-0024DCD6_mobile_camera.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 155,
+    "modality": "PNG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-0031A4A3_mobile_camera.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 156,
+    "modality": "PNG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-00358725_mobile_camera.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 157,
+    "modality": "PNG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-004182F5_mobile_camera.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 158,
+    "modality": "PNG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-00446F76_mobile_camera.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 159,
+    "modality": "PNG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-00449E04_mobile_camera.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 160,
+    "modality": "PNG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-004EC088_mobile_camera.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 161,
+    "modality": "PNG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-00662D4D_mobile_camera.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 162,
+    "modality": "PNG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-0067E656_mobile_camera.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 163,
+    "modality": "PNG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-006BE31F_mobile_camera.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 164,
+    "modality": "PNG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-006D5022_mobile_camera.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 165,
+    "modality": "PNG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-009D8813_mobile_camera.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 166,
+    "modality": "PNG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-00A17387_mobile_camera.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 167,
+    "modality": "PNG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-00B39F2F_mobile_camera.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 168,
+    "modality": "PNG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-00B8FD30_mobile_camera.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 169,
+    "modality": "PNG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-00BEA546_mobile_camera.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 170,
+    "modality": "PNG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-00ED4E97_mobile_camera.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 171,
+    "modality": "PNG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-00EE9532_mobile_camera.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 172,
+    "modality": "PNG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-00F9CA77_mobile_camera.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 173,
+    "modality": "PNG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-00FBE313_mobile_camera.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 174,
+    "modality": "PNG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-0102956C_mobile_camera.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 175,
+    "modality": "PNG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-010FCF5E_mobile_camera.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 176,
+    "modality": "PNG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-013AA810_mobile_camera.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 177,
+    "modality": "PNG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-013D9CDE_mobile_camera.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 178,
+    "modality": "PNG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-01430AE9_mobile_camera.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 179,
+    "modality": "PNG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-0147D2A1_mobile_camera.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 180,
+    "modality": "PNG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-014EE54B_mobile_camera.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 181,
+    "modality": "PNG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-014F95AD_mobile_camera.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 182,
+    "modality": "PNG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-0189E11D_mobile_camera.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 183,
+    "modality": "PNG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-018F2EC6_mobile_camera.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 184,
+    "modality": "PNG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-0197DB96_mobile_camera.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 185,
+    "modality": "PNG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-01A87317_mobile_camera.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 186,
+    "modality": "PNG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-01BFFFB8_mobile_camera.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 187,
+    "modality": "PNG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-01C067E9_mobile_camera.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 188,
+    "modality": "PNG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-01C1494A_mobile_camera.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 189,
+    "modality": "PNG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-01C1968B_mobile_camera.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 190,
+    "modality": "PNG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-01CE9D54_mobile_camera.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 191,
+    "modality": "PNG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-01DCF344_mobile_camera.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 192,
+    "modality": "PNG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-01DF1A3F_mobile_camera.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 193,
+    "modality": "PNG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-01E09EE7_mobile_camera.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 194,
+    "modality": "PNG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-01E273C2_mobile_camera.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 195,
+    "modality": "PNG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-01E8F39C_mobile_camera.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 196,
+    "modality": "PNG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-01EB22AE_mobile_camera.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 197,
+    "modality": "PNG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-01F6F4F3_mobile_camera.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 198,
+    "modality": "PNG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-0215D221_mobile_camera.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 199,
+    "modality": "PNG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-0216D7D9_mobile_camera.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 200,
+    "modality": "PNG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-0231CCEB_mobile_camera.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 201,
+    "modality": "PNG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-0010905E_rotated_90.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 202,
+    "modality": "PNG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-001A07AB_rotated_90.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 203,
+    "modality": "PNG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-001F58BA_rotated_90.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 204,
+    "modality": "PNG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-0024DCD6_rotated_90.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 205,
+    "modality": "PNG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-0031A4A3_rotated_90.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 206,
+    "modality": "PNG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-00358725_rotated_90.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 207,
+    "modality": "PNG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-004182F5_rotated_90.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 208,
+    "modality": "PNG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-00446F76_rotated_90.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 209,
+    "modality": "PNG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-00449E04_rotated_90.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 210,
+    "modality": "PNG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-004EC088_rotated_90.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 211,
+    "modality": "PNG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-00662D4D_rotated_90.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 212,
+    "modality": "PNG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-0067E656_rotated_90.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 213,
+    "modality": "PNG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-006BE31F_rotated_90.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 214,
+    "modality": "PNG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-006D5022_rotated_90.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 215,
+    "modality": "PNG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-009D8813_rotated_90.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 216,
+    "modality": "PNG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-00A17387_rotated_90.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 217,
+    "modality": "PNG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-00B39F2F_rotated_90.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 218,
+    "modality": "PNG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-00B8FD30_rotated_90.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 219,
+    "modality": "PNG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-00BEA546_rotated_90.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 220,
+    "modality": "PNG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-00ED4E97_rotated_90.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 221,
+    "modality": "PNG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-00EE9532_rotated_90.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 222,
+    "modality": "PNG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-00F9CA77_rotated_90.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 223,
+    "modality": "PNG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-00FBE313_rotated_90.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 224,
+    "modality": "PNG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-0102956C_rotated_90.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 225,
+    "modality": "PNG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-010FCF5E_rotated_90.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 226,
+    "modality": "PNG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-013AA810_rotated_90.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 227,
+    "modality": "PNG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-013D9CDE_rotated_90.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 228,
+    "modality": "PNG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-01430AE9_rotated_90.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 229,
+    "modality": "PNG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-0147D2A1_rotated_90.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 230,
+    "modality": "PNG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-014EE54B_rotated_90.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 231,
+    "modality": "PNG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-014F95AD_rotated_90.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 232,
+    "modality": "PNG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-0189E11D_rotated_90.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 233,
+    "modality": "PNG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-018F2EC6_rotated_90.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 234,
+    "modality": "PNG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-0197DB96_rotated_90.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 235,
+    "modality": "PNG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-01A87317_rotated_90.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 236,
+    "modality": "PNG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-01BFFFB8_rotated_90.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 237,
+    "modality": "PNG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-01C067E9_rotated_90.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 238,
+    "modality": "PNG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-01C1494A_rotated_90.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 239,
+    "modality": "PNG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-01C1968B_rotated_90.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 240,
+    "modality": "PNG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-01CE9D54_rotated_90.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 241,
+    "modality": "PNG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-01DCF344_rotated_90.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 242,
+    "modality": "PNG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-01DF1A3F_rotated_90.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 243,
+    "modality": "PNG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-01E09EE7_rotated_90.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 244,
+    "modality": "PNG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-01E273C2_rotated_90.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 245,
+    "modality": "PNG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-01E8F39C_rotated_90.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 246,
+    "modality": "PNG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-01EB22AE_rotated_90.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 247,
+    "modality": "PNG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-01F6F4F3_rotated_90.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 248,
+    "modality": "PNG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-0215D221_rotated_90.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 249,
+    "modality": "PNG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-0216D7D9_rotated_90.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 250,
+    "modality": "PNG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-0231CCEB_rotated_90.png",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 251,
+    "modality": "JPEG",
+    "quality_profile": "clean",
+    "file_name": "DOC-0010905E_clean.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 252,
+    "modality": "JPEG",
+    "quality_profile": "clean",
+    "file_name": "DOC-001A07AB_clean.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 253,
+    "modality": "JPEG",
+    "quality_profile": "clean",
+    "file_name": "DOC-001F58BA_clean.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 254,
+    "modality": "JPEG",
+    "quality_profile": "clean",
+    "file_name": "DOC-0024DCD6_clean.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 255,
+    "modality": "JPEG",
+    "quality_profile": "clean",
+    "file_name": "DOC-0031A4A3_clean.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 256,
+    "modality": "JPEG",
+    "quality_profile": "clean",
+    "file_name": "DOC-00358725_clean.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 257,
+    "modality": "JPEG",
+    "quality_profile": "clean",
+    "file_name": "DOC-004182F5_clean.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 258,
+    "modality": "JPEG",
+    "quality_profile": "clean",
+    "file_name": "DOC-00446F76_clean.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 259,
+    "modality": "JPEG",
+    "quality_profile": "clean",
+    "file_name": "DOC-00449E04_clean.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 260,
+    "modality": "JPEG",
+    "quality_profile": "clean",
+    "file_name": "DOC-004EC088_clean.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 261,
+    "modality": "JPEG",
+    "quality_profile": "clean",
+    "file_name": "DOC-00662D4D_clean.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 262,
+    "modality": "JPEG",
+    "quality_profile": "clean",
+    "file_name": "DOC-0067E656_clean.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 263,
+    "modality": "JPEG",
+    "quality_profile": "clean",
+    "file_name": "DOC-006BE31F_clean.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 264,
+    "modality": "JPEG",
+    "quality_profile": "clean",
+    "file_name": "DOC-006D5022_clean.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 265,
+    "modality": "JPEG",
+    "quality_profile": "clean",
+    "file_name": "DOC-009D8813_clean.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 266,
+    "modality": "JPEG",
+    "quality_profile": "clean",
+    "file_name": "DOC-00A17387_clean.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 267,
+    "modality": "JPEG",
+    "quality_profile": "clean",
+    "file_name": "DOC-00B39F2F_clean.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 268,
+    "modality": "JPEG",
+    "quality_profile": "clean",
+    "file_name": "DOC-00B8FD30_clean.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 269,
+    "modality": "JPEG",
+    "quality_profile": "clean",
+    "file_name": "DOC-00BEA546_clean.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 270,
+    "modality": "JPEG",
+    "quality_profile": "clean",
+    "file_name": "DOC-00ED4E97_clean.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 271,
+    "modality": "JPEG",
+    "quality_profile": "clean",
+    "file_name": "DOC-00EE9532_clean.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 272,
+    "modality": "JPEG",
+    "quality_profile": "clean",
+    "file_name": "DOC-00F9CA77_clean.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 273,
+    "modality": "JPEG",
+    "quality_profile": "clean",
+    "file_name": "DOC-00FBE313_clean.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 274,
+    "modality": "JPEG",
+    "quality_profile": "clean",
+    "file_name": "DOC-0102956C_clean.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 275,
+    "modality": "JPEG",
+    "quality_profile": "clean",
+    "file_name": "DOC-010FCF5E_clean.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 276,
+    "modality": "JPEG",
+    "quality_profile": "clean",
+    "file_name": "DOC-013AA810_clean.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 277,
+    "modality": "JPEG",
+    "quality_profile": "clean",
+    "file_name": "DOC-013D9CDE_clean.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 278,
+    "modality": "JPEG",
+    "quality_profile": "clean",
+    "file_name": "DOC-01430AE9_clean.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 279,
+    "modality": "JPEG",
+    "quality_profile": "clean",
+    "file_name": "DOC-0147D2A1_clean.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 280,
+    "modality": "JPEG",
+    "quality_profile": "clean",
+    "file_name": "DOC-014EE54B_clean.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 281,
+    "modality": "JPEG",
+    "quality_profile": "clean",
+    "file_name": "DOC-014F95AD_clean.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 282,
+    "modality": "JPEG",
+    "quality_profile": "clean",
+    "file_name": "DOC-0189E11D_clean.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 283,
+    "modality": "JPEG",
+    "quality_profile": "clean",
+    "file_name": "DOC-018F2EC6_clean.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 284,
+    "modality": "JPEG",
+    "quality_profile": "clean",
+    "file_name": "DOC-0197DB96_clean.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 285,
+    "modality": "JPEG",
+    "quality_profile": "clean",
+    "file_name": "DOC-01A87317_clean.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 286,
+    "modality": "JPEG",
+    "quality_profile": "clean",
+    "file_name": "DOC-01BFFFB8_clean.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 287,
+    "modality": "JPEG",
+    "quality_profile": "clean",
+    "file_name": "DOC-01C067E9_clean.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 288,
+    "modality": "JPEG",
+    "quality_profile": "clean",
+    "file_name": "DOC-01C1494A_clean.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 289,
+    "modality": "JPEG",
+    "quality_profile": "clean",
+    "file_name": "DOC-01C1968B_clean.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 290,
+    "modality": "JPEG",
+    "quality_profile": "clean",
+    "file_name": "DOC-01CE9D54_clean.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 291,
+    "modality": "JPEG",
+    "quality_profile": "clean",
+    "file_name": "DOC-01DCF344_clean.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 292,
+    "modality": "JPEG",
+    "quality_profile": "clean",
+    "file_name": "DOC-01DF1A3F_clean.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 293,
+    "modality": "JPEG",
+    "quality_profile": "clean",
+    "file_name": "DOC-01E09EE7_clean.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 294,
+    "modality": "JPEG",
+    "quality_profile": "clean",
+    "file_name": "DOC-01E273C2_clean.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 295,
+    "modality": "JPEG",
+    "quality_profile": "clean",
+    "file_name": "DOC-01E8F39C_clean.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 296,
+    "modality": "JPEG",
+    "quality_profile": "clean",
+    "file_name": "DOC-01EB22AE_clean.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 297,
+    "modality": "JPEG",
+    "quality_profile": "clean",
+    "file_name": "DOC-01F6F4F3_clean.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 298,
+    "modality": "JPEG",
+    "quality_profile": "clean",
+    "file_name": "DOC-0215D221_clean.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 299,
+    "modality": "JPEG",
+    "quality_profile": "clean",
+    "file_name": "DOC-0216D7D9_clean.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 300,
+    "modality": "JPEG",
+    "quality_profile": "clean",
+    "file_name": "DOC-0231CCEB_clean.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 301,
+    "modality": "JPEG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-0010905E_scanner_copy.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 302,
+    "modality": "JPEG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-001A07AB_scanner_copy.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 303,
+    "modality": "JPEG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-001F58BA_scanner_copy.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 304,
+    "modality": "JPEG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-0024DCD6_scanner_copy.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 305,
+    "modality": "JPEG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-0031A4A3_scanner_copy.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 306,
+    "modality": "JPEG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-00358725_scanner_copy.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 307,
+    "modality": "JPEG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-004182F5_scanner_copy.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 308,
+    "modality": "JPEG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-00446F76_scanner_copy.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 309,
+    "modality": "JPEG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-00449E04_scanner_copy.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 310,
+    "modality": "JPEG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-004EC088_scanner_copy.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 311,
+    "modality": "JPEG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-00662D4D_scanner_copy.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 312,
+    "modality": "JPEG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-0067E656_scanner_copy.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 313,
+    "modality": "JPEG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-006BE31F_scanner_copy.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 314,
+    "modality": "JPEG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-006D5022_scanner_copy.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 315,
+    "modality": "JPEG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-009D8813_scanner_copy.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 316,
+    "modality": "JPEG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-00A17387_scanner_copy.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 317,
+    "modality": "JPEG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-00B39F2F_scanner_copy.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 318,
+    "modality": "JPEG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-00B8FD30_scanner_copy.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 319,
+    "modality": "JPEG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-00BEA546_scanner_copy.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 320,
+    "modality": "JPEG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-00ED4E97_scanner_copy.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 321,
+    "modality": "JPEG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-00EE9532_scanner_copy.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 322,
+    "modality": "JPEG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-00F9CA77_scanner_copy.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 323,
+    "modality": "JPEG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-00FBE313_scanner_copy.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 324,
+    "modality": "JPEG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-0102956C_scanner_copy.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 325,
+    "modality": "JPEG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-010FCF5E_scanner_copy.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 326,
+    "modality": "JPEG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-013AA810_scanner_copy.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 327,
+    "modality": "JPEG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-013D9CDE_scanner_copy.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 328,
+    "modality": "JPEG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-01430AE9_scanner_copy.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 329,
+    "modality": "JPEG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-0147D2A1_scanner_copy.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 330,
+    "modality": "JPEG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-014EE54B_scanner_copy.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 331,
+    "modality": "JPEG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-014F95AD_scanner_copy.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 332,
+    "modality": "JPEG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-0189E11D_scanner_copy.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 333,
+    "modality": "JPEG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-018F2EC6_scanner_copy.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 334,
+    "modality": "JPEG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-0197DB96_scanner_copy.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 335,
+    "modality": "JPEG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-01A87317_scanner_copy.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 336,
+    "modality": "JPEG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-01BFFFB8_scanner_copy.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 337,
+    "modality": "JPEG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-01C067E9_scanner_copy.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 338,
+    "modality": "JPEG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-01C1494A_scanner_copy.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 339,
+    "modality": "JPEG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-01C1968B_scanner_copy.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 340,
+    "modality": "JPEG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-01CE9D54_scanner_copy.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 341,
+    "modality": "JPEG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-01DCF344_scanner_copy.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 342,
+    "modality": "JPEG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-01DF1A3F_scanner_copy.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 343,
+    "modality": "JPEG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-01E09EE7_scanner_copy.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 344,
+    "modality": "JPEG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-01E273C2_scanner_copy.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 345,
+    "modality": "JPEG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-01E8F39C_scanner_copy.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 346,
+    "modality": "JPEG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-01EB22AE_scanner_copy.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 347,
+    "modality": "JPEG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-01F6F4F3_scanner_copy.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 348,
+    "modality": "JPEG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-0215D221_scanner_copy.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 349,
+    "modality": "JPEG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-0216D7D9_scanner_copy.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 350,
+    "modality": "JPEG",
+    "quality_profile": "scanner_copy",
+    "file_name": "DOC-0231CCEB_scanner_copy.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 351,
+    "modality": "JPEG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-0010905E_mobile_camera.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 352,
+    "modality": "JPEG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-001A07AB_mobile_camera.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 353,
+    "modality": "JPEG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-001F58BA_mobile_camera.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 354,
+    "modality": "JPEG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-0024DCD6_mobile_camera.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 355,
+    "modality": "JPEG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-0031A4A3_mobile_camera.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 356,
+    "modality": "JPEG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-00358725_mobile_camera.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 357,
+    "modality": "JPEG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-004182F5_mobile_camera.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 358,
+    "modality": "JPEG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-00446F76_mobile_camera.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 359,
+    "modality": "JPEG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-00449E04_mobile_camera.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 360,
+    "modality": "JPEG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-004EC088_mobile_camera.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 361,
+    "modality": "JPEG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-00662D4D_mobile_camera.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 362,
+    "modality": "JPEG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-0067E656_mobile_camera.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 363,
+    "modality": "JPEG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-006BE31F_mobile_camera.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 364,
+    "modality": "JPEG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-006D5022_mobile_camera.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 365,
+    "modality": "JPEG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-009D8813_mobile_camera.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 366,
+    "modality": "JPEG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-00A17387_mobile_camera.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 367,
+    "modality": "JPEG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-00B39F2F_mobile_camera.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 368,
+    "modality": "JPEG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-00B8FD30_mobile_camera.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 369,
+    "modality": "JPEG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-00BEA546_mobile_camera.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 370,
+    "modality": "JPEG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-00ED4E97_mobile_camera.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 371,
+    "modality": "JPEG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-00EE9532_mobile_camera.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 372,
+    "modality": "JPEG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-00F9CA77_mobile_camera.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 373,
+    "modality": "JPEG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-00FBE313_mobile_camera.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 374,
+    "modality": "JPEG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-0102956C_mobile_camera.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 375,
+    "modality": "JPEG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-010FCF5E_mobile_camera.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 376,
+    "modality": "JPEG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-013AA810_mobile_camera.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 377,
+    "modality": "JPEG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-013D9CDE_mobile_camera.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 378,
+    "modality": "JPEG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-01430AE9_mobile_camera.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 379,
+    "modality": "JPEG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-0147D2A1_mobile_camera.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 380,
+    "modality": "JPEG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-014EE54B_mobile_camera.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 381,
+    "modality": "JPEG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-014F95AD_mobile_camera.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 382,
+    "modality": "JPEG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-0189E11D_mobile_camera.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 383,
+    "modality": "JPEG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-018F2EC6_mobile_camera.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 384,
+    "modality": "JPEG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-0197DB96_mobile_camera.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 385,
+    "modality": "JPEG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-01A87317_mobile_camera.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 386,
+    "modality": "JPEG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-01BFFFB8_mobile_camera.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 387,
+    "modality": "JPEG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-01C067E9_mobile_camera.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 388,
+    "modality": "JPEG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-01C1494A_mobile_camera.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 389,
+    "modality": "JPEG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-01C1968B_mobile_camera.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 390,
+    "modality": "JPEG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-01CE9D54_mobile_camera.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 391,
+    "modality": "JPEG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-01DCF344_mobile_camera.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 392,
+    "modality": "JPEG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-01DF1A3F_mobile_camera.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 393,
+    "modality": "JPEG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-01E09EE7_mobile_camera.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 394,
+    "modality": "JPEG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-01E273C2_mobile_camera.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 395,
+    "modality": "JPEG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-01E8F39C_mobile_camera.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 396,
+    "modality": "JPEG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-01EB22AE_mobile_camera.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 397,
+    "modality": "JPEG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-01F6F4F3_mobile_camera.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 398,
+    "modality": "JPEG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-0215D221_mobile_camera.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 399,
+    "modality": "JPEG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-0216D7D9_mobile_camera.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 400,
+    "modality": "JPEG",
+    "quality_profile": "mobile_camera",
+    "file_name": "DOC-0231CCEB_mobile_camera.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 401,
+    "modality": "JPEG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-0010905E_rotated_90.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 402,
+    "modality": "JPEG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-001A07AB_rotated_90.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 403,
+    "modality": "JPEG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-001F58BA_rotated_90.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 404,
+    "modality": "JPEG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-0024DCD6_rotated_90.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 405,
+    "modality": "JPEG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-0031A4A3_rotated_90.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 406,
+    "modality": "JPEG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-00358725_rotated_90.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 407,
+    "modality": "JPEG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-004182F5_rotated_90.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 408,
+    "modality": "JPEG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-00446F76_rotated_90.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 409,
+    "modality": "JPEG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-00449E04_rotated_90.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 410,
+    "modality": "JPEG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-004EC088_rotated_90.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 411,
+    "modality": "JPEG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-00662D4D_rotated_90.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 412,
+    "modality": "JPEG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-0067E656_rotated_90.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 413,
+    "modality": "JPEG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-006BE31F_rotated_90.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 414,
+    "modality": "JPEG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-006D5022_rotated_90.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 415,
+    "modality": "JPEG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-009D8813_rotated_90.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 416,
+    "modality": "JPEG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-00A17387_rotated_90.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 417,
+    "modality": "JPEG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-00B39F2F_rotated_90.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 418,
+    "modality": "JPEG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-00B8FD30_rotated_90.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 419,
+    "modality": "JPEG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-00BEA546_rotated_90.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 420,
+    "modality": "JPEG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-00ED4E97_rotated_90.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 421,
+    "modality": "JPEG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-00EE9532_rotated_90.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 422,
+    "modality": "JPEG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-00F9CA77_rotated_90.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 423,
+    "modality": "JPEG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-00FBE313_rotated_90.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 424,
+    "modality": "JPEG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-0102956C_rotated_90.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 425,
+    "modality": "JPEG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-010FCF5E_rotated_90.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 426,
+    "modality": "JPEG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-013AA810_rotated_90.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 427,
+    "modality": "JPEG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-013D9CDE_rotated_90.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 428,
+    "modality": "JPEG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-01430AE9_rotated_90.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 429,
+    "modality": "JPEG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-0147D2A1_rotated_90.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 430,
+    "modality": "JPEG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-014EE54B_rotated_90.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 431,
+    "modality": "JPEG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-014F95AD_rotated_90.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 432,
+    "modality": "JPEG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-0189E11D_rotated_90.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 433,
+    "modality": "JPEG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-018F2EC6_rotated_90.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 434,
+    "modality": "JPEG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-0197DB96_rotated_90.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 435,
+    "modality": "JPEG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-01A87317_rotated_90.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 436,
+    "modality": "JPEG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-01BFFFB8_rotated_90.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 437,
+    "modality": "JPEG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-01C067E9_rotated_90.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 438,
+    "modality": "JPEG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-01C1494A_rotated_90.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 439,
+    "modality": "JPEG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-01C1968B_rotated_90.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 440,
+    "modality": "JPEG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-01CE9D54_rotated_90.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 441,
+    "modality": "JPEG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-01DCF344_rotated_90.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 442,
+    "modality": "JPEG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-01DF1A3F_rotated_90.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 443,
+    "modality": "JPEG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-01E09EE7_rotated_90.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 444,
+    "modality": "JPEG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-01E273C2_rotated_90.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 445,
+    "modality": "JPEG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-01E8F39C_rotated_90.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 446,
+    "modality": "JPEG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-01EB22AE_rotated_90.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 447,
+    "modality": "JPEG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-01F6F4F3_rotated_90.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 448,
+    "modality": "JPEG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-0215D221_rotated_90.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 449,
+    "modality": "JPEG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-0216D7D9_rotated_90.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  },
+  {
+    "sample_id": 450,
+    "modality": "JPEG",
+    "quality_profile": "rotated_90",
+    "file_name": "DOC-0231CCEB_rotated_90.jpeg",
+    "fields_evaluated": 20,
+    "status": "SUCCESS"
+  }
+]

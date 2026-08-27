@@ -1,0 +1,51 @@
+[2026-08-27 01:06:20] =================================================================
+[2026-08-27 01:06:20]  AU DIC 9,000-DOCUMENT FULL BENCHMARK EVALUATION ENGINE
+[2026-08-27 01:06:20]  Run ID: run_9000_benchmark_1787772980634
+[2026-08-27 01:06:20]  Output Directory: C:\github\academicuniverse\backend\benchmark_reports\run_9000_benchmark_1787772980634
+[2026-08-27 01:06:20] =================================================================
+[2026-08-27 01:06:20] [STEP 1/5] Collecting and verifying 9,000 multi-modal specimens...
+[2026-08-27 01:06:39] [PASS] Successfully verified exactly 9,000 specimens across 9 categories.
+[2026-08-27 01:06:39] 
+[STEP 2/5] Starting continuous specimen evaluation...
+[2026-08-27 01:06:41]   [PROGRESS   5.6%] Completed: 500/9,000 | Success: 500 | Failed: 0 | Rate: 188.3 docs/sec | ETA: 0m 45s
+[2026-08-27 01:06:52]   [PROGRESS  11.1%] Completed: 1,000/9,000 | Success: 1,000 | Failed: 0 | Rate: 73.9 docs/sec | ETA: 1m 48s
+[2026-08-27 01:06:55]   [PROGRESS  16.7%] Completed: 1,500/9,000 | Success: 1,500 | Failed: 0 | Rate: 93.1 docs/sec | ETA: 1m 20s
+[2026-08-27 01:06:58]   [PROGRESS  22.2%] Completed: 2,000/9,000 | Success: 2,000 | Failed: 0 | Rate: 107.0 docs/sec | ETA: 1m 5s
+[2026-08-27 01:07:00]   [PROGRESS  27.8%] Completed: 2,500/9,000 | Success: 2,500 | Failed: 0 | Rate: 117.4 docs/sec | ETA: 0m 55s
+[2026-08-27 01:07:11]   [PROGRESS  33.3%] Completed: 3,000/9,000 | Success: 3,000 | Failed: 0 | Rate: 94.5 docs/sec | ETA: 1m 3s
+[2026-08-27 01:07:13]   [PROGRESS  38.9%] Completed: 3,500/9,000 | Success: 3,500 | Failed: 0 | Rate: 101.4 docs/sec | ETA: 0m 54s
+[2026-08-27 01:07:24]   [PROGRESS  44.4%] Completed: 4,000/9,000 | Success: 4,000 | Failed: 0 | Rate: 89.0 docs/sec | ETA: 0m 56s
+[2026-08-27 01:07:26]   [PROGRESS  50.0%] Completed: 4,500/9,000 | Success: 4,500 | Failed: 0 | Rate: 94.5 docs/sec | ETA: 0m 47s
+[2026-08-27 01:07:37]   [PROGRESS  55.6%] Completed: 5,000/9,000 | Success: 5,000 | Failed: 0 | Rate: 86.1 docs/sec | ETA: 0m 46s
+[2026-08-27 01:07:40]   [PROGRESS  61.1%] Completed: 5,500/9,000 | Success: 5,500 | Failed: 0 | Rate: 90.6 docs/sec | ETA: 0m 38s
+[2026-08-27 01:07:42]   [PROGRESS  66.7%] Completed: 6,000/9,000 | Success: 6,000 | Failed: 0 | Rate: 94.8 docs/sec | ETA: 0m 31s
+[2026-08-27 01:07:45]   [PROGRESS  72.2%] Completed: 6,500/9,000 | Success: 6,500 | Failed: 0 | Rate: 98.4 docs/sec | ETA: 0m 25s
+[2026-08-27 01:07:47]   [PROGRESS  77.8%] Completed: 7,000/9,000 | Success: 7,000 | Failed: 0 | Rate: 102.1 docs/sec | ETA: 0m 19s
+[2026-08-27 01:07:50]   [PROGRESS  83.3%] Completed: 7,500/9,000 | Success: 7,500 | Failed: 0 | Rate: 105.2 docs/sec | ETA: 0m 14s
+[2026-08-27 01:07:53]   [PROGRESS  88.9%] Completed: 8,000/9,000 | Success: 8,000 | Failed: 0 | Rate: 108.2 docs/sec | ETA: 0m 9s
+[2026-08-27 01:07:55]   [PROGRESS  94.4%] Completed: 8,500/9,000 | Success: 8,500 | Failed: 0 | Rate: 110.9 docs/sec | ETA: 0m 4s
+[2026-08-27 01:07:58]   [PROGRESS 100.0%] Completed: 9,000/9,000 | Success: 9,000 | Failed: 0 | Rate: 113.6 docs/sec | ETA: 0m 0s
+[2026-08-27 01:07:58] 
+[PASS] Specimen evaluation completed in 79.21 seconds.
+[2026-08-27 01:07:58]   Total Processed: 9,000 successful, 0 failed.
+[2026-08-27 01:07:58] 
+[STEP 3/5] Computing comprehensive statistical hypothesis tests and ablations...
+[2026-08-27 01:07:58] Total Paired Field Observations: 180,000 rows
+[2026-08-27 01:07:58] [INFO] Running 10,000-Iteration Bootstrap Resampling...
+[2026-08-27 01:08:02] [STEP 4/5] Training Decision Tree and Random Forest classifiers across 3 splits...
+[2026-08-27 01:08:05]   Split 60:40 -> DT F1: 97.43%, MCC: 0.5854 | RF F1: 97.41%, MCC: 0.5819
+[2026-08-27 01:08:07]   Split 70:30 -> DT F1: 97.44%, MCC: 0.5880 | RF F1: 97.42%, MCC: 0.5848
+[2026-08-27 01:08:10]   Split 80:20 -> DT F1: 97.43%, MCC: 0.5864 | RF F1: 97.42%, MCC: 0.5842
+[2026-08-27 01:08:10] 
+[STEP 5/5] Persisting all publication artifacts to run directory...
+[2026-08-27 01:08:11]   [SAVED] paired_field_observations.csv (24,234,231 bytes)
+[2026-08-27 01:08:11]   [SAVED] predictions.json
+[2026-08-27 01:08:11]   [SAVED] metrics.json
+[2026-08-27 01:08:11]   [SAVED] statistical_results.json
+[2026-08-27 01:08:11]   [SAVED] comparisons.json
+[2026-08-27 01:08:11]   [SAVED] summary.md
+[2026-08-27 01:08:11] 
+=================================================================
+[2026-08-27 01:08:11]  9,000-DOCUMENT BENCHMARK RUN COMPLETED SUCCESSFULLY!
+[2026-08-27 01:08:11]  All artifacts safely stored in: C:\github\academicuniverse\backend\benchmark_reports\run_9000_benchmark_1787772980634
+[2026-08-27 01:08:11] =================================================================

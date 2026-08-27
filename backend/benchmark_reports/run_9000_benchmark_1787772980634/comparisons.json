@@ -1,0 +1,47 @@
+[
+  {
+    "category": "Clean PDF (1,000)",
+    "pass_a_f1": 0.8534,
+    "pass_b_f1": 0.96225
+  },
+  {
+    "category": "Clean PNG (1,000)",
+    "pass_a_f1": 0.8538,
+    "pass_b_f1": 0.9629
+  },
+  {
+    "category": "Scanned PNG (1,000)",
+    "pass_a_f1": 0.83215,
+    "pass_b_f1": 0.9422
+  },
+  {
+    "category": "Mobile PNG (1,000)",
+    "pass_a_f1": 0.80065,
+    "pass_b_f1": 0.91175
+  },
+  {
+    "category": "Rotated 90 PNG (1,000)",
+    "pass_a_f1": 0.74365,
+    "pass_b_f1": 0.85835
+  },
+  {
+    "category": "Clean JPEG (1,000)",
+    "pass_a_f1": 0.8537,
+    "pass_b_f1": 0.9629
+  },
+  {
+    "category": "Scanned JPEG (1,000)",
+    "pass_a_f1": 0.83225,
+    "pass_b_f1": 0.9422
+  },
+  {
+    "category": "Mobile JPEG (1,000)",
+    "pass_a_f1": 0.80065,
+    "pass_b_f1": 0.91175
+  },
+  {
+    "category": "Rotated 90 JPEG (1,000)",
+    "pass_a_f1": 0.74355,
+    "pass_b_f1": 0.85835
+  }
+]

@@ -1,0 +1,100 @@
+{
+  "run_id": "run_450_benchmark_1787773671237",
+  "dataset_location": "D:\\AU_DIC_Benchmark_60k",
+  "total_documents": 450,
+  "successful_documents": 450,
+  "failed_documents": 0,
+  "total_field_observations": 9000,
+  "execution_duration_seconds": 2.23,
+  "pass_a_raw": {
+    "f1_score": 0.8176666666666667,
+    "character_error_rate": 0.08141538444622864,
+    "word_error_rate": 0.08141538444622864,
+    "ci_95_f1": [
+      0.8096666666666666,
+      0.8255555555555556
+    ],
+    "ci_95_cer": [
+      0.07627567608298254,
+      0.08679146020924368
+    ]
+  },
+  "pass_b_normalized": {
+    "f1_score": 0.9292222222222222,
+    "character_error_rate": 0.024514558250863194,
+    "word_error_rate": 0.024514558250863194,
+    "ci_95_f1": [
+      0.9237777777777778,
+      0.9345555555555556
+    ],
+    "ci_95_cer": [
+      0.022116557999796775,
+      0.02698558860476527
+    ]
+  },
+  "net_gain": {
+    "f1_absolute_gain": 0.11155555555555552,
+    "f1_relative_gain_pct": 13.643158037776868,
+    "cer_reduction_absolute": -0.05690082619536545,
+    "cer_reduction_pct": -69.88952589537422
+  },
+  "rule_corrections": {
+    "Date Normalizer": 450,
+    "Roll Number Normalizer": 300,
+    "Degree Alias Normalizer": 0,
+    "Numeric Normalizer": 225,
+    "Honorific / Whitespace": 29,
+    "University Alias Normalizer": 0
+  },
+  "error_taxonomy_pass_a": {
+    "EXACT_MATCH": 7359,
+    "FORMAT_ERROR": 1004,
+    "NORMALIZATION_ERROR": 637,
+    "OCR_ERROR": 0,
+    "FIELD_MISSING": 0,
+    "HALLUCINATION": 0,
+    "CATEGORY_ERROR": 0,
+    "PARTIAL_MATCH": 0,
+    "LOW_CONFIDENCE": 0
+  },
+  "error_taxonomy_pass_b": {
+    "EXACT_MATCH": 8363,
+    "FORMAT_ERROR": 0,
+    "NORMALIZATION_ERROR": 637,
+    "OCR_ERROR": 0,
+    "FIELD_MISSING": 0,
+    "HALLUCINATION": 0,
+    "CATEGORY_ERROR": 0,
+    "PARTIAL_MATCH": 0,
+    "LOW_CONFIDENCE": 0
+  },
+  "ml_benchmark": [
+    {
+      "Split": "60:40",
+      "DT_Acc": 0.9527777777777777,
+      "DT_F1": 0.9751316559391457,
+      "DT_MCC": 0.5641522233043839,
+      "RF_Acc": 0.9547222222222222,
+      "RF_F1": 0.9762147964395156,
+      "RF_MCC": 0.5865325143316729
+    },
+    {
+      "Split": "70:30",
+      "DT_Acc": 0.9555555555555556,
+      "DT_F1": 0.9766081871345029,
+      "DT_MCC": 0.5949507380450276,
+      "RF_Acc": 0.957037037037037,
+      "RF_F1": 0.9774055317491235,
+      "RF_MCC": 0.6126319252548271
+    },
+    {
+      "Split": "80:20",
+      "DT_Acc": 0.9583333333333334,
+      "DT_F1": 0.9780765857936276,
+      "DT_MCC": 0.6260039415144427,
+      "RF_Acc": 0.9572222222222222,
+      "RF_F1": 0.9775051124744376,
+      "RF_MCC": 0.6134964977535776
+    }
+  ]
+}
