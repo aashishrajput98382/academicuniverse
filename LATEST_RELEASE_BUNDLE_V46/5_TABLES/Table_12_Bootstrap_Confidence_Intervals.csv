@@ -1,0 +1,10 @@
+Evaluation Pass,Benchmark Metric,Empirical Mean,"95% Bootstrap CI [Lower, Upper]",CI Bound Range (delta)
+Pass A (Without Normalization),Field F1 Score,81.77%,"[76.89%, 82.22%]",5.33%
+,Character Error Rate (CER),8.14%,"[7.93%, 11.48%]",3.55%
+,Word Error Rate (WER),8.14%,"[7.93%, 11.48%]",3.55%
+Pass B (With Normalization),Field F1 Score,92.92%,"[88.56%, 92.44%]",3.88%
+,Character Error Rate (CER),2.45%,"[2.75%, 4.60%]",1.85%
+,Word Error Rate (WER),2.45%,"[2.75%, 4.60%]",1.85%
+Net Empirical Change,F1 Score Boost,+11.16%,"[+9.11%, +12.89%]",3.78%
+,CER Reduction,-5.69%,"[-7.55%, -4.55%]",3.00%
+,WER Reduction,-5.69%,"[-7.55%, -4.55%]",3.00%

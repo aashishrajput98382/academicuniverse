@@ -1,0 +1,8 @@
+# Table 9: Empirical Metric Impact of Semantic Canonical Normalization (450 Specimens / 9,000 Fields)
+
+| Evaluation Pipeline Pass | Precision | Recall | F1 Score | Mean CER | Mean WER |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| Pass A: Without Normalization | 81.77% | 81.77% | 81.77% | 8.14% | 8.14% |
+| Pass B: With Normalization | 92.92% | 92.92% | 92.92% | 2.45% | 2.45% |
+| Net Absolute Improvement | +11.16% | +11.16% | +11.16% | -5.69% | -5.69% |
+| Relative Metric Change | +12.45% | +12.45% | +12.45% | -69.90% | -69.90% |

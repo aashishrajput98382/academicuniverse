@@ -1,0 +1,14 @@
+# Table 13: Nine-Class OCR Error Taxonomy Distribution Before and After Normalization
+
+| Error Category Class | Diagnostic Failure Description | Pass A (Without Normalization) | Pass B (With Normalization) | Absolute Shift | Category Shift (%) |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| EXACT_MATCH | Character-perfect field match | 716 (81.77%) | 815 (92.92%) | +1,004 | +12.45% |
+| FORMAT_ERROR | Match achieved after canonicalization | 99 (11.16%) | 0 (0.00%) | -1,004 | -100.00% |
+| NORMALIZATION_ERROR | Canonical values remain unequal | 637 (7.08%) | 637 (7.08%) | 0 | 0.00% |
+| OCR_ERROR | Optical scanner and sensor noise | 0 (0.00%) | 0 (0.00%) | 0 | 0.00% |
+| FIELD_MISSING | Target entity key omitted | 0 (0.00%) | 0 (0.00%) | 0 | 0.00% |
+| HALLUCINATION | Content absent from document | 0 (0.00%) | 0 (0.00%) | 0 | 0.00% |
+| CATEGORY_ERROR | Category misclassification | 0 (0.00%) | 0 (0.00%) | 0 | 0.00% |
+| PARTIAL_MATCH | Partial substring overlap | 0 (0.00%) | 0 (0.00%) | 0 | 0.00% |
+| LOW_CONFIDENCE | Score below confidence cutoff | 0 (0.00%) | 0 (0.00%) | 0 | 0.00% |
+| Total Evaluations | Complete Benchmark Suite | 9,000 (100%) | 9,000 (100%) | 0 | 100.00% |

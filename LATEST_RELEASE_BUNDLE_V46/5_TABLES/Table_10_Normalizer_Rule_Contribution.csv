@@ -1,0 +1,8 @@
+Domain Normalizer Rule,Addressed Syntax Discrepancy,Corrected Mismatches (Count),Rule Contribution (%)
+Date Normalizer,Text/DMY date syntax -> ISO 8601 (YYYY-MM-DD),46,46.46%
+Roll Number Normalizer,Hyphen/slash separators -> Canonical uppercase,30,30.30%
+Numeric Normalizer,Trailing text/range tags -> 2-decimal floats,23,23.23%
+Degree Alias Normalizer,Shorthand titles (B.Tech) -> Full degree names,0,0.00%
+Honorific / Whitespace,Whitespace padding & honorific prefixes (Mr.),0,0.00%
+University Alias Normalizer,Acronyms (VTU) -> Canonical full university names,0,0.00%
+Total Corrected Mismatches,All Normalizer Rules Combined,99,100.00%

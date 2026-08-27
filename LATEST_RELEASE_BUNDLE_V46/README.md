@@ -45,6 +45,26 @@ Yeh folder hamare pure research project ki **sabse latest, 100% verified, aur fi
 
 ---
 
+### 5. `5_TABLES/` (All 14 Manuscript Tables in CSV & Markdown)
+* `ALL_TABLES_CONSOLIDATED.md`: Sabhi 14 tables ek single master Markdown document me.
+* Individual `.csv` and `.md` files for Table 1 through Table 14:
+  - `Table_01_Literature_Survey.csv` / `.md`
+  - `Table_02_Computing_Environment.csv` / `.md`
+  - `Table_03_Dataset_Composition.csv` / `.md`
+  - `Table_04_Optical_Degradation_Profiles.csv` / `.md`
+  - `Table_05_Canonical_Parameters.csv` / `.md`
+  - `Table_06_Mathematical_Metrics.csv` / `.md`
+  - `Table_07_Dry_Run_Verification.csv` / `.md`
+  - `Table_08_SOTA_Benchmark_Paradigms.csv` / `.md`
+  - `Table_09_Normalization_Ablation.csv` / `.md`
+  - `Table_10_Normalizer_Rule_Contribution.csv` / `.md`
+  - `Table_11_Statistical_Hypothesis_Testing.csv` / `.md`
+  - `Table_12_Bootstrap_Confidence_Intervals.csv` / `.md`
+  - `Table_13_OCR_Error_Taxonomy_Distribution.csv` / `.md`
+  - `Table_14_Classical_ML_Failure_Prediction.csv` / `.md`
+
+---
+
 ## 📈 Key Final Benchmark Metrics (AU DIC Benchmark v1.0):
 * **Total Evaluated Specimens**: 450 Multi-modal Documents (50 PDFs, 200 PNGs, 200 JPEGs)
 * **Total Field Observations**: 9,000 Paired Evaluations

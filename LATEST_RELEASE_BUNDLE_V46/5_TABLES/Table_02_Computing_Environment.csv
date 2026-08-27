@@ -1,0 +1,12 @@
+Parameter,Verified Configuration / Value
+Operating System,"Microsoft Windows 11 Professional (64-bit, x86_64 Architecture)"
+Compute Hardware,HP EliteBook 840 G8 Workstation
+Processor (CPU),Intel Core i7 Processor
+System Memory (RAM),16 GB DDR4 System RAM
+Hardware Acceleration,None (CPU-Only Model Inference Execution)
+Inference Serving Engine,"Ollama Local Runtime (v0.32.14, Local Host)"
+Evaluated Neural Engine,"MiniCPM-V (minicpm-v:latest, ~7.6B Parameters, Q4_0 GGUF)"
+Software Environments,"Python 3.14.x, Node.js v18.x, npm v9.x"
+Scientific & Statistical Stack,"scipy >= 1.11, pandas >= 2.0, numpy >= 1.24, scikit-learn >= 1.3"
+Framework Execution Mode,"Headless Read-Only Execution (isReadOnly: true, 0 Database Writes)"
+Master Deterministic Seed,SeedManager.masterSeed = 42
