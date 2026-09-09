@@ -8,6 +8,10 @@ import Timetable from '../models/Timetable';
 
 const logger = new Logger('aiController');
 
+import { AcademicSchedule } from '../models/AcademicSchedule';
+import { Person } from '../models/Person';
+import { toObjectId } from '../utils/mongooseHelpers';
+
 export const getStudentContext = async (userId: string) => {
     let context: any = {
         todayClasses: 0,
@@ -19,34 +23,78 @@ export const getStudentContext = async (userId: string) => {
     };
 
     try {
-        const section = await Section.findOne({
-            $or: [
-                { representativeId: userId },
-            ]
-        });
+        // 1. Try canonical AcademicSchedule via Person mapping (contains actual classroom/room numbers)
+        const person = await Person.findOne({ userIds: toObjectId(userId) });
+        if (person) {
+            const academicSchedule = await AcademicSchedule.findOne({ personId: person._id }).sort({ createdAt: -1 });
+            if (academicSchedule && Array.isArray(academicSchedule.schedule) && academicSchedule.schedule.length > 0) {
+                const now = new Date();
+                const todayStr = now.toLocaleDateString('en-CA', { timeZone: 'Asia/Kolkata' }); // YYYY-MM-DD
+                
+                // Look for today's schedule or fallback to matching day of week
+                let matchedDay = academicSchedule.schedule.find(d => d.date === todayStr);
+                if (!matchedDay) {
+                    matchedDay = academicSchedule.schedule.find(d => {
+                        const dDay = new Date(d.date + 'T00:00:00+05:30').toLocaleDateString('en-US', { timeZone: 'Asia/Kolkata', weekday: 'long' });
+                        return dDay === context.day;
+                    });
+                }
 
-        if (section) {
-            const timetable = await Timetable.findOne({ sectionId: section._id });
-            if (timetable && timetable.parsedData) {
-                const today = context.day;
-                const todaySchedule = timetable.parsedData.filter(slot => slot.dayOfWeek === today);
+                if (matchedDay && Array.isArray(matchedDay.events) && matchedDay.events.length > 0) {
+                    context.todayClasses = matchedDay.events.length;
+                    context.todaySchedule = matchedDay.events.map(e => ({
+                        subject: e.courseName || e.courseCode,
+                        courseCode: e.courseCode,
+                        room: e.room,
+                        instructor: e.instructor,
+                        timeSlot: e.timeSlot,
+                        startTime: e.timeSlot?.split('-')?.[0]?.trim(),
+                        endTime: e.timeSlot?.split('-')?.[1]?.trim(),
+                        isFreeSlot: false
+                    }));
+                }
 
-                context.todayClasses = todaySchedule.filter(s => !s.isFreeSlot).length;
-                context.totalWeeklyClasses = timetable.parsedData.filter(s => !s.isFreeSlot).length;
-                context.freeSlots = todaySchedule.filter(s => s.isFreeSlot).map(s => `${s.startTime}-${s.endTime}`);
-                context.todaySchedule = todaySchedule.map(s => ({
-                    subject: s.subject,
-                    startTime: s.startTime,
-                    endTime: s.endTime,
-                    isFreeSlot: s.isFreeSlot
-                }));
+                let totalCount = 0;
+                for (const d of academicSchedule.schedule) {
+                    if (Array.isArray(d.events)) {
+                        totalCount += d.events.length;
+                    }
+                }
+                context.totalWeeklyClasses = totalCount;
+            }
+        }
 
-                if (context.todayClasses === 0 && (today === 'Saturday' || today === 'Sunday')) {
-                    const mondaySchedule = timetable.parsedData.filter(slot => slot.dayOfWeek === 'Monday');
-                    context.mondayPreview = {
-                        classes: mondaySchedule.filter(s => !s.isFreeSlot).length,
-                        subjects: Array.from(new Set(mondaySchedule.filter(s => !s.isFreeSlot).map(s => s.subject)))
-                    };
+        // 2. Fallback to Section / Timetable model if no AcademicSchedule found
+        if (context.todaySchedule.length === 0) {
+            const section = await Section.findOne({
+                $or: [
+                    { representativeId: userId },
+                ]
+            });
+
+            if (section) {
+                const timetable = await Timetable.findOne({ sectionId: section._id });
+                if (timetable && timetable.parsedData) {
+                    const today = context.day;
+                    const todaySchedule = timetable.parsedData.filter(slot => slot.dayOfWeek === today);
+
+                    context.todayClasses = todaySchedule.filter(s => !s.isFreeSlot).length;
+                    context.totalWeeklyClasses = timetable.parsedData.filter(s => !s.isFreeSlot).length;
+                    context.freeSlots = todaySchedule.filter(s => s.isFreeSlot).map(s => `${s.startTime}-${s.endTime}`);
+                    context.todaySchedule = todaySchedule.map(s => ({
+                        subject: s.subject,
+                        startTime: s.startTime,
+                        endTime: s.endTime,
+                        isFreeSlot: s.isFreeSlot
+                    }));
+
+                    if (context.todayClasses === 0 && (today === 'Saturday' || today === 'Sunday')) {
+                        const mondaySchedule = timetable.parsedData.filter(slot => slot.dayOfWeek === 'Monday');
+                        context.mondayPreview = {
+                            classes: mondaySchedule.filter(s => !s.isFreeSlot).length,
+                            subjects: Array.from(new Set(mondaySchedule.filter(s => !s.isFreeSlot).map(s => s.subject)))
+                        };
+                    }
                 }
             }
         }
