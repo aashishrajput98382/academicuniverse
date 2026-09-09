@@ -40,12 +40,5 @@ export const ezoneApi = {
             method: 'GET',
             headers: getAuthHeaders()
         });
-    },
-
-    webscrap: async () => {
-        return await apiRequest('/api/ezone/webscrap', {
-            method: 'POST',
-            headers: getAuthHeaders()
-        });
     }
 };

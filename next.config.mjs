@@ -63,6 +63,15 @@ const nextConfig = {
     ],
   },
   poweredByHeader: false,
+  async redirects() {
+    return [
+      {
+        source: '/dashboard/student/webscrap',
+        destination: '/dashboard/student',
+        permanent: false,
+      },
+    ];
+  },
   async headers() {
     return [
       {
