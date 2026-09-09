@@ -26,19 +26,12 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
     '/dashboard/student/profile': 'profile',
     '/dashboard/student/events': 'events',
     '/dashboard/student/mail': 'mail',
-    '/dashboard/student/growth': 'growth-hub',
     '/dashboard/student/document-intelligence': 'document-intelligence',
     '/dashboard/student/schedule': 'academic-schedule',
-    '/dashboard/student/career': 'career-profile',
-    '/dashboard/student/chatbot': 'ai-chatbot',
-    '/dashboard/student/research': 'research-wing',
-    '/dashboard/student/code': 'code-arena',
-    '/dashboard/student/records': 'academic-records',
     '/dashboard/student/ezone-sync': 'sync-college-profile',
     '/dashboard/student/skills': 'skills-tracker',
     '/dashboard/student/resume-builder': 'resume-builder',
     '/dashboard/student/overlap': 'overlap-engine',
-    '/dashboard/student/faculty-cabin': 'find-faculty-cabin',
   };
 
   useEffect(() => {
@@ -74,19 +67,12 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
     { label: 'Profile', href: '/dashboard/student/profile', icon: '👤' },
     { label: 'Events from Gmail', href: '/dashboard/student/events', icon: '📧', badge: eventsCount },
     { label: 'Mail Explorer', href: '/dashboard/student/mail', icon: '✉️' },
-    { label: 'Growth Hub', href: '/dashboard/student/growth', icon: '📈' },
     { label: 'Document Intelligence', href: '/dashboard/student/document-intelligence', icon: '🧠' },
     { label: 'Academic Schedule', href: '/dashboard/student/schedule', icon: '📅' },
-    { label: 'Career Profile', href: '/dashboard/student/career', icon: '💼' },
-    { label: 'AI Chatbot', href: '/dashboard/student/chatbot', icon: '🤖' },
-    { label: 'Research Wing', href: '/dashboard/student/research', icon: '🔬' },
-    { label: 'Code Arena', href: '/dashboard/student/code', icon: '💻' },
-    { label: 'Academic Records', href: '/dashboard/student/records', icon: '📚' },
     { label: 'Sync College Profile', href: '/dashboard/student/ezone-sync', icon: '🔄' },
     { label: 'Skills Tracker', href: '/dashboard/student/skills', icon: '🎯' },
     { label: 'Resume Builder', href: '/dashboard/student/resume-builder', icon: '📄' },
     { label: 'Overlap Engine', href: '/dashboard/student/overlap', icon: '📅' },
-    { label: 'Find Faculty Cabin', href: '/dashboard/student/faculty-cabin', icon: '🚪' },
   ];
 
   const sidebarItems = allSidebarItems.filter(item => {
