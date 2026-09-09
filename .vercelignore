@@ -1,16 +1,18 @@
 # Vercel Deployment Ignore File
 # Prevents uploading heavy non-frontend directories to Vercel build context
 
-docs/paper/
-docs/reports/
-backend/
-benchmarks/
-ADBG/
-research/
-analysis/
-paper_pipeline/
-storage/
-logs/
-tmp/
+/docs/paper/
+/docs/reports/
+/backend/
+/benchmarks/
+/ADBG/
+/research/
+/analysis/
+/paper_pipeline/
+/storage/
+/logs/
+/tmp/
+/scratch/
 *.docx
 *.pdf
+
