@@ -81,9 +81,9 @@ export const getRedirectUri = (): string => {
 };
 
 export const getOAuth2Client = () => {
-    const clientId = process.env.GOOGLE_CLIENT_ID;
-    const clientSecret = process.env.GOOGLE_CLIENT_SECRET;
-    const redirectUri = getRedirectUri();
+    const clientId = process.env.GOOGLE_CLIENT_ID?.trim();
+    const clientSecret = process.env.GOOGLE_CLIENT_SECRET?.trim();
+    const redirectUri = getRedirectUri()?.trim();
 
     if (!clientId || !clientSecret || !redirectUri) {
         console.error('Missing Google OAuth environment variables:', { 
