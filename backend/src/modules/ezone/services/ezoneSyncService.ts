@@ -293,7 +293,17 @@ export class EzoneSyncService {
                 mongoData = sanitizedData;
             }
 
-            // 6. Store clean data into MongoDB
+            // 6. Store clean data into MongoDB (fallback to user details if scraper had N/A)
+            if (!(mongoData as any).studentName || (mongoData as any).studentName === 'N/A') {
+                (mongoData as any).studentName = userName || (userEmail ? userEmail.split('@')[0] : 'Student');
+            }
+            if (!(mongoData as any).systemId || (mongoData as any).systemId === 'N/A') {
+                (mongoData as any).systemId = systemId || (userEmail ? userEmail.split('.')[0] : 'N/A');
+            }
+            if (!(mongoData as any).studentEmail || (mongoData as any).studentEmail === 'N/A') {
+                (mongoData as any).studentEmail = userEmail;
+            }
+
             const savedProfile = await this.repository.upsertProfile(userId, organizationId, mongoData);
             await this.safeLogSheets('MONGODB_UPDATED', 'SUCCESS', 'Clean data persisted to MongoDB');
 

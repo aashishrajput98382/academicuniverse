@@ -94,9 +94,12 @@ export class OverlapService {
    * Secure tenant-isolated student search.
    * Derives organizationId from current authenticated user.
    */
-  async searchStudents(query: string, currentFirebaseUid: string): Promise<StudentSearchResult[]> {
+  async searchStudents(query: string, currentFirebaseUid: string, userEmail?: string): Promise<StudentSearchResult[]> {
     try {
-      const currentUser = await User.findOne({ firebaseUid: currentFirebaseUid }).exec();
+      let currentUser = await User.findOne({ firebaseUid: currentFirebaseUid }).exec();
+      if (!currentUser && userEmail) {
+        currentUser = await User.findOne({ email: userEmail.toLowerCase() }).exec();
+      }
       if (!currentUser) {
         throw new NotFoundError('Authenticated user record not found');
       }
@@ -113,6 +116,8 @@ export class OverlapService {
         .lean()
         .exec();
 
+      const userMap = new Map<string, any>(tenantUsers.map(u => [u._id.toString(), u]));
+
       let profilesQuery: any = { organizationId };
 
       if (cleanQuery) {
@@ -120,6 +125,7 @@ export class OverlapService {
         profilesQuery.$or = [
           { systemId: regex },
           { studentName: regex },
+          { studentEmail: regex },
           { email: regex }
         ];
       }
@@ -135,6 +141,9 @@ export class OverlapService {
         if (p.userId && p.userId.toString() === currentUser._id.toString()) {
           continue;
         }
+
+        const uId = p.userId ? p.userId.toString() : p._id.toString();
+        const matchedUser = p.userId ? userMap.get(p.userId.toString()) : null;
 
         const hasTimetable = Array.isArray(p.timetable) && p.timetable.length > 0;
         let syncStatus: 'SYNCED' | 'NEVER_SYNCED' | 'SYNCING' | 'SYNC_FAILED' = 'NEVER_SYNCED';
@@ -152,14 +161,24 @@ export class OverlapService {
           unselectableReason = 'Student has not synchronized schedule via E-Zone Sync';
         }
 
-        const resolvedName = (p.studentName && p.studentName !== 'N/A') ? p.studentName : 'Student';
+        const resolvedName = (p.studentName && p.studentName !== 'N/A' && p.studentName.trim() !== '') 
+          ? p.studentName 
+          : (matchedUser?.name || 'Student');
 
-        resultsMap.set(p.systemId || p.userId.toString(), {
+        const resolvedSystemId = (p.systemId && p.systemId !== 'N/A' && p.systemId.trim() !== '')
+          ? p.systemId
+          : ((matchedUser as any)?.systemId || matchedUser?.email?.split('.')[0] || matchedUser?.email?.split('@')[0] || 'N/A');
+
+        const resolvedDepartment = (p.department && p.department !== 'N/A' && p.department.trim() !== '')
+          ? p.department
+          : ((matchedUser as any)?.department || 'Computer Science & Engineering');
+
+        resultsMap.set(uId, {
           id: p._id.toString(),
           userId: p.userId ? p.userId.toString() : '',
           studentName: resolvedName,
-          systemId: p.systemId || 'N/A',
-          department: p.department || 'General',
+          systemId: resolvedSystemId,
+          department: resolvedDepartment,
           semester: p.semester || 'N/A',
           program: p.program || p.school || 'Academic Program',
           school: p.school || 'School of Engineering',
@@ -171,17 +190,28 @@ export class OverlapService {
 
       for (const u of tenantUsers) {
         const uId = u._id.toString();
-        const existing = Array.from(resultsMap.values()).find(r => r.userId === uId);
+        const existing = resultsMap.get(uId) || Array.from(resultsMap.values()).find(r => r.userId === uId);
 
-        if (!existing) {
-          const sysId = (u as any).systemId || u.email.split('@')[0];
+        if (existing) {
+          // If existing profile was missing real name or systemId, enrich it
+          if (!existing.studentName || existing.studentName === 'Student' || existing.studentName === 'N/A') {
+            existing.studentName = u.name;
+          }
+          if (!existing.systemId || existing.systemId === 'N/A') {
+            existing.systemId = (u as any).systemId || u.email.split('.')[0] || u.email.split('@')[0];
+          }
+          if (!existing.department || existing.department === 'N/A' || existing.department === 'General') {
+            existing.department = (u as any).department || 'Computer Science & Engineering';
+          }
+        } else {
+          const sysId = (u as any).systemId || u.email.split('.')[0] || u.email.split('@')[0];
           if (!cleanQuery || u.name.toLowerCase().includes(cleanQuery.toLowerCase()) || sysId.toLowerCase().includes(cleanQuery.toLowerCase())) {
             resultsMap.set(uId, {
               id: uId,
               userId: uId,
               studentName: u.name,
               systemId: sysId,
-              department: (u as any).department || 'General',
+              department: (u as any).department || 'Computer Science & Engineering',
               semester: 'N/A',
               program: 'Academic Program',
               school: 'University',
@@ -262,16 +292,27 @@ export class OverlapService {
       const allProfiles = [currentProfile, ...targetProfiles];
 
       for (const profile of allProfiles) {
-        const pName = (profile.studentName && profile.studentName !== 'N/A') ? profile.studentName : 'Student';
+        let pName = (profile.studentName && profile.studentName !== 'N/A' && profile.studentName.trim()) ? profile.studentName : '';
+        if (!pName && profile.userId) {
+          const u = await User.findById(profile.userId).lean();
+          if (u?.name) pName = u.name;
+        }
+        if (!pName) pName = 'Student';
+
         if (!Array.isArray(profile.timetable) || profile.timetable.length === 0) {
           throw new ValidationError(`Student '${pName}' has not synchronized their timetable via E-Zone Sync. Cannot compute overlap.`);
         }
       }
 
-      const participantNames = allProfiles.map(p => {
-        if (p.studentName && p.studentName !== 'N/A') return p.studentName;
-        return 'Student';
-      });
+      const participantNames: string[] = [];
+      for (const p of allProfiles) {
+        let name = (p.studentName && p.studentName !== 'N/A' && p.studentName.trim()) ? p.studentName : '';
+        if (!name && p.userId) {
+          const u = await User.findById(p.userId).lean();
+          if (u?.name) name = u.name;
+        }
+        participantNames.push(name || 'Student');
+      }
 
       const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
       const participantFreeSlots: Record<string, number[]>[] = allProfiles.map((profile, idx) => {

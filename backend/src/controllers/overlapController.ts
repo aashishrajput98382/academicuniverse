@@ -27,7 +27,8 @@ export const searchStudents = async (req: FirebaseUserRequest, res: Response) =>
     }
 
     const query = (req.query.q as string) || '';
-    const results = await overlapService.searchStudents(query, req.firebaseUser.firebaseUid);
+    const email = req.firebaseUser.email || (req as any).user?.email;
+    const results = await overlapService.searchStudents(query, req.firebaseUser.firebaseUid, email);
 
     return res.status(200).json({
       success: true,

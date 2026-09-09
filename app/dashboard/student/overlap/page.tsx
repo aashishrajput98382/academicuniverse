@@ -141,6 +141,27 @@ export default function OverlapEnginePage() {
 
               <div className="p-6 space-y-6">
                 
+                {/* Current User (Host) Info Banner */}
+                <div className="flex items-center justify-between p-3.5 rounded-xl bg-slate-950/70 border border-slate-800 text-xs">
+                  <div className="flex items-center gap-3">
+                    <div className="w-8 h-8 rounded-full bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 font-bold flex items-center justify-center text-xs shrink-0">
+                      {(backendUser?.name || user?.displayName || 'A').charAt(0)}
+                    </div>
+                    <div className="min-w-0">
+                      <div className="font-bold text-white flex items-center gap-1.5 truncate">
+                        {backendUser?.name || user?.displayName || 'Aashish Rajput'}
+                        <span className="px-1.5 py-0.5 rounded text-[10px] bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-medium shrink-0">You</span>
+                      </div>
+                      <div className="text-[11px] text-slate-400 truncate">
+                        ID: {(backendUser as any)?.systemId || user?.email?.split('@')[0] || '2023329421'} • Host Schedule Active
+                      </div>
+                    </div>
+                  </div>
+                  <span className="px-2 py-0.5 rounded text-[10px] font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 shrink-0">
+                    ✅ Synced
+                  </span>
+                </div>
+
                 {/* Search Bar */}
                 <div className="relative">
                   <Search className="absolute left-3.5 top-3 h-4 w-4 text-slate-400" />
