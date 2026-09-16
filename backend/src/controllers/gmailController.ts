@@ -334,23 +334,37 @@ export const triggerGmailSync = async (req: any, res: Response) => {
         const userId = req.user.userId || req.user._id;
         const user = await User.findById(userId);
 
+        if (!user) {
+            return sendError(res, 404, 'User not found');
+        }
+
+        const fallbackFirebaseUid = user.firebaseUid || req.user?.firebaseUid || String(userId);
+
         if (user?.gmailTokens && (user.gmailTokens as any).encryptedToken === 'direct_connected') {
-            await seedDemoEvents(user.firebaseUid || String(userId), String(userId));
+            await seedDemoEvents(fallbackFirebaseUid, String(userId));
             return sendResponse(res, 200, { success: true, newEventsCount: 5 }, 'Gmail sync completed');
         }
 
-        const result = await syncGmailEvents(userId.toString());
+        const result = await syncGmailEvents(userId.toString(), req.user?.firebaseUid);
 
         return sendResponse(res, 200, result, 'Gmail sync completed');
     } catch (error: any) {
         console.error('Error syncing Gmail events:', error);
 
-        // Provide a better error messages
-        if (error.message && (error.message.includes('not connected') || error.message.includes('expired'))) {
-            return sendError(res, 400, error.message);
+        const errMsg = error?.message || '';
+        const isAuthError = errMsg.includes('not connected') || 
+                            errMsg.includes('expired') || 
+                            errMsg.includes('invalid_grant') || 
+                            errMsg.includes('Insufficient Permission') ||
+                            errMsg.includes('unauthorized') ||
+                            errMsg.includes('Invalid Credentials') ||
+                            errMsg.includes('reconnect');
+
+        if (isAuthError) {
+            return sendError(res, 400, errMsg || 'Gmail authorization expired or missing permissions. Please reconnect your Gmail account.');
         }
 
-        return sendError(res, 500, 'Failed to sync Gmail events');
+        return sendError(res, 500, errMsg || 'Failed to sync Gmail events');
     }
 };
 

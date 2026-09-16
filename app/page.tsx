@@ -14,9 +14,19 @@ import { Users, UserCheck, Calendar, Settings } from 'lucide-react'
 
 export default function AcademicUniverseHome() {
   const scrollerRef = useRef<HTMLDivElement>(null)
-  const { user, backendUser, loading } = useAuth()
+  const { user, backendUser, loading, authError, logout } = useAuth()
   const router = useRouter()
   const [isAdmin, setIsAdmin] = useState(false)
+  const [timedOut, setTimedOut] = useState(false)
+
+  useEffect(() => {
+    if (!backendUser && user && !loading) {
+      const timer = setTimeout(() => setTimedOut(true), 6000)
+      return () => clearTimeout(timer)
+    } else {
+      setTimedOut(false)
+    }
+  }, [backendUser, user, loading])
 
   // All hooks must be called unconditionally at the top level
   useEffect(() => {
@@ -84,8 +94,32 @@ export default function AcademicUniverseHome() {
     )
   }
 
-  // Still loading backend user data - show loading state
+  // Still loading backend user data - show loading state or connection error
   if (!backendUser && user && !loading) {
+    if (timedOut || authError) {
+      return (
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-emerald-900 flex flex-col items-center justify-center p-4 text-center">
+          <div className="bg-slate-800/90 border border-slate-700 p-8 rounded-2xl max-w-md w-full shadow-2xl backdrop-blur-sm">
+            <div className="w-12 h-12 bg-amber-500/20 text-amber-400 rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-xl">
+              !
+            </div>
+            <h3 className="text-xl font-semibold text-white mb-2">Backend Connection Delayed</h3>
+            <p className="text-slate-300 text-sm mb-6">
+              {authError || "We couldn't connect to the backend server. Please check your network connection, DNS, or retry."}
+            </p>
+            <div className="flex gap-3 justify-center">
+              <Button onClick={() => window.location.reload()} variant="outline" className="text-white border-slate-600 hover:bg-slate-700">
+                Retry
+              </Button>
+              <Button onClick={() => logout()} className="bg-emerald-600 hover:bg-emerald-500 text-white">
+                Sign Out
+              </Button>
+            </div>
+          </div>
+        </div>
+      )
+    }
+
     return (
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-emerald-900 flex items-center justify-center">
         <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-emerald-400 border-opacity-50" />

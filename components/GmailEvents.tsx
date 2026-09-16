@@ -233,7 +233,7 @@ export const GmailEvents: React.FC = () => {
                 description: errorMsg,
                 variant: 'destructive'
             });
-            if (errorMsg.includes('not connected') || errorMsg.includes('expired')) {
+            if (errorMsg.includes('not connected') || errorMsg.includes('expired') || errorMsg.includes('permission') || errorMsg.includes('reconnect') || errorMsg.includes('authorization')) {
                 setGmailConnected(false);
             }
         } finally {
@@ -321,7 +321,7 @@ export const GmailEvents: React.FC = () => {
                 </div>
                 <div className="flex gap-2">
                     {!gmailConnected ? (
-                        <button onClick={handleConnect} className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition">
+                        <button onClick={() => handleConnect('direct')} className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition">
                             Connect Gmail
                         </button>
                     ) : (

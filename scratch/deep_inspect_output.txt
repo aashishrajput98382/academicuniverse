@@ -1,0 +1,316 @@
+
+==================== SLIDE 1 ====================
+Shape 'Rectangle 1': fill=#0B132B, border=#None
+Shape 'Rectangle 2': fill=#10B981, border=#None
+Shape 'Rounded Rectangle 3': fill=#16213E, border=#10B981
+Shape 'Rounded Rectangle 4': fill=#065F46, border=#10B981
+    [inherit, defpt, b=False] LIVE PRODUCTION PLATFORM • 2026
+Shape 'TextBox 5': fill=#None, border=#None
+    [inherit, defpt, b=False] ACADEMIC UNIVERSE (AU)
+    [inherit, defpt, b=False] Next-Generation Intelligent Campus Operating & Academic Platform
+    [inherit, defpt, b=False] A unified, production-deployed ecosystem combining automated E-Zone portal synchronization, context-awar
+Shape 'Rounded Rectangle 6': fill=#1B263B, border=#334155
+    [inherit, defpt, b=False] PRESENTER & CANDIDATE
+    [inherit, defpt, b=False] Aashish Rajput [inherit, defpt, b=False] System ID: 2023329421 [inherit, defpt, b=False] B.Tech CSE, Sha
+Shape 'Rounded Rectangle 7': fill=#1B263B, border=#334155
+    [inherit, defpt, b=False] TECH STACK
+    [inherit, defpt, b=False] Next.js 16 (Turbopack) • TypeScript [inherit, defpt, b=False] Express.js • MongoDB Atlas • GridFS [inher
+Shape 'Rounded Rectangle 8': fill=#1B263B, border=#334155
+    [inherit, defpt, b=False] DEPLOYMENT STATUS
+    [inherit, defpt, b=False] Frontend: Vercel (Production) [inherit, defpt, b=False] Backend: Railway Microservices [inherit, defpt, 
+
+==================== SLIDE 2 ====================
+Shape 'Rectangle 1': fill=#0B132B, border=#None
+Shape 'TextBox 2': fill=#None, border=#None
+    [inherit, defpt, b=False] BACKGROUND & ARCHITECTURAL NEED
+Shape 'TextBox 3': fill=#None, border=#None
+    [inherit, defpt, b=False] Problem Statement & Project Motivation
+Shape 'Rectangle 4': fill=#334155, border=#None
+Shape 'TextBox 5': fill=#None, border=#None
+    [inherit, defpt, b=False] Academic Universe (AU) | Project Progress & Technical Evaluation | Presenter: Aashish Rajput (2023329421
+Shape 'TextBox 6': fill=#None, border=#None
+    [inherit, defpt, b=False] 2 / 10
+Shape 'Rounded Rectangle 7': fill=#16213E, border=#334155
+Shape 'TextBox 8': fill=#None, border=#None
+    [inherit, defpt, b=False] 1. Severe Academic Fragmentation
+    [inherit, defpt, b=False] Traditional university workflows force students and professors to navigate 5+ disjointed web application
+Shape 'Rounded Rectangle 9': fill=#16213E, border=#334155
+Shape 'TextBox 10': fill=#None, border=#None
+    [inherit, defpt, b=False] 2. Coordination & Free-Time Bottlenecks
+    [inherit, defpt, b=False] University schedules run on 9 distinct 50-minute periods daily with rotating lab and elective batches. O
+Shape 'Rounded Rectangle 11': fill=#16213E, border=#334155
+Shape 'TextBox 12': fill=#None, border=#None
+    [inherit, defpt, b=False] 3. Unverified Digital Credentialing
+    [inherit, defpt, b=False] Students lack a centralized, verifiable academic repository. Achievement certificates, semester grade sh
+Shape 'Rounded Rectangle 13': fill=#16213E, border=#334155
+Shape 'TextBox 14': fill=#None, border=#None
+    [inherit, defpt, b=False] 4. Context-Blind Campus AI Chatbots
+    [inherit, defpt, b=False] Standard generative AI models know nothing about university reality. They cannot tell students where the
+
+==================== SLIDE 3 ====================
+Shape 'Rectangle 1': fill=#0B132B, border=#None
+Shape 'TextBox 2': fill=#None, border=#None
+    [inherit, defpt, b=False] SYSTEM DESIGN & DATA PIPELINES
+Shape 'TextBox 3': fill=#None, border=#None
+    [inherit, defpt, b=False] Full-Stack System Architecture & Production Stack
+Shape 'Rectangle 4': fill=#334155, border=#None
+Shape 'TextBox 5': fill=#None, border=#None
+    [inherit, defpt, b=False] Academic Universe (AU) | Project Progress & Technical Evaluation | Presenter: Aashish Rajput (2023329421
+Shape 'TextBox 6': fill=#None, border=#None
+    [inherit, defpt, b=False] 3 / 10
+Shape 'Rounded Rectangle 7': fill=#16213E, border=#334155
+Shape 'TextBox 8': fill=#None, border=#None
+    [inherit, defpt, b=False] FRONTEND TIER (Client)
+    [inherit, defpt, b=False] • Next.js 16 App Router + Turbopack engine for sub-second page transitions
+    [inherit, defpt, b=False] • Tailwind CSS + Radix UI + Lucide Icons for state-of-the-art dark aesthetics
+    [inherit, defpt, b=False] • Dual-Layer Navigation: Top Primary Navbar + Clean Left Dashboard Menu
+    [inherit, defpt, b=False] • React Query / Context for stateful synchronization of profiles & schedules
+    [inherit, defpt, b=False] • Hosted on Vercel Edge with zero-downtime automated CI/CD pipeline
+Shape 'Rounded Rectangle 9': fill=#16213E, border=#334155
+Shape 'TextBox 10': fill=#None, border=#None
+    [inherit, defpt, b=False] BACKEND TIER (Microservices)
+    [inherit, defpt, b=False] • Modular Express.js API framework fully written in strict TypeScript
+    [inherit, defpt, b=False] • Playwright Headless Automation Worker for university E-Zone synchronization
+    [inherit, defpt, b=False] • Firebase Auth Token Middleware + Role-Based Access Control (RBAC)
+    [inherit, defpt, b=False] • Dual Error Shielding: Resilient API proxies with Sentry telemetry & fallback
+    [inherit, defpt, b=False] • Hosted on Railway Container PaaS with automatic scaling
+Shape 'Rounded Rectangle 11': fill=#16213E, border=#334155
+Shape 'TextBox 12': fill=#None, border=#None
+    [inherit, defpt, b=False] DATA & INTELLIGENCE TIER
+    [inherit, defpt, b=False] • MongoDB Atlas: Relational-modeled schema for users, profiles & timetables
+    [inherit, defpt, b=False] • GridFS File Storage: Chunked binary document storage for verifiable certificates
+    [inherit, defpt, b=False] • Google Gemini 2.5 Flash: Context-injected LLM for live classroom & schedule Q&A
+    [inherit, defpt, b=False] • Google Sheets Live Archival: Bi-directional administrative audit synchronization
+    [inherit, defpt, b=False] • Triple Git Remote Mirroring: Provenance tracking across 3 GitHub accounts
+
+==================== SLIDE 4 ====================
+Shape 'Rectangle 1': fill=#0B132B, border=#None
+Shape 'TextBox 2': fill=#None, border=#None
+    [inherit, defpt, b=False] CORE CAPABILITY • PORTAL INTEGRATION
+Shape 'TextBox 3': fill=#None, border=#None
+    [inherit, defpt, b=False] Module 1: Automated E-Zone Profile & Timetable Sync
+Shape 'Rectangle 4': fill=#334155, border=#None
+Shape 'TextBox 5': fill=#None, border=#None
+    [inherit, defpt, b=False] Academic Universe (AU) | Project Progress & Technical Evaluation | Presenter: Aashish Rajput (2023329421
+Shape 'TextBox 6': fill=#None, border=#None
+    [inherit, defpt, b=False] 4 / 10
+Shape 'Rounded Rectangle 7': fill=#16213E, border=#334155
+Shape 'TextBox 8': fill=#None, border=#None
+    [inherit, defpt, b=False] Automated University Portal Integration
+    [inherit, defpt, b=False] ✔ Playwright Automation Engine:  [#94A3B8, defpt, b=0] Performs automated browser interactions with the 
+    [inherit, defpt, b=False] ✔ Two-Factor Student Email OTP:  [#94A3B8, defpt, b=0] Secure 2-step verification protocol requiring the
+    [inherit, defpt, b=False] ✔ Real Attendance & Grade Synchronization:  [#94A3B8, defpt, b=0] Captures course-level attendance perce
+    [inherit, defpt, b=False] ✔ Full Institutional Timetable Parsing:  [#94A3B8, defpt, b=0] Extracts complete Monday–Saturday schedul
+    [inherit, defpt, b=False] ✔ Google Sheets + MongoDB Dual Storage:  [#94A3B8, defpt, b=0] Persists clean normalized models into Mon
+Shape 'Rounded Rectangle 9': fill=#1B263B, border=#10B981
+Shape 'TextBox 10': fill=#None, border=#None
+    [inherit, defpt, b=False] VERIFIED IN LIVE DATABASE
+    [inherit, defpt, b=False] STUDENT SYSTEM ID
+    [inherit, defpt, b=False] 2023329421 (Aashish Rajput)
+    [inherit, defpt, b=False] LIVE SYNCED TIMETABLE
+    [inherit, defpt, b=False] 12 Active Weekly Class Slots
+    [inherit, defpt, b=False] CLASSROOM ALLOCATIONS
+    [inherit, defpt, b=False] Room 206 Block 3, Room 008 Block 3
+    [inherit, defpt, b=False] FACULTY INTEGRATED
+    [inherit, defpt, b=False] Dr. Batri K, Ms. Akanksha Srivastav
+    [inherit, defpt, b=False] SYNC PROTOCOL STATUS
+    [inherit, defpt, b=False] OTP Verified & DB Active
+    [inherit, defpt, b=False] GOOGLE SHEETS STREAM
+    [inherit, defpt, b=False] Automated Append Enabled
+
+==================== SLIDE 5 ====================
+Shape 'Rectangle 1': fill=#0B132B, border=#None
+Shape 'TextBox 2': fill=#None, border=#None
+    [inherit, defpt, b=False] CONTEXT-AWARE ARTIFICIAL INTELLIGENCE
+Shape 'TextBox 3': fill=#None, border=#None
+    [inherit, defpt, b=False] Module 2: Live AI Campus Chatbot with Classroom Intelligence
+Shape 'Rectangle 4': fill=#334155, border=#None
+Shape 'TextBox 5': fill=#None, border=#None
+    [inherit, defpt, b=False] Academic Universe (AU) | Project Progress & Technical Evaluation | Presenter: Aashish Rajput (2023329421
+Shape 'TextBox 6': fill=#None, border=#None
+    [inherit, defpt, b=False] 5 / 10
+Shape 'Rounded Rectangle 7': fill=#16213E, border=#334155
+Shape 'TextBox 8': fill=#None, border=#None
+    [inherit, defpt, b=False] Real Classroom Context Injection
+    [inherit, defpt, b=False] ★ Dynamic Schedule Querying:  [#94A3B8, defpt, b=0] Before querying Google Gemini, the backend queries M
+    [inherit, defpt, b=False] ★ Exact Room & Teacher Resolution:  [#94A3B8, defpt, b=0] Injects live classroom blocks: Room 206 Block 
+    [inherit, defpt, b=False] ★ Zero Generic Hallucinations:  [#94A3B8, defpt, b=0] Instead of vague boilerplate responses, the AI ans
+    [inherit, defpt, b=False] ★ Emotional Support & Campus Mentoring:  [#94A3B8, defpt, b=0] Built-in emotional intelligence layer pro
+    [inherit, defpt, b=False] ★ Model Failover Architecture:  [#94A3B8, defpt, b=0] Primary inference via Google Gemini 2.5 Flash with
+Shape 'Rounded Rectangle 9': fill=#1B263B, border=#38BDF8
+Shape 'TextBox 10': fill=#None, border=#None
+    [inherit, defpt, b=False] LIVE TESTED PROMPT INTERACTION
+    [inherit, defpt, b=False] Student Prompt:
+    [inherit, defpt, b=False] Where is my Research Methodology lecture today, and who teaches it?
+    [inherit, defpt, b=False] Academic Universe AI:
+    [inherit, defpt, b=False] Your Research Methodology class is scheduled in Room 206, Block 3 from 10:40 AM to 11:25 AM. The course 
+    [inherit, defpt, b=False] Student Prompt:
+    [inherit, defpt, b=False] Where do I go for my Simulation Lab session?
+    [inherit, defpt, b=False] Academic Universe AI:
+    [inherit, defpt, b=False] Your Technical Skill Enhancement Simulation Lab takes place in Room No 008, Block 3 under the guidance o
+
+==================== SLIDE 6 ====================
+Shape 'Rectangle 1': fill=#0B132B, border=#None
+Shape 'TextBox 2': fill=#None, border=#None
+    [inherit, defpt, b=False] ALGORITHMIC SCHEDULING & COLLABORATION
+Shape 'TextBox 3': fill=#None, border=#None
+    [inherit, defpt, b=False] Module 3: Overlap Engine — Smart Student Free-Time Planner
+Shape 'Rectangle 4': fill=#334155, border=#None
+Shape 'TextBox 5': fill=#None, border=#None
+    [inherit, defpt, b=False] Academic Universe (AU) | Project Progress & Technical Evaluation | Presenter: Aashish Rajput (2023329421
+Shape 'TextBox 6': fill=#None, border=#None
+    [inherit, defpt, b=False] 6 / 10
+Shape 'Rounded Rectangle 7': fill=#16213E, border=#334155
+Shape 'TextBox 8': fill=#None, border=#None
+    [inherit, defpt, b=False] Mathematical Free-Slot Intersection
+    [inherit, defpt, b=False] ✔ N-Way Interval Intersection:  [#94A3B8, defpt, b=0] Mathematical interval algorithm that maps daily sc
+    [inherit, defpt, b=False] ✔ Multi-Student Selection (1 to 5):  [#94A3B8, defpt, b=0] Allows any student to search and pick up to 5
+    [inherit, defpt, b=False] ✔ Live Identity & System ID Resolution:  [#94A3B8, defpt, b=0] Dynamically links MongoDB 'User' records 
+    [inherit, defpt, b=False] ✔ Schedule Sync Verification Badges:  [#94A3B8, defpt, b=0] Visual '✅ Synced Schedule' vs '⚠ Never Synce
+    [inherit, defpt, b=False] ✔ Host (You) Status Card:  [#94A3B8, defpt, b=0] Prominently highlights the logged-in user as the meetin
+Shape 'Rounded Rectangle 9': fill=#1B263B, border=#10B981
+Shape 'TextBox 10': fill=#None, border=#None
+    [inherit, defpt, b=False] HOW OVERLAP ENGINE FINDS COMMON TIME
+    [inherit, defpt, b=False] Step 1: Student Search
+    [inherit, defpt, b=False] Search peers by System ID (e.g. 2024427058) or Name. Tenant-isolated to Sharda University.
+    [inherit, defpt, b=False] Step 2: Timetable Ingestion
+    [inherit, defpt, b=False] Engine fetches verified E-Zone timetable matrix for Host + all selected participant IDs.
+    [inherit, defpt, b=False] Step 3: Interval Intersection
+    [inherit, defpt, b=False] Performs mathematical set intersection: Free(Day) = Free(Host) ∩ Free(Student A) ∩ Free(Student B).
+    [inherit, defpt, b=False] Step 4: AI Ranked Slots
+    [inherit, defpt, b=False] Consecutive free periods are grouped into 1-hour or 2-hour blocks and ranked for optimal study sessions.
+    [inherit, defpt, b=False] Step 5: Instant Share / Export
+    [inherit, defpt, b=False] One-click copy of meeting recommendations with exact period timings and room recommendations.
+
+==================== SLIDE 7 ====================
+Shape 'Rectangle 1': fill=#0B132B, border=#None
+Shape 'TextBox 2': fill=#None, border=#None
+    [inherit, defpt, b=False] RESEARCH & SCHOLARLY PUBLICATION
+Shape 'TextBox 3': fill=#None, border=#None
+    [inherit, defpt, b=False] Module 4: AI-Powered Academic Research Wing
+Shape 'Rectangle 4': fill=#334155, border=#None
+Shape 'TextBox 5': fill=#None, border=#None
+    [inherit, defpt, b=False] Academic Universe (AU) | Project Progress & Technical Evaluation | Presenter: Aashish Rajput (2023329421
+Shape 'TextBox 6': fill=#None, border=#None
+    [inherit, defpt, b=False] 7 / 10
+Shape 'Rounded Rectangle 7': fill=#16213E, border=#334155
+Shape 'TextBox 8': fill=#None, border=#None
+    [inherit, defpt, b=False] 1. TOPIC GENERATION
+    [inherit, defpt, b=False] Explores high-impact research topics, problem formulations, and state-of-the-art gap analysis based on s
+Shape 'Rounded Rectangle 9': fill=#16213E, border=#334155
+Shape 'TextBox 10': fill=#None, border=#None
+    [inherit, defpt, b=False] 2. RESEARCH OUTLINE
+    [inherit, defpt, b=False] Synthesizes structured academic outlines following IEEE and ACM standard templates with clear subsection
+Shape 'Rounded Rectangle 11': fill=#16213E, border=#334155
+Shape 'TextBox 12': fill=#None, border=#None
+    [inherit, defpt, b=False] 3. CONTENT WRITER
+    [inherit, defpt, b=False] Full-length section generation with interactive prompt improvement, literature review expansion, and for
+Shape 'Rounded Rectangle 13': fill=#16213E, border=#334155
+Shape 'TextBox 14': fill=#None, border=#None
+    [inherit, defpt, b=False] 4. ABSTRACT & CITATIONS
+    [inherit, defpt, b=False] Generates concise IEEE-style abstracts and properly formatted scholarly bibliographies with DOI indexing
+Shape 'Rounded Rectangle 15': fill=#16213E, border=#334155
+Shape 'TextBox 16': fill=#None, border=#None
+    [inherit, defpt, b=False] 5. FINAL EXPORT
+    [inherit, defpt, b=False] One-click export directly to publication-ready PDF and editable Microsoft Word (DOCX) files.
+Shape 'Rounded Rectangle 17': fill=#16213E, border=#334155
+Shape 'TextBox 18': fill=#None, border=#None
+    [inherit, defpt, b=False] 6. DRAFT HISTORY
+    [inherit, defpt, b=False] Saves all research iterations in MongoDB Atlas so students can resume drafting papers at any time.
+
+==================== SLIDE 8 ====================
+Shape 'Rectangle 1': fill=#0B132B, border=#None
+Shape 'TextBox 2': fill=#None, border=#None
+    [inherit, defpt, b=False] DIGITAL CREDENTIALING & GMAIL SYNC
+Shape 'TextBox 3': fill=#None, border=#None
+    [inherit, defpt, b=False] Module 5: Verifiable Academic Records & Document Intelligence
+Shape 'Rectangle 4': fill=#334155, border=#None
+Shape 'TextBox 5': fill=#None, border=#None
+    [inherit, defpt, b=False] Academic Universe (AU) | Project Progress & Technical Evaluation | Presenter: Aashish Rajput (2023329421
+Shape 'TextBox 6': fill=#None, border=#None
+    [inherit, defpt, b=False] 8 / 10
+Shape 'Rounded Rectangle 7': fill=#16213E, border=#334155
+Shape 'TextBox 8': fill=#None, border=#None
+    [inherit, defpt, b=False] Verifiable Academic Records (GridFS Vault)
+    [inherit, defpt, b=False] • Secure storage of 57+ genuine academic achievement records & certificates
+    [inherit, defpt, b=False] • Binary files stored in MongoDB GridFS with SHA-256 integrity verification
+    [inherit, defpt, b=False] • Eliminates lost certificates and simplifies placement credential sharing
+    [inherit, defpt, b=False] • Centralized student profile showcasing academic excellence & GPA progression
+Shape 'Rounded Rectangle 9': fill=#16213E, border=#334155
+Shape 'TextBox 10': fill=#None, border=#None
+    [inherit, defpt, b=False] Document Intelligence Pipeline
+    [inherit, defpt, b=False] • Automated thumbnail generation for instant document inspection and preview
+    [inherit, defpt, b=False] • Classification tags: Technical certifications, hackathons, academic degrees
+    [inherit, defpt, b=False] • Full modal preview with high-resolution zooming and download capabilities
+    [inherit, defpt, b=False] • Directly linked into student placement resumes and faculty review dashboards
+Shape 'Rounded Rectangle 11': fill=#16213E, border=#334155
+Shape 'TextBox 12': fill=#None, border=#None
+    [inherit, defpt, b=False] Gmail Events Synchronization Engine
+    [inherit, defpt, b=False] • Google OAuth 2.0 Web Client authentication with university email scope
+    [inherit, defpt, b=False] • Scans incoming student Gmail messages for institutional notices and seminars
+    [inherit, defpt, b=False] • Extracts event dates, seminar venues, and deadlines into calendar cards
+    [inherit, defpt, b=False] • Eliminates missed departmental notices and campus registration deadlines
+Shape 'Rounded Rectangle 13': fill=#16213E, border=#334155
+Shape 'TextBox 14': fill=#None, border=#None
+    [inherit, defpt, b=False] Institutional Audit & Security Guard
+    [inherit, defpt, b=False] • Strict tenant isolation ensuring student data cannot be accessed across orgs
+    [inherit, defpt, b=False] • Firebase Admin service account integration for trusted server-side execution
+    [inherit, defpt, b=False] • Credential token cleansing to eliminate OAuth redirect and newline errors
+    [inherit, defpt, b=False] • Real-time Sentry exception capturing and performance monitoring
+
+==================== SLIDE 9 ====================
+Shape 'Rectangle 1': fill=#0B132B, border=#None
+Shape 'TextBox 2': fill=#None, border=#None
+    [inherit, defpt, b=False] STUDENT SUCCESS & PRODUCTIVITY TOOLS
+Shape 'TextBox 3': fill=#None, border=#None
+    [inherit, defpt, b=False] Module 6: Placement Preparation & Campus Navigation
+Shape 'Rectangle 4': fill=#334155, border=#None
+Shape 'TextBox 5': fill=#None, border=#None
+    [inherit, defpt, b=False] Academic Universe (AU) | Project Progress & Technical Evaluation | Presenter: Aashish Rajput (2023329421
+Shape 'TextBox 6': fill=#None, border=#None
+    [inherit, defpt, b=False] 9 / 10
+Shape 'Rounded Rectangle 7': fill=#16213E, border=#334155
+Shape 'TextBox 8': fill=#None, border=#None
+    [inherit, defpt, b=False] 💼  Career & Verified Profile
+    [inherit, defpt, b=False] A unified student showcase displaying verified certificates, academic semester milestones, and technical
+Shape 'Rounded Rectangle 9': fill=#16213E, border=#334155
+Shape 'TextBox 10': fill=#None, border=#None
+    [inherit, defpt, b=False] 💻  Code Arena & Problem Solving Ledger
+    [inherit, defpt, b=False] Built-in engineering coding environment with problem tracking, bug bounty challenges, solution submissio
+Shape 'Rounded Rectangle 11': fill=#16213E, border=#334155
+Shape 'TextBox 12': fill=#None, border=#None
+    [inherit, defpt, b=False] 🚪  Find Faculty Cabin Search Engine
+    [inherit, defpt, b=False] Instant campus search bar in the top navigation allowing students to locate faculty cabin numbers, floor
+Shape 'Rounded Rectangle 13': fill=#16213E, border=#334155
+Shape 'TextBox 14': fill=#None, border=#None
+    [inherit, defpt, b=False] 🧭  Streamlined Non-Redundant Navigation
+    [inherit, defpt, b=False] Deduplicated user experience: Top Navbar hosts global modules (Growth Hub, Career Profile, AI Chatbot, R
+
+==================== SLIDE 10 ====================
+Shape 'Rectangle 1': fill=#0B132B, border=#None
+Shape 'TextBox 2': fill=#None, border=#None
+    [inherit, defpt, b=False] EVALUATION SUMMARY & NEXT MILESTONES
+Shape 'TextBox 3': fill=#None, border=#None
+    [inherit, defpt, b=False] Live Production Status, Achievements & Future Roadmap
+Shape 'Rectangle 4': fill=#334155, border=#None
+Shape 'TextBox 5': fill=#None, border=#None
+    [inherit, defpt, b=False] Academic Universe (AU) | Project Progress & Technical Evaluation | Presenter: Aashish Rajput (2023329421
+Shape 'TextBox 6': fill=#None, border=#None
+    [inherit, defpt, b=False] 10 / 10
+Shape 'Rounded Rectangle 7': fill=#16213E, border=#10B981
+Shape 'TextBox 8': fill=#None, border=#None
+    [inherit, defpt, b=False] Genuinely Completed & Live Today
+    [inherit, defpt, b=False] ✔ Vercel Production Deployment:  [#94A3B8, defpt, b=0] Live at 'https://academicuniverse.vercel.app' wit
+    [inherit, defpt, b=False] ✔ Railway Backend Microservices:  [#94A3B8, defpt, b=0] Containerized Express TypeScript backend with ve
+    [inherit, defpt, b=False] ✔ Authorized E-Zone Sync:  [#94A3B8, defpt, b=0] Real Playwright automation syncing timetables, courses,
+    [inherit, defpt, b=False] ✔ Contextual Gemini Chatbot:  [#94A3B8, defpt, b=0] Inference live with classroom locations (Room 206 Bl
+    [inherit, defpt, b=False] ✔ Functional Overlap Planner:  [#94A3B8, defpt, b=0] Full N-way schedule intersection live with genuine 
+    [inherit, defpt, b=False] ✔ Zero-Mock Production Data:  [#94A3B8, defpt, b=0] 57+ verified academic records, 2 live timetables, an
+Shape 'Rounded Rectangle 9': fill=#1B263B, border=#38BDF8
+Shape 'TextBox 10': fill=#None, border=#None
+    [inherit, defpt, b=False] Upcoming Engineering Roadmap
+    [inherit, defpt, b=False] ➔ Mobile Progressive Web App (PWA):  [#94A3B8, defpt, b=0] Offline timetable caching and fast home-scree
+    [inherit, defpt, b=False] ➔ Real-Time Push Notifications:  [#94A3B8, defpt, b=0] Instant WebPush alerts for classroom room-swaps a
+    [inherit, defpt, b=False] ➔ Automated Peer Review & Benchmarking:  [#94A3B8, defpt, b=0] Integration with AU DIC benchmark pipelin
+    [inherit, defpt, b=False] ➔ Multi-University Tenant Expansion:  [#94A3B8, defpt, b=0] Expanding tenant isolation to support affili
+    [inherit, defpt, b=False] THANK YOU! OPEN FOR QUESTIONS & EVALUATION DEMO

@@ -1,0 +1,96 @@
+flowchart TD
+    %% =========================================================================
+    %% ACADEMIC UNIVERSE (AU) — STANDARD ANSI/ISO FLOWCHART
+    %% Strictly using: Terminator ([ ]), Process [ ], Decision { }, Connector (( ))
+    %% Fully compatible with draw.io (Insert -> Advanced -> Mermaid)
+    %% =========================================================================
+
+    %% SECTION 1: AUTHENTICATION & ACCESS CONTROL
+    StartNode([Start]) --> P1[Open Academic Universe Web App]
+    P1 --> D1{Institutional Domain?<br/>@ug.sharda.ac.in}
+
+    D1 -->|No| P_Err1[Display Invalid Domain Alert]
+    P_Err1 --> P1
+
+    D1 -->|Yes| P2[Initiate Google OAuth 2.0 Handshake]
+    P2 --> D2{OAuth Token<br/>Verified by Firebase?}
+
+    D2 -->|No| P_Err2[Display Authentication Error]
+    P_Err2 --> P2
+
+    D2 -->|Yes| P3[Match User Record in MongoDB Atlas]
+    P3 --> P4[Issue RS256 JWT with RBAC Claims]
+    P4 --> P5[Mount Secure Session Cookie & Load Dashboard]
+    P5 --> D3{Select Module /<br/>Operation?}
+
+    %% BRANCHING TO CONNECTORS
+    D3 -->|E-Zone Sync| ConnA_Out((A))
+    D3 -->|Campus AI Bot| ConnB_Out((B))
+    D3 -->|Overlap Planner| ConnC_Out((C))
+    D3 -->|Research Wing| ConnD_Out((D))
+
+    %% =========================================================================
+    %% SECTION 2: ENGINE A — E-ZONE PORTAL SYNC
+    %% =========================================================================
+    ConnA_In((A)) --> PA1[Input Student System ID: 2023329421]
+    PA1 --> PA2[Trigger 2FA OTP to Institutional Webmail]
+    PA2 --> DA1{OTP Valid &<br/>Handshake OK?}
+
+    DA1 -->|No| PA_Err[Show Invalid OTP Alert]
+    PA_Err --> PA1
+
+    DA1 -->|Yes| PA3[Launch Playwright Headless Worker on Railway]
+    PA3 --> PA4[Scrape Timetable Grid & Attendance Percentage]
+    PA4 --> PA5[Sanitize Course Codes, Faculty & Room Numbers]
+    PA5 --> PA6[Save AcademicSchedule in MongoDB Atlas]
+    PA6 --> PA7[Append Real-Time Audit Row to Google Sheets]
+    PA7 --> ConnE_A((E))
+
+    %% =========================================================================
+    %% SECTION 3: ENGINE B — CONTEXTUAL CAMPUS AI
+    %% =========================================================================
+    ConnB_In((B)) --> PB1[Student Inputs Natural Language Query]
+    PB1 --> PB2[RAG Service Queries MongoDB for Student Schedule]
+    PB2 --> DB1{Classroom Context<br/>Found in Schedule?}
+
+    DB1 -->|Yes| PB3[Inject Live Coordinates: Room 206 Block 3, Dr. Batri K]
+    DB1 -->|No| PB4[Inject General Campus Guidelines & Schedule Summary]
+
+    PB3 --> PB5[Apply Zero-Hallucination & Empathy Guardrails]
+    PB4 --> PB5
+    PB5 --> PB6[Google Gemini 2.5 Flash Generates Grounded Advice]
+    PB6 --> PB7[Stream Verified Answer to Student UI]
+    PB7 --> ConnE_B((E))
+
+    %% =========================================================================
+    %% SECTION 4: ENGINE C — OVERLAP MEETING PLANNER
+    %% =========================================================================
+    ConnC_In((C)) --> PC1[Resolve Host Card: Aashish Rajput - 2023329421]
+    PC1 --> PC2[Search Peer in Directory: Vishal Sharma - 2024427058]
+    PC2 --> DC1{Peer Has Synced<br/>Schedule?}
+
+    DC1 -->|No| PC_NoSync[Send Portal Sync Request to Peer]
+    PC_NoSync --> ConnE_C((E))
+
+    DC1 -->|Yes| PC3[Construct 54-Slot Weekly Availability Bitmask]
+    PC3 --> PC4[Execute Set Intersection: Free = Free Host ∩ Free Peers]
+    PC4 --> PC5[Cluster Adjacent Periods into 1h/2h Free Study Blocks]
+    PC5 --> PC6[Display Ranked Availability Matrix & Shareable Booking Link]
+    PC6 --> ConnE_C((E))
+
+    %% =========================================================================
+    %% SECTION 5: ENGINE D — RESEARCH WING 5-STAGE PIPELINE
+    %% =========================================================================
+    ConnD_In((D)) --> PD1[Stage 1: AI Topic Generation & Literature Gap Analysis]
+    PD1 --> PD2[Stage 2: Synthesize Standard IEEE Section Hierarchy]
+    PD2 --> PD3[Stage 3: Deep Academic Drafting with Formulas & Proofreading]
+    PD3 --> PD4[Stage 4: Formatted IEEE Citations & Abstract Synthesis]
+    PD4 --> PD5[Stage 5: 1-Click Export to Camera-Ready PDF and DOCX]
+    PD5 --> PD6[Persist Versioned Draft Tree in MongoDB Atlas]
+    PD6 --> ConnE_D((E))
+
+    %% =========================================================================
+    %% SECTION 6: CONVERGENCE & TERMINATION
+    %% =========================================================================
+    ConnE_In((E)) --> P_Final[Update Dashboard State & Confirm Synchronized Records]
+    P_Final --> EndNode([End])

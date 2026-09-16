@@ -1,0 +1,436 @@
+
+==================== SLIDE 1 ====================
+  Shape 1 (Rectangle 1) [left=0.0, top=0.0, w=960.0, h=540.0]:
+     Fill: 0B132B | Border: None
+  Shape 2 (Rectangle 2) [left=0.0, top=0.0, w=960.0, h=8.6]:
+     Fill: 10B981 | Border: None
+  Shape 3 (Rounded Rectangle 3) [left=57.6, top=64.8, w=844.8, h=417.6]:
+     Fill: 16213E | Border: 10B981
+  Shape 4 (Rounded Rectangle 4) [left=93.6, top=93.6, w=230.4, h=32.4]:
+     Fill: 065F46 | Border: 10B981
+       P: LIVE PRODUCTION PLATFORM • 2026 (col=default, bold=None)
+  Shape 5 (TextBox 5) [left=93.6, top=136.8, w=770.4, h=165.6]:
+     Fill: None | Border: None
+       P: ACADEMIC UNIVERSE (AU) (col=default, bold=None)
+       P: Next-Generation Intelligent Campus Operating & Academic Platform (col=default, bold=None)
+       P: A unified, production-deployed ecosystem combining automated E-Zone portal synchronization, context-aware AI advising, m
+  Shape 6 (Rounded Rectangle 6) [left=93.6, top=324.0, w=244.8, h=129.6]:
+     Fill: 1B263B | Border: 334155
+       P: PRESENTER & CANDIDATE (col=default, bold=None)
+       P: Aashish Rajput (col=default, bold=None) System ID: 2023329421 (col=default, bold=None) B.Tech CSE, Sharda University (co
+  Shape 7 (Rounded Rectangle 7) [left=356.4, top=324.0, w=244.8, h=129.6]:
+     Fill: 1B263B | Border: 334155
+       P: TECH STACK (col=default, bold=None)
+       P: Next.js 16 (Turbopack) • TypeScript (col=default, bold=None) Express.js • MongoDB Atlas • GridFS (col=default, bold=None
+  Shape 8 (Rounded Rectangle 8) [left=619.2, top=324.0, w=244.8, h=129.6]:
+     Fill: 1B263B | Border: 334155
+       P: DEPLOYMENT STATUS (col=default, bold=None)
+       P: Frontend: Vercel (Production) (col=default, bold=None) Backend: Railway Microservices (col=default, bold=None) Repo: Tri
+
+==================== SLIDE 2 ====================
+  Shape 1 (Rectangle 1) [left=0.0, top=0.0, w=960.0, h=540.0]:
+     Fill: 0B132B | Border: None
+  Shape 2 (TextBox 2) [left=57.6, top=28.8, w=720.0, h=25.2]:
+     Fill: None | Border: None
+       P: BACKGROUND & ARCHITECTURAL NEED (col=default, bold=None)
+  Shape 3 (TextBox 3) [left=57.6, top=54.0, w=842.4, h=57.6]:
+     Fill: None | Border: None
+       P: Problem Statement & Project Motivation (col=default, bold=None)
+  Shape 4 (Rectangle 4) [left=57.6, top=504.0, w=844.8, h=1.4]:
+     Fill: 334155 | Border: None
+  Shape 5 (TextBox 5) [left=57.6, top=507.6, w=648.0, h=25.2]:
+     Fill: None | Border: None
+       P: Academic Universe (AU) | Project Progress & Technical Evaluation | Presenter: Aashish Rajput (2023329421) (col=default, 
+  Shape 6 (TextBox 6) [left=828.0, top=507.6, w=72.0, h=25.2]:
+     Fill: None | Border: None
+       P: 2 / 10 (col=default, bold=None)
+  Shape 7 (Rounded Rectangle 7) [left=57.6, top=122.4, w=414.0, h=165.6]:
+     Fill: 16213E | Border: 334155
+  Shape 8 (TextBox 8) [left=75.6, top=136.8, w=378.0, h=136.8]:
+     Fill: None | Border: None
+       P: 1. Severe Academic Fragmentation (col=default, bold=None)
+       P: Traditional university workflows force students and professors to navigate 5+ disjointed web applications for attendance
+  Shape 9 (Rounded Rectangle 9) [left=486.0, top=122.4, w=414.0, h=165.6]:
+     Fill: 16213E | Border: 334155
+  Shape 10 (TextBox 10) [left=504.0, top=136.8, w=378.0, h=136.8]:
+     Fill: None | Border: None
+       P: 2. Coordination & Free-Time Bottlenecks (col=default, bold=None)
+       P: University schedules run on 9 distinct 50-minute periods daily with rotating lab and elective batches. Organizing peer s
+  Shape 11 (Rounded Rectangle 11) [left=57.6, top=302.4, w=414.0, h=165.6]:
+     Fill: 16213E | Border: 334155
+  Shape 12 (TextBox 12) [left=75.6, top=316.8, w=378.0, h=136.8]:
+     Fill: None | Border: None
+       P: 3. Unverified Digital Credentialing (col=default, bold=None)
+       P: Students lack a centralized, verifiable academic repository. Achievement certificates, semester grade sheets, and compet
+  Shape 13 (Rounded Rectangle 13) [left=486.0, top=302.4, w=414.0, h=165.6]:
+     Fill: 16213E | Border: 334155
+  Shape 14 (TextBox 14) [left=504.0, top=316.8, w=378.0, h=136.8]:
+     Fill: None | Border: None
+       P: 4. Context-Blind Campus AI Chatbots (col=default, bold=None)
+       P: Standard generative AI models know nothing about university reality. They cannot tell students where their next lecture 
+
+==================== SLIDE 3 ====================
+  Shape 1 (Rectangle 1) [left=0.0, top=0.0, w=960.0, h=540.0]:
+     Fill: 0B132B | Border: None
+  Shape 2 (TextBox 2) [left=57.6, top=28.8, w=720.0, h=25.2]:
+     Fill: None | Border: None
+       P: SYSTEM DESIGN & DATA PIPELINES (col=default, bold=None)
+  Shape 3 (TextBox 3) [left=57.6, top=54.0, w=842.4, h=57.6]:
+     Fill: None | Border: None
+       P: Full-Stack System Architecture & Production Stack (col=default, bold=None)
+  Shape 4 (Rectangle 4) [left=57.6, top=504.0, w=844.8, h=1.4]:
+     Fill: 334155 | Border: None
+  Shape 5 (TextBox 5) [left=57.6, top=507.6, w=648.0, h=25.2]:
+     Fill: None | Border: None
+       P: Academic Universe (AU) | Project Progress & Technical Evaluation | Presenter: Aashish Rajput (2023329421) (col=default, 
+  Shape 6 (TextBox 6) [left=828.0, top=507.6, w=72.0, h=25.2]:
+     Fill: None | Border: None
+       P: 3 / 10 (col=default, bold=None)
+  Shape 7 (Rounded Rectangle 7) [left=57.6, top=122.4, w=273.6, h=360.0]:
+     Fill: 16213E | Border: 334155
+  Shape 8 (TextBox 8) [left=72.0, top=136.8, w=244.8, h=331.2]:
+     Fill: None | Border: None
+       P: FRONTEND TIER (Client) (col=default, bold=None)
+       P: • Next.js 16 App Router + Turbopack engine for sub-second page transitions (col=default, bold=None)
+       P: • Tailwind CSS + Radix UI + Lucide Icons for state-of-the-art dark aesthetics (col=default, bold=None)
+       P: • Dual-Layer Navigation: Top Primary Navbar + Clean Left Dashboard Menu (col=default, bold=None)
+       P: • React Query / Context for stateful synchronization of profiles & schedules (col=default, bold=None)
+       P: • Hosted on Vercel Edge with zero-downtime automated CI/CD pipeline (col=default, bold=None)
+  Shape 9 (Rounded Rectangle 9) [left=342.0, top=122.4, w=273.6, h=360.0]:
+     Fill: 16213E | Border: 334155
+  Shape 10 (TextBox 10) [left=356.4, top=136.8, w=244.8, h=331.2]:
+     Fill: None | Border: None
+       P: BACKEND TIER (Microservices) (col=default, bold=None)
+       P: • Modular Express.js API framework fully written in strict TypeScript (col=default, bold=None)
+       P: • Playwright Headless Automation Worker for university E-Zone synchronization (col=default, bold=None)
+       P: • Firebase Auth Token Middleware + Role-Based Access Control (RBAC) (col=default, bold=None)
+       P: • Dual Error Shielding: Resilient API proxies with Sentry telemetry & fallback (col=default, bold=None)
+       P: • Hosted on Railway Container PaaS with automatic scaling (col=default, bold=None)
+  Shape 11 (Rounded Rectangle 11) [left=626.4, top=122.4, w=273.6, h=360.0]:
+     Fill: 16213E | Border: 334155
+  Shape 12 (TextBox 12) [left=640.8, top=136.8, w=244.8, h=331.2]:
+     Fill: None | Border: None
+       P: DATA & INTELLIGENCE TIER (col=default, bold=None)
+       P: • MongoDB Atlas: Relational-modeled schema for users, profiles & timetables (col=default, bold=None)
+       P: • GridFS File Storage: Chunked binary document storage for verifiable certificates (col=default, bold=None)
+       P: • Google Gemini 2.5 Flash: Context-injected LLM for live classroom & schedule Q&A (col=default, bold=None)
+       P: • Google Sheets Live Archival: Bi-directional administrative audit synchronization (col=default, bold=None)
+       P: • Triple Git Remote Mirroring: Provenance tracking across 3 GitHub accounts (col=default, bold=None)
+
+==================== SLIDE 4 ====================
+  Shape 1 (Rectangle 1) [left=0.0, top=0.0, w=960.0, h=540.0]:
+     Fill: 0B132B | Border: None
+  Shape 2 (TextBox 2) [left=57.6, top=28.8, w=720.0, h=25.2]:
+     Fill: None | Border: None
+       P: CORE CAPABILITY • PORTAL INTEGRATION (col=default, bold=None)
+  Shape 3 (TextBox 3) [left=57.6, top=54.0, w=842.4, h=57.6]:
+     Fill: None | Border: None
+       P: Module 1: Automated E-Zone Profile & Timetable Sync (col=default, bold=None)
+  Shape 4 (Rectangle 4) [left=57.6, top=504.0, w=844.8, h=1.4]:
+     Fill: 334155 | Border: None
+  Shape 5 (TextBox 5) [left=57.6, top=507.6, w=648.0, h=25.2]:
+     Fill: None | Border: None
+       P: Academic Universe (AU) | Project Progress & Technical Evaluation | Presenter: Aashish Rajput (2023329421) (col=default, 
+  Shape 6 (TextBox 6) [left=828.0, top=507.6, w=72.0, h=25.2]:
+     Fill: None | Border: None
+       P: 4 / 10 (col=default, bold=None)
+  Shape 7 (Rounded Rectangle 7) [left=57.6, top=122.4, w=489.6, h=360.0]:
+     Fill: 16213E | Border: 334155
+  Shape 8 (TextBox 8) [left=75.6, top=136.8, w=453.6, h=331.2]:
+     Fill: None | Border: None
+       P: Automated University Portal Integration (col=default, bold=None)
+       P: ✔ Playwright Automation Engine:  (col=default, bold=None) Performs automated browser interactions with the Sharda Univer
+       P: ✔ Two-Factor Student Email OTP:  (col=default, bold=None) Secure 2-step verification protocol requiring the student to i
+       P: ✔ Real Attendance & Grade Synchronization:  (col=default, bold=None) Captures course-level attendance percentages (e.g. 
+       P: ✔ Full Institutional Timetable Parsing:  (col=default, bold=None) Extracts complete Monday–Saturday schedules with exact
+       P: ✔ Google Sheets + MongoDB Dual Storage:  (col=default, bold=None) Persists clean normalized models into MongoDB Atlas wh
+  Shape 9 (Rounded Rectangle 9) [left=561.6, top=122.4, w=340.8, h=360.0]:
+     Fill: 1B263B | Border: 10B981
+  Shape 10 (TextBox 10) [left=579.6, top=136.8, w=302.4, h=331.2]:
+     Fill: None | Border: None
+       P: VERIFIED IN LIVE DATABASE (col=default, bold=None)
+       P: STUDENT SYSTEM ID (col=default, bold=None)
+       P: 2023329421 (Aashish Rajput) (col=default, bold=None)
+       P: LIVE SYNCED TIMETABLE (col=default, bold=None)
+       P: 12 Active Weekly Class Slots (col=default, bold=None)
+       P: CLASSROOM ALLOCATIONS (col=default, bold=None)
+       P: Room 206 Block 3, Room 008 Block 3 (col=default, bold=None)
+       P: FACULTY INTEGRATED (col=default, bold=None)
+       P: Dr. Batri K, Ms. Akanksha Srivastav (col=default, bold=None)
+       P: SYNC PROTOCOL STATUS (col=default, bold=None)
+       P: OTP Verified & DB Active (col=default, bold=None)
+       P: GOOGLE SHEETS STREAM (col=default, bold=None)
+       P: Automated Append Enabled (col=default, bold=None)
+
+==================== SLIDE 5 ====================
+  Shape 1 (Rectangle 1) [left=0.0, top=0.0, w=960.0, h=540.0]:
+     Fill: 0B132B | Border: None
+  Shape 2 (TextBox 2) [left=57.6, top=28.8, w=720.0, h=25.2]:
+     Fill: None | Border: None
+       P: CONTEXT-AWARE ARTIFICIAL INTELLIGENCE (col=default, bold=None)
+  Shape 3 (TextBox 3) [left=57.6, top=54.0, w=842.4, h=57.6]:
+     Fill: None | Border: None
+       P: Module 2: Live AI Campus Chatbot with Classroom Intelligence (col=default, bold=None)
+  Shape 4 (Rectangle 4) [left=57.6, top=504.0, w=844.8, h=1.4]:
+     Fill: 334155 | Border: None
+  Shape 5 (TextBox 5) [left=57.6, top=507.6, w=648.0, h=25.2]:
+     Fill: None | Border: None
+       P: Academic Universe (AU) | Project Progress & Technical Evaluation | Presenter: Aashish Rajput (2023329421) (col=default, 
+  Shape 6 (TextBox 6) [left=828.0, top=507.6, w=72.0, h=25.2]:
+     Fill: None | Border: None
+       P: 5 / 10 (col=default, bold=None)
+  Shape 7 (Rounded Rectangle 7) [left=57.6, top=122.4, w=414.0, h=360.0]:
+     Fill: 16213E | Border: 334155
+  Shape 8 (TextBox 8) [left=75.6, top=136.8, w=378.0, h=331.2]:
+     Fill: None | Border: None
+       P: Real Classroom Context Injection (col=default, bold=None)
+       P: ★ Dynamic Schedule Querying:  (col=default, bold=None) Before querying Google Gemini, the backend queries MongoDB 'Acade
+       P: ★ Exact Room & Teacher Resolution:  (col=default, bold=None) Injects live classroom blocks: Room 206 Block 3 (Research M
+       P: ★ Zero Generic Hallucinations:  (col=default, bold=None) Instead of vague boilerplate responses, the AI answers student 
+       P: ★ Emotional Support & Campus Mentoring:  (col=default, bold=None) Built-in emotional intelligence layer providing empath
+       P: ★ Model Failover Architecture:  (col=default, bold=None) Primary inference via Google Gemini 2.5 Flash with resilient re
+  Shape 9 (Rounded Rectangle 9) [left=486.0, top=122.4, w=416.4, h=360.0]:
+     Fill: 1B263B | Border: 38BDF8
+  Shape 10 (TextBox 10) [left=504.0, top=136.8, w=381.6, h=331.2]:
+     Fill: None | Border: None
+       P: LIVE TESTED PROMPT INTERACTION (col=default, bold=None)
+       P: Student Prompt: (col=default, bold=None)
+       P: Where is my Research Methodology lecture today, and who teaches it? (col=default, bold=None)
+       P: Academic Universe AI: (col=default, bold=None)
+       P: Your Research Methodology class is scheduled in Room 206, Block 3 from 10:40 AM to 11:25 AM. The course is conducted by 
+       P: Student Prompt: (col=default, bold=None)
+       P: Where do I go for my Simulation Lab session? (col=default, bold=None)
+       P: Academic Universe AI: (col=default, bold=None)
+       P: Your Technical Skill Enhancement Simulation Lab takes place in Room No 008, Block 3 under the guidance of Mr. Mayank Agg
+
+==================== SLIDE 6 ====================
+  Shape 1 (Rectangle 1) [left=0.0, top=0.0, w=960.0, h=540.0]:
+     Fill: 0B132B | Border: None
+  Shape 2 (TextBox 2) [left=57.6, top=28.8, w=720.0, h=25.2]:
+     Fill: None | Border: None
+       P: ALGORITHMIC SCHEDULING & COLLABORATION (col=default, bold=None)
+  Shape 3 (TextBox 3) [left=57.6, top=54.0, w=842.4, h=57.6]:
+     Fill: None | Border: None
+       P: Module 3: Overlap Engine — Smart Student Free-Time Planner (col=default, bold=None)
+  Shape 4 (Rectangle 4) [left=57.6, top=504.0, w=844.8, h=1.4]:
+     Fill: 334155 | Border: None
+  Shape 5 (TextBox 5) [left=57.6, top=507.6, w=648.0, h=25.2]:
+     Fill: None | Border: None
+       P: Academic Universe (AU) | Project Progress & Technical Evaluation | Presenter: Aashish Rajput (2023329421) (col=default, 
+  Shape 6 (TextBox 6) [left=828.0, top=507.6, w=72.0, h=25.2]:
+     Fill: None | Border: None
+       P: 6 / 10 (col=default, bold=None)
+  Shape 7 (Rounded Rectangle 7) [left=57.6, top=122.4, w=414.0, h=360.0]:
+     Fill: 16213E | Border: 334155
+  Shape 8 (TextBox 8) [left=75.6, top=136.8, w=378.0, h=331.2]:
+     Fill: None | Border: None
+       P: Mathematical Free-Slot Intersection (col=default, bold=None)
+       P: ✔ N-Way Interval Intersection:  (col=default, bold=None) Mathematical interval algorithm that maps daily schedules onto 
+       P: ✔ Multi-Student Selection (1 to 5):  (col=default, bold=None) Allows any student to search and pick up to 5 peers in the
+       P: ✔ Live Identity & System ID Resolution:  (col=default, bold=None) Dynamically links MongoDB 'User' records with 'EzoneAc
+       P: ✔ Schedule Sync Verification Badges:  (col=default, bold=None) Visual '✅ Synced Schedule' vs '⚠ Never Synced' status bad
+       P: ✔ Host (You) Status Card:  (col=default, bold=None) Prominently highlights the logged-in user as the meeting host with t
+  Shape 9 (Rounded Rectangle 9) [left=486.0, top=122.4, w=416.4, h=360.0]:
+     Fill: 1B263B | Border: 10B981
+  Shape 10 (TextBox 10) [left=504.0, top=136.8, w=381.6, h=331.2]:
+     Fill: None | Border: None
+       P: HOW OVERLAP ENGINE FINDS COMMON TIME (col=default, bold=None)
+       P: Step 1: Student Search (col=default, bold=None)
+       P: Search peers by System ID (e.g. 2024427058) or Name. Tenant-isolated to Sharda University. (col=default, bold=None)
+       P: Step 2: Timetable Ingestion (col=default, bold=None)
+       P: Engine fetches verified E-Zone timetable matrix for Host + all selected participant IDs. (col=default, bold=None)
+       P: Step 3: Interval Intersection (col=default, bold=None)
+       P: Performs mathematical set intersection: Free(Day) = Free(Host) ∩ Free(Student A) ∩ Free(Student B). (col=default, bold=N
+       P: Step 4: AI Ranked Slots (col=default, bold=None)
+       P: Consecutive free periods are grouped into 1-hour or 2-hour blocks and ranked for optimal study sessions. (col=default, b
+       P: Step 5: Instant Share / Export (col=default, bold=None)
+       P: One-click copy of meeting recommendations with exact period timings and room recommendations. (col=default, bold=None)
+
+==================== SLIDE 7 ====================
+  Shape 1 (Rectangle 1) [left=0.0, top=0.0, w=960.0, h=540.0]:
+     Fill: 0B132B | Border: None
+  Shape 2 (TextBox 2) [left=57.6, top=28.8, w=720.0, h=25.2]:
+     Fill: None | Border: None
+       P: RESEARCH & SCHOLARLY PUBLICATION (col=default, bold=None)
+  Shape 3 (TextBox 3) [left=57.6, top=54.0, w=842.4, h=57.6]:
+     Fill: None | Border: None
+       P: Module 4: AI-Powered Academic Research Wing (col=default, bold=None)
+  Shape 4 (Rectangle 4) [left=57.6, top=504.0, w=844.8, h=1.4]:
+     Fill: 334155 | Border: None
+  Shape 5 (TextBox 5) [left=57.6, top=507.6, w=648.0, h=25.2]:
+     Fill: None | Border: None
+       P: Academic Universe (AU) | Project Progress & Technical Evaluation | Presenter: Aashish Rajput (2023329421) (col=default, 
+  Shape 6 (TextBox 6) [left=828.0, top=507.6, w=72.0, h=25.2]:
+     Fill: None | Border: None
+       P: 7 / 10 (col=default, bold=None)
+  Shape 7 (Rounded Rectangle 7) [left=57.6, top=122.4, w=273.6, h=165.6]:
+     Fill: 16213E | Border: 334155
+  Shape 8 (TextBox 8) [left=72.0, top=136.8, w=244.8, h=136.8]:
+     Fill: None | Border: None
+       P: 1. TOPIC GENERATION (col=default, bold=None)
+       P: Explores high-impact research topics, problem formulations, and state-of-the-art gap analysis based on student's enginee
+  Shape 9 (Rounded Rectangle 9) [left=342.0, top=122.4, w=273.6, h=165.6]:
+     Fill: 16213E | Border: 334155
+  Shape 10 (TextBox 10) [left=356.4, top=136.8, w=244.8, h=136.8]:
+     Fill: None | Border: None
+       P: 2. RESEARCH OUTLINE (col=default, bold=None)
+       P: Synthesizes structured academic outlines following IEEE and ACM standard templates with clear subsection breakdowns. (co
+  Shape 11 (Rounded Rectangle 11) [left=626.4, top=122.4, w=273.6, h=165.6]:
+     Fill: 16213E | Border: 334155
+  Shape 12 (TextBox 12) [left=640.8, top=136.8, w=244.8, h=136.8]:
+     Fill: None | Border: None
+       P: 3. CONTENT WRITER (col=default, bold=None)
+       P: Full-length section generation with interactive prompt improvement, literature review expansion, and formula formatting.
+  Shape 13 (Rounded Rectangle 13) [left=57.6, top=302.4, w=273.6, h=165.6]:
+     Fill: 16213E | Border: 334155
+  Shape 14 (TextBox 14) [left=72.0, top=316.8, w=244.8, h=136.8]:
+     Fill: None | Border: None
+       P: 4. ABSTRACT & CITATIONS (col=default, bold=None)
+       P: Generates concise IEEE-style abstracts and properly formatted scholarly bibliographies with DOI indexing. (col=default, 
+  Shape 15 (Rounded Rectangle 15) [left=342.0, top=302.4, w=273.6, h=165.6]:
+     Fill: 16213E | Border: 334155
+  Shape 16 (TextBox 16) [left=356.4, top=316.8, w=244.8, h=136.8]:
+     Fill: None | Border: None
+       P: 5. FINAL EXPORT (col=default, bold=None)
+       P: One-click export directly to publication-ready PDF and editable Microsoft Word (DOCX) files. (col=default, bold=None)
+  Shape 17 (Rounded Rectangle 17) [left=626.4, top=302.4, w=273.6, h=165.6]:
+     Fill: 16213E | Border: 334155
+  Shape 18 (TextBox 18) [left=640.8, top=316.8, w=244.8, h=136.8]:
+     Fill: None | Border: None
+       P: 6. DRAFT HISTORY (col=default, bold=None)
+       P: Saves all research iterations in MongoDB Atlas so students can resume drafting papers at any time. (col=default, bold=No
+
+==================== SLIDE 8 ====================
+  Shape 1 (Rectangle 1) [left=0.0, top=0.0, w=960.0, h=540.0]:
+     Fill: 0B132B | Border: None
+  Shape 2 (TextBox 2) [left=57.6, top=28.8, w=720.0, h=25.2]:
+     Fill: None | Border: None
+       P: DIGITAL CREDENTIALING & GMAIL SYNC (col=default, bold=None)
+  Shape 3 (TextBox 3) [left=57.6, top=54.0, w=842.4, h=57.6]:
+     Fill: None | Border: None
+       P: Module 5: Verifiable Academic Records & Document Intelligence (col=default, bold=None)
+  Shape 4 (Rectangle 4) [left=57.6, top=504.0, w=844.8, h=1.4]:
+     Fill: 334155 | Border: None
+  Shape 5 (TextBox 5) [left=57.6, top=507.6, w=648.0, h=25.2]:
+     Fill: None | Border: None
+       P: Academic Universe (AU) | Project Progress & Technical Evaluation | Presenter: Aashish Rajput (2023329421) (col=default, 
+  Shape 6 (TextBox 6) [left=828.0, top=507.6, w=72.0, h=25.2]:
+     Fill: None | Border: None
+       P: 8 / 10 (col=default, bold=None)
+  Shape 7 (Rounded Rectangle 7) [left=57.6, top=122.4, w=414.0, h=165.6]:
+     Fill: 16213E | Border: 334155
+  Shape 8 (TextBox 8) [left=72.0, top=133.2, w=385.2, h=144.0]:
+     Fill: None | Border: None
+       P: Verifiable Academic Records (GridFS Vault) (col=default, bold=None)
+       P: • Secure storage of 57+ genuine academic achievement records & certificates (col=default, bold=None)
+       P: • Binary files stored in MongoDB GridFS with SHA-256 integrity verification (col=default, bold=None)
+       P: • Eliminates lost certificates and simplifies placement credential sharing (col=default, bold=None)
+       P: • Centralized student profile showcasing academic excellence & GPA progression (col=default, bold=None)
+  Shape 9 (Rounded Rectangle 9) [left=486.0, top=122.4, w=414.0, h=165.6]:
+     Fill: 16213E | Border: 334155
+  Shape 10 (TextBox 10) [left=500.4, top=133.2, w=385.2, h=144.0]:
+     Fill: None | Border: None
+       P: Document Intelligence Pipeline (col=default, bold=None)
+       P: • Automated thumbnail generation for instant document inspection and preview (col=default, bold=None)
+       P: • Classification tags: Technical certifications, hackathons, academic degrees (col=default, bold=None)
+       P: • Full modal preview with high-resolution zooming and download capabilities (col=default, bold=None)
+       P: • Directly linked into student placement resumes and faculty review dashboards (col=default, bold=None)
+  Shape 11 (Rounded Rectangle 11) [left=57.6, top=302.4, w=414.0, h=165.6]:
+     Fill: 16213E | Border: 334155
+  Shape 12 (TextBox 12) [left=72.0, top=313.2, w=385.2, h=144.0]:
+     Fill: None | Border: None
+       P: Gmail Events Synchronization Engine (col=default, bold=None)
+       P: • Google OAuth 2.0 Web Client authentication with university email scope (col=default, bold=None)
+       P: • Scans incoming student Gmail messages for institutional notices and seminars (col=default, bold=None)
+       P: • Extracts event dates, seminar venues, and deadlines into calendar cards (col=default, bold=None)
+       P: • Eliminates missed departmental notices and campus registration deadlines (col=default, bold=None)
+  Shape 13 (Rounded Rectangle 13) [left=486.0, top=302.4, w=414.0, h=165.6]:
+     Fill: 16213E | Border: 334155
+  Shape 14 (TextBox 14) [left=500.4, top=313.2, w=385.2, h=144.0]:
+     Fill: None | Border: None
+       P: Institutional Audit & Security Guard (col=default, bold=None)
+       P: • Strict tenant isolation ensuring student data cannot be accessed across orgs (col=default, bold=None)
+       P: • Firebase Admin service account integration for trusted server-side execution (col=default, bold=None)
+       P: • Credential token cleansing to eliminate OAuth redirect and newline errors (col=default, bold=None)
+       P: • Real-time Sentry exception capturing and performance monitoring (col=default, bold=None)
+
+==================== SLIDE 9 ====================
+  Shape 1 (Rectangle 1) [left=0.0, top=0.0, w=960.0, h=540.0]:
+     Fill: 0B132B | Border: None
+  Shape 2 (TextBox 2) [left=57.6, top=28.8, w=720.0, h=25.2]:
+     Fill: None | Border: None
+       P: STUDENT SUCCESS & PRODUCTIVITY TOOLS (col=default, bold=None)
+  Shape 3 (TextBox 3) [left=57.6, top=54.0, w=842.4, h=57.6]:
+     Fill: None | Border: None
+       P: Module 6: Placement Preparation & Campus Navigation (col=default, bold=None)
+  Shape 4 (Rectangle 4) [left=57.6, top=504.0, w=844.8, h=1.4]:
+     Fill: 334155 | Border: None
+  Shape 5 (TextBox 5) [left=57.6, top=507.6, w=648.0, h=25.2]:
+     Fill: None | Border: None
+       P: Academic Universe (AU) | Project Progress & Technical Evaluation | Presenter: Aashish Rajput (2023329421) (col=default, 
+  Shape 6 (TextBox 6) [left=828.0, top=507.6, w=72.0, h=25.2]:
+     Fill: None | Border: None
+       P: 9 / 10 (col=default, bold=None)
+  Shape 7 (Rounded Rectangle 7) [left=57.6, top=122.4, w=414.0, h=165.6]:
+     Fill: 16213E | Border: 334155
+  Shape 8 (TextBox 8) [left=75.6, top=136.8, w=378.0, h=136.8]:
+     Fill: None | Border: None
+       P: 💼  Career & Verified Profile (col=default, bold=None)
+       P: A unified student showcase displaying verified certificates, academic semester milestones, and technical accomplishments
+  Shape 9 (Rounded Rectangle 9) [left=486.0, top=122.4, w=414.0, h=165.6]:
+     Fill: 16213E | Border: 334155
+  Shape 10 (TextBox 10) [left=504.0, top=136.8, w=378.0, h=136.8]:
+     Fill: None | Border: None
+       P: 💻  Code Arena & Problem Solving Ledger (col=default, bold=None)
+       P: Built-in engineering coding environment with problem tracking, bug bounty challenges, solution submission, and student c
+  Shape 11 (Rounded Rectangle 11) [left=57.6, top=302.4, w=414.0, h=165.6]:
+     Fill: 16213E | Border: 334155
+  Shape 12 (TextBox 12) [left=75.6, top=316.8, w=378.0, h=136.8]:
+     Fill: None | Border: None
+       P: 🚪  Find Faculty Cabin Search Engine (col=default, bold=None)
+       P: Instant campus search bar in the top navigation allowing students to locate faculty cabin numbers, floor levels, and cam
+  Shape 13 (Rounded Rectangle 13) [left=486.0, top=302.4, w=414.0, h=165.6]:
+     Fill: 16213E | Border: 334155
+  Shape 14 (TextBox 14) [left=504.0, top=316.8, w=378.0, h=136.8]:
+     Fill: None | Border: None
+       P: 🧭  Streamlined Non-Redundant Navigation (col=default, bold=None)
+       P: Deduplicated user experience: Top Navbar hosts global modules (Growth Hub, Career Profile, AI Chatbot, Research Wing, Co
+
+==================== SLIDE 10 ====================
+  Shape 1 (Rectangle 1) [left=0.0, top=0.0, w=960.0, h=540.0]:
+     Fill: 0B132B | Border: None
+  Shape 2 (TextBox 2) [left=57.6, top=28.8, w=720.0, h=25.2]:
+     Fill: None | Border: None
+       P: EVALUATION SUMMARY & NEXT MILESTONES (col=default, bold=None)
+  Shape 3 (TextBox 3) [left=57.6, top=54.0, w=842.4, h=57.6]:
+     Fill: None | Border: None
+       P: Live Production Status, Achievements & Future Roadmap (col=default, bold=None)
+  Shape 4 (Rectangle 4) [left=57.6, top=504.0, w=844.8, h=1.4]:
+     Fill: 334155 | Border: None
+  Shape 5 (TextBox 5) [left=57.6, top=507.6, w=648.0, h=25.2]:
+     Fill: None | Border: None
+       P: Academic Universe (AU) | Project Progress & Technical Evaluation | Presenter: Aashish Rajput (2023329421) (col=default, 
+  Shape 6 (TextBox 6) [left=828.0, top=507.6, w=72.0, h=25.2]:
+     Fill: None | Border: None
+       P: 10 / 10 (col=default, bold=None)
+  Shape 7 (Rounded Rectangle 7) [left=57.6, top=122.4, w=414.0, h=360.0]:
+     Fill: 16213E | Border: 10B981
+  Shape 8 (TextBox 8) [left=75.6, top=136.8, w=378.0, h=331.2]:
+     Fill: None | Border: None
+       P: Genuinely Completed & Live Today (col=default, bold=None)
+       P: ✔ Vercel Production Deployment:  (col=default, bold=None) Live at 'https://academicuniverse.vercel.app' with 50 static &
+       P: ✔ Railway Backend Microservices:  (col=default, bold=None) Containerized Express TypeScript backend with verified MongoD
+       P: ✔ Authorized E-Zone Sync:  (col=default, bold=None) Real Playwright automation syncing timetables, courses, and attendan
+       P: ✔ Contextual Gemini Chatbot:  (col=default, bold=None) Inference live with classroom locations (Room 206 Block 3) and te
+       P: ✔ Functional Overlap Planner:  (col=default, bold=None) Full N-way schedule intersection live with genuine student names
+       P: ✔ Zero-Mock Production Data:  (col=default, bold=None) 57+ verified academic records, 2 live timetables, and real authen
+  Shape 9 (Rounded Rectangle 9) [left=486.0, top=122.4, w=416.4, h=360.0]:
+     Fill: 1B263B | Border: 38BDF8
+  Shape 10 (TextBox 10) [left=504.0, top=136.8, w=381.6, h=331.2]:
+     Fill: None | Border: None
+       P: Upcoming Engineering Roadmap (col=default, bold=None)
+       P: ➔ Mobile Progressive Web App (PWA):  (col=default, bold=None) Offline timetable caching and fast home-screen launch on m
+       P: ➔ Real-Time Push Notifications:  (col=default, bold=None) Instant WebPush alerts for classroom room-swaps and cancelled 
+       P: ➔ Automated Peer Review & Benchmarking:  (col=default, bold=None) Integration with AU DIC benchmark pipeline for evaluat
+       P: ➔ Multi-University Tenant Expansion:  (col=default, bold=None) Expanding tenant isolation to support affiliated institut
+       P: THANK YOU! OPEN FOR QUESTIONS & EVALUATION DEMO (col=default, bold=None)

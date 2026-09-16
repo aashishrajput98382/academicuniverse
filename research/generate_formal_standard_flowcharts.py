@@ -233,14 +233,14 @@ def generate_formal_figure_3():
     draw_arrow(ax, 6.2, 4.6, 7.2, 4.6)
 
     draw_rect(ax, 8.4, 4.6, 2.4, 0.55, "Resolution Normalization\n(300 DPI Grid Resize)", color="#FFFFFF", border="#4A5568")
-    draw_arrow(ax, 9.6, 4.6, 10.6, 4.6)
 
-    draw_connector(ax, 10.9, 4.6, 0.25, "1", color="#E2E8F0", border="#4A5568")
+    # Connect Row 1 to Row 2 with arrow (replacing '1' connector symbol)
+    ax.plot([9.6, 10.9], [4.6, 4.6], color="#2D3748", linewidth=1.2, zorder=2)
+    draw_arrow(ax, 10.9, 4.6, 10.9, 3.8)
+    ax.plot([10.9, 10.9], [3.8, 3.1], color="#2D3748", linewidth=1.2, zorder=2)
+    draw_arrow(ax, 10.9, 3.1, 9.6, 3.1)
 
     # Row 2 (Right to Left)
-    draw_connector(ax, 10.9, 3.1, 0.25, "1", color="#E2E8F0", border="#4A5568")
-    draw_arrow(ax, 10.65, 3.1, 9.6, 3.1)
-
     draw_rect(ax, 8.4, 3.1, 2.4, 0.55, "Zero-Shot Prompt Inject\n(Academic Schema Target)", color="#FFFFFF", border="#4A5568")
     draw_arrow(ax, 7.2, 3.1, 6.2, 3.1)
 
@@ -254,10 +254,14 @@ def generate_formal_figure_3():
     draw_diamond(ax, 1.8, 1.6, 2.2, 0.8, "JSON Valid?", color="#ED8936", border="#C05621")
     draw_arrow(ax, 2.9, 1.6, 4.0, 1.6, "Yes (Valid)", text_pos='top')
     
-    # Retry branch
+    # Retry branch: Schema Repair
     draw_arrow(ax, 1.8, 1.2, 1.8, 0.65, "No", text_pos='right')
     draw_rect(ax, 2.8, 0.65, 1.6, 0.4, "Schema Repair", color="#FED7D7", border="#E53E3E")
-    ax.plot([1.8, 2.0], [0.65, 0.65], color="#E53E3E", linewidth=1.2)
+    ax.plot([1.8, 2.0], [0.65, 0.65], color="#2D3748", linewidth=1.2)
+
+    # Connect Schema Repair to End with arrow
+    ax.plot([3.6, 10.9], [0.65, 0.65], color="#2D3748", linewidth=1.2, zorder=2)
+    draw_arrow(ax, 10.9, 0.65, 10.9, 1.35, color="#2D3748")
 
     draw_predefined_process(ax, 5.2, 1.6, 2.4, 0.55, "6-Stage Semantic\nCanonicalNormalizer", color="#EBF8FF", border="#2B6CB0")
     draw_arrow(ax, 6.4, 1.6, 7.4, 1.6)

@@ -1,0 +1,146 @@
+flowchart LR
+    %% =========================================================================
+    %% ACADEMIC UNIVERSE (AU) — HORIZONTAL SYSTEM FLOWCHART (flowchart LR)
+    %% Compatible with draw.io (Insert -> Advanced -> Mermaid)
+    %% =========================================================================
+
+    %% STAGE 1: AUTHENTICATION & IDENTITY PLANE (LEFT)
+    subgraph STAGE1 ["🔐 1. AUTHENTICATION & IDENTITY PLANE"]
+        direction LR
+        S1_Entry["User Lands on /login<br/><i>Domain: @ug.sharda.ac.in</i>"]
+        S1_OAuth["Google OAuth 2.0 Client<br/><i>Firebase Auth Verification</i>"]
+        S1_DBMatch["MongoDB Atlas Match<br/><i>Resolve Student Record</i>"]
+        S1_JWT["RS256 JWT Issuance<br/><i>RBAC: STUDENT / FACULTY</i>"]
+        S1_Redirect["Session Mount<br/><i>/dashboard/student</i>"]
+
+        S1_Entry --> S1_OAuth --> S1_DBMatch --> S1_JWT --> S1_Redirect
+    end
+
+    %% STAGE 2: DEDUPLICATED NAVIGATION PLANE
+    subgraph STAGE2 ["🧭 2. DEDUPLICATED DUAL NAVIGATION"]
+        direction TB
+        NavRouter{"Next.js 16 Router<br/>Zero-Redundancy Hub"}
+
+        subgraph TOP_NAV ["Top Navbar (Global 7 Portals)"]
+            direction TB
+            TN1["📈 Growth Hub (/growth)"]
+            TN2["💼 Career Profile (/career)"]
+            TN3["📚 Presence Central (/attendance)"]
+            TN4["🤖 Campus AI Bot (/campus-ai)"]
+            TN5["🔬 Research Wing (/research)"]
+            TN6["💻 Code Arena (/arena)"]
+            TN7["🚪 Faculty Cabin (/cabin)"]
+        end
+
+        subgraph LEFT_SIDEBAR ["Left Sidebar (Operations 9 Modules)"]
+            direction TB
+            LS1["👤 Profile Details (/profile)"]
+            LS2["📧 Gmail Notices (/events)"]
+            LS3["✉️ Webmail Explorer (/mail)"]
+            LS4["🧠 Doc Vault Intelligence (/docs)"]
+            LS5["📅 Weekly Timetable (/schedule)"]
+            LS6["🔄 E-Zone Sync Engine (/sync)"]
+            LS7["🎯 Skills Proficiency (/skills)"]
+            LS8["📄 Placement Resume (/resume)"]
+            LS9["👥 Overlap Engine (/overlap)"]
+        end
+
+        NavRouter --> TOP_NAV
+        NavRouter --> LEFT_SIDEBAR
+    end
+
+    S1_Redirect ==> NavRouter
+
+    %% STAGE 3: 4 PARALLEL OPERATIONAL ENGINES (HORIZONTAL TRACKS)
+    subgraph STAGE3 ["⚡ 3. FOUR PARALLEL AUTONOMOUS ENGINES"]
+        direction TB
+
+        %% ENGINE A: E-ZONE PORTAL SYNC TRACK
+        subgraph ENG_A ["🔄 ENGINE A: E-ZONE PORTAL SYNC"]
+            direction LR
+            EA1["A1: Enter System ID<br/><i>2023329421</i>"]
+            EA2["A2: 2FA Webmail OTP<br/><i>University Handshake</i>"]
+            EA3["A3: Playwright Scraper<br/><i>DOM Attendance Parser</i>"]
+            EA4["A4: TS Normalization<br/><i>12 Weekly Slots</i>"]
+            EA5["A5: Dual Persistence<br/><i>Atlas + Sheets Audit</i>"]
+
+            EA1 --> EA2 --> EA3 --> EA4 --> EA5
+        end
+
+        %% ENGINE B: CONTEXTUAL CAMPUS AI TRACK
+        subgraph ENG_B ["🤖 ENGINE B: CONTEXTUAL CAMPUS AI"]
+            direction LR
+            EB1["B1: Student Chat Query<br/><i>'Where is my RM lecture?'</i>"]
+            EB2["B2: Real Schedule RAG<br/><i>Room 206 Block 3, Dr. Batri K</i>"]
+            EB3["B3: System Prompt Injection<br/><i>Zero-Hallucination Rules</i>"]
+            EB4["B4: Gemini 2.5 Inference<br/><i>Low-Latency Stream</i>"]
+            EB5["B5: Precise Live Guidance<br/><i>Room & Faculty Answer</i>"]
+
+            EB1 --> EB2 --> EB3 --> EB4 --> EB5
+        end
+
+        %% ENGINE C: OVERLAP MEETING PLANNER TRACK
+        subgraph ENG_C ["👥 ENGINE C: OVERLAP MEETING PLANNER"]
+            direction LR
+            EC1["C1: Host Status Card<br/><i>Aashish Rajput (2023329421)</i>"]
+            EC2["C2: Peer Directory Search<br/><i>Vishal Sharma (2024427058)</i>"]
+            EC3["C3: 54-Slot Bitmasking<br/><i>6 Days × 9 Periods</i>"]
+            EC4["C4: N-Way Intersection<br/><i>Free = ⋂ Free(U_i)</i>"]
+            EC5["C5: Ranked Meet Blocks<br/><i>1h/2h Contiguous Slots</i>"]
+
+            EC1 --> EC2 --> EC3 --> EC4 --> EC5
+        end
+
+        %% ENGINE D: RESEARCH WING PIPELINE TRACK
+        subgraph ENG_D ["🔬 ENGINE D: RESEARCH WING PIPELINE"]
+            direction LR
+            ED1["D1: AI Topic & Gap<br/><i>Literature SOTA Search</i>"]
+            ED2["D2: IEEE Outline Builder<br/><i>Section Hierarchy</i>"]
+            ED3["D3: Content & Proofreading<br/><i>Formulas & Academic Polish</i>"]
+            ED4["D4: BibTeX Citations<br/><i>Abstract & References</i>"]
+            ED5["D5: Dual Format Export<br/><i>Camera-Ready PDF & DOCX</i>"]
+
+            ED1 --> ED2 --> ED3 --> ED4 --> ED5
+        end
+    end
+
+    %% Route connections from Navigation to corresponding Engines
+    LS6 ==> EA1
+    TN4 ==> EB1
+    LS9 ==> EC1
+    TN5 ==> ED1
+
+    %% STAGE 4: PRODUCTION CLOUD INFRASTRUCTURE (RIGHT)
+    subgraph STAGE4 ["☁️ 4. CLOUD PERSISTENCE & INFRASTRUCTURE"]
+        direction TB
+        INFRA_VERCEL["Vercel Edge Platform<br/><i>Next.js 16 App Router | 50 Routes</i>"]
+        INFRA_RAILWAY["Railway Cloud Container<br/><i>Express API | Headless Playwright</i>"]
+        INFRA_MONGO["MongoDB Atlas Enterprise<br/><i>Users | Schedules | GridFS</i>"]
+        INFRA_AI["AI & External Services<br/><i>Gemini 2.5 Flash | Firebase | Sheets</i>"]
+    end
+
+    EA5 ==> INFRA_RAILWAY
+    EA5 ==> INFRA_MONGO
+    EB5 ==> INFRA_AI
+    EC5 ==> INFRA_MONGO
+    ED5 ==> INFRA_MONGO
+    ED5 ==> INFRA_VERCEL
+
+    %% =========================================================================
+    %% COLOR STYLING DIRECTIVES (DRAW.IO COMPATIBLE)
+    %% =========================================================================
+    classDef cyanStyle fill:#083344,stroke:#06b6d4,stroke-width:2px,color:#e0f2fe;
+    classDef indigoStyle fill:#1e1b4b,stroke:#6366f1,stroke-width:2px,color:#e0e7ff;
+    classDef emeraldStyle fill:#064e3b,stroke:#10b981,stroke-width:2px,color:#d1fae5;
+    classDef purpleStyle fill:#3b0764,stroke:#a855f7,stroke-width:2px,color:#fae8ff;
+    classDef amberStyle fill:#451a03,stroke:#f59e0b,stroke-width:2px,color:#fef3c7;
+    classDef roseStyle fill:#4c0519,stroke:#f43f5e,stroke-width:2px,color:#ffe4e6;
+    classDef infraStyle fill:#0f172a,stroke:#38bdf8,stroke-width:2px,color:#f8fafc;
+
+    class S1_Entry,S1_OAuth,S1_DBMatch,S1_JWT,S1_Redirect cyanStyle;
+    class NavRouter,TN1,TN2,TN3,TN4,TN5,TN6,TN7,LS1,LS2,LS3,LS4,LS5,LS6,LS7,LS8,LS9 indigoStyle;
+    class EA1,EA2,EA3,EA4,EA5 emeraldStyle;
+    class EB1,EB2,EB3,EB4,EB5 purpleStyle;
+    class EC1,EC2,EC3,EC4,EC5 amberStyle;
+    class ED1,ED2,ED3,ED4,ED5 roseStyle;
+    class INFRA_VERCEL,INFRA_RAILWAY,INFRA_MONGO,INFRA_AI infraStyle;

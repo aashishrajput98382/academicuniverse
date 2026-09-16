@@ -1,0 +1,196 @@
+
+==================== SLIDE 1 ====================
+  [Rounded Rectangle 4] def_sz=1000 | runs=[] -> LIVE PRODUCTION PLATFORM • 2026
+  [TextBox 5] def_sz=3600 | runs=[] -> ACADEMIC UNIVERSE (AU)
+  [TextBox 5] def_sz=1800 | runs=[] -> Next-Generation Intelligent Campus Operating & Academic Platform
+  [TextBox 5] def_sz=1250 | runs=[] -> A unified, production-deployed ecosystem combining automated E-Zo
+  [Rounded Rectangle 6] def_sz=1050 | runs=[] -> PRESENTER & CANDIDATE
+  [Rounded Rectangle 6] def_sz=1100 | runs=[] -> Aashish RajputSystem ID: 2023329421B.Tech CSE, Sharda University
+  [Rounded Rectangle 7] def_sz=1050 | runs=[] -> TECH STACK
+  [Rounded Rectangle 7] def_sz=1100 | runs=[] -> Next.js 16 (Turbopack) • TypeScriptExpress.js • MongoDB Atlas • G
+  [Rounded Rectangle 8] def_sz=1050 | runs=[] -> DEPLOYMENT STATUS
+  [Rounded Rectangle 8] def_sz=1100 | runs=[] -> Frontend: Vercel (Production)Backend: Railway MicroservicesRepo: 
+
+==================== SLIDE 2 ====================
+  [TextBox 2] def_sz=1000 | runs=[] -> BACKGROUND & ARCHITECTURAL NEED
+  [TextBox 3] def_sz=2400 | runs=[] -> Problem Statement & Project Motivation
+  [TextBox 5] def_sz=950 | runs=[] -> Academic Universe (AU) | Project Progress & Technical Evaluation 
+  [TextBox 6] def_sz=950 | runs=[] -> 2 / 10
+  [TextBox 8] def_sz=1400 | runs=[] -> 1. Severe Academic Fragmentation
+  [TextBox 8] def_sz=1150 | runs=[] -> Traditional university workflows force students and professors to
+  [TextBox 10] def_sz=1400 | runs=[] -> 2. Coordination & Free-Time Bottlenecks
+  [TextBox 10] def_sz=1150 | runs=[] -> University schedules run on 9 distinct 50-minute periods daily wi
+  [TextBox 12] def_sz=1400 | runs=[] -> 3. Unverified Digital Credentialing
+  [TextBox 12] def_sz=1150 | runs=[] -> Students lack a centralized, verifiable academic repository. Achi
+  [TextBox 14] def_sz=1400 | runs=[] -> 4. Context-Blind Campus AI Chatbots
+  [TextBox 14] def_sz=1150 | runs=[] -> Standard generative AI models know nothing about university reali
+
+==================== SLIDE 3 ====================
+  [TextBox 2] def_sz=1000 | runs=[] -> SYSTEM DESIGN & DATA PIPELINES
+  [TextBox 3] def_sz=2400 | runs=[] -> Full-Stack System Architecture & Production Stack
+  [TextBox 5] def_sz=950 | runs=[] -> Academic Universe (AU) | Project Progress & Technical Evaluation 
+  [TextBox 6] def_sz=950 | runs=[] -> 3 / 10
+  [TextBox 8] def_sz=1300 | runs=[] -> FRONTEND TIER (Client)
+  [TextBox 8] def_sz=1050 | runs=[] -> • Next.js 16 App Router + Turbopack engine for sub-second page tr
+  [TextBox 8] def_sz=1050 | runs=[] -> • Tailwind CSS + Radix UI + Lucide Icons for state-of-the-art dar
+  [TextBox 8] def_sz=1050 | runs=[] -> • Dual-Layer Navigation: Top Primary Navbar + Clean Left Dashboar
+  [TextBox 8] def_sz=1050 | runs=[] -> • React Query / Context for stateful synchronization of profiles 
+  [TextBox 8] def_sz=1050 | runs=[] -> • Hosted on Vercel Edge with zero-downtime automated CI/CD pipeli
+  [TextBox 10] def_sz=1300 | runs=[] -> BACKEND TIER (Microservices)
+  [TextBox 10] def_sz=1050 | runs=[] -> • Modular Express.js API framework fully written in strict TypeSc
+  [TextBox 10] def_sz=1050 | runs=[] -> • Playwright Headless Automation Worker for university E-Zone syn
+  [TextBox 10] def_sz=1050 | runs=[] -> • Firebase Auth Token Middleware + Role-Based Access Control (RBA
+  [TextBox 10] def_sz=1050 | runs=[] -> • Dual Error Shielding: Resilient API proxies with Sentry telemet
+  [TextBox 10] def_sz=1050 | runs=[] -> • Hosted on Railway Container PaaS with automatic scaling
+  [TextBox 12] def_sz=1300 | runs=[] -> DATA & INTELLIGENCE TIER
+  [TextBox 12] def_sz=1050 | runs=[] -> • MongoDB Atlas: Relational-modeled schema for users, profiles & 
+  [TextBox 12] def_sz=1050 | runs=[] -> • GridFS File Storage: Chunked binary document storage for verifi
+  [TextBox 12] def_sz=1050 | runs=[] -> • Google Gemini 2.5 Flash: Context-injected LLM for live classroo
+  [TextBox 12] def_sz=1050 | runs=[] -> • Google Sheets Live Archival: Bi-directional administrative audi
+  [TextBox 12] def_sz=1050 | runs=[] -> • Triple Git Remote Mirroring: Provenance tracking across 3 GitHu
+
+==================== SLIDE 4 ====================
+  [TextBox 2] def_sz=1000 | runs=[] -> CORE CAPABILITY • PORTAL INTEGRATION
+  [TextBox 3] def_sz=2400 | runs=[] -> Module 1: Automated E-Zone Profile & Timetable Sync
+  [TextBox 5] def_sz=950 | runs=[] -> Academic Universe (AU) | Project Progress & Technical Evaluation 
+  [TextBox 6] def_sz=950 | runs=[] -> 4 / 10
+  [TextBox 8] def_sz=1600 | runs=[] -> Automated University Portal Integration
+  [TextBox 8] def_sz=1050 | runs=[] -> ✔ Playwright Automation Engine: Performs automated browser intera
+  [TextBox 8] def_sz=1050 | runs=[] -> ✔ Two-Factor Student Email OTP: Secure 2-step verification protoc
+  [TextBox 8] def_sz=1050 | runs=[] -> ✔ Real Attendance & Grade Synchronization: Captures course-level 
+  [TextBox 8] def_sz=1050 | runs=[] -> ✔ Full Institutional Timetable Parsing: Extracts complete Monday–
+  [TextBox 8] def_sz=1050 | runs=[] -> ✔ Google Sheets + MongoDB Dual Storage: Persists clean normalized
+  [TextBox 10] def_sz=1300 | runs=[] -> VERIFIED IN LIVE DATABASE
+  [TextBox 10] def_sz=950 | runs=[] -> STUDENT SYSTEM ID
+  [TextBox 10] def_sz=1150 | runs=[] -> 2023329421 (Aashish Rajput)
+  [TextBox 10] def_sz=950 | runs=[] -> LIVE SYNCED TIMETABLE
+  [TextBox 10] def_sz=1150 | runs=[] -> 12 Active Weekly Class Slots
+  [TextBox 10] def_sz=950 | runs=[] -> CLASSROOM ALLOCATIONS
+  [TextBox 10] def_sz=1150 | runs=[] -> Room 206 Block 3, Room 008 Block 3
+  [TextBox 10] def_sz=950 | runs=[] -> FACULTY INTEGRATED
+  [TextBox 10] def_sz=1150 | runs=[] -> Dr. Batri K, Ms. Akanksha Srivastav
+  [TextBox 10] def_sz=950 | runs=[] -> SYNC PROTOCOL STATUS
+  [TextBox 10] def_sz=1150 | runs=[] -> OTP Verified & DB Active
+  [TextBox 10] def_sz=950 | runs=[] -> GOOGLE SHEETS STREAM
+  [TextBox 10] def_sz=1150 | runs=[] -> Automated Append Enabled
+
+==================== SLIDE 5 ====================
+  [TextBox 2] def_sz=1000 | runs=[] -> CONTEXT-AWARE ARTIFICIAL INTELLIGENCE
+  [TextBox 3] def_sz=2400 | runs=[] -> Module 2: Live AI Campus Chatbot with Classroom Intelligence
+  [TextBox 5] def_sz=950 | runs=[] -> Academic Universe (AU) | Project Progress & Technical Evaluation 
+  [TextBox 6] def_sz=950 | runs=[] -> 5 / 10
+  [TextBox 8] def_sz=1600 | runs=[] -> Real Classroom Context Injection
+  [TextBox 8] def_sz=1050 | runs=[] -> ★ Dynamic Schedule Querying: Before querying Google Gemini, the b
+  [TextBox 8] def_sz=1050 | runs=[] -> ★ Exact Room & Teacher Resolution: Injects live classroom blocks:
+  [TextBox 8] def_sz=1050 | runs=[] -> ★ Zero Generic Hallucinations: Instead of vague boilerplate respo
+  [TextBox 8] def_sz=1050 | runs=[] -> ★ Emotional Support & Campus Mentoring: Built-in emotional intell
+  [TextBox 8] def_sz=1050 | runs=[] -> ★ Model Failover Architecture: Primary inference via Google Gemin
+  [TextBox 10] def_sz=1300 | runs=[] -> LIVE TESTED PROMPT INTERACTION
+  [TextBox 10] def_sz=1000 | runs=[] -> Student Prompt:
+  [TextBox 10] def_sz=1050 | runs=[] -> Where is my Research Methodology lecture today, and who teaches i
+  [TextBox 10] def_sz=1000 | runs=[] -> Academic Universe AI:
+  [TextBox 10] def_sz=1050 | runs=[] -> Your Research Methodology class is scheduled in Room 206, Block 3
+  [TextBox 10] def_sz=1000 | runs=[] -> Student Prompt:
+  [TextBox 10] def_sz=1050 | runs=[] -> Where do I go for my Simulation Lab session?
+  [TextBox 10] def_sz=1000 | runs=[] -> Academic Universe AI:
+  [TextBox 10] def_sz=1050 | runs=[] -> Your Technical Skill Enhancement Simulation Lab takes place in Ro
+
+==================== SLIDE 6 ====================
+  [TextBox 2] def_sz=1000 | runs=[] -> ALGORITHMIC SCHEDULING & COLLABORATION
+  [TextBox 3] def_sz=2400 | runs=[] -> Module 3: Overlap Engine — Smart Student Free-Time Planner
+  [TextBox 5] def_sz=950 | runs=[] -> Academic Universe (AU) | Project Progress & Technical Evaluation 
+  [TextBox 6] def_sz=950 | runs=[] -> 6 / 10
+  [TextBox 8] def_sz=1600 | runs=[] -> Mathematical Free-Slot Intersection
+  [TextBox 8] def_sz=1050 | runs=[] -> ✔ N-Way Interval Intersection: Mathematical interval algorithm th
+  [TextBox 8] def_sz=1050 | runs=[] -> ✔ Multi-Student Selection (1 to 5): Allows any student to search 
+  [TextBox 8] def_sz=1050 | runs=[] -> ✔ Live Identity & System ID Resolution: Dynamically links MongoDB
+  [TextBox 8] def_sz=1050 | runs=[] -> ✔ Schedule Sync Verification Badges: Visual '✅ Synced Schedule' v
+  [TextBox 8] def_sz=1050 | runs=[] -> ✔ Host (You) Status Card: Prominently highlights the logged-in us
+  [TextBox 10] def_sz=1300 | runs=[] -> HOW OVERLAP ENGINE FINDS COMMON TIME
+  [TextBox 10] def_sz=1050 | runs=[] -> Step 1: Student Search
+  [TextBox 10] def_sz=1000 | runs=[] -> Search peers by System ID (e.g. 2024427058) or Name. Tenant-isola
+  [TextBox 10] def_sz=1050 | runs=[] -> Step 2: Timetable Ingestion
+  [TextBox 10] def_sz=1000 | runs=[] -> Engine fetches verified E-Zone timetable matrix for Host + all se
+  [TextBox 10] def_sz=1050 | runs=[] -> Step 3: Interval Intersection
+  [TextBox 10] def_sz=1000 | runs=[] -> Performs mathematical set intersection: Free(Day) = Free(Host) ∩ 
+  [TextBox 10] def_sz=1050 | runs=[] -> Step 4: AI Ranked Slots
+  [TextBox 10] def_sz=1000 | runs=[] -> Consecutive free periods are grouped into 1-hour or 2-hour blocks
+  [TextBox 10] def_sz=1050 | runs=[] -> Step 5: Instant Share / Export
+  [TextBox 10] def_sz=1000 | runs=[] -> One-click copy of meeting recommendations with exact period timin
+
+==================== SLIDE 7 ====================
+  [TextBox 2] def_sz=1000 | runs=[] -> RESEARCH & SCHOLARLY PUBLICATION
+  [TextBox 3] def_sz=2400 | runs=[] -> Module 4: AI-Powered Academic Research Wing
+  [TextBox 5] def_sz=950 | runs=[] -> Academic Universe (AU) | Project Progress & Technical Evaluation 
+  [TextBox 6] def_sz=950 | runs=[] -> 7 / 10
+  [TextBox 8] def_sz=1200 | runs=[] -> 1. TOPIC GENERATION
+  [TextBox 8] def_sz=1050 | runs=[] -> Explores high-impact research topics, problem formulations, and s
+  [TextBox 10] def_sz=1200 | runs=[] -> 2. RESEARCH OUTLINE
+  [TextBox 10] def_sz=1050 | runs=[] -> Synthesizes structured academic outlines following IEEE and ACM s
+  [TextBox 12] def_sz=1200 | runs=[] -> 3. CONTENT WRITER
+  [TextBox 12] def_sz=1050 | runs=[] -> Full-length section generation with interactive prompt improvemen
+  [TextBox 14] def_sz=1200 | runs=[] -> 4. ABSTRACT & CITATIONS
+  [TextBox 14] def_sz=1050 | runs=[] -> Generates concise IEEE-style abstracts and properly formatted sch
+  [TextBox 16] def_sz=1200 | runs=[] -> 5. FINAL EXPORT
+  [TextBox 16] def_sz=1050 | runs=[] -> One-click export directly to publication-ready PDF and editable M
+  [TextBox 18] def_sz=1200 | runs=[] -> 6. DRAFT HISTORY
+  [TextBox 18] def_sz=1050 | runs=[] -> Saves all research iterations in MongoDB Atlas so students can re
+
+==================== SLIDE 8 ====================
+  [TextBox 2] def_sz=1000 | runs=[] -> DIGITAL CREDENTIALING & GMAIL SYNC
+  [TextBox 3] def_sz=2400 | runs=[] -> Module 5: Verifiable Academic Records & Document Intelligence
+  [TextBox 5] def_sz=950 | runs=[] -> Academic Universe (AU) | Project Progress & Technical Evaluation 
+  [TextBox 6] def_sz=950 | runs=[] -> 8 / 10
+  [TextBox 8] def_sz=1300 | runs=[] -> Verifiable Academic Records (GridFS Vault)
+  [TextBox 8] def_sz=1000 | runs=[] -> • Secure storage of 57+ genuine academic achievement records & ce
+  [TextBox 8] def_sz=1000 | runs=[] -> • Binary files stored in MongoDB GridFS with SHA-256 integrity ve
+  [TextBox 8] def_sz=1000 | runs=[] -> • Eliminates lost certificates and simplifies placement credentia
+  [TextBox 8] def_sz=1000 | runs=[] -> • Centralized student profile showcasing academic excellence & GP
+  [TextBox 10] def_sz=1300 | runs=[] -> Document Intelligence Pipeline
+  [TextBox 10] def_sz=1000 | runs=[] -> • Automated thumbnail generation for instant document inspection 
+  [TextBox 10] def_sz=1000 | runs=[] -> • Classification tags: Technical certifications, hackathons, acad
+  [TextBox 10] def_sz=1000 | runs=[] -> • Full modal preview with high-resolution zooming and download ca
+  [TextBox 10] def_sz=1000 | runs=[] -> • Directly linked into student placement resumes and faculty revi
+  [TextBox 12] def_sz=1300 | runs=[] -> Gmail Events Synchronization Engine
+  [TextBox 12] def_sz=1000 | runs=[] -> • Google OAuth 2.0 Web Client authentication with university emai
+  [TextBox 12] def_sz=1000 | runs=[] -> • Scans incoming student Gmail messages for institutional notices
+  [TextBox 12] def_sz=1000 | runs=[] -> • Extracts event dates, seminar venues, and deadlines into calend
+  [TextBox 12] def_sz=1000 | runs=[] -> • Eliminates missed departmental notices and campus registration 
+  [TextBox 14] def_sz=1300 | runs=[] -> Institutional Audit & Security Guard
+  [TextBox 14] def_sz=1000 | runs=[] -> • Strict tenant isolation ensuring student data cannot be accesse
+  [TextBox 14] def_sz=1000 | runs=[] -> • Firebase Admin service account integration for trusted server-s
+  [TextBox 14] def_sz=1000 | runs=[] -> • Credential token cleansing to eliminate OAuth redirect and newl
+  [TextBox 14] def_sz=1000 | runs=[] -> • Real-time Sentry exception capturing and performance monitoring
+
+==================== SLIDE 9 ====================
+  [TextBox 2] def_sz=1000 | runs=[] -> STUDENT SUCCESS & PRODUCTIVITY TOOLS
+  [TextBox 3] def_sz=2400 | runs=[] -> Module 6: Placement Preparation & Campus Navigation
+  [TextBox 5] def_sz=950 | runs=[] -> Academic Universe (AU) | Project Progress & Technical Evaluation 
+  [TextBox 6] def_sz=950 | runs=[] -> 9 / 10
+  [TextBox 8] def_sz=1400 | runs=[] -> 💼  Career & Verified Profile
+  [TextBox 8] def_sz=1100 | runs=[] -> A unified student showcase displaying verified certificates, acad
+  [TextBox 10] def_sz=1400 | runs=[] -> 💻  Code Arena & Problem Solving Ledger
+  [TextBox 10] def_sz=1100 | runs=[] -> Built-in engineering coding environment with problem tracking, bu
+  [TextBox 12] def_sz=1400 | runs=[] -> 🚪  Find Faculty Cabin Search Engine
+  [TextBox 12] def_sz=1100 | runs=[] -> Instant campus search bar in the top navigation allowing students
+  [TextBox 14] def_sz=1400 | runs=[] -> 🧭  Streamlined Non-Redundant Navigation
+  [TextBox 14] def_sz=1100 | runs=[] -> Deduplicated user experience: Top Navbar hosts global modules (Gr
+
+==================== SLIDE 10 ====================
+  [TextBox 2] def_sz=1000 | runs=[] -> EVALUATION SUMMARY & NEXT MILESTONES
+  [TextBox 3] def_sz=2400 | runs=[] -> Live Production Status, Achievements & Future Roadmap
+  [TextBox 5] def_sz=950 | runs=[] -> Academic Universe (AU) | Project Progress & Technical Evaluation 
+  [TextBox 6] def_sz=950 | runs=[] -> 10 / 10
+  [TextBox 8] def_sz=1500 | runs=[] -> Genuinely Completed & Live Today
+  [TextBox 8] def_sz=1000 | runs=[] -> ✔ Vercel Production Deployment: Live at 'https://academicuniverse
+  [TextBox 8] def_sz=1000 | runs=[] -> ✔ Railway Backend Microservices: Containerized Express TypeScript
+  [TextBox 8] def_sz=1000 | runs=[] -> ✔ Authorized E-Zone Sync: Real Playwright automation syncing time
+  [TextBox 8] def_sz=1000 | runs=[] -> ✔ Contextual Gemini Chatbot: Inference live with classroom locati
+  [TextBox 8] def_sz=1000 | runs=[] -> ✔ Functional Overlap Planner: Full N-way schedule intersection li
+  [TextBox 8] def_sz=1000 | runs=[] -> ✔ Zero-Mock Production Data: 57+ verified academic records, 2 liv
+  [TextBox 10] def_sz=1500 | runs=[] -> Upcoming Engineering Roadmap
+  [TextBox 10] def_sz=1000 | runs=[] -> ➔ Mobile Progressive Web App (PWA): Offline timetable caching and
+  [TextBox 10] def_sz=1000 | runs=[] -> ➔ Real-Time Push Notifications: Instant WebPush alerts for classr
+  [TextBox 10] def_sz=1000 | runs=[] -> ➔ Automated Peer Review & Benchmarking: Integration with AU DIC b
+  [TextBox 10] def_sz=1000 | runs=[] -> ➔ Multi-University Tenant Expansion: Expanding tenant isolation t
+  [TextBox 10] def_sz=1100 | runs=[] -> THANK YOU! OPEN FOR QUESTIONS & EVALUATION DEMO

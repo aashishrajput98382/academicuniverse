@@ -1,0 +1,23 @@
+flowchart TD
+    %% ===================================================================
+    %% ACADEMIC UNIVERSE (AU) — SIMPLE FLOWCHART
+    %% Exact Structure of the Reference Diagram:
+    %% Column 1: Start -> Process 1 -> Decision -> Process 2 -> Connector A
+    %% Column 2: Connector A -> Process 3 -> Process 4 -> Process 5 -> Process 6 -> End
+    %% ===================================================================
+
+    subgraph Column1 ["Login & Access"]
+        Start([Start]) --> P1[Open Academic Universe Website]
+        P1 --> D1{Login Successful?<br/>@ug.sharda.ac.in}
+        D1 -->|No - Retry| P1
+        D1 -->|Yes| P2[Load Personalized Student Dashboard]
+        P2 --> ConnA1((A))
+    end
+
+    subgraph Column2 ["Platform Usage & Output"]
+        ConnA2((A)) --> P3[Sync Attendance & Timetable via E-Zone]
+        P3 --> P4[Ask Campus AI Chatbot for Class & Room Guidance]
+        P4 --> P5[Find Common Free Study Slots in Overlap Planner]
+        P5 --> P6[Draft & Export Papers in Research Wing]
+        P6 --> EndNode([End])
+    end

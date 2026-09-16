@@ -14,7 +14,7 @@ const SPAM_KEYWORDS = [
     'promotion', 'newsletter'
 ];
 
-export const syncGmailEvents = async (userId: string) => {
+export const syncGmailEvents = async (userId: string, fallbackFirebaseUid?: string) => {
     console.log("[GMAIL_SYNC_TRACE] Starting sync for mongo userId:", userId);
 
     let user = await User.findById(userId);
@@ -22,7 +22,19 @@ export const syncGmailEvents = async (userId: string) => {
         console.log("[GMAIL_SYNC_TRACE] User not found!");
         throw new Error('User not found');
     }
-    console.log("[GMAIL_SYNC_TRACE] Found user, firebaseUid:", user.firebaseUid);
+
+    const targetFirebaseUid = user.firebaseUid || fallbackFirebaseUid || String(userId);
+    console.log("[GMAIL_SYNC_TRACE] Found user, firebaseUid:", user.firebaseUid, "targetFirebaseUid:", targetFirebaseUid);
+
+    // If user document didn't have firebaseUid but we have one from token, persist it
+    if (!user.firebaseUid && targetFirebaseUid && targetFirebaseUid !== String(userId)) {
+        try {
+            user.firebaseUid = targetFirebaseUid;
+            await user.save();
+        } catch (saveUidErr) {
+            console.warn('[GMAIL_SYNC] Could not persist firebaseUid to user:', saveUidErr);
+        }
+    }
 
     if (!user.gmailTokens) {
         console.log("[GMAIL_SYNC_TRACE] Gmail not connected!");
@@ -71,11 +83,26 @@ export const syncGmailEvents = async (userId: string) => {
     console.log("[GMAIL_SYNC_TRACE] Calling Gmail API with query:", gmailQuery);
     console.log("[GMAIL_SYNC_TRACE] Gmail API params: maxResults=50");
 
-    const response = await gmail.users.messages.list({
-        userId: 'me',
-        maxResults: 50,
-        q: gmailQuery,
-    });
+    let response;
+    try {
+        response = await gmail.users.messages.list({
+            userId: 'me',
+            maxResults: 50,
+            q: gmailQuery,
+        });
+    } catch (listErr: any) {
+        console.error('[GMAIL_SYNC_TRACE] Failed to list messages from Gmail API:', listErr);
+        const errMsg = listErr?.message || '';
+        if (
+            errMsg.includes('invalid_grant') || 
+            errMsg.includes('Invalid Credentials') || 
+            errMsg.includes('unauthorized') || 
+            errMsg.includes('Insufficient Permission')
+        ) {
+            throw new Error('Gmail authorization expired or missing permissions. Please reconnect your Gmail account.');
+        }
+        throw new Error(`Gmail API error: ${errMsg || 'Failed to list messages'}`);
+    }
 
     const messages = response.data.messages || [];
     console.log("[GMAIL_SYNC_TRACE] Gmail API returned", messages.length, "messages");
@@ -91,96 +118,125 @@ export const syncGmailEvents = async (userId: string) => {
         processedCount++;
         if (!message.id) continue;
 
-        console.log("[GMAIL_SYNC_TRACE] Processing message ID:", message.id);
-        const msgData = await gmail.users.messages.get({
-            userId: 'me',
-            id: message.id,
-            format: 'full',
-        });
+        try {
+            console.log("[GMAIL_SYNC_TRACE] Processing message ID:", message.id);
+            const msgData = await gmail.users.messages.get({
+                userId: 'me',
+                id: message.id,
+                format: 'full',
+            });
 
-        const headers = msgData.data.payload?.headers || [];
-        const subjectHeader = headers.find(h => h.name?.toLowerCase() === 'subject');
-        const fromHeader = headers.find(h => h.name?.toLowerCase() === 'from');
-        const dateHeader = headers.find(h => h.name?.toLowerCase() === 'date');
-        const internalDate = msgData.data.internalDate;
-        console.log("[GMAIL_SYNC_TRACE] Message internalDate (ms):", internalDate);
+            const headers = msgData.data.payload?.headers || [];
+            const subjectHeader = headers.find(h => h.name?.toLowerCase() === 'subject');
+            const fromHeader = headers.find(h => h.name?.toLowerCase() === 'from');
+            const dateHeader = headers.find(h => h.name?.toLowerCase() === 'date');
+            const internalDate = msgData.data.internalDate;
 
-        const subject = subjectHeader?.value || '';
-        console.log("[GMAIL_SYNC_TRACE] Message subject:", subject);
-        const from = fromHeader?.value || 'Unknown Organizer';
-        const emailDate = dateHeader?.value ? new Date(dateHeader.value) : new Date();
+            const subject = subjectHeader?.value || '';
+            const from = fromHeader?.value || 'Unknown Organizer';
 
-        const snippet = msgData.data.snippet || '';
-        
-        const payload = msgData.data.payload;
-        const getEmailBody = (p: any): string => {
-            let body = '';
-            if (!p) return body;
-            if (p.body && p.body.data) {
-                const base64 = p.body.data.replace(/-/g, '+').replace(/_/g, '/');
-                body += Buffer.from(base64, 'base64').toString('utf-8') + ' ';
+            let emailDateIso = new Date().toISOString();
+            try {
+                if (dateHeader?.value) {
+                    const parsed = new Date(dateHeader.value);
+                    if (!isNaN(parsed.getTime())) {
+                        emailDateIso = parsed.toISOString();
+                    }
+                } else if (internalDate) {
+                    const parsed = new Date(Number(internalDate));
+                    if (!isNaN(parsed.getTime())) {
+                        emailDateIso = parsed.toISOString();
+                    }
+                }
+            } catch {
+                emailDateIso = new Date().toISOString();
             }
-            if (p.parts && p.parts.length > 0) {
-                for (const part of p.parts) {
-                    body += getEmailBody(part);
+
+            const snippet = msgData.data.snippet || '';
+            
+            const payload = msgData.data.payload;
+            const getEmailBody = (p: any): string => {
+                let body = '';
+                if (!p) return body;
+                if (p.body && p.body.data) {
+                    const base64 = p.body.data.replace(/-/g, '+').replace(/_/g, '/');
+                    body += Buffer.from(base64, 'base64').toString('utf-8') + ' ';
+                }
+                if (p.parts && p.parts.length > 0) {
+                    for (const part of p.parts) {
+                        body += getEmailBody(part);
+                    }
+                }
+                return body;
+            };
+            const bodyText = getEmailBody(payload);
+
+            const searchText = `${subject} ${snippet} ${bodyText}`.toLowerCase();
+
+            // Check spam first
+            const isSpam = SPAM_KEYWORDS.some(keyword => searchText.includes(keyword.toLowerCase()));
+            if (isSpam) {
+                spamCount++;
+                console.log("[GMAIL_SYNC_TRACE] Skipping message (spam):", subject);
+                continue;
+            }
+
+            // Check target keywords
+            const isEvent = TARGET_KEYWORDS.some(keyword => searchText.includes(keyword.toLowerCase()));
+            if (!isEvent) {
+                notEventCount++;
+                continue;
+            }
+
+            // Check if already exists in Firestore
+            let isDuplicate = false;
+            if (firebaseFirestore && typeof firebaseFirestore.collection === 'function' && targetFirebaseUid) {
+                try {
+                    const existingRef = await firebaseFirestore
+                        .collection('detected_events')
+                        .where('emailId', '==', message.id)
+                        .where('userId', '==', targetFirebaseUid)
+                        .get();
+
+                    if (existingRef && !existingRef.empty) {
+                        isDuplicate = true;
+                    }
+                } catch (firestoreErr) {
+                    console.warn(`[GMAIL_SYNC] Firestore duplicate check warning for ${message.id}:`, firestoreErr);
                 }
             }
-            return body;
-        };
-        const bodyText = getEmailBody(payload);
 
-        const searchText = `${subject} ${snippet} ${bodyText}`.toLowerCase();
-
-        // Check spam first
-        const isSpam = SPAM_KEYWORDS.some(keyword => searchText.includes(keyword.toLowerCase()));
-        if (isSpam) {
-            spamCount++;
-            console.log("[GMAIL_SYNC_TRACE] Skipping message (spam):", subject);
-            continue;
-        }
-
-        // Check target keywords
-        // We do this despite the 'q' parameter in case the 'q' matched a non-target keyword or just to be safe
-        const isEvent = TARGET_KEYWORDS.some(keyword => searchText.includes(keyword.toLowerCase()));
-        console.log("[GMAIL_SYNC_TRACE] isEvent check for subject:", subject, "- result:", isEvent);
-        if (!isEvent) {
-            notEventCount++;
-            continue;
-        }
-
-        if (isEvent) {
-            // Check if already exists to prevent duplicates
-            console.log("[GMAIL_SYNC_TRACE] Checking for existing event with emailId:", message.id, "and userId:", user.firebaseUid);
-            const existingRef = await firebaseFirestore
-                .collection('detected_events')
-                .where('emailId', '==', message.id)
-                .where('userId', '==', user.firebaseUid) // Query by firebaseUid
-                .get();
-
-            if (existingRef && !existingRef.empty) {
+            if (isDuplicate) {
                 duplicateCount++;
                 console.log("[GMAIL_SYNC_TRACE] Skipping message (duplicate):", subject);
                 continue;
             }
 
             const eventData = {
-                userId: user.firebaseUid, // Frontend queries using Firebase uid
-                mongoUserId: userId,      // Keep mongo DB id for safety
+                userId: targetFirebaseUid,
+                mongoUserId: userId,
                 emailId: message.id,
-                title: subject,
-                date: emailDate.toISOString(),
+                title: subject || 'Untitled Event',
+                date: emailDateIso,
                 location: 'See Email',
                 registrationLink: `https://mail.google.com/mail/u/0/#inbox/${message.id}`,
-                organizer: from.replace(/<.*>/, '').trim(), // Clean up email brackets
+                organizer: from.replace(/<.*>/, '').trim() || 'Unknown Organizer',
                 emailSource: 'Gmail',
                 detectedAt: new Date().toISOString(),
             };
 
             console.log("[GMAIL_SYNC_TRACE] Saving new event for subject:", subject);
-            if (firebaseFirestore?.collection) {
-                await firebaseFirestore.collection('detected_events').add(eventData);
-                newEventsCount++;
+            if (firebaseFirestore && typeof firebaseFirestore.collection === 'function') {
+                try {
+                    await firebaseFirestore.collection('detected_events').add(eventData);
+                    newEventsCount++;
+                } catch (saveErr) {
+                    console.error(`[GMAIL_SYNC] Failed to save detected event ${message.id} to Firestore:`, saveErr);
+                }
             }
+        } catch (msgErr) {
+            console.error(`[GMAIL_SYNC] Error processing message ${message.id}:`, msgErr);
+            continue;
         }
     }
 

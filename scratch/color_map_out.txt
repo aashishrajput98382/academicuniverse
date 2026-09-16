@@ -1,0 +1,284 @@
+
+--- SLIDE 1 ---
+  ShapeFill [Rectangle 1]: #0B132B
+  ShapeFill [Rectangle 2]: #10B981
+  ShapeFill [Rounded Rectangle 3]: #16213E
+  Border [Rounded Rectangle 3]: #10B981
+  ShapeFill [Rounded Rectangle 4]: #065F46
+  Border [Rounded Rectangle 4]: #10B981
+    Text [Rounded Rectangle 4]: defRPr:#F8FAFC  -> 'LIVE PRODUCTION PLATFORM • 2026'
+    Text [TextBox 5]: defRPr:#F8FAFC  -> 'ACADEMIC UNIVERSE (AU)'
+    Text [TextBox 5]: defRPr:#38BDF8  -> 'Next-Generation Intelligent Campus Operating & Aca'
+    Text [TextBox 5]: defRPr:#94A3B8  -> 'A unified, production-deployed ecosystem combining'
+  ShapeFill [Rounded Rectangle 6]: #1B263B
+  Border [Rounded Rectangle 6]: #334155
+    Text [Rounded Rectangle 6]: defRPr:#10B981  -> 'PRESENTER & CANDIDATE'
+    Text [Rounded Rectangle 6]: defRPr:#F8FAFC  -> 'Aashish RajputSystem ID: 2023329421B.Tech CSE, Sha'
+  ShapeFill [Rounded Rectangle 7]: #1B263B
+  Border [Rounded Rectangle 7]: #334155
+    Text [Rounded Rectangle 7]: defRPr:#10B981  -> 'TECH STACK'
+    Text [Rounded Rectangle 7]: defRPr:#F8FAFC  -> 'Next.js 16 (Turbopack) • TypeScriptExpress.js • Mo'
+  ShapeFill [Rounded Rectangle 8]: #1B263B
+  Border [Rounded Rectangle 8]: #334155
+    Text [Rounded Rectangle 8]: defRPr:#10B981  -> 'DEPLOYMENT STATUS'
+    Text [Rounded Rectangle 8]: defRPr:#F8FAFC  -> 'Frontend: Vercel (Production)Backend: Railway Micr'
+
+--- SLIDE 2 ---
+  ShapeFill [Rectangle 1]: #0B132B
+    Text [TextBox 2]: defRPr:#10B981  -> 'BACKGROUND & ARCHITECTURAL NEED'
+    Text [TextBox 3]: defRPr:#F8FAFC  -> 'Problem Statement & Project Motivation'
+  ShapeFill [Rectangle 4]: #334155
+    Text [TextBox 5]: defRPr:#94A3B8  -> 'Academic Universe (AU) | Project Progress & Techni'
+    Text [TextBox 6]: defRPr:#10B981  -> '2 / 10'
+  ShapeFill [Rounded Rectangle 7]: #16213E
+  Border [Rounded Rectangle 7]: #334155
+    Text [TextBox 8]: defRPr:#38BDF8  -> '1. Severe Academic Fragmentation'
+    Text [TextBox 8]: defRPr:#F8FAFC  -> 'Traditional university workflows force students an'
+  ShapeFill [Rounded Rectangle 9]: #16213E
+  Border [Rounded Rectangle 9]: #334155
+    Text [TextBox 10]: defRPr:#10B981  -> '2. Coordination & Free-Time Bottlenecks'
+    Text [TextBox 10]: defRPr:#F8FAFC  -> 'University schedules run on 9 distinct 50-minute p'
+  ShapeFill [Rounded Rectangle 11]: #16213E
+  Border [Rounded Rectangle 11]: #334155
+    Text [TextBox 12]: defRPr:#38BDF8  -> '3. Unverified Digital Credentialing'
+    Text [TextBox 12]: defRPr:#F8FAFC  -> 'Students lack a centralized, verifiable academic r'
+  ShapeFill [Rounded Rectangle 13]: #16213E
+  Border [Rounded Rectangle 13]: #334155
+    Text [TextBox 14]: defRPr:#10B981  -> '4. Context-Blind Campus AI Chatbots'
+    Text [TextBox 14]: defRPr:#F8FAFC  -> 'Standard generative AI models know nothing about u'
+
+--- SLIDE 3 ---
+  ShapeFill [Rectangle 1]: #0B132B
+    Text [TextBox 2]: defRPr:#10B981  -> 'SYSTEM DESIGN & DATA PIPELINES'
+    Text [TextBox 3]: defRPr:#F8FAFC  -> 'Full-Stack System Architecture & Production Stack'
+  ShapeFill [Rectangle 4]: #334155
+    Text [TextBox 5]: defRPr:#94A3B8  -> 'Academic Universe (AU) | Project Progress & Techni'
+    Text [TextBox 6]: defRPr:#10B981  -> '3 / 10'
+  ShapeFill [Rounded Rectangle 7]: #16213E
+  Border [Rounded Rectangle 7]: #334155
+    Text [TextBox 8]: defRPr:#38BDF8  -> 'FRONTEND TIER (Client)'
+    Text [TextBox 8]: defRPr:#F8FAFC  -> '• Next.js 16 App Router + Turbopack engine for sub'
+    Text [TextBox 8]: defRPr:#F8FAFC  -> '• Tailwind CSS + Radix UI + Lucide Icons for state'
+    Text [TextBox 8]: defRPr:#F8FAFC  -> '• Dual-Layer Navigation: Top Primary Navbar + Clea'
+    Text [TextBox 8]: defRPr:#F8FAFC  -> '• React Query / Context for stateful synchronizati'
+    Text [TextBox 8]: defRPr:#F8FAFC  -> '• Hosted on Vercel Edge with zero-downtime automat'
+  ShapeFill [Rounded Rectangle 9]: #16213E
+  Border [Rounded Rectangle 9]: #334155
+    Text [TextBox 10]: defRPr:#10B981  -> 'BACKEND TIER (Microservices)'
+    Text [TextBox 10]: defRPr:#F8FAFC  -> '• Modular Express.js API framework fully written i'
+    Text [TextBox 10]: defRPr:#F8FAFC  -> '• Playwright Headless Automation Worker for univer'
+    Text [TextBox 10]: defRPr:#F8FAFC  -> '• Firebase Auth Token Middleware + Role-Based Acce'
+    Text [TextBox 10]: defRPr:#F8FAFC  -> '• Dual Error Shielding: Resilient API proxies with'
+    Text [TextBox 10]: defRPr:#F8FAFC  -> '• Hosted on Railway Container PaaS with automatic '
+  ShapeFill [Rounded Rectangle 11]: #16213E
+  Border [Rounded Rectangle 11]: #334155
+    Text [TextBox 12]: defRPr:#38BDF8  -> 'DATA & INTELLIGENCE TIER'
+    Text [TextBox 12]: defRPr:#F8FAFC  -> '• MongoDB Atlas: Relational-modeled schema for use'
+    Text [TextBox 12]: defRPr:#F8FAFC  -> '• GridFS File Storage: Chunked binary document sto'
+    Text [TextBox 12]: defRPr:#F8FAFC  -> '• Google Gemini 2.5 Flash: Context-injected LLM fo'
+    Text [TextBox 12]: defRPr:#F8FAFC  -> '• Google Sheets Live Archival: Bi-directional admi'
+    Text [TextBox 12]: defRPr:#F8FAFC  -> '• Triple Git Remote Mirroring: Provenance tracking'
+
+--- SLIDE 4 ---
+  ShapeFill [Rectangle 1]: #0B132B
+    Text [TextBox 2]: defRPr:#10B981  -> 'CORE CAPABILITY • PORTAL INTEGRATION'
+    Text [TextBox 3]: defRPr:#F8FAFC  -> 'Module 1: Automated E-Zone Profile & Timetable Syn'
+  ShapeFill [Rectangle 4]: #334155
+    Text [TextBox 5]: defRPr:#94A3B8  -> 'Academic Universe (AU) | Project Progress & Techni'
+    Text [TextBox 6]: defRPr:#10B981  -> '4 / 10'
+  ShapeFill [Rounded Rectangle 7]: #16213E
+  Border [Rounded Rectangle 7]: #334155
+    Text [TextBox 8]: defRPr:#10B981  -> 'Automated University Portal Integration'
+    Text [TextBox 8]: defRPr:#F8FAFC #94A3B8:'Performs automated browse' -> '✔ Playwright Automation Engine: Performs automated'
+    Text [TextBox 8]: defRPr:#F8FAFC #94A3B8:'Secure 2-step verificatio' -> '✔ Two-Factor Student Email OTP: Secure 2-step veri'
+    Text [TextBox 8]: defRPr:#F8FAFC #94A3B8:'Captures course-level att' -> '✔ Real Attendance & Grade Synchronization: Capture'
+    Text [TextBox 8]: defRPr:#F8FAFC #94A3B8:'Extracts complete Monday–' -> '✔ Full Institutional Timetable Parsing: Extracts c'
+    Text [TextBox 8]: defRPr:#F8FAFC #94A3B8:'Persists clean normalized' -> '✔ Google Sheets + MongoDB Dual Storage: Persists c'
+  ShapeFill [Rounded Rectangle 9]: #1B263B
+  Border [Rounded Rectangle 9]: #10B981
+    Text [TextBox 10]: defRPr:#38BDF8  -> 'VERIFIED IN LIVE DATABASE'
+    Text [TextBox 10]: defRPr:#10B981  -> 'STUDENT SYSTEM ID'
+    Text [TextBox 10]: defRPr:#F8FAFC  -> '2023329421 (Aashish Rajput)'
+    Text [TextBox 10]: defRPr:#10B981  -> 'LIVE SYNCED TIMETABLE'
+    Text [TextBox 10]: defRPr:#F8FAFC  -> '12 Active Weekly Class Slots'
+    Text [TextBox 10]: defRPr:#10B981  -> 'CLASSROOM ALLOCATIONS'
+    Text [TextBox 10]: defRPr:#F8FAFC  -> 'Room 206 Block 3, Room 008 Block 3'
+    Text [TextBox 10]: defRPr:#10B981  -> 'FACULTY INTEGRATED'
+    Text [TextBox 10]: defRPr:#F8FAFC  -> 'Dr. Batri K, Ms. Akanksha Srivastav'
+    Text [TextBox 10]: defRPr:#10B981  -> 'SYNC PROTOCOL STATUS'
+    Text [TextBox 10]: defRPr:#F8FAFC  -> 'OTP Verified & DB Active'
+    Text [TextBox 10]: defRPr:#10B981  -> 'GOOGLE SHEETS STREAM'
+    Text [TextBox 10]: defRPr:#F8FAFC  -> 'Automated Append Enabled'
+
+--- SLIDE 5 ---
+  ShapeFill [Rectangle 1]: #0B132B
+    Text [TextBox 2]: defRPr:#10B981  -> 'CONTEXT-AWARE ARTIFICIAL INTELLIGENCE'
+    Text [TextBox 3]: defRPr:#F8FAFC  -> 'Module 2: Live AI Campus Chatbot with Classroom In'
+  ShapeFill [Rectangle 4]: #334155
+    Text [TextBox 5]: defRPr:#94A3B8  -> 'Academic Universe (AU) | Project Progress & Techni'
+    Text [TextBox 6]: defRPr:#10B981  -> '5 / 10'
+  ShapeFill [Rounded Rectangle 7]: #16213E
+  Border [Rounded Rectangle 7]: #334155
+    Text [TextBox 8]: defRPr:#10B981  -> 'Real Classroom Context Injection'
+    Text [TextBox 8]: defRPr:#F8FAFC #94A3B8:'Before querying Google Ge' -> '★ Dynamic Schedule Querying: Before querying Googl'
+    Text [TextBox 8]: defRPr:#F8FAFC #94A3B8:'Injects live classroom bl' -> '★ Exact Room & Teacher Resolution: Injects live cl'
+    Text [TextBox 8]: defRPr:#F8FAFC #94A3B8:'Instead of vague boilerpl' -> '★ Zero Generic Hallucinations: Instead of vague bo'
+    Text [TextBox 8]: defRPr:#F8FAFC #94A3B8:'Built-in emotional intell' -> '★ Emotional Support & Campus Mentoring: Built-in e'
+    Text [TextBox 8]: defRPr:#F8FAFC #94A3B8:'Primary inference via Goo' -> '★ Model Failover Architecture: Primary inference v'
+  ShapeFill [Rounded Rectangle 9]: #1B263B
+  Border [Rounded Rectangle 9]: #38BDF8
+    Text [TextBox 10]: defRPr:#38BDF8  -> 'LIVE TESTED PROMPT INTERACTION'
+    Text [TextBox 10]: defRPr:#38BDF8  -> 'Student Prompt:'
+    Text [TextBox 10]: defRPr:#F8FAFC  -> 'Where is my Research Methodology lecture today, an'
+    Text [TextBox 10]: defRPr:#10B981  -> 'Academic Universe AI:'
+    Text [TextBox 10]: defRPr:#94A3B8  -> 'Your Research Methodology class is scheduled in Ro'
+    Text [TextBox 10]: defRPr:#38BDF8  -> 'Student Prompt:'
+    Text [TextBox 10]: defRPr:#F8FAFC  -> 'Where do I go for my Simulation Lab session?'
+    Text [TextBox 10]: defRPr:#10B981  -> 'Academic Universe AI:'
+    Text [TextBox 10]: defRPr:#94A3B8  -> 'Your Technical Skill Enhancement Simulation Lab ta'
+
+--- SLIDE 6 ---
+  ShapeFill [Rectangle 1]: #0B132B
+    Text [TextBox 2]: defRPr:#10B981  -> 'ALGORITHMIC SCHEDULING & COLLABORATION'
+    Text [TextBox 3]: defRPr:#F8FAFC  -> 'Module 3: Overlap Engine — Smart Student Free-Time'
+  ShapeFill [Rectangle 4]: #334155
+    Text [TextBox 5]: defRPr:#94A3B8  -> 'Academic Universe (AU) | Project Progress & Techni'
+    Text [TextBox 6]: defRPr:#10B981  -> '6 / 10'
+  ShapeFill [Rounded Rectangle 7]: #16213E
+  Border [Rounded Rectangle 7]: #334155
+    Text [TextBox 8]: defRPr:#10B981  -> 'Mathematical Free-Slot Intersection'
+    Text [TextBox 8]: defRPr:#F8FAFC #94A3B8:'Mathematical interval alg' -> '✔ N-Way Interval Intersection: Mathematical interv'
+    Text [TextBox 8]: defRPr:#F8FAFC #94A3B8:'Allows any student to sea' -> '✔ Multi-Student Selection (1 to 5): Allows any stu'
+    Text [TextBox 8]: defRPr:#F8FAFC #94A3B8:'Dynamically links MongoDB' -> '✔ Live Identity & System ID Resolution: Dynamicall'
+    Text [TextBox 8]: defRPr:#F8FAFC #94A3B8:'Visual '✅ Synced Schedule' -> '✔ Schedule Sync Verification Badges: Visual '✅ Syn'
+    Text [TextBox 8]: defRPr:#F8FAFC #94A3B8:'Prominently highlights th' -> '✔ Host (You) Status Card: Prominently highlights t'
+  ShapeFill [Rounded Rectangle 9]: #1B263B
+  Border [Rounded Rectangle 9]: #10B981
+    Text [TextBox 10]: defRPr:#38BDF8  -> 'HOW OVERLAP ENGINE FINDS COMMON TIME'
+    Text [TextBox 10]: defRPr:#10B981  -> 'Step 1: Student Search'
+    Text [TextBox 10]: defRPr:#F8FAFC  -> 'Search peers by System ID (e.g. 2024427058) or Nam'
+    Text [TextBox 10]: defRPr:#10B981  -> 'Step 2: Timetable Ingestion'
+    Text [TextBox 10]: defRPr:#F8FAFC  -> 'Engine fetches verified E-Zone timetable matrix fo'
+    Text [TextBox 10]: defRPr:#10B981  -> 'Step 3: Interval Intersection'
+    Text [TextBox 10]: defRPr:#F8FAFC  -> 'Performs mathematical set intersection: Free(Day) '
+    Text [TextBox 10]: defRPr:#10B981  -> 'Step 4: AI Ranked Slots'
+    Text [TextBox 10]: defRPr:#F8FAFC  -> 'Consecutive free periods are grouped into 1-hour o'
+    Text [TextBox 10]: defRPr:#10B981  -> 'Step 5: Instant Share / Export'
+    Text [TextBox 10]: defRPr:#F8FAFC  -> 'One-click copy of meeting recommendations with exa'
+
+--- SLIDE 7 ---
+  ShapeFill [Rectangle 1]: #0B132B
+    Text [TextBox 2]: defRPr:#10B981  -> 'RESEARCH & SCHOLARLY PUBLICATION'
+    Text [TextBox 3]: defRPr:#F8FAFC  -> 'Module 4: AI-Powered Academic Research Wing'
+  ShapeFill [Rectangle 4]: #334155
+    Text [TextBox 5]: defRPr:#94A3B8  -> 'Academic Universe (AU) | Project Progress & Techni'
+    Text [TextBox 6]: defRPr:#10B981  -> '7 / 10'
+  ShapeFill [Rounded Rectangle 7]: #16213E
+  Border [Rounded Rectangle 7]: #334155
+    Text [TextBox 8]: defRPr:#38BDF8  -> '1. TOPIC GENERATION'
+    Text [TextBox 8]: defRPr:#F8FAFC  -> 'Explores high-impact research topics, problem form'
+  ShapeFill [Rounded Rectangle 9]: #16213E
+  Border [Rounded Rectangle 9]: #334155
+    Text [TextBox 10]: defRPr:#10B981  -> '2. RESEARCH OUTLINE'
+    Text [TextBox 10]: defRPr:#F8FAFC  -> 'Synthesizes structured academic outlines following'
+  ShapeFill [Rounded Rectangle 11]: #16213E
+  Border [Rounded Rectangle 11]: #334155
+    Text [TextBox 12]: defRPr:#38BDF8  -> '3. CONTENT WRITER'
+    Text [TextBox 12]: defRPr:#F8FAFC  -> 'Full-length section generation with interactive pr'
+  ShapeFill [Rounded Rectangle 13]: #16213E
+  Border [Rounded Rectangle 13]: #334155
+    Text [TextBox 14]: defRPr:#10B981  -> '4. ABSTRACT & CITATIONS'
+    Text [TextBox 14]: defRPr:#F8FAFC  -> 'Generates concise IEEE-style abstracts and properl'
+  ShapeFill [Rounded Rectangle 15]: #16213E
+  Border [Rounded Rectangle 15]: #334155
+    Text [TextBox 16]: defRPr:#38BDF8  -> '5. FINAL EXPORT'
+    Text [TextBox 16]: defRPr:#F8FAFC  -> 'One-click export directly to publication-ready PDF'
+  ShapeFill [Rounded Rectangle 17]: #16213E
+  Border [Rounded Rectangle 17]: #334155
+    Text [TextBox 18]: defRPr:#10B981  -> '6. DRAFT HISTORY'
+    Text [TextBox 18]: defRPr:#F8FAFC  -> 'Saves all research iterations in MongoDB Atlas so '
+
+--- SLIDE 8 ---
+  ShapeFill [Rectangle 1]: #0B132B
+    Text [TextBox 2]: defRPr:#10B981  -> 'DIGITAL CREDENTIALING & GMAIL SYNC'
+    Text [TextBox 3]: defRPr:#F8FAFC  -> 'Module 5: Verifiable Academic Records & Document I'
+  ShapeFill [Rectangle 4]: #334155
+    Text [TextBox 5]: defRPr:#94A3B8  -> 'Academic Universe (AU) | Project Progress & Techni'
+    Text [TextBox 6]: defRPr:#10B981  -> '8 / 10'
+  ShapeFill [Rounded Rectangle 7]: #16213E
+  Border [Rounded Rectangle 7]: #334155
+    Text [TextBox 8]: defRPr:#38BDF8  -> 'Verifiable Academic Records (GridFS Vault)'
+    Text [TextBox 8]: defRPr:#F8FAFC  -> '• Secure storage of 57+ genuine academic achieveme'
+    Text [TextBox 8]: defRPr:#F8FAFC  -> '• Binary files stored in MongoDB GridFS with SHA-2'
+    Text [TextBox 8]: defRPr:#F8FAFC  -> '• Eliminates lost certificates and simplifies plac'
+    Text [TextBox 8]: defRPr:#F8FAFC  -> '• Centralized student profile showcasing academic '
+  ShapeFill [Rounded Rectangle 9]: #16213E
+  Border [Rounded Rectangle 9]: #334155
+    Text [TextBox 10]: defRPr:#10B981  -> 'Document Intelligence Pipeline'
+    Text [TextBox 10]: defRPr:#F8FAFC  -> '• Automated thumbnail generation for instant docum'
+    Text [TextBox 10]: defRPr:#F8FAFC  -> '• Classification tags: Technical certifications, h'
+    Text [TextBox 10]: defRPr:#F8FAFC  -> '• Full modal preview with high-resolution zooming '
+    Text [TextBox 10]: defRPr:#F8FAFC  -> '• Directly linked into student placement resumes a'
+  ShapeFill [Rounded Rectangle 11]: #16213E
+  Border [Rounded Rectangle 11]: #334155
+    Text [TextBox 12]: defRPr:#38BDF8  -> 'Gmail Events Synchronization Engine'
+    Text [TextBox 12]: defRPr:#F8FAFC  -> '• Google OAuth 2.0 Web Client authentication with '
+    Text [TextBox 12]: defRPr:#F8FAFC  -> '• Scans incoming student Gmail messages for instit'
+    Text [TextBox 12]: defRPr:#F8FAFC  -> '• Extracts event dates, seminar venues, and deadli'
+    Text [TextBox 12]: defRPr:#F8FAFC  -> '• Eliminates missed departmental notices and campu'
+  ShapeFill [Rounded Rectangle 13]: #16213E
+  Border [Rounded Rectangle 13]: #334155
+    Text [TextBox 14]: defRPr:#10B981  -> 'Institutional Audit & Security Guard'
+    Text [TextBox 14]: defRPr:#F8FAFC  -> '• Strict tenant isolation ensuring student data ca'
+    Text [TextBox 14]: defRPr:#F8FAFC  -> '• Firebase Admin service account integration for t'
+    Text [TextBox 14]: defRPr:#F8FAFC  -> '• Credential token cleansing to eliminate OAuth re'
+    Text [TextBox 14]: defRPr:#F8FAFC  -> '• Real-time Sentry exception capturing and perform'
+
+--- SLIDE 9 ---
+  ShapeFill [Rectangle 1]: #0B132B
+    Text [TextBox 2]: defRPr:#10B981  -> 'STUDENT SUCCESS & PRODUCTIVITY TOOLS'
+    Text [TextBox 3]: defRPr:#F8FAFC  -> 'Module 6: Placement Preparation & Campus Navigatio'
+  ShapeFill [Rectangle 4]: #334155
+    Text [TextBox 5]: defRPr:#94A3B8  -> 'Academic Universe (AU) | Project Progress & Techni'
+    Text [TextBox 6]: defRPr:#10B981  -> '9 / 10'
+  ShapeFill [Rounded Rectangle 7]: #16213E
+  Border [Rounded Rectangle 7]: #334155
+    Text [TextBox 8]: defRPr:#38BDF8  -> '💼  Career & Verified Profile'
+    Text [TextBox 8]: defRPr:#F8FAFC  -> 'A unified student showcase displaying verified cer'
+  ShapeFill [Rounded Rectangle 9]: #16213E
+  Border [Rounded Rectangle 9]: #334155
+    Text [TextBox 10]: defRPr:#10B981  -> '💻  Code Arena & Problem Solving Ledger'
+    Text [TextBox 10]: defRPr:#F8FAFC  -> 'Built-in engineering coding environment with probl'
+  ShapeFill [Rounded Rectangle 11]: #16213E
+  Border [Rounded Rectangle 11]: #334155
+    Text [TextBox 12]: defRPr:#38BDF8  -> '🚪  Find Faculty Cabin Search Engine'
+    Text [TextBox 12]: defRPr:#F8FAFC  -> 'Instant campus search bar in the top navigation al'
+  ShapeFill [Rounded Rectangle 13]: #16213E
+  Border [Rounded Rectangle 13]: #334155
+    Text [TextBox 14]: defRPr:#10B981  -> '🧭  Streamlined Non-Redundant Navigation'
+    Text [TextBox 14]: defRPr:#F8FAFC  -> 'Deduplicated user experience: Top Navbar hosts glo'
+
+--- SLIDE 10 ---
+  ShapeFill [Rectangle 1]: #0B132B
+    Text [TextBox 2]: defRPr:#10B981  -> 'EVALUATION SUMMARY & NEXT MILESTONES'
+    Text [TextBox 3]: defRPr:#F8FAFC  -> 'Live Production Status, Achievements & Future Road'
+  ShapeFill [Rectangle 4]: #334155
+    Text [TextBox 5]: defRPr:#94A3B8  -> 'Academic Universe (AU) | Project Progress & Techni'
+    Text [TextBox 6]: defRPr:#10B981  -> '10 / 10'
+  ShapeFill [Rounded Rectangle 7]: #16213E
+  Border [Rounded Rectangle 7]: #10B981
+    Text [TextBox 8]: defRPr:#10B981  -> 'Genuinely Completed & Live Today'
+    Text [TextBox 8]: defRPr:#F8FAFC #94A3B8:'Live at 'https://academic' -> '✔ Vercel Production Deployment: Live at 'https://a'
+    Text [TextBox 8]: defRPr:#F8FAFC #94A3B8:'Containerized Express Typ' -> '✔ Railway Backend Microservices: Containerized Exp'
+    Text [TextBox 8]: defRPr:#F8FAFC #94A3B8:'Real Playwright automatio' -> '✔ Authorized E-Zone Sync: Real Playwright automati'
+    Text [TextBox 8]: defRPr:#F8FAFC #94A3B8:'Inference live with class' -> '✔ Contextual Gemini Chatbot: Inference live with c'
+    Text [TextBox 8]: defRPr:#F8FAFC #94A3B8:'Full N-way schedule inter' -> '✔ Functional Overlap Planner: Full N-way schedule '
+    Text [TextBox 8]: defRPr:#F8FAFC #94A3B8:'57+ verified academic rec' -> '✔ Zero-Mock Production Data: 57+ verified academic'
+  ShapeFill [Rounded Rectangle 9]: #1B263B
+  Border [Rounded Rectangle 9]: #38BDF8
+    Text [TextBox 10]: defRPr:#38BDF8  -> 'Upcoming Engineering Roadmap'
+    Text [TextBox 10]: defRPr:#F8FAFC #94A3B8:'Offline timetable caching' -> '➔ Mobile Progressive Web App (PWA): Offline timeta'
+    Text [TextBox 10]: defRPr:#F8FAFC #94A3B8:'Instant WebPush alerts fo' -> '➔ Real-Time Push Notifications: Instant WebPush al'
+    Text [TextBox 10]: defRPr:#F8FAFC #94A3B8:'Integration with AU DIC b' -> '➔ Automated Peer Review & Benchmarking: Integratio'
+    Text [TextBox 10]: defRPr:#F8FAFC #94A3B8:'Expanding tenant isolatio' -> '➔ Multi-University Tenant Expansion: Expanding ten'
+    Text [TextBox 10]: defRPr:#10B981  -> 'THANK YOU! OPEN FOR QUESTIONS & EVALUATION DEMO'

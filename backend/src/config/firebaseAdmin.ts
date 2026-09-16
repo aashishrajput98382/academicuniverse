@@ -106,22 +106,28 @@ try {
     }
   };
 
-  // Mock Firestore instance
+  // Mock Firestore instance with chainable query methods
+  const createMockQuery = (): any => ({
+    where: () => createMockQuery(),
+    orderBy: () => createMockQuery(),
+    limit: () => createMockQuery(),
+    get: async () => ({
+      empty: true,
+      size: 0,
+      docs: [],
+      forEach: (_callback: (doc: any) => void) => { },
+    }),
+    add: async (data: any) => ({ id: 'mock-doc-' + Date.now(), ...data }),
+  });
+
   firebaseFirestoreInstance = {
-    collection: (collectionName: string) => ({
-      where: (field: string, operator: string, value: any) => ({
-        get: async () => {
-          return {
-            empty: false,
-            size: 0,
-            docs: [],
-            forEach: (callback: (doc: any) => void) => { },
-          };
-        },
-      }),
-      doc: (docId: string) => ({
+    collection: (_collectionName: string) => ({
+      ...createMockQuery(),
+      doc: (_docId: string) => ({
         get: async () => ({ exists: false, data: () => ({}) }),
         set: () => Promise.resolve(),
+        update: () => Promise.resolve(),
+        delete: () => Promise.resolve(),
       }),
     }),
   };
