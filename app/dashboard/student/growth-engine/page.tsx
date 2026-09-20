@@ -279,7 +279,11 @@ export default function StudentGrowthEnginePage() {
           <div className="grid grid-cols-3 gap-3 shrink-0">
             <div className="p-4 rounded-xl bg-slate-900/60 border border-slate-800/80 text-center min-w-[105px]">
               <span className="text-[11px] font-semibold text-slate-400 uppercase tracking-wider block">Current SGPA</span>
-              <span className="text-2xl font-black text-white mt-1 block">{report?.trajectory?.currentSgpa || '7.50'}</span>
+              <span className="text-2xl font-black text-white mt-1 block">
+                {typeof report?.trajectory?.currentSgpa === 'number'
+                  ? report.trajectory.currentSgpa.toFixed(2)
+                  : (report?.trajectory?.currentSgpa || '7.50')}
+              </span>
               <span className={`text-[11px] font-bold ${report?.trajectory?.velocity && report.trajectory.velocity >= 0 ? 'text-emerald-400' : 'text-rose-400'}`}>
                 {report?.trajectory?.velocity && report.trajectory.velocity >= 0 ? `+${report.trajectory.velocity}` : report?.trajectory?.velocity} vs Prev
               </span>
@@ -287,7 +291,11 @@ export default function StudentGrowthEnginePage() {
 
             <div className="p-4 rounded-xl bg-slate-900/60 border border-slate-800/80 text-center min-w-[105px]">
               <span className="text-[11px] font-semibold text-slate-400 uppercase tracking-wider block">Cumulative CGPA</span>
-              <span className="text-2xl font-black text-indigo-300 mt-1 block">{report?.trajectory?.overallCgpa || '7.65'}</span>
+              <span className="text-2xl font-black text-indigo-300 mt-1 block">
+                {typeof report?.trajectory?.overallCgpa === 'number'
+                  ? report.trajectory.overallCgpa.toFixed(2)
+                  : (report?.trajectory?.overallCgpa || '7.65')}
+              </span>
               <span className="text-[11px] font-medium text-slate-400">All Semesters</span>
             </div>
 
@@ -333,7 +341,9 @@ export default function StudentGrowthEnginePage() {
 
               <div className="flex items-baseline justify-between pt-1">
                 <div>
-                  <span className="text-2xl font-black text-white">{sem.sgpa}</span>
+                  <span className="text-2xl font-black text-white">
+                    {typeof sem.sgpa === 'number' ? sem.sgpa.toFixed(2) : sem.sgpa}
+                  </span>
                   <span className="text-xs text-slate-400 ml-1.5 font-medium">SGPA</span>
                 </div>
                 <span className="text-xs text-slate-400">{sem.credits} Credits</span>

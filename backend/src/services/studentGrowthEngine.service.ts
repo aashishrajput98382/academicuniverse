@@ -1,10 +1,11 @@
-import mongoose from 'mongoose';
+import mongoose, { Types } from 'mongoose';
 import { EzoneAcademicProfile } from '../models/EzoneAcademicProfile';
 import { AcademicRecord } from '../models/AcademicRecord';
 import Mark from '../models/Mark';
 import { Person } from '../models/Person';
 import User from '../models/User';
 import { toObjectId } from '../utils/mongooseHelpers';
+import { PersonResolver } from '../shared/services/personResolver.service';
 
 export type TrajectoryDirection =
   | 'ACCELERATING_UPWARD'
@@ -29,6 +30,26 @@ export interface ISemesterSnapshot {
   credits: number;
   attendancePercentage: number;
   subjectCount: number;
+}
+
+/**
+ * Official University GPA Eligibility Rules (strictly aligned with academicRecordController):
+ * - Statuses 'Audit', 'In Progress', 'Fail' are GPA-exempt.
+ * - Grade 'F' does not contribute to GPA.
+ */
+const GPA_EXEMPT_STATUSES = new Set(['Audit', 'In Progress', 'Fail']);
+const NON_GP_GRADES = new Set(['F']);
+
+function isGpaEligible(record: any): boolean {
+  const status = (record.gradingStatus || 'Graded').trim();
+  if (GPA_EXEMPT_STATUSES.has(status)) {
+    return false;
+  }
+  const grade = String(record.grade || '').trim();
+  if (NON_GP_GRADES.has(grade)) {
+    return false;
+  }
+  return true;
 }
 
 export interface IDomainAffinity {
@@ -177,11 +198,24 @@ export class StudentGrowthEngineService {
     const user = await User.findById(userObjId);
     const studentName = user?.name || 'Student';
 
-    // 2. Fetch Academic Records (Curricular transcripts)
+    // 2. Fetch Academic Records (Curricular transcripts) using canonical Person resolution
     let academicRecords: any[] = [];
+    let resolvedPersonId: any = null;
     const person = await Person.findOne({ userIds: userObjId });
     if (person) {
-      academicRecords = await AcademicRecord.find({ personId: person._id }).sort({ semesterNumber: 1, year: 1 });
+      resolvedPersonId = person._id;
+    } else if (organizationId) {
+      try {
+        const personResolver = new PersonResolver();
+        const pIdStr = await personResolver.resolve(userId, organizationId, user?.email, user?.name);
+        resolvedPersonId = toObjectId(pIdStr);
+      } catch (e) {
+        // Safe fallback
+      }
+    }
+
+    if (resolvedPersonId) {
+      academicRecords = await AcademicRecord.find({ personId: resolvedPersonId }).sort({ semesterNumber: 1, year: 1 });
     }
 
     // 3. Fetch Ezone Profile (Attendance & CA Marks)
@@ -190,11 +224,15 @@ export class StudentGrowthEngineService {
     // 4. Fetch Raw Marks if available
     const rawMarks = await Mark.find({ studentId: userObjId });
 
-    // Compute or synthesize realistic multi-semester trajectory
-    const semesterSnapshots = this.compileSemesterSnapshots(academicRecords, ezoneProfile, rawMarks);
+    // Compute or synthesize realistic multi-semester trajectory matching official transcript rules
+    const { snapshots: semesterSnapshots, cumulativeCgpa } = this.compileSemesterSnapshots(
+      academicRecords,
+      ezoneProfile,
+      rawMarks
+    );
 
     // Pillar 1: Trajectory Analysis (Velocity, Acceleration, Momentum)
-    const trajectory = this.computeTrajectory(semesterSnapshots, ezoneProfile);
+    const trajectory = this.computeTrajectory(semesterSnapshots, ezoneProfile, cumulativeCgpa);
 
     // Pillar 2: Subject Domain Affinity & Pattern Recognition
     const domainAffinity = this.computeDomainAffinity(academicRecords, ezoneProfile, rawMarks);
@@ -216,32 +254,46 @@ export class StudentGrowthEngineService {
   }
 
   /**
-   * Compiles multi-semester snapshots from DB records with graceful fallback
+   * Compiles multi-semester snapshots from DB records matching official transcript GPA eligibility
    */
   private compileSemesterSnapshots(
     academicRecords: any[],
     ezoneProfile: any,
     rawMarks: any[]
-  ): ISemesterSnapshot[] {
-    const semMap = new Map<number, { credits: number; weightedPoints: number; count: number }>();
+  ): { snapshots: ISemesterSnapshot[]; cumulativeCgpa: number } {
+    const semMap = new Map<number, {
+      totalCredits: number;
+      eligibleCredits: number;
+      eligibleGradePoints: number;
+      count: number;
+    }>();
+
+    let totalCumulativeEligibleCredits = 0;
+    let totalCumulativeEligiblePoints = 0;
 
     if (academicRecords && academicRecords.length > 0) {
       academicRecords.forEach((rec) => {
         const sem = rec.semesterNumber || parseInt(rec.semester?.replace(/\D/g, '') || '1') || 1;
-        const cur = semMap.get(sem) || { credits: 0, weightedPoints: 0, count: 0 };
-        const credits = rec.credits && Number(rec.credits) > 0 ? Number(rec.credits) : 4;
-        
-        // In institutional schemas, gradePoints may store total earned credit points (e.g. 24 for 4 credits = grade 6).
-        // If gradePoints > 10, extract the underlying 10-point grade.
-        let baseGrade = rec.gradePoints !== undefined && rec.gradePoints !== null ? Number(rec.gradePoints) : 7.0;
-        if (baseGrade > 10 && credits > 0) {
-          baseGrade = baseGrade / credits;
-        }
-        baseGrade = Math.min(10, Math.max(0, baseGrade));
+        const cur = semMap.get(sem) || {
+          totalCredits: 0,
+          eligibleCredits: 0,
+          eligibleGradePoints: 0,
+          count: 0,
+        };
 
-        cur.credits += credits;
-        cur.weightedPoints += baseGrade * credits;
+        const credits = Number(rec.credits ?? 0);
+        const gradePoints = Number(rec.gradePoints ?? 0);
+
+        cur.totalCredits += credits;
         cur.count += 1;
+
+        if (isGpaEligible(rec)) {
+          cur.eligibleCredits += credits;
+          cur.eligibleGradePoints += gradePoints;
+          totalCumulativeEligibleCredits += credits;
+          totalCumulativeEligiblePoints += gradePoints;
+        }
+
         semMap.set(sem, cur);
       });
     }
@@ -253,13 +305,13 @@ export class StudentGrowthEngineService {
       const sortedSems = Array.from(semMap.keys()).sort((a, b) => a - b);
       sortedSems.forEach((sem) => {
         const data = semMap.get(sem)!;
-        const rawSgpa = data.credits > 0 ? data.weightedPoints / data.credits : 7.0;
+        const rawSgpa = data.eligibleCredits > 0 ? data.eligibleGradePoints / data.eligibleCredits : 7.0;
         const sgpa = parseFloat(Math.min(10, Math.max(0, rawSgpa)).toFixed(2));
         snapshots.push({
           semesterNumber: sem,
           semesterName: `Semester ${sem}`,
           sgpa,
-          credits: data.credits,
+          credits: data.totalCredits,
           attendancePercentage: Math.min(100, Math.max(60, overallAttendance + (sem % 2 === 0 ? 3 : -4))),
           subjectCount: data.count,
         });
@@ -305,13 +357,21 @@ export class StudentGrowthEngineService {
       );
     }
 
-    return snapshots;
+    const cumulativeCgpa = totalCumulativeEligibleCredits > 0
+      ? parseFloat((totalCumulativeEligiblePoints / totalCumulativeEligibleCredits).toFixed(2))
+      : (snapshots.length > 0 ? snapshots[snapshots.length - 1].sgpa : 7.5);
+
+    return { snapshots, cumulativeCgpa };
   }
 
   /**
    * Computes Trajectory velocity, acceleration, direction, and attendance covariance
    */
-  private computeTrajectory(snapshots: ISemesterSnapshot[], ezoneProfile: any) {
+  private computeTrajectory(
+    snapshots: ISemesterSnapshot[],
+    ezoneProfile: any,
+    cumulativeCgpa?: number
+  ) {
     const n = snapshots.length;
     const currentSnapshot = snapshots[n - 1];
     const prevSnapshot = snapshots[n - 2];
@@ -345,10 +405,12 @@ export class StudentGrowthEngineService {
       trajectoryDescription = `A moderate decline of ${velocity} SGPA detected. Reviewing missed internal assessments can restore growth.`;
     }
 
-    // Overall CGPA calculation
+    // Overall CGPA calculation strictly matching official transcript canonical calculation
     const totalCredits = snapshots.reduce((acc, s) => acc + s.credits, 0);
     const totalPoints = snapshots.reduce((acc, s) => acc + s.sgpa * s.credits, 0);
-    const overallCgpa = totalCredits > 0 ? parseFloat((totalPoints / totalCredits).toFixed(2)) : currentSgpa;
+    const overallCgpa = (cumulativeCgpa !== undefined && cumulativeCgpa > 0)
+      ? cumulativeCgpa
+      : (totalCredits > 0 ? parseFloat((totalPoints / totalCredits).toFixed(2)) : currentSgpa);
 
     // Momentum score (-100 to +100)
     const momentumScore = Math.max(-100, Math.min(100, Math.round(velocity * 80 + acceleration * 40)));
@@ -400,10 +462,19 @@ export class StudentGrowthEngineService {
     if (academicRecords && academicRecords.length > 0) {
       academicRecords.forEach((rec) => {
         const { cluster } = this.classifySubject(rec.subjectName, rec.subjectCode);
-        const credits = rec.credits && Number(rec.credits) > 0 ? Number(rec.credits) : 4;
-        let baseGrade = rec.gradePoints !== undefined && rec.gradePoints !== null ? Number(rec.gradePoints) : 7.0;
-        if (baseGrade > 10 && credits > 0) {
-          baseGrade = baseGrade / credits;
+        const credits = Number(rec.credits ?? 0);
+        let baseGrade = 7.0;
+        if (credits > 0 && rec.gradePoints !== undefined && rec.gradePoints !== null) {
+          baseGrade = Number(rec.gradePoints) / credits;
+        } else if (rec.grade) {
+          const g = String(rec.grade).trim().toUpperCase();
+          if (g === 'O') baseGrade = 10;
+          else if (g === 'A+') baseGrade = 9;
+          else if (g === 'A') baseGrade = 8;
+          else if (g === 'B+') baseGrade = 7;
+          else if (g === 'B') baseGrade = 6;
+          else if (g === 'C') baseGrade = 5;
+          else if (g === 'F') baseGrade = 0;
         }
         baseGrade = Math.min(10, Math.max(0, baseGrade));
         // Normalized percentage on 0-100 scale: e.g. Grade 8 -> 80%, Grade 6.5 -> 65%
