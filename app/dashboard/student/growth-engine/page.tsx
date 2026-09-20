@@ -26,6 +26,10 @@ import {
   Compass,
   FileText,
   Flame,
+  Target,
+  Lightbulb,
+  Clock,
+  Briefcase,
 } from 'lucide-react';
 
 interface ISemesterSnapshot {
@@ -61,6 +65,9 @@ interface IRemediationAdvice {
   rootCauseExplanation: string;
   pragmaticAdvice: string;
   industryContext: string;
+  whyItMatters?: string;
+  smartActionHack?: string;
+  estimatedImpact?: string;
 }
 
 interface IGrowthReport {
@@ -504,23 +511,63 @@ export default function StudentGrowthEnginePage() {
       </div>
 
       {/* Pillar 3: Pragmatic Industry-Aligned Remediation Framework (PIARF) */}
-      <div className="space-y-4">
+      <div className="space-y-5">
         <div>
-          <h3 className="text-base font-bold text-white flex items-center gap-2">
-            <Layers className="w-4 h-4 text-amber-400" />
-            Pragmatic Industry-Aligned Remediation Framework
-          </h3>
+          <div className="flex items-center justify-between flex-wrap gap-2">
+            <h3 className="text-base font-bold text-white flex items-center gap-2">
+              <Layers className="w-4 h-4 text-amber-400" />
+              Pragmatic Industry-Aligned Remediation Framework (PIARF)
+            </h3>
+            <div className="flex items-center gap-2 text-xs font-semibold flex-wrap">
+              <span className="px-2.5 py-1 rounded-full bg-rose-500/10 text-rose-400 border border-rose-500/20 flex items-center gap-1">
+                <Flame className="w-3.5 h-3.5" /> {criticalRemediations.length} Critical Focus
+              </span>
+              <span className="px-2.5 py-1 rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20 flex items-center gap-1">
+                <ShieldCheck className="w-3.5 h-3.5" /> {passOnlyRemediations.length} Pass-Only
+              </span>
+              <span className="px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 flex items-center gap-1">
+                <Clock className="w-3.5 h-3.5" /> Saves ~40h Coding Time
+              </span>
+            </div>
+          </div>
           <p className="text-xs text-slate-400 mt-0.5">
-            Clear triage between high-ROI core CS remediation and low-ROI pass-only clearance to protect your coding bandwidth.
+            Real-world triage: Focus deep energy where recruiters look (DSA & Core CS), and clear non-core requirements with minimal effort.
           </p>
+        </div>
+
+        {/* Tactical Student Reality Banner: College Mindset vs Industry Reality */}
+        <div className="p-4 md:p-5 rounded-2xl bg-gradient-to-r from-amber-500/10 via-slate-900/90 to-indigo-500/10 border border-amber-500/30 backdrop-blur-md shadow-xl">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div className="space-y-2 max-w-3xl">
+              <div className="flex items-center gap-2">
+                <span className="px-2.5 py-0.5 rounded text-[10px] font-black uppercase tracking-wider bg-amber-500/20 text-amber-300 border border-amber-500/30 flex items-center gap-1">
+                  <Zap className="w-3 h-3" /> Engineering Time Triage Rule
+                </span>
+                <span className="text-xs text-slate-300 font-semibold">College Mindset vs Industry Reality</span>
+              </div>
+              <p className="text-xs text-slate-200 leading-relaxed">
+                College curriculum treats every subject equally. But software recruiters weigh <strong>Data Structures & Core CS at 95%</strong>, while non-tech electives carry <strong>0% hiring value</strong>. Allocate 85% of your mental energy to high-ROI technical mastery & CGPA backlogs; use 2-day past-paper sprints for auxiliary courses to safeguard your coding hours!
+              </p>
+            </div>
+            <div className="flex items-center gap-2 shrink-0">
+              <div className="p-3 rounded-xl bg-slate-900/80 border border-slate-800 text-center min-w-[130px]">
+                <span className="text-[10px] text-slate-400 font-medium uppercase block">Tech Hiring Weight</span>
+                <span className="text-lg font-black text-rose-400">95% vs 0%</span>
+                <span className="text-[10px] text-slate-400 block">Core CS vs Electives</span>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {/* Column 1: High-ROI Core (Critical Focus) */}
           <div className="space-y-3">
-            <div className="flex items-center gap-2 text-xs font-bold text-rose-400 uppercase tracking-wider">
-              <Flame className="w-4 h-4 text-rose-400" />
-              High-ROI Core Subjects (Critical Remediation)
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-2 text-xs font-bold text-rose-400 uppercase tracking-wider">
+                <Flame className="w-4 h-4 text-rose-400" />
+                High-ROI Core Subjects (Critical Remediation)
+              </div>
+              <span className="text-[11px] text-rose-400/80 font-medium">Yahaan Full Jaan Lagani Hai</span>
             </div>
 
             {criticalRemediations.length === 0 ? (
@@ -531,33 +578,62 @@ export default function StudentGrowthEnginePage() {
               criticalRemediations.map((item) => (
                 <div
                   key={item.subjectCode}
-                  className="p-5 rounded-xl bg-gradient-to-br from-rose-950/20 to-slate-900/80 border border-rose-500/30 space-y-3 shadow-lg"
+                  className="p-5 rounded-xl bg-gradient-to-br from-rose-950/20 via-slate-900/90 to-slate-900 border border-rose-500/30 space-y-3 shadow-xl hover:border-rose-500/50 transition-all"
                 >
-                  <div className="flex items-center justify-between">
+                  <div className="flex items-center justify-between flex-wrap gap-2">
                     <div>
-                      <span className="text-xs font-bold text-white block">{item.subjectName}</span>
-                      <span className="text-[11px] text-slate-400">{item.subjectCode} • Score: {item.scoreOrGrade}</span>
+                      <span className="text-sm font-bold text-white block">{item.subjectName}</span>
+                      <span className="text-xs text-slate-400 font-medium">{item.subjectCode} • {item.scoreOrGrade}</span>
                     </div>
-                    <span className="px-2.5 py-1 text-[10px] font-extrabold rounded-lg bg-rose-500/20 text-rose-400 border border-rose-500/30 uppercase tracking-wider">
-                      Priority 1
-                    </span>
+                    <div className="flex items-center gap-1.5">
+                      {item.estimatedImpact && (
+                        <span className="px-2.5 py-1 text-[10px] font-bold rounded-lg bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">
+                          {item.estimatedImpact}
+                        </span>
+                      )}
+                      <span className="px-2.5 py-1 text-[10px] font-black rounded-lg bg-rose-500/20 text-rose-400 border border-rose-500/30 uppercase tracking-wider">
+                        Priority 1
+                      </span>
+                    </div>
                   </div>
 
-                  <div className="p-3 rounded-lg bg-rose-950/30 border border-rose-500/20 text-xs text-rose-200 leading-relaxed">
-                    <strong>Root Cause:</strong> {item.rootCauseExplanation}
+                  {/* Kyun Critical Hai (Why it matters) */}
+                  <div className="p-3 rounded-lg bg-rose-950/30 border border-rose-500/20 space-y-1">
+                    <div className="flex items-center gap-1.5 text-[11px] font-bold text-rose-300 uppercase tracking-wider">
+                      <Target className="w-3.5 h-3.5 text-rose-400" />
+                      Kyun Critical Hai (High Impact)
+                    </div>
+                    <p className="text-xs text-rose-100/90 leading-relaxed">
+                      {item.whyItMatters || item.industryContext}
+                    </p>
                   </div>
 
-                  <div className="text-xs text-slate-300 leading-relaxed">
-                    <strong>Industry Directive:</strong> {item.pragmaticAdvice}
+                  {/* Root Cause & Diagnosis */}
+                  <div className="p-2.5 rounded-lg bg-slate-800/40 border border-slate-700/50 text-xs text-slate-300 leading-relaxed flex items-start gap-2">
+                    <AlertTriangle className="w-3.5 h-3.5 text-amber-400 shrink-0 mt-0.5" />
+                    <span><strong>Root Cause:</strong> {item.rootCauseExplanation}</span>
                   </div>
 
-                  <div className="pt-1 flex items-center justify-between text-[11px] text-slate-400">
-                    <span>{item.industryContext}</span>
+                  {/* Smart Hack / Action Directive */}
+                  <div className="p-3 rounded-lg bg-slate-900/90 border border-slate-700/60 space-y-1">
+                    <div className="flex items-center gap-1.5 text-[11px] font-bold text-emerald-400 uppercase tracking-wider">
+                      <Lightbulb className="w-3.5 h-3.5 text-emerald-400" />
+                      Target Action Directive (Smart Hack)
+                    </div>
+                    <p className="text-xs text-slate-200 leading-relaxed">
+                      {item.smartActionHack || item.pragmaticAdvice}
+                    </p>
+                  </div>
+
+                  <div className="pt-1 flex items-center justify-between text-xs text-slate-400 flex-wrap gap-2">
+                    <span className="font-semibold text-rose-400/90">{item.industryContext}</span>
                     <Link
-                      href={`/dashboard/student/chatbot?query=Help me remediate my low score in ${encodeURIComponent(item.subjectName)}`}
-                      className="text-indigo-400 hover:text-indigo-300 font-medium inline-flex items-center gap-1"
+                      href={`/dashboard/student/chatbot?query=${encodeURIComponent(
+                        `Help me create an intensive study plan and interview recovery sprint for ${item.subjectName} (${item.subjectCode})`
+                      )}`}
+                      className="text-indigo-400 hover:text-indigo-300 font-bold inline-flex items-center gap-1 bg-indigo-500/10 px-3 py-1.5 rounded-lg border border-indigo-500/20 hover:bg-indigo-500/20 transition-all text-xs"
                     >
-                      Remediate with AI <ArrowRight className="w-3 h-3" />
+                      Remediate with AI <ArrowRight className="w-3.5 h-3.5" />
                     </Link>
                   </div>
                 </div>
@@ -567,9 +643,12 @@ export default function StudentGrowthEnginePage() {
 
           {/* Column 2: Low-ROI Auxiliary (Pass-Only Clearance) */}
           <div className="space-y-3">
-            <div className="flex items-center gap-2 text-xs font-bold text-slate-300 uppercase tracking-wider">
-              <ShieldCheck className="w-4 h-4 text-blue-400" />
-              Low-ROI Auxiliary Courses (Pass-Only Strategy)
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-2 text-xs font-bold text-slate-300 uppercase tracking-wider">
+                <ShieldCheck className="w-4 h-4 text-blue-400" />
+                Low-ROI Auxiliary Courses (Pass-Only Strategy)
+              </div>
+              <span className="text-[11px] text-slate-400 font-medium">Time Waste Mat Karein</span>
             </div>
 
             {passOnlyRemediations.length === 0 ? (
@@ -580,24 +659,57 @@ export default function StudentGrowthEnginePage() {
               passOnlyRemediations.map((item) => (
                 <div
                   key={item.subjectCode}
-                  className="p-5 rounded-xl bg-slate-900/60 border border-slate-700/60 space-y-3"
+                  className="p-5 rounded-xl bg-gradient-to-br from-blue-950/15 via-slate-900/80 to-slate-900 border border-slate-700/60 space-y-3 shadow-lg hover:border-slate-600 transition-all"
                 >
-                  <div className="flex items-center justify-between">
+                  <div className="flex items-center justify-between flex-wrap gap-2">
                     <div>
-                      <span className="text-xs font-bold text-white block">{item.subjectName}</span>
-                      <span className="text-[11px] text-slate-400">{item.subjectCode} • Score: {item.scoreOrGrade}</span>
+                      <span className="text-sm font-bold text-white block">{item.subjectName}</span>
+                      <span className="text-xs text-slate-400 font-medium">{item.subjectCode} • {item.scoreOrGrade}</span>
                     </div>
-                    <span className="px-2.5 py-1 text-[10px] font-bold rounded-lg bg-slate-800 text-slate-300 border border-slate-700 uppercase tracking-wider">
-                      Pass-Only
-                    </span>
+                    <div className="flex items-center gap-1.5">
+                      {item.estimatedImpact && (
+                        <span className="px-2.5 py-1 text-[10px] font-bold rounded-lg bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                          {item.estimatedImpact}
+                        </span>
+                      )}
+                      <span className="px-2.5 py-1 text-[10px] font-bold rounded-lg bg-blue-500/10 text-blue-400 border border-blue-500/30 uppercase tracking-wider">
+                        Pass-Only
+                      </span>
+                    </div>
                   </div>
 
-                  <div className="p-3 rounded-lg bg-slate-800/50 border border-slate-700/50 text-xs text-slate-300 leading-relaxed">
-                    <strong>Pragmatic Advice:</strong> {item.pragmaticAdvice}
+                  {/* Recruiter Reality Check */}
+                  <div className="p-3 rounded-lg bg-slate-800/60 border border-slate-700/60 space-y-1">
+                    <div className="flex items-center gap-1.5 text-[11px] font-bold text-slate-300 uppercase tracking-wider">
+                      <Briefcase className="w-3.5 h-3.5 text-blue-400" />
+                      Recruiter Reality Check (Industry Perspective)
+                    </div>
+                    <p className="text-xs text-slate-300 leading-relaxed">
+                      {item.whyItMatters || item.industryContext}
+                    </p>
                   </div>
 
-                  <div className="text-[11px] text-slate-400 italic">
-                    {item.industryContext}
+                  {/* Smart Student Hack (Time Saver) */}
+                  <div className="p-3 rounded-lg bg-slate-900/90 border border-slate-700/60 space-y-1">
+                    <div className="flex items-center gap-1.5 text-[11px] font-bold text-amber-400 uppercase tracking-wider">
+                      <Lightbulb className="w-3.5 h-3.5 text-amber-400" />
+                      Smart Student Hack (Time Saver)
+                    </div>
+                    <p className="text-xs text-slate-300 leading-relaxed">
+                      {item.smartActionHack || item.pragmaticAdvice}
+                    </p>
+                  </div>
+
+                  <div className="pt-1 flex items-center justify-between text-xs text-slate-400 flex-wrap gap-2">
+                    <span className="italic text-slate-400 text-[11px]">{item.industryContext}</span>
+                    <Link
+                      href={`/dashboard/student/chatbot?query=${encodeURIComponent(
+                        `Give me a 2-day past-paper pass-only study plan for ${item.subjectName} (${item.subjectCode}) without taking time away from coding`
+                      )}`}
+                      className="text-blue-400 hover:text-blue-300 font-bold inline-flex items-center gap-1 bg-blue-500/10 px-3 py-1.5 rounded-lg border border-blue-500/20 hover:bg-blue-500/20 transition-all text-xs"
+                    >
+                      Get 2-Day Cheat Sheet <ArrowRight className="w-3.5 h-3.5" />
+                    </Link>
                   </div>
                 </div>
               ))

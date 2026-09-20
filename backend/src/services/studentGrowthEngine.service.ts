@@ -97,6 +97,9 @@ export interface IRemediationAdvice {
   rootCauseExplanation: string;
   pragmaticAdvice: string;
   industryContext: string;
+  whyItMatters?: string;
+  smartActionHack?: string;
+  estimatedImpact?: string;
 }
 
 export interface IGrowthEngineReport {
@@ -738,6 +741,9 @@ export class StudentGrowthEngineService {
         rootCauseExplanation: string;
         pragmaticAdvice: string;
         industryContext: string;
+        whyItMatters?: string;
+        smartActionHack?: string;
+        estimatedImpact?: string;
         numericScore: number;
         rank: number;
       }> = [];
@@ -778,6 +784,18 @@ export class StudentGrowthEngineService {
                 cluster === 'theoretical_math'
                   ? `High Academic Impact: ${credits} credits directly restore CGPA + unlocks Data Science/ML opportunities.`
                   : 'Critical Tech Filter: Mandatory for graduation compliance and tech eligibility.',
+              whyItMatters:
+                cluster === 'theoretical_math'
+                  ? `Backlog clearance directly restores +0.36 to cumulative CGPA and unlocks foundational mathematical reasoning for AI/ML engineering.`
+                  : `Mandatory technical screening criteria for graduation and SDE hiring eligibility.`,
+              smartActionHack:
+                cluster === 'theoretical_math'
+                  ? `Prepare standard formula cheatsheets (Bayes Theorem, probability distributions, regression) to secure a clean re-exam clearance.`
+                  : `Execute targeted previous-year paper sprints to clear credits.`,
+              estimatedImpact:
+                cluster === 'theoretical_math'
+                  ? `+0.36 CGPA Boost • AI/ML Foundation`
+                  : `Mandatory Tech Clearance • SDE Eligibility`,
               numericScore: 35,
               rank: 1,
             });
@@ -796,6 +814,9 @@ export class StudentGrowthEngineService {
               pragmaticAdvice:
                 'Strictly pass-only strategy recommended. Unless pursuing embedded firmware/VLSI, do NOT waste high-energy coding hours. Master the top 5 recurring past-year question templates to clear the credits and immediately re-focus on software engineering.',
               industryContext: 'Low Industry ROI: Purely institutional compliance; zero recruiter interest in software screens.',
+              whyItMatters: 'Hardware circuit derivations carry 0% weight in software engineering hiring pipelines. Purely required for graduation credits compliance.',
+              smartActionHack: 'Master only the top 5 recurring past-year exam templates to secure passing marks (Grade D/P) and save 30+ hours for software projects.',
+              estimatedImpact: 'Saves ~30+ Coding Hours • Degree Clearance',
               numericScore: 30,
               rank: 3,
             });
@@ -819,6 +840,9 @@ export class StudentGrowthEngineService {
                 ? 'Highest Tech Priority! DSA is tested in 90%+ of technical coding interviews. Revisit Trees, Graphs, Dynamic Programming, and complexity analysis on LeetCode to upgrade from Grade B to interview mastery.'
                 : `Elevate technical depth in ${name}. Core software engineering concepts directly determine senior technical interview outcomes.`,
             industryContext: 'Highest Tech ROI (95%): Mandatory technical screening filter for SDE-1, Backend, and Systems hiring.',
+            whyItMatters: 'Data Structures is tested in 90%+ of technical coding screens for SDE-1, Backend, and Systems hiring. Elevating from Grade B understanding to interview mastery is the highest ROI action for your placements.',
+            smartActionHack: 'Execute a 14-day targeted LeetCode sprint on Trees, Graphs, and Dynamic Programming to upgrade from Grade B understanding to interview-ready confidence.',
+            estimatedImpact: '95% Tech Screen Filter • Interview Ready',
             numericScore: grade === 'B' ? 60 : 50,
             rank: 2,
           });
@@ -839,6 +863,9 @@ export class StudentGrowthEngineService {
             pragmaticAdvice:
               'Zero anxiety required. Non-technical elective grades carry 0% weight in software hiring pipelines. Complete standard submissions without taking time away from GitHub portfolio projects.',
             industryContext: 'Institutional Compliance (15% ROI): Purely university credit fulfillment; zero recruiter relevance.',
+            whyItMatters: 'Non-technical institutional elective carries 0% recruiter interest for technical software roles.',
+            smartActionHack: 'Zero anxiety required! Complete basic class submissions to maintain compliance while reserving maximum mental energy for GitHub portfolio apps.',
+            estimatedImpact: 'Zero Recruiter Relevance • Baseline Pass',
             numericScore: grade === 'C' ? 50 : 40,
             rank: 4,
           });
@@ -861,6 +888,9 @@ export class StudentGrowthEngineService {
           rootCauseExplanation: c.rootCauseExplanation,
           pragmaticAdvice: c.pragmaticAdvice,
           industryContext: c.industryContext,
+          whyItMatters: c.whyItMatters,
+          smartActionHack: c.smartActionHack,
+          estimatedImpact: c.estimatedImpact,
         });
       });
     }
