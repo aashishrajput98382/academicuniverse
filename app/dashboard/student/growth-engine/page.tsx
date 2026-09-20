@@ -520,18 +520,18 @@ export default function StudentGrowthEnginePage() {
             </h3>
             <div className="flex items-center gap-2 text-xs font-semibold flex-wrap">
               <span className="px-2.5 py-1 rounded-full bg-rose-500/10 text-rose-400 border border-rose-500/20 flex items-center gap-1">
-                <Flame className="w-3.5 h-3.5" /> {criticalRemediations.length} Critical Focus
+                <Flame className="w-3.5 h-3.5" /> {criticalRemediations.length} Subject Mein Jaan Lagao
               </span>
               <span className="px-2.5 py-1 rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20 flex items-center gap-1">
-                <ShieldCheck className="w-3.5 h-3.5" /> {passOnlyRemediations.length} Pass-Only
+                <ShieldCheck className="w-3.5 h-3.5" /> {passOnlyRemediations.length} Subject Smartly Pass Karo
               </span>
               <span className="px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 flex items-center gap-1">
-                <Clock className="w-3.5 h-3.5" /> Saves ~40h Coding Time
+                <Clock className="w-3.5 h-3.5" /> ~40h Coding Time Bachao
               </span>
             </div>
           </div>
           <p className="text-xs text-slate-400 mt-0.5">
-            Real-world triage: Focus deep energy where recruiters look (DSA & Core CS), and clear non-core requirements with minimal effort.
+            College bolta hai sab padho, lekin industry mein DSA 95% maayane rakhta hai aur electives 0%. Yahan se samjho kahan jaan lagani hai aur kahan smart pass hokar time bachana hai!
           </p>
         </div>
 
@@ -541,12 +541,12 @@ export default function StudentGrowthEnginePage() {
             <div className="space-y-2 max-w-3xl">
               <div className="flex items-center gap-2">
                 <span className="px-2.5 py-0.5 rounded text-[10px] font-black uppercase tracking-wider bg-amber-500/20 text-amber-300 border border-amber-500/30 flex items-center gap-1">
-                  <Zap className="w-3 h-3" /> Engineering Time Triage Rule
+                  <Zap className="w-3 h-3" /> Engineering Time Triage Rule (College vs Asli Reality)
                 </span>
-                <span className="text-xs text-slate-300 font-semibold">College Mindset vs Industry Reality</span>
+                <span className="text-xs text-slate-300 font-semibold">Kahan Jaan Lagani Hai vs Kahan Time Bachana Hai</span>
               </div>
               <p className="text-xs text-slate-200 leading-relaxed">
-                College curriculum treats every subject equally. But software recruiters weigh <strong>Data Structures & Core CS at 95%</strong>, while non-tech electives carry <strong>0% hiring value</strong>. Allocate 85% of your mental energy to high-ROI technical mastery & CGPA backlogs; use 2-day past-paper sprints for auxiliary courses to safeguard your coding hours!
+                College har subject ko barabar manta hai, lekin reality ye hai ki tech recruiters sirf <strong>Data Structures aur Core CS (95%)</strong> dekhte hain, jabki non-tech electives ka placement mein <strong>0% value</strong> hota hai. Apna 85% focus High-ROI technical subjects aur backlogs par lagao, aur baaki non-tech courses ko 2-day past-paper hack se nipta kar apna keemti time Coding aur GitHub projects ke liye bachao!
               </p>
             </div>
             <div className="flex items-center gap-2 shrink-0">
@@ -565,14 +565,14 @@ export default function StudentGrowthEnginePage() {
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2 text-xs font-bold text-rose-400 uppercase tracking-wider">
                 <Flame className="w-4 h-4 text-rose-400" />
-                High-ROI Core Subjects (Critical Remediation)
+                High-ROI Core Subjects (Yahaan Full Jaan Lagani Hai)
               </div>
-              <span className="text-[11px] text-rose-400/80 font-medium">Yahaan Full Jaan Lagani Hai</span>
+              <span className="text-[11px] text-rose-400/80 font-medium">Tech Interviews & CGPA Boost</span>
             </div>
 
             {criticalRemediations.length === 0 ? (
               <div className="p-5 rounded-xl bg-slate-900/40 border border-slate-800 text-slate-400 text-xs">
-                No critical core subjects flagged! All foundational CS courses are in good standing.
+                Sab badhiya hai! Saare foundational CS subjects achhi position mein hain.
               </div>
             ) : (
               criticalRemediations.map((item) => (
@@ -597,28 +597,28 @@ export default function StudentGrowthEnginePage() {
                     </div>
                   </div>
 
-                  {/* Kyun Critical Hai (Why it matters) */}
+                  {/* Kyun Zaroori Hai (Why it matters) */}
                   <div className="p-3 rounded-lg bg-rose-950/30 border border-rose-500/20 space-y-1">
                     <div className="flex items-center gap-1.5 text-[11px] font-bold text-rose-300 uppercase tracking-wider">
                       <Target className="w-3.5 h-3.5 text-rose-400" />
-                      Kyun Critical Hai (High Impact)
+                      Kyun Zaroori Hai (High Impact)
                     </div>
                     <p className="text-xs text-rose-100/90 leading-relaxed">
                       {item.whyItMatters || item.industryContext}
                     </p>
                   </div>
 
-                  {/* Root Cause & Diagnosis */}
+                  {/* Asli Wajah (Root Cause) */}
                   <div className="p-2.5 rounded-lg bg-slate-800/40 border border-slate-700/50 text-xs text-slate-300 leading-relaxed flex items-start gap-2">
                     <AlertTriangle className="w-3.5 h-3.5 text-amber-400 shrink-0 mt-0.5" />
-                    <span><strong>Root Cause:</strong> {item.rootCauseExplanation}</span>
+                    <span><strong>Asli Wajah (Root Cause):</strong> {item.rootCauseExplanation}</span>
                   </div>
 
-                  {/* Smart Hack / Action Directive */}
+                  {/* Action Plan (Smart Hack) */}
                   <div className="p-3 rounded-lg bg-slate-900/90 border border-slate-700/60 space-y-1">
                     <div className="flex items-center gap-1.5 text-[11px] font-bold text-emerald-400 uppercase tracking-wider">
                       <Lightbulb className="w-3.5 h-3.5 text-emerald-400" />
-                      Target Action Directive (Smart Hack)
+                      Action Plan (Smart Hack)
                     </div>
                     <p className="text-xs text-slate-200 leading-relaxed">
                       {item.smartActionHack || item.pragmaticAdvice}
@@ -629,11 +629,11 @@ export default function StudentGrowthEnginePage() {
                     <span className="font-semibold text-rose-400/90">{item.industryContext}</span>
                     <Link
                       href={`/dashboard/student/chatbot?query=${encodeURIComponent(
-                        `Help me create an intensive study plan and interview recovery sprint for ${item.subjectName} (${item.subjectCode})`
+                        `Mujhe ${item.subjectName} (${item.subjectCode}) ke liye intensive study plan aur interview sprint guide bana kar do`
                       )}`}
                       className="text-indigo-400 hover:text-indigo-300 font-bold inline-flex items-center gap-1 bg-indigo-500/10 px-3 py-1.5 rounded-lg border border-indigo-500/20 hover:bg-indigo-500/20 transition-all text-xs"
                     >
-                      Remediate with AI <ArrowRight className="w-3.5 h-3.5" />
+                      AI se Study Plan Banao <ArrowRight className="w-3.5 h-3.5" />
                     </Link>
                   </div>
                 </div>
@@ -646,14 +646,14 @@ export default function StudentGrowthEnginePage() {
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2 text-xs font-bold text-slate-300 uppercase tracking-wider">
                 <ShieldCheck className="w-4 h-4 text-blue-400" />
-                Low-ROI Auxiliary Courses (Pass-Only Strategy)
+                Low-ROI Auxiliary Courses (Time Waste Mat Karein)
               </div>
-              <span className="text-[11px] text-slate-400 font-medium">Time Waste Mat Karein</span>
+              <span className="text-[11px] text-slate-400 font-medium">Sirf Degree Formality Ke Liye</span>
             </div>
 
             {passOnlyRemediations.length === 0 ? (
               <div className="p-5 rounded-xl bg-slate-900/40 border border-slate-800 text-slate-400 text-xs">
-                No auxiliary backlogs or low marks flagged.
+                Koi non-core backlog ya low marks nahi hain.
               </div>
             ) : (
               passOnlyRemediations.map((item) => (
@@ -682,7 +682,7 @@ export default function StudentGrowthEnginePage() {
                   <div className="p-3 rounded-lg bg-slate-800/60 border border-slate-700/60 space-y-1">
                     <div className="flex items-center gap-1.5 text-[11px] font-bold text-slate-300 uppercase tracking-wider">
                       <Briefcase className="w-3.5 h-3.5 text-blue-400" />
-                      Recruiter Reality Check (Industry Perspective)
+                      Recruiter Reality Check (Asli Sach)
                     </div>
                     <p className="text-xs text-slate-300 leading-relaxed">
                       {item.whyItMatters || item.industryContext}
@@ -704,11 +704,11 @@ export default function StudentGrowthEnginePage() {
                     <span className="italic text-slate-400 text-[11px]">{item.industryContext}</span>
                     <Link
                       href={`/dashboard/student/chatbot?query=${encodeURIComponent(
-                        `Give me a 2-day past-paper pass-only study plan for ${item.subjectName} (${item.subjectCode}) without taking time away from coding`
+                        `Bina coding time waste kiye mujhe ${item.subjectName} (${item.subjectCode}) ke liye 2-day past-paper pass-only cheat sheet strategy do`
                       )}`}
                       className="text-blue-400 hover:text-blue-300 font-bold inline-flex items-center gap-1 bg-blue-500/10 px-3 py-1.5 rounded-lg border border-blue-500/20 hover:bg-blue-500/20 transition-all text-xs"
                     >
-                      Get 2-Day Cheat Sheet <ArrowRight className="w-3.5 h-3.5" />
+                      AI se 2-Day Cheat Sheet Lo <ArrowRight className="w-3.5 h-3.5" />
                     </Link>
                   </div>
                 </div>
@@ -725,11 +725,11 @@ export default function StudentGrowthEnginePage() {
             <Bot className="w-5 h-5 text-indigo-400" />
             <h4 className="text-sm font-bold text-white">Ask Senior Tech Mentor (AI Chatbot)</h4>
           </div>
-          <span className="text-xs text-indigo-300/80 font-medium">Pre-loaded with your Growth Trajectory</span>
+          <span className="text-xs text-indigo-300/80 font-medium">Aapki Growth Trajectory ke sath pre-loaded hai</span>
         </div>
 
         <p className="text-xs text-slate-300">
-          Click any prompt below to launch the AI Chatbot with your full academic momentum and subject affinity context pre-injected:
+          Neeche diye gaye kisi bhi prompt par click karke seedha AI Senior Mentor se personalized guidance lo:
         </p>
 
         <div className="flex flex-wrap gap-2.5">
@@ -737,39 +737,39 @@ export default function StudentGrowthEnginePage() {
             onClick={() =>
               router.push(
                 `/dashboard/student/chatbot?query=${encodeURIComponent(
-                  'Based on my current academic trajectory, what software engineering projects should I prioritize this semester?'
+                  'Meri academic trajectory aur archetype ke hisaab se mujhe is semester kaunse software engineering projects par focus karna chahiye?'
                 )}`
               )
             }
             className="px-3.5 py-2 rounded-xl text-xs font-medium text-slate-200 bg-slate-800/80 hover:bg-slate-700/80 border border-slate-700/80 transition-all flex items-center gap-1.5 shadow-sm"
           >
-            🚀 Best projects for my archetype <ArrowRight className="w-3 h-3 text-indigo-400" />
+            🚀 Mere Archetype ke best projects batao <ArrowRight className="w-3 h-3 text-indigo-400" />
           </button>
 
           <button
             onClick={() =>
               router.push(
                 `/dashboard/student/chatbot?query=${encodeURIComponent(
-                  'How should I clear low-ROI auxiliary subjects like EVS without wasting my core coding hours?'
+                  'Bina coding hours waste kiye non-core subjects jaise EEE aur EVS ko 2 din mein kaise smartly clear karein?'
                 )}`
               )
             }
             className="px-3.5 py-2 rounded-xl text-xs font-medium text-slate-200 bg-slate-800/80 hover:bg-slate-700/80 border border-slate-700/80 transition-all flex items-center gap-1.5 shadow-sm"
           >
-            🛡️ 2-day clearance strategy for non-core subjects <ArrowRight className="w-3 h-3 text-indigo-400" />
+            🛡️ Non-core subjects ke liye 2-day clearance strategy <ArrowRight className="w-3 h-3 text-indigo-400" />
           </button>
 
           <button
             onClick={() =>
               router.push(
                 `/dashboard/student/chatbot?query=${encodeURIComponent(
-                  'Analyze the correlation between my attendance and my marks across recent semesters.'
+                  'Meri attendance aur marks ke beech ka correlation aur statistical impact explain karo.'
                 )}`
               )
             }
             className="px-3.5 py-2 rounded-xl text-xs font-medium text-slate-200 bg-slate-800/80 hover:bg-slate-700/80 border border-slate-700/80 transition-all flex items-center gap-1.5 shadow-sm"
           >
-            📊 Attendance vs Marks correlation <ArrowRight className="w-3 h-3 text-indigo-400" />
+            📊 Attendance vs Marks ka correlation samjhao <ArrowRight className="w-3 h-3 text-indigo-400" />
           </button>
         </div>
       </div>

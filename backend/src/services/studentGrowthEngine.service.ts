@@ -775,23 +775,23 @@ export class StudentGrowthEngineService {
               industryScore,
               priority: 'CRITICAL_CORE',
               rootCause: 'TERMINAL_EXAM_DROP',
-              rootCauseExplanation: `End-term backlog recorded (Grade F, ${credits} credits). Suppresses cumulative CGPA and semester velocity.`,
+              rootCauseExplanation: `End-term theory exam mein backlog laga hua hai (${credits} Credits) jo overall CGPA ko niche kheench raha hai.`,
               pragmaticAdvice:
                 cluster === 'theoretical_math'
-                  ? `Clear this ${credits}-credit backlog promptly using standard formula cheatsheets (Bayes Theorem, probability distributions, regression). Strong statistical intuition is also a high-value asset for AI/ML engineering.`
-                  : `Critical requirement: Clear this ${credits}-credit technical course immediately. Practice previous 3-year end-term question blueprints.`,
+                  ? `Formula sheet aur Bayes Theorem ke pichle 3 saal ke questions tayyar karke is re-exam ko sabse pehle niptao taaki CGPA seedha jump kare.`
+                  : `Is technical subject ka backlog sabse pehle clear karo. Previous year blueprint papers solve karke direct clearance lo.`,
               industryContext:
                 cluster === 'theoretical_math'
-                  ? `High Academic Impact: ${credits} credits directly restore CGPA + unlocks Data Science/ML opportunities.`
-                  : 'Critical Tech Filter: Mandatory for graduation compliance and tech eligibility.',
+                  ? `High Academic Impact: 4 Credits se CGPA seedha recover hoga + AI/ML foundation strong hogi.`
+                  : 'Critical Tech Filter: Graduation degree aur placement eligibility ke liye zaroori hai.',
               whyItMatters:
                 cluster === 'theoretical_math'
-                  ? `Backlog clearance directly restores +0.36 to cumulative CGPA and unlocks foundational mathematical reasoning for AI/ML engineering.`
-                  : `Mandatory technical screening criteria for graduation and SDE hiring eligibility.`,
+                  ? `Ye 4-credit ka bada subject hai. Iska backlog clear hote hi aapka CGPA seedha jump (+0.36 boost) karega, aur Machine Learning / AI engineering ke liye iski statistical foundation direct kaam aayegi.`
+                  : `Tech jobs aur graduation ke liye is technical backlog ko clear karna top priority hai.`,
               smartActionHack:
                 cluster === 'theoretical_math'
-                  ? `Prepare standard formula cheatsheets (Bayes Theorem, probability distributions, regression) to secure a clean re-exam clearance.`
-                  : `Execute targeted previous-year paper sprints to clear credits.`,
+                  ? `Formula sheets aur Bayes' Theorem ke past-paper questions tayyar karke is re-exam ko sabse pehle clear karo taaki CGPA recover ho jaye.`
+                  : `Previous 3 years ke exam blueprints solve karke re-exam pass karo.`,
               estimatedImpact:
                 cluster === 'theoretical_math'
                   ? `+0.36 CGPA Boost • AI/ML Foundation`
@@ -810,13 +810,13 @@ export class StudentGrowthEngineService {
               industryScore,
               priority: 'PASS_ONLY_AUXILIARY',
               rootCause: 'TERMINAL_EXAM_DROP',
-              rootCauseExplanation: `Hardware/Auxiliary exam backlog (Grade F, ${credits} credits) requiring university graduation clearance.`,
+              rootCauseExplanation: `Hardware circuit derivations ka exam backlog hai (${credits} Credits), jise sirf degree formality ke liye pass karna hai.`,
               pragmaticAdvice:
-                'Strictly pass-only strategy recommended. Unless pursuing embedded firmware/VLSI, do NOT waste high-energy coding hours. Master the top 5 recurring past-year question templates to clear the credits and immediately re-focus on software engineering.',
-              industryContext: 'Low Industry ROI: Purely institutional compliance; zero recruiter interest in software screens.',
-              whyItMatters: 'Hardware circuit derivations carry 0% weight in software engineering hiring pipelines. Purely required for graduation credits compliance.',
-              smartActionHack: 'Master only the top 5 recurring past-year exam templates to secure passing marks (Grade D/P) and save 30+ hours for software projects.',
-              estimatedImpact: 'Saves ~30+ Coding Hours • Degree Clearance',
+                'Smart Hack: Is subject mein topper banne ki zaroorat nahi hai. Sirf top 5 recurring standard question patterns solve karke passing marks (Grade D/P) lo aur bacha hua keemti time coding par lagao.',
+              industryContext: 'Low Industry ROI (35%): Software hiring mein 0% value; sirf university degree formality hai.',
+              whyItMatters: 'Circuit equations aur hardware derivations ka software development ya web dev hiring mein 0% value hai. Isme topper banne ki bilkul zaroorat nahi hai.',
+              smartActionHack: 'Pichle 3 saal ke papers ke sirf top 5 standard question patterns solve karo, passing marks (Grade D/P) lekar backlog clear karo aur apna keemti time software coding par lagao!',
+              estimatedImpact: '~30+ Ghante Coding Ke Bachao • Degree Pass',
               numericScore: 30,
               rank: 3,
             });
@@ -834,14 +834,14 @@ export class StudentGrowthEngineService {
             industryScore,
             priority: 'CRITICAL_CORE',
             rootCause: 'GENERAL_UNDERPERFORMANCE',
-            rootCauseExplanation: `Grade ${grade} in core computing foundation. Creates an avoidable screening hurdle in product company interviews.`,
+            rootCauseExplanation: `DSA mein Grade ${grade} hai. Pass toh ho, lekin product company coding rounds nikalne ke liye deep mastery chahiye.`,
             pragmaticAdvice:
               name.toLowerCase().includes('data structure') || name.toLowerCase().includes('algorithm')
-                ? 'Highest Tech Priority! DSA is tested in 90%+ of technical coding interviews. Revisit Trees, Graphs, Dynamic Programming, and complexity analysis on LeetCode to upgrade from Grade B to interview mastery.'
-                : `Elevate technical depth in ${name}. Core software engineering concepts directly determine senior technical interview outcomes.`,
-            industryContext: 'Highest Tech ROI (95%): Mandatory technical screening filter for SDE-1, Backend, and Systems hiring.',
-            whyItMatters: 'Data Structures is tested in 90%+ of technical coding screens for SDE-1, Backend, and Systems hiring. Elevating from Grade B understanding to interview mastery is the highest ROI action for your placements.',
-            smartActionHack: 'Execute a 14-day targeted LeetCode sprint on Trees, Graphs, and Dynamic Programming to upgrade from Grade B understanding to interview-ready confidence.',
+                ? 'Highest Tech Priority! 90%+ software interviews mein DSA pucha jata hai. Trees, Graphs aur Dynamic Programming par LeetCode sprints chalaakar interview-ready bano.'
+                : `Technical depth badhao: ${name} ke core software concepts seedhe technical interviews mein test hote hain.`,
+            industryContext: 'Highest Tech ROI (95%): SDE-1 aur Backend hiring ka sabse bada screening filter.',
+            whyItMatters: 'Software jobs ke 90%+ technical coding rounds sirf DSA par hote hain. Grade B (6/10) achha hai lekin top product companies ke coding round crack karne ke liye interview-ready mastery zaroori hai.',
+            smartActionHack: '14-day ka targeted LeetCode sprint chalao: Trees, Graphs aur Dynamic Programming par focus karke apni Grade B understanding ko interview mastery mein badlo.',
             estimatedImpact: '95% Tech Screen Filter • Interview Ready',
             numericScore: grade === 'B' ? 60 : 50,
             rank: 2,
@@ -859,12 +859,12 @@ export class StudentGrowthEngineService {
             industryScore,
             priority: 'PASS_ONLY_AUXILIARY',
             rootCause: 'GENERAL_UNDERPERFORMANCE',
-            rootCauseExplanation: `Grade ${grade} in non-technical elective; minimal semester study allocation was dedicated.`,
+            rootCauseExplanation: `Non-technical elective subject hai jisme semester ke dauran minimal study time diya gaya tha.`,
             pragmaticAdvice:
-              'Zero anxiety required. Non-technical elective grades carry 0% weight in software hiring pipelines. Complete standard submissions without taking time away from GitHub portfolio projects.',
-            industryContext: 'Institutional Compliance (15% ROI): Purely university credit fulfillment; zero recruiter relevance.',
-            whyItMatters: 'Non-technical institutional elective carries 0% recruiter interest for technical software roles.',
-            smartActionHack: 'Zero anxiety required! Complete basic class submissions to maintain compliance while reserving maximum mental energy for GitHub portfolio apps.',
+              'Zero Tension: Non-tech electives ka software jobs mein koi lena-dena nahi hota. Normal passing marks rakho aur dimag GitHub projects banane mein lagao.',
+            industryContext: 'Institutional Formality (15% ROI): Purely degree credit poora karne ke liye; zero recruiter interest.',
+            whyItMatters: 'Ye non-technical college elective hai. Koi bhi tech recruiter ya company aapse iske marks nahi mangegi. Is par zero anxiety leni hai!',
+            smartActionHack: 'Zero Tension: Basic assignments aur presentations submit karke compliance poori rakho aur apna dimag aur time GitHub projects banane mein lagao.',
             estimatedImpact: 'Zero Recruiter Relevance • Baseline Pass',
             numericScore: grade === 'C' ? 50 : 40,
             rank: 4,
