@@ -53,6 +53,27 @@ const GPA_EXEMPT_STATUSES = new Set(['Audit', 'In Progress', 'Fail']);
  */
 const NON_GP_GRADES = new Set(['F']);
 
+const GRADE_POINTS_MAP: Record<string, number> = {
+  'O': 10,
+  'A+': 9,
+  'A': 8,
+  'B+': 7,
+  'B': 6,
+  'C': 5,
+  'D': 4,
+  'P': 4,
+  'F': 0,
+};
+
+export function getEffectiveGradePoints(record: any): number {
+  const credits = Number(record.credits ?? 0);
+  const grade = String(record.grade || '').trim().toUpperCase();
+  if (GRADE_POINTS_MAP.hasOwnProperty(grade) && credits > 0) {
+    return credits * GRADE_POINTS_MAP[grade];
+  }
+  return Number(record.gradePoints ?? 0);
+}
+
 /**
  * Determine whether a subject record should contribute to GPA calculations.
  *
@@ -157,7 +178,7 @@ export const getMyAcademicRecords = async (req: any, res: Response) => {
       }
       const semester = semesterMap.get(canonicalKey)!;
       const credits = Number(record.credits ?? 0);
-      const gradePoints = Number(record.gradePoints ?? 0);
+      const gradePoints = getEffectiveGradePoints(record);
 
       semester.subjects.push({
         code: record.subjectCode,

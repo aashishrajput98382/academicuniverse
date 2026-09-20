@@ -52,6 +52,27 @@ function isGpaEligible(record: any): boolean {
   return true;
 }
 
+const GRADE_POINTS_MAP: Record<string, number> = {
+  'O': 10,
+  'A+': 9,
+  'A': 8,
+  'B+': 7,
+  'B': 6,
+  'C': 5,
+  'D': 4,
+  'P': 4,
+  'F': 0,
+};
+
+function getEffectiveGradePoints(record: any): number {
+  const credits = Number(record.credits ?? 0);
+  const grade = String(record.grade || '').trim().toUpperCase();
+  if (GRADE_POINTS_MAP.hasOwnProperty(grade) && credits > 0) {
+    return credits * GRADE_POINTS_MAP[grade];
+  }
+  return Number(record.gradePoints ?? 0);
+}
+
 export interface IDomainAffinity {
   cluster: DomainCluster;
   displayName: string;
@@ -282,7 +303,7 @@ export class StudentGrowthEngineService {
         };
 
         const credits = Number(rec.credits ?? 0);
-        const gradePoints = Number(rec.gradePoints ?? 0);
+        const gradePoints = getEffectiveGradePoints(rec);
 
         cur.totalCredits += credits;
         cur.count += 1;
