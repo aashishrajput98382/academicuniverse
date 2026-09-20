@@ -26,6 +26,7 @@ import skillsRoutes from './skillsRoutes';
 import codeArenaRoutes from './codeArenaRoutes';
 import syntheticRoutes from './syntheticRoutes';
 import uaipRoutes from './uaipRoutes';
+import growthEngineRoutes from './growthEngineRoutes';
 
 import { researchRoutes } from '../modules/research';
 import { ezoneRoutes } from '../modules/ezone';
@@ -65,6 +66,7 @@ router.use('/resume-health', resumeHealthRoutes);
 router.use('/module-visibility', moduleVisibilityRoutes);
 router.use('/synthetic', syntheticRoutes);
 router.use('/uaip', uaipRoutes);
+router.use('/growth-engine', growthEngineRoutes);
 
 // Module-specific route guards (student-facing modules)
 router.use('/overlap-engine', moduleGuard('overlap-engine'), overlapRoutes);

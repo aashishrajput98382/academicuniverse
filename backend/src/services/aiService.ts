@@ -27,7 +27,7 @@ class AIService {
         }
 
         try {
-            const systemPrompt = `You are an empathetic Emotional Intelligence Assistant and Academic Helper for university students at Sharda University. 
+            let systemPrompt = `You are an empathetic Emotional Intelligence Assistant and Academic Mentor for university students at Sharda University. 
 Current Time: ${context?.currentTime || 'Unknown'}, Day: ${context?.day || 'Unknown'}
 Academic Context (including today's schedule, rooms/classrooms, and instructors): ${JSON.stringify(context)}
 
@@ -39,6 +39,10 @@ If the student asks about their current or next class, room number, classroom lo
 If they are stressed, suggest study breaks or time management. 
 Always include a supportive tone and keep responses concise but warm.
 Safety Disclaimer: Remind them you are an AI assistant and not a professional counselor if they express serious distress.`;
+
+            if (context?.growthReport?.seniorMentorPromptSnippet) {
+                systemPrompt += `\n\n${context.growthReport.seniorMentorPromptSnippet}`;
+            }
 
             // Format history into a single string to provide context since genai API expects text
             let conversationHistory = "";
@@ -98,7 +102,24 @@ Safety Disclaimer: Remind them you are an AI assistant and not a professional co
         };
 
         const moodResponses = responses[mood.toLowerCase()] || responses['neutral'];
-        const selectedMessage = moodResponses[Math.floor(Math.random() * moodResponses.length)];
+        let selectedMessage = moodResponses[Math.floor(Math.random() * moodResponses.length)];
+
+        if (context?.growthReport) {
+            const gr = context.growthReport;
+            const lowerMsg = (message || '').toLowerCase();
+            if (
+                lowerMsg.includes('mark') ||
+                lowerMsg.includes('result') ||
+                lowerMsg.includes('growth') ||
+                lowerMsg.includes('fail') ||
+                lowerMsg.includes('sgpa') ||
+                lowerMsg.includes('subject') ||
+                lowerMsg.includes('trajectory') ||
+                lowerMsg.includes('career')
+            ) {
+                selectedMessage = `Looking at your academic growth trajectory: You are currently in "${gr.trajectoryDirection}" with an SGPA of ${gr.currentSgpa} (Velocity: ${gr.velocity > 0 ? '+' : ''}${gr.velocity}). Your primary strength is ${gr.primaryStrength}. Pragmatic Senior Mentor Tip: Put deep, focused effort into core CS subjects (DBMS, OS, DSA); for auxiliary courses like EVS/8085, maintain a comfortable passing strategy and invest your saved hours into coding and portfolio projects!`;
+            }
+        }
 
         return `${contextTag}\n\n${selectedMessage}`;
     }

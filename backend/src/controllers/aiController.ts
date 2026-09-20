@@ -11,6 +11,9 @@ const logger = new Logger('aiController');
 import { AcademicSchedule } from '../models/AcademicSchedule';
 import { Person } from '../models/Person';
 import { toObjectId } from '../utils/mongooseHelpers';
+import { StudentGrowthEngineService } from '../services/studentGrowthEngine.service';
+
+const growthEngine = new StudentGrowthEngineService();
 
 export const getStudentContext = async (userId: string) => {
     let context: any = {
@@ -97,6 +100,28 @@ export const getStudentContext = async (userId: string) => {
                     }
                 }
             }
+        }
+        // 3. Augment with Student Growth Engine (SGIE) Analytics & Pragmatic Mentor Directive
+        try {
+            const growthReport = await growthEngine.analyzeStudentGrowth(userId);
+            context.growthReport = {
+                trajectoryDirection: growthReport.trajectory.direction,
+                currentSgpa: growthReport.trajectory.currentSgpa,
+                previousSgpa: growthReport.trajectory.previousSgpa,
+                velocity: growthReport.trajectory.velocity,
+                momentumScore: growthReport.trajectory.momentumScore,
+                overallCgpa: growthReport.trajectory.overallCgpa,
+                archetype: growthReport.domainAffinity.archetype,
+                primaryStrength: growthReport.domainAffinity.primaryStrength,
+                primaryFrictionPoint: growthReport.domainAffinity.primaryFrictionPoint,
+                attendanceGradeCovarianceAlert: growthReport.trajectory.attendanceGradeCovarianceAlert,
+                covarianceMessage: growthReport.trajectory.covarianceMessage,
+                remediationActionPlan: growthReport.remediation.actionPlan,
+                seniorMentorPromptSnippet: growthReport.chatbotContextSummary.seniorMentorPromptSnippet,
+                shortDirective: growthReport.chatbotContextSummary.shortDirective
+            };
+        } catch (gErr) {
+            logger.warn('Growth Engine context generation skipped or failed:', gErr);
         }
     } catch (err) {
         logger.error('Error fetching student context for AI:', err);

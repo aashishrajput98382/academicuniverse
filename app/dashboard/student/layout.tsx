@@ -65,6 +65,7 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
 
   const allSidebarItems = [
     { label: 'Profile', href: '/dashboard/student/profile', icon: '👤' },
+    { label: 'Growth Engine', href: '/dashboard/student/growth-engine', icon: '📈' },
     { label: 'Events from Gmail', href: '/dashboard/student/events', icon: '📧', badge: eventsCount },
     { label: 'Mail Explorer', href: '/dashboard/student/mail', icon: '✉️' },
     { label: 'Document Intelligence', href: '/dashboard/student/document-intelligence', icon: '🧠' },
