@@ -44,6 +44,9 @@ interface IDomainAffinity {
   subjectCount: number;
   affinityIndex: number;
   status: 'STRENGTH' | 'BALANCED' | 'FRICTION_POINT';
+  industryRoi?: number;
+  roiLabel?: string;
+  roiTier?: string;
 }
 
 interface IRemediationAdvice {
@@ -187,6 +190,49 @@ export default function StudentGrowthEnginePage() {
       default:
         return <BookOpen className="w-5 h-5 text-slate-400" />;
     }
+  };
+
+  const getDefaultRoi = (cluster: string = '') => {
+    switch (cluster) {
+      case 'core_cs_systems':
+        return 95;
+      case 'applied_dev_cloud':
+        return 88;
+      case 'theoretical_math':
+        return 60;
+      case 'hardware_electronics':
+        return 35;
+      default:
+        return 15;
+    }
+  };
+
+  const getDefaultRoiLabel = (cluster: string = '') => {
+    switch (cluster) {
+      case 'core_cs_systems':
+        return 'Highest Tech ROI';
+      case 'applied_dev_cloud':
+        return 'High Practical ROI';
+      case 'theoretical_math':
+        return 'Moderate Analytical ROI';
+      case 'hardware_electronics':
+        return 'Specialized Hardware ROI';
+      default:
+        return 'Institutional Compliance';
+    }
+  };
+
+  const getRoiBadgeClasses = (roi: number) => {
+    if (roi >= 85) {
+      return 'bg-emerald-500/10 text-emerald-400 border-emerald-500/30';
+    }
+    if (roi >= 50) {
+      return 'bg-indigo-500/10 text-indigo-400 border-indigo-500/30';
+    }
+    if (roi >= 30) {
+      return 'bg-amber-500/10 text-amber-400 border-amber-500/30';
+    }
+    return 'bg-slate-800 text-slate-400 border-slate-700';
   };
 
   if (loading && !report) {
@@ -392,48 +438,68 @@ export default function StudentGrowthEnginePage() {
 
         {/* Domain Cluster Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {report?.domainAffinity?.clusterBreakdown?.map((item) => (
-            <div
-              key={item.cluster}
-              className="p-5 rounded-xl bg-slate-900/60 border border-slate-800/80 hover:border-slate-700/80 transition-all space-y-3"
-            >
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-2">
-                  {getClusterIcon(item.cluster)}
-                  <span className="text-xs font-bold text-slate-200">{item.displayName}</span>
+          {report?.domainAffinity?.clusterBreakdown?.map((item) => {
+            const clusterRoi = item.industryRoi ?? getDefaultRoi(item.cluster);
+            const clusterRoiLabel = item.roiLabel ?? getDefaultRoiLabel(item.cluster);
+
+            return (
+              <div
+                key={item.cluster}
+                className="p-5 rounded-xl bg-slate-900/60 border border-slate-800/80 hover:border-slate-700/80 transition-all space-y-3 flex flex-col justify-between"
+              >
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between gap-2">
+                    <div className="flex items-center gap-2">
+                      {getClusterIcon(item.cluster)}
+                      <span className="text-xs font-bold text-slate-200">{item.displayName}</span>
+                    </div>
+                    <span
+                      className={`text-[10px] font-bold px-2 py-0.5 rounded-md uppercase tracking-wider shrink-0 ${
+                        item.status === 'STRENGTH'
+                          ? 'bg-emerald-500/10 text-emerald-400 border border-emerald-500/20'
+                          : item.status === 'FRICTION_POINT'
+                          ? 'bg-rose-500/10 text-rose-400 border border-rose-500/20'
+                          : 'bg-blue-500/10 text-blue-400 border border-blue-500/20'
+                      }`}
+                    >
+                      {item.status === 'STRENGTH' ? 'Core Strength' : item.status === 'FRICTION_POINT' ? 'Friction Point' : 'Balanced'}
+                    </span>
+                  </div>
+
+                  <div className="flex items-baseline justify-between pt-1">
+                    <span className="text-2xl font-black text-white">{item.averageScore}%</span>
+                    <span className="text-xs text-slate-400">Affinity Index: {item.affinityIndex}x</span>
+                  </div>
+
+                  <div className="w-full bg-slate-800 rounded-full h-2 overflow-hidden">
+                    <div
+                      className={`h-full rounded-full transition-all ${
+                        item.status === 'STRENGTH'
+                          ? 'bg-gradient-to-r from-emerald-500 to-teal-400'
+                          : item.status === 'FRICTION_POINT'
+                          ? 'bg-gradient-to-r from-rose-500 to-orange-400'
+                          : 'bg-gradient-to-r from-blue-500 to-indigo-400'
+                      }`}
+                      style={{ width: `${Math.min(100, item.averageScore)}%` }}
+                    />
+                  </div>
                 </div>
-                <span
-                  className={`text-[10px] font-bold px-2 py-0.5 rounded-md uppercase tracking-wider ${
-                    item.status === 'STRENGTH'
-                      ? 'bg-emerald-500/10 text-emerald-400 border border-emerald-500/20'
-                      : item.status === 'FRICTION_POINT'
-                      ? 'bg-rose-500/10 text-rose-400 border border-rose-500/20'
-                      : 'bg-blue-500/10 text-blue-400 border border-blue-500/20'
-                  }`}
-                >
-                  {item.status === 'STRENGTH' ? 'Core Strength' : item.status === 'FRICTION_POINT' ? 'Friction Point' : 'Balanced'}
-                </span>
-              </div>
 
-              <div className="flex items-baseline justify-between pt-1">
-                <span className="text-2xl font-black text-white">{item.averageScore}%</span>
-                <span className="text-xs text-slate-400">Affinity Index: {item.affinityIndex}x</span>
+                {/* Industry ROI Badge & Indicator */}
+                <div className="pt-2.5 mt-1 border-t border-slate-800/80 flex items-center justify-between text-xs">
+                  <span className="text-slate-400 flex items-center gap-1.5 font-medium text-[11px]">
+                    <Flame className="w-3.5 h-3.5 text-amber-400" />
+                    Industry ROI:
+                  </span>
+                  <span
+                    className={`px-2 py-0.5 rounded-md text-[11px] font-bold border ${getRoiBadgeClasses(clusterRoi)}`}
+                  >
+                    {clusterRoi}% • {clusterRoiLabel}
+                  </span>
+                </div>
               </div>
-
-              <div className="w-full bg-slate-800 rounded-full h-2 overflow-hidden">
-                <div
-                  className={`h-full rounded-full transition-all ${
-                    item.status === 'STRENGTH'
-                      ? 'bg-gradient-to-r from-emerald-500 to-teal-400'
-                      : item.status === 'FRICTION_POINT'
-                      ? 'bg-gradient-to-r from-rose-500 to-orange-400'
-                      : 'bg-gradient-to-r from-blue-500 to-indigo-400'
-                  }`}
-                  style={{ width: `${Math.min(100, item.averageScore)}%` }}
-                />
-              </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
 

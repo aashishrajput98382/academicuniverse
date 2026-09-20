@@ -80,6 +80,9 @@ export interface IDomainAffinity {
   subjectCount: number;
   affinityIndex: number; // > 1.0 means relative strength, < 1.0 means relative weakness
   status: 'STRENGTH' | 'BALANCED' | 'FRICTION_POINT';
+  industryRoi?: number; // 0-100 scale (e.g. 95)
+  roiLabel?: string; // e.g. 'Highest Tech ROI'
+  roiTier?: 'CRITICAL' | 'HIGH' | 'MODERATE' | 'LOW' | 'COMPLIANCE';
 }
 
 export interface IRemediationAdvice {
@@ -570,6 +573,14 @@ export class StudentGrowthEngineService {
 
     const overallAvg = grandCount > 0 ? grandTotal / grandCount : 70;
 
+    const ROI_CONFIG: Record<DomainCluster, { roi: number; label: string; tier: 'CRITICAL' | 'HIGH' | 'MODERATE' | 'LOW' | 'COMPLIANCE' }> = {
+      core_cs_systems: { roi: 95, label: 'Highest Tech ROI', tier: 'CRITICAL' },
+      applied_dev_cloud: { roi: 88, label: 'High Practical ROI', tier: 'HIGH' },
+      theoretical_math: { roi: 60, label: 'Moderate Analytical ROI', tier: 'MODERATE' },
+      hardware_electronics: { roi: 35, label: 'Specialized Hardware ROI', tier: 'LOW' },
+      auxiliary_general: { roi: 15, label: 'Institutional Compliance', tier: 'COMPLIANCE' },
+    };
+
     const clusterBreakdown: IDomainAffinity[] = (Object.keys(clusterMap) as DomainCluster[]).map((key) => {
       const item = clusterMap[key];
       const avg = item.count > 0 ? parseFloat(Math.min(100, Math.max(0, item.totalScore / item.count)).toFixed(1)) : 70;
@@ -582,6 +593,8 @@ export class StudentGrowthEngineService {
         status = 'FRICTION_POINT';
       }
 
+      const roiConfig = ROI_CONFIG[key];
+
       return {
         cluster: key,
         displayName: item.name,
@@ -589,6 +602,9 @@ export class StudentGrowthEngineService {
         subjectCount: item.count,
         affinityIndex,
         status,
+        industryRoi: roiConfig.roi,
+        roiLabel: roiConfig.label,
+        roiTier: roiConfig.tier,
       };
     });
 
