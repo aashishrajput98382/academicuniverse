@@ -229,10 +229,18 @@ export class StudentGrowthEngineService {
       academicRecords.forEach((rec) => {
         const sem = rec.semesterNumber || parseInt(rec.semester?.replace(/\D/g, '') || '1') || 1;
         const cur = semMap.get(sem) || { credits: 0, weightedPoints: 0, count: 0 };
-        const credits = rec.credits || 4;
-        const gradePoints = rec.gradePoints || 7.0;
+        const credits = rec.credits && Number(rec.credits) > 0 ? Number(rec.credits) : 4;
+        
+        // In institutional schemas, gradePoints may store total earned credit points (e.g. 24 for 4 credits = grade 6).
+        // If gradePoints > 10, extract the underlying 10-point grade.
+        let baseGrade = rec.gradePoints !== undefined && rec.gradePoints !== null ? Number(rec.gradePoints) : 7.0;
+        if (baseGrade > 10 && credits > 0) {
+          baseGrade = baseGrade / credits;
+        }
+        baseGrade = Math.min(10, Math.max(0, baseGrade));
+
         cur.credits += credits;
-        cur.weightedPoints += gradePoints * credits;
+        cur.weightedPoints += baseGrade * credits;
         cur.count += 1;
         semMap.set(sem, cur);
       });
@@ -245,7 +253,8 @@ export class StudentGrowthEngineService {
       const sortedSems = Array.from(semMap.keys()).sort((a, b) => a - b);
       sortedSems.forEach((sem) => {
         const data = semMap.get(sem)!;
-        const sgpa = data.credits > 0 ? parseFloat((data.weightedPoints / data.credits).toFixed(2)) : 7.0;
+        const rawSgpa = data.credits > 0 ? data.weightedPoints / data.credits : 7.0;
+        const sgpa = parseFloat(Math.min(10, Math.max(0, rawSgpa)).toFixed(2));
         snapshots.push({
           semesterNumber: sem,
           semesterName: `Semester ${sem}`,
@@ -391,7 +400,14 @@ export class StudentGrowthEngineService {
     if (academicRecords && academicRecords.length > 0) {
       academicRecords.forEach((rec) => {
         const { cluster } = this.classifySubject(rec.subjectName, rec.subjectCode);
-        const score = rec.gradePoints ? rec.gradePoints * 10 : 70;
+        const credits = rec.credits && Number(rec.credits) > 0 ? Number(rec.credits) : 4;
+        let baseGrade = rec.gradePoints !== undefined && rec.gradePoints !== null ? Number(rec.gradePoints) : 7.0;
+        if (baseGrade > 10 && credits > 0) {
+          baseGrade = baseGrade / credits;
+        }
+        baseGrade = Math.min(10, Math.max(0, baseGrade));
+        // Normalized percentage on 0-100 scale: e.g. Grade 8 -> 80%, Grade 6.5 -> 65%
+        const score = Math.min(100, Math.max(0, parseFloat((baseGrade * 10).toFixed(1))));
         clusterMap[cluster].totalScore += score;
         clusterMap[cluster].count += 1;
       });
@@ -401,7 +417,7 @@ export class StudentGrowthEngineService {
     if (ezoneProfile?.subjects && ezoneProfile.subjects.length > 0) {
       ezoneProfile.subjects.forEach((sub: any) => {
         const { cluster } = this.classifySubject(sub.courseName || '', sub.courseCode || '');
-        const score = sub.attendancePercentage ? Math.min(100, sub.attendancePercentage) : 75;
+        const score = sub.attendancePercentage ? Math.min(100, Math.max(0, Number(sub.attendancePercentage))) : 75;
         clusterMap[cluster].totalScore += score;
         clusterMap[cluster].count += 1;
       });
@@ -432,7 +448,7 @@ export class StudentGrowthEngineService {
 
     const clusterBreakdown: IDomainAffinity[] = (Object.keys(clusterMap) as DomainCluster[]).map((key) => {
       const item = clusterMap[key];
-      const avg = item.count > 0 ? parseFloat((item.totalScore / item.count).toFixed(1)) : 70;
+      const avg = item.count > 0 ? parseFloat(Math.min(100, Math.max(0, item.totalScore / item.count)).toFixed(1)) : 70;
       const affinityIndex = parseFloat((avg / (overallAvg || 1)).toFixed(2));
       let status: IDomainAffinity['status'] = 'BALANCED';
 
