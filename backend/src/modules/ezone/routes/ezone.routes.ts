@@ -30,5 +30,10 @@ router.post('/verify-otp', authenticateUser, controller.verifyOtp);
  */
 router.get('/profile', authenticateUser, controller.getProfile);
 
+/**
+ * @route PUT /api/ezone/historical-attendance
+ */
+router.put('/historical-attendance', authenticateUser, controller.updateHistoricalAttendance);
+
 export default router;
 export { service as ezoneService };

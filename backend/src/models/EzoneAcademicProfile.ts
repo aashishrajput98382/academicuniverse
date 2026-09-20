@@ -1,5 +1,21 @@
 import mongoose, { Schema, Document } from 'mongoose';
 
+export interface IHistoricalAttendance {
+    semesterNumber: number;
+    semesterName?: string;
+    academicSession?: string;
+    attendancePercentage: number;
+    totalClasses?: number;
+    presentClasses?: number;
+    absentClasses?: number;
+    subjects?: {
+        courseCode: string;
+        courseName: string;
+        faculty?: string;
+        attendancePercentage: number;
+    }[];
+}
+
 export interface IEzoneAcademicProfile extends Document {
     organizationId: mongoose.Types.ObjectId;
     userId: mongoose.Types.ObjectId;
@@ -17,6 +33,8 @@ export interface IEzoneAcademicProfile extends Document {
     totalClasses: number;
     presentClasses: number;
     absentClasses: number;
+
+    historicalAttendance?: IHistoricalAttendance[];
 
     caMarks: {
         courseCode: string;
@@ -107,6 +125,25 @@ const ezoneAcademicProfileSchema = new Schema<IEzoneAcademicProfile>(
             type: Number,
             default: 0,
         },
+        historicalAttendance: [
+            {
+                semesterNumber: { type: Number, required: true },
+                semesterName: String,
+                academicSession: String,
+                attendancePercentage: { type: Number, required: true },
+                totalClasses: { type: Number, default: 0 },
+                presentClasses: { type: Number, default: 0 },
+                absentClasses: { type: Number, default: 0 },
+                subjects: [
+                    {
+                        courseCode: String,
+                        courseName: String,
+                        faculty: String,
+                        attendancePercentage: Number,
+                    },
+                ],
+            },
+        ],
         caMarks: [
             {
                 courseCode: String,

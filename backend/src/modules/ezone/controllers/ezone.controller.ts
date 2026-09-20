@@ -89,4 +89,37 @@ export class EzoneController {
             res.status(500).json({ success: false, message: error.message });
         }
     };
+
+    /**
+     * PUT /api/ezone/historical-attendance
+     */
+    updateHistoricalAttendance = async (req: Request, res: Response): Promise<void> => {
+        try {
+            const user = (req as any).user;
+            const { userId, organizationId } = user || {};
+            const { historicalAttendance } = req.body;
+
+            if (!Array.isArray(historicalAttendance)) {
+                res.status(400).json({ success: false, message: 'historicalAttendance array is required' });
+                return;
+            }
+
+            const cleanAttendance = historicalAttendance.map((item: any) => ({
+                semesterNumber: Number(item.semesterNumber) || 1,
+                semesterName: item.semesterName || `Semester ${item.semesterNumber}`,
+                academicSession: item.academicSession || '',
+                attendancePercentage: parseFloat(item.attendancePercentage) || 0,
+                totalClasses: parseInt(item.totalClasses) || 0,
+                presentClasses: parseInt(item.presentClasses) || 0,
+                absentClasses: parseInt(item.absentClasses) || 0,
+                subjects: Array.isArray(item.subjects) ? item.subjects : []
+            }));
+
+            const profile = await this.ezoneService.updateHistoricalAttendance(userId, organizationId, cleanAttendance);
+            res.status(200).json({ success: true, data: profile, message: 'Historical attendance updated successfully' });
+        } catch (error: any) {
+            logger.error('Controller error in updateHistoricalAttendance:', error);
+            res.status(500).json({ success: false, message: error.message });
+        }
+    };
 }

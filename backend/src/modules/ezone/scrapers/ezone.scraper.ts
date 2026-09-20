@@ -363,7 +363,7 @@ export class EzoneScraper {
 
             // Extract data from dashboard
             await ezoneLogger.logSyncStep(userId, organizationId, sessionId, 'action', 'Extracting data from dashboard...', { category: 'EXTRACTION', actionType: 'page.evaluate', progress: 40 }, firebaseUid);
-            let mergedData = extractedRawData;
+            let mergedData: any = extractedRawData;
             logger.info(`[SCRAPER] dashboardExtract: ${JSON.stringify(mergedData.profile)}`);
             logger.info(`[SCRAPER] dashboardExtract attendance: ${JSON.stringify(mergedData.attendance)}`);
             logger.info(`[SCRAPER] dashboardExtract caMarks count: ${mergedData.caMarks?.length || 0}`);
@@ -391,12 +391,23 @@ export class EzoneScraper {
 
                     let pageData: any = {};
                     
-                    // Special handling for attendance page: extract per-course attendance cards
+                    // Special handling for attendance page: extract multi-semester attendance and active course cards
                     if (pageInfo.key === 'attendance') {
-                        const attendanceCards: any[] = await this.extractAttendanceCards(page);
-                        logger.info(`[SCRAPER] attendanceExtract cards: ${JSON.stringify(attendanceCards)}`);
-                        pageData.attendanceCards = attendanceCards;
+                        const { activeCards, historicalAttendance } = await this.extractMultiSemesterAttendance(
+                            page, 
+                            ezoneLogger, 
+                            userId, 
+                            organizationId, 
+                            sessionId, 
+                            firebaseUid
+                        );
+                        logger.info(`[SCRAPER] attendanceExtract cards: ${JSON.stringify(activeCards)}`);
+                        logger.info(`[SCRAPER] historicalAttendance semesters count: ${historicalAttendance.length}`);
+                        pageData.attendanceCards = activeCards;
+                        pageData.historicalAttendance = historicalAttendance;
+                        mergedData.historicalAttendance = historicalAttendance;
                         
+                        const attendanceCards = activeCards;
                         // Merge attendance percentages into subjects by course code
                         if (attendanceCards.length > 0 && mergedData.subjects?.length > 0) {
                             const subjectMap = new Map<string, any>();
@@ -443,7 +454,7 @@ export class EzoneScraper {
             await page.goto('https://student.sharda.ac.in/admin/home', { waitUntil: 'networkidle', timeout: 60000 });
             await page.waitForTimeout(3000);
 
-            const rawData = mergedData;
+            const rawData: any = mergedData;
             logger.info(`[SCRAPER] mergedExtract: ${JSON.stringify({ profile: rawData.profile, attendance: rawData.attendance, caMarksCount: rawData.caMarks?.length, timetableCount: rawData.timetable?.length, subjectsCount: rawData.subjects?.length })}`);
 
             // Post-Extraction Sanitization & Validation
@@ -529,8 +540,35 @@ export class EzoneScraper {
                 holidays: (rawData.holidays || []).map((h: any) => ({
                     name: this.sanitize(h.name),
                     date: this.sanitize(h.date)
+                })),
+
+                historicalAttendance: (rawData.historicalAttendance || []).map((h: any) => ({
+                    semesterNumber: Number(h.semesterNumber) || 1,
+                    semesterName: this.sanitize(h.semesterName || `Semester ${h.semesterNumber}`),
+                    academicSession: this.sanitize(h.academicSession || ''),
+                    attendancePercentage: parseFloat(this.sanitize(String(h.attendancePercentage))) || 0,
+                    totalClasses: parseInt(this.sanitize(String(h.totalClasses))) || 0,
+                    presentClasses: parseInt(this.sanitize(String(h.presentClasses))) || 0,
+                    absentClasses: parseInt(this.sanitize(String(h.absentClasses))) || 0,
+                    subjects: (h.subjects || []).map((s: any) => ({
+                        courseCode: this.sanitize(s.courseCode),
+                        courseName: this.sanitize(s.courseName),
+                        faculty: this.sanitize(s.faculty),
+                        attendancePercentage: parseFloat(this.sanitize(String(s.attendancePercentage))) || 0
+                    }))
                 }))
             };
+
+            // Auto-calculate overall attendance percentage from subjects if top widget had 0
+            if (sanitizedData.attendancePercentage === 0 && sanitizedData.subjects.length > 0) {
+                const validSubjectAtt = sanitizedData.subjects
+                    .map((s: any) => s.attendancePercentage)
+                    .filter((p: number) => p > 0);
+                if (validSubjectAtt.length > 0) {
+                    const avg = validSubjectAtt.reduce((a: number, b: number) => a + b, 0) / validSubjectAtt.length;
+                    sanitizedData.attendancePercentage = Math.round(avg);
+                }
+            }
 
             logger.info(`[SCRAPER] mongoPayload: ${JSON.stringify({ ...sanitizedData, cgpa })}`);
 
@@ -540,7 +578,12 @@ export class EzoneScraper {
                 sanitizedData.program, sanitizedData.school,
                 ...sanitizedData.caMarks.flatMap((m: any) => Object.values(m)),
                 ...sanitizedData.timetable.flatMap((t: any) => Object.values(t)),
-                ...sanitizedData.holidays.flatMap((h: any) => Object.values(h))
+                ...sanitizedData.holidays.flatMap((h: any) => Object.values(h)),
+                ...sanitizedData.historicalAttendance.flatMap((h: any) => [
+                    h.semesterName,
+                    h.academicSession,
+                    ...h.subjects.flatMap((s: any) => [s.courseCode, s.courseName])
+                ])
             ];
 
             if (allValues.some(v => !this.isValidValue(v))) {
@@ -581,16 +624,259 @@ export class EzoneScraper {
                 const attendanceMatch = attendanceText.match(/(\d+(?:\.\d+)?)\s*%/);
                 const attendancePercentage = attendanceMatch ? parseFloat(attendanceMatch[1]) : 0;
 
+                // Extract ratio if visible (e.g. 24 / 30)
+                const cardText = card.textContent || '';
+                const ratioMatch = cardText.match(/(\d+)\s*\/\s*(\d+)/);
+                const presentClasses = ratioMatch ? parseInt(ratioMatch[1]) || 0 : 0;
+                const totalClasses = ratioMatch ? parseInt(ratioMatch[2]) || 0 : 0;
+
                 return {
                     courseName: clean(nameEl?.textContent || 'N/A'),
                     courseCode: clean(codeBadge?.textContent || 'N/A'),
                     courseType: typeBadge?.getAttribute('title') || '',
                     faculty: clean(facultyEl?.textContent?.replace('Faculty :', '') || 'N/A'),
                     credits: parseFloat(clean(creditBadge?.textContent || '0')) || 0,
-                    attendancePercentage
+                    attendancePercentage,
+                    presentClasses,
+                    totalClasses
                 };
             });
         });
+    }
+
+    /**
+     * Extract multi-semester attendance by traversing session/term dropdowns or tabs
+     */
+    private async extractMultiSemesterAttendance(
+        page: Page, 
+        ezoneLogger?: any, 
+        userId?: string, 
+        orgId?: string, 
+        sessionId?: string, 
+        firebaseUid?: string
+    ): Promise<{ activeCards: any[]; historicalAttendance: any[] }> {
+        const historicalAttendance: any[] = [];
+        let activeCards: any[] = [];
+
+        try {
+            // First capture whatever is initially rendered on the page as active semester cards
+            activeCards = await this.extractAttendanceCards(page);
+            logger.info(`[SCRAPER] Initial attendance cards count: ${activeCards.length}`);
+
+            // Discover session / term dropdown(s)
+            const dropdownData = await page.evaluate(() => {
+                const clean = (text: any) => (text || '').trim().replace(/\s+/g, ' ');
+                const selects = Array.from(document.querySelectorAll('select'));
+                
+                return selects.map((sel, index) => {
+                    const id = sel.id || '';
+                    const name = sel.getAttribute('name') || '';
+                    const className = sel.className || '';
+                    const options = Array.from(sel.querySelectorAll('option')).map((opt) => ({
+                        value: opt.value,
+                        text: clean(opt.textContent || ''),
+                        selected: opt.selected,
+                    })).filter(o => o.value !== '' && o.value !== '0' && !o.text.toLowerCase().includes('select'));
+
+                    return {
+                        index,
+                        selector: id ? `#${id}` : name ? `select[name="${name}"]` : `select:nth-of-type(${index + 1})`,
+                        id,
+                        name,
+                        className,
+                        options,
+                    };
+                });
+            });
+
+            logger.info(`[SCRAPER] Discovered ${dropdownData.length} select elements on attendance page`);
+
+            // Strategy 1: Look for term/session select elements
+            const termSelect = dropdownData.find(d => 
+                /(term|session|semester|academic_year|acad_year|batch)/i.test(`${d.id} ${d.name} ${d.className}`) ||
+                d.options.some(o => /(term|sem|semester|20\d\d)/i.test(o.text))
+            );
+
+            // If found a relevant dropdown with multiple options
+            if (termSelect && termSelect.options.length > 0) {
+                logger.info(`[SCRAPER] Found session/term dropdown: ${termSelect.selector} with ${termSelect.options.length} options`);
+                if (userId && orgId && sessionId && ezoneLogger) {
+                    await ezoneLogger.logSyncStep(
+                        userId, 
+                        orgId, 
+                        sessionId, 
+                        'action', 
+                        `Found session dropdown with ${termSelect.options.length} academic terms. Traversing historical attendance...`, 
+                        { category: 'EXTRACTION', progress: 52 }, 
+                        firebaseUid
+                    );
+                }
+
+                // Identify initial selected option to restore later
+                const initialOption = termSelect.options.find(o => o.selected) || termSelect.options[termSelect.options.length - 1];
+
+                // Parse and assign semester numbers
+                const parsedOptions = termSelect.options.map((opt, idx) => {
+                    const text = opt.text;
+                    const semMatch = text.match(/(?:semester|sem)[\s-]*([1-8])/i);
+                    const termMatch = text.match(/term[\s-]*([1-8])/i);
+                    const yearMatch = text.match(/(20\d{2})/);
+                    const startYear = yearMatch ? parseInt(yearMatch[1]) : 2020 + idx;
+                    const termNum = termMatch ? parseInt(termMatch[1]) : (semMatch ? parseInt(semMatch[1]) : (idx + 1));
+                    
+                    return {
+                        ...opt,
+                        parsedSem: semMatch ? parseInt(semMatch[1]) : 0,
+                        startYear,
+                        termNum,
+                        originalIndex: idx,
+                    };
+                });
+
+                // Chronological sort: earliest academic year & term first
+                parsedOptions.sort((a, b) => {
+                    if (a.startYear !== b.startYear) return a.startYear - b.startYear;
+                    return a.termNum - b.termNum;
+                });
+
+                // Sequentially assign semester 1..N if not explicit
+                parsedOptions.forEach((opt, seqIdx) => {
+                    if (!opt.parsedSem || opt.parsedSem === 0) {
+                        opt.parsedSem = seqIdx + 1;
+                    }
+                });
+
+                // Traverse options
+                for (const opt of parsedOptions) {
+                    try {
+                        logger.info(`[SCRAPER] Switching to term: "${opt.text}" (Semester ${opt.parsedSem})`);
+                        await page.selectOption(termSelect.selector, opt.value);
+                        await page.dispatchEvent(termSelect.selector, 'change').catch(() => {});
+
+                        // Click search/submit button if one exists
+                        const submitBtn = await page.$('button[type="submit"], input[type="submit"], button:has-text("Search"), button:has-text("View"), button:has-text("Submit"), button:has-text("Show"), .btn-search, #btnSearch, .btn-primary');
+                        if (submitBtn && await submitBtn.isVisible().catch(() => false)) {
+                            await submitBtn.click().catch(() => {});
+                        }
+
+                        // Wait for update
+                        await page.waitForTimeout(2000);
+                        await page.waitForLoadState('networkidle', { timeout: 8000 }).catch(() => {});
+
+                        // Extract cards and summary for this semester
+                        const semCards = await this.extractAttendanceCards(page);
+                        
+                        // Extract summary stats if present
+                        const semStats = await page.evaluate(() => {
+                            const statWidget = document.querySelector('.statess, .attendance-summary, #attendance-stat');
+                            if (!statWidget) return { total: 0, present: 0, absent: 0, percentage: 0 };
+                            
+                            const totalEl = statWidget.querySelector('h5:has-text("Total"), .total-classes') || statWidget.querySelectorAll('h5')[0];
+                            const presentEl = statWidget.querySelector('h5:has-text("Present"), .present-classes') || statWidget.querySelectorAll('h5')[1];
+                            const absentEl = statWidget.querySelector('h5:has-text("Absent"), .absent-classes') || statWidget.querySelectorAll('h5')[2];
+
+                            const parseNum = (el: any) => parseInt((el?.textContent || '').replace(/[^0-9]/g, '')) || 0;
+                            const total = parseNum(totalEl);
+                            const present = parseNum(presentEl);
+                            const absent = parseNum(absentEl);
+                            const pct = total > 0 ? Math.round((present / total) * 100) : 0;
+                            return { total, present, absent, percentage: pct };
+                        });
+
+                        // Calculate overall attendance percentage for this semester
+                        let semPercentage = 0;
+                        if (semStats.total > 0 && semStats.percentage > 0) {
+                            semPercentage = semStats.percentage;
+                        } else if (semCards.length > 0) {
+                            const validCards = semCards.filter(c => c.attendancePercentage > 0);
+                            if (validCards.length > 0) {
+                                const sum = validCards.reduce((acc, c) => acc + c.attendancePercentage, 0);
+                                semPercentage = parseFloat((sum / validCards.length).toFixed(1));
+                            }
+                        }
+
+                        if (semPercentage > 0 || semCards.length > 0) {
+                            historicalAttendance.push({
+                                semesterNumber: opt.parsedSem,
+                                semesterName: `Semester ${opt.parsedSem}`,
+                                academicSession: opt.text,
+                                attendancePercentage: semPercentage,
+                                totalClasses: semStats.total || semCards.reduce((acc, c) => acc + (c.totalClasses || 0), 0),
+                                presentClasses: semStats.present || semCards.reduce((acc, c) => acc + (c.presentClasses || 0), 0),
+                                absentClasses: semStats.absent || semCards.reduce((acc, c) => acc + (c.absentClasses || 0), 0),
+                                subjects: semCards.map(c => ({
+                                    courseCode: c.courseCode,
+                                    courseName: c.courseName,
+                                    faculty: c.faculty,
+                                    attendancePercentage: c.attendancePercentage,
+                                }))
+                            });
+                            logger.info(`[SCRAPER] Extracted Sem ${opt.parsedSem} attendance: ${semPercentage}% across ${semCards.length} subjects`);
+                        }
+                    } catch (optErr) {
+                        logger.warn(`[SCRAPER] Failed to extract attendance for option "${opt.text}": ${(optErr as Error).message}`);
+                    }
+                }
+
+                // Restore initial selected option so active semester subjects remain accurate
+                if (initialOption) {
+                    try {
+                        await page.selectOption(termSelect.selector, initialOption.value);
+                        await page.dispatchEvent(termSelect.selector, 'change').catch(() => {});
+                        const submitBtn = await page.$('button[type="submit"], input[type="submit"], button:has-text("Search"), button:has-text("View"), button:has-text("Submit"), button:has-text("Show")');
+                        if (submitBtn && await submitBtn.isVisible().catch(() => false)) {
+                            await submitBtn.click().catch(() => {});
+                        }
+                        await page.waitForTimeout(1500);
+                        activeCards = await this.extractAttendanceCards(page);
+                    } catch (restoreErr) {
+                        logger.warn(`[SCRAPER] Failed to restore initial option: ${(restoreErr as Error).message}`);
+                    }
+                }
+            } else {
+                // Strategy 2: Check for semester tabs (nav-tabs / pills)
+                const tabs = await page.evaluate(() => {
+                    const links = Array.from(document.querySelectorAll('.nav-tabs a, .nav-pills a, a[data-toggle="tab"], .semester-tab'));
+                    return links.map(l => ({
+                        text: (l.textContent || '').trim(),
+                        href: (l as HTMLAnchorElement).href || ''
+                    })).filter(t => /(term|sem|semester)/i.test(t.text));
+                });
+
+                if (tabs.length > 0) {
+                    logger.info(`[SCRAPER] Discovered ${tabs.length} attendance semester tabs`);
+                    for (let tIdx = 0; tIdx < tabs.length; tIdx++) {
+                        const tab = tabs[tIdx];
+                        try {
+                            await page.click(`.nav-tabs a:has-text("${tab.text}"), .nav-pills a:has-text("${tab.text}")`).catch(() => {});
+                            await page.waitForTimeout(2000);
+                            const semCards = await this.extractAttendanceCards(page);
+                            const semMatch = tab.text.match(/([1-8])/);
+                            const semNum = semMatch ? parseInt(semMatch[1]) : tIdx + 1;
+                            
+                            const validCards = semCards.filter(c => c.attendancePercentage > 0);
+                            const avgPct = validCards.length > 0
+                                ? parseFloat((validCards.reduce((a, b) => a + b.attendancePercentage, 0) / validCards.length).toFixed(1))
+                                : 0;
+                            
+                            historicalAttendance.push({
+                                semesterNumber: semNum,
+                                semesterName: `Semester ${semNum}`,
+                                academicSession: tab.text,
+                                attendancePercentage: avgPct,
+                                subjects: semCards
+                            });
+                        } catch (tabErr) {
+                            logger.warn(`[SCRAPER] Error clicking attendance tab ${tab.text}: ${(tabErr as Error).message}`);
+                        }
+                    }
+                }
+            }
+        } catch (err) {
+            logger.warn(`[SCRAPER] Multi-semester attendance extraction encountered warning: ${(err as Error).message}`);
+        }
+
+        return { activeCards, historicalAttendance };
     }
 
     /**

@@ -319,7 +319,31 @@ export class StudentGrowthEngineService {
       });
     }
 
-    const overallAttendance = ezoneProfile?.attendancePercentage || 78.5;
+    // Resolve baseline overall attendance
+    let overallAttendance = ezoneProfile?.attendancePercentage || 0;
+    if (overallAttendance === 0 && ezoneProfile?.subjects && ezoneProfile.subjects.length > 0) {
+      const validSubAtt = ezoneProfile.subjects
+        .map((s: any) => Number(s.attendancePercentage))
+        .filter((p: number) => p > 0);
+      if (validSubAtt.length > 0) {
+        overallAttendance = Math.round(validSubAtt.reduce((a: number, b: number) => a + b, 0) / validSubAtt.length);
+      }
+    }
+    if (overallAttendance === 0) {
+      overallAttendance = 78.5;
+    }
+
+    const historicalMap = new Map<number, number>();
+    if (ezoneProfile?.historicalAttendance && Array.isArray(ezoneProfile.historicalAttendance)) {
+      ezoneProfile.historicalAttendance.forEach((item: any) => {
+        const sNum = Number(item.semesterNumber);
+        const att = Number(item.attendancePercentage);
+        if (sNum > 0 && att > 0) {
+          historicalMap.set(sNum, att);
+        }
+      });
+    }
+
     const snapshots: ISemesterSnapshot[] = [];
 
     if (semMap.size > 0) {
@@ -328,12 +352,20 @@ export class StudentGrowthEngineService {
         const data = semMap.get(sem)!;
         const rawSgpa = data.eligibleCredits > 0 ? data.eligibleGradePoints / data.eligibleCredits : 7.0;
         const sgpa = parseFloat(Math.min(10, Math.max(0, rawSgpa)).toFixed(2));
+
+        // Use real historical attendance if found in ezoneProfile.historicalAttendance
+        let semAttendance = historicalMap.get(sem);
+        if (semAttendance === undefined || semAttendance === 0) {
+          // Fallback only if no real multi-semester attendance record exists for this semester
+          semAttendance = Math.min(100, Math.max(60, overallAttendance + (sem % 2 === 0 ? 3 : -4)));
+        }
+
         snapshots.push({
           semesterNumber: sem,
           semesterName: `Semester ${sem}`,
           sgpa,
           credits: data.totalCredits,
-          attendancePercentage: Math.min(100, Math.max(60, overallAttendance + (sem % 2 === 0 ? 3 : -4))),
+          attendancePercentage: semAttendance,
           subjectCount: data.count,
         });
       });

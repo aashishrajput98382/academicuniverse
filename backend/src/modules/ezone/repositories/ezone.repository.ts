@@ -83,4 +83,21 @@ export class EzoneRepository {
         logger.info('[TRACE-PROFILE-UPSERT] Profile upserted:', { profileId: profile._id, userId: idVal, email: userEmail });
         return profile;
     }
+
+    async updateHistoricalAttendance(userId: string, organizationId: string, historicalAttendance: any[]): Promise<IEzoneAcademicProfile | null> {
+        const idVal = this.toQueryId(userId);
+        const query: any = {
+            $or: [
+                { userId: idVal },
+                { userId: userId }
+            ]
+        };
+        const updated = await EzoneAcademicProfile.findOneAndUpdate(
+            query,
+            { $set: { historicalAttendance, lastSyncedAt: new Date() } },
+            { new: true }
+        );
+        logger.info('[TRACE-HISTORICAL-ATTENDANCE-UPDATE]', { userId: idVal, count: historicalAttendance.length });
+        return updated;
+    }
 }

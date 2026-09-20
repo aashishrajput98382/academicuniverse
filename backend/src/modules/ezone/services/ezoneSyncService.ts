@@ -288,9 +288,16 @@ export class EzoneSyncService {
             let mongoData;
             if (sheetsData) {
                 mongoData = this.mapper.fromSheetsToMongo(sheetsData);
+                if (sanitizedData.historicalAttendance) {
+                    mongoData.historicalAttendance = sanitizedData.historicalAttendance;
+                }
             } else {
                 // Use sanitized data directly if Google Sheets is disabled or failed
                 mongoData = sanitizedData;
+            }
+
+            if (sanitizedData.historicalAttendance && !mongoData.historicalAttendance) {
+                mongoData.historicalAttendance = sanitizedData.historicalAttendance;
             }
 
             // 6. Store clean data into MongoDB (fallback to user details if scraper had N/A)
@@ -343,5 +350,12 @@ export class EzoneSyncService {
      */
     async getProfile(userId: string, organizationId: string): Promise<IEzoneAcademicProfile | null> {
         return await this.repository.findByUserId(userId, organizationId);
+    }
+
+    /**
+     * Update historical attendance records directly
+     */
+    async updateHistoricalAttendance(userId: string, organizationId: string, historicalAttendance: any[]): Promise<IEzoneAcademicProfile | null> {
+        return await this.repository.updateHistoricalAttendance(userId, organizationId, historicalAttendance);
     }
 }
