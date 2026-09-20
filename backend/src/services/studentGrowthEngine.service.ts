@@ -141,6 +141,27 @@ export class StudentGrowthEngineService {
   private classifySubject(subjectName: string, subjectCode: string = ''): { cluster: DomainCluster; industryScore: number } {
     const text = `${subjectName} ${subjectCode}`.toLowerCase();
 
+    // 0. Auxiliary & Non-Technical Electives / Compliance overrides
+    if (
+      text.includes('project management') ||
+      text.includes('entrepreneurship') ||
+      text.includes('environmental') ||
+      text.includes('human values') ||
+      text.includes('constitution') ||
+      text.includes('ethics') ||
+      text.includes('career') ||
+      text.includes('soft skill') ||
+      text.includes('communication') ||
+      text.includes('english')
+    ) {
+      return { cluster: 'auxiliary_general', industryScore: 0.15 };
+    }
+
+    // Basic Sciences
+    if (text.includes('physics') || text.includes('chemistry')) {
+      return { cluster: 'auxiliary_general', industryScore: 0.20 };
+    }
+
     // 1. Core CS & Systems (M >= 0.85)
     if (
       text.includes('data structure') ||
@@ -203,7 +224,9 @@ export class StudentGrowthEngineService {
       text.includes('computer architecture') ||
       text.includes('coa') ||
       text.includes('vlsi') ||
-      text.includes('embedded')
+      text.includes('embedded') ||
+      text.includes('eee') ||
+      text.includes('electrical')
     ) {
       return { cluster: 'hardware_electronics', industryScore: 0.35 };
     }
@@ -647,8 +670,9 @@ export class StudentGrowthEngineService {
     rawMarks: any[]
   ): IGrowthEngineReport['remediation'] {
     const actionPlan: IRemediationAdvice[] = [];
+    const seenSubjects = new Set<string>();
 
-    // Check CA marks from ezone profile
+    // 1. Check CA marks from live ezone profile if synced
     if (ezoneProfile?.caMarks && ezoneProfile.caMarks.length > 0) {
       ezoneProfile.caMarks.forEach((ca: any) => {
         const totalNum = parseFloat(ca.total) || 0;
@@ -669,7 +693,7 @@ export class StudentGrowthEngineService {
 
           if (priority === 'CRITICAL_CORE') {
             pragmaticAdvice =
-              'Do NOT leave this unaddressed! Core CS subjects like DBMS, OS, or DSA are tested in 90% of technical interviews. Complete the practical SQL/indexing drill immediately.';
+              'Do NOT leave this unaddressed! Core CS subjects like DBMS, OS, or DSA are tested in 90% of technical interviews. Complete practical implementation drills immediately.';
             industryContext = 'Critical Tech Filter: Mandatory for SDE-1, Backend, and Systems hiring.';
           } else if (priority === 'PASS_ONLY_AUXILIARY') {
             pragmaticAdvice =
@@ -680,10 +704,12 @@ export class StudentGrowthEngineService {
             industryContext = 'Moderate Foundation: Supports analytical reasoning.';
           }
 
+          const code = (ca.courseCode || 'CS-GEN').trim().toUpperCase();
+          seenSubjects.add(code);
           actionPlan.push({
-            subjectCode: ca.courseCode || 'CS-GEN',
+            subjectCode: code,
             subjectName: ca.courseName || 'Course',
-            scoreOrGrade: `${totalNum}/25`,
+            scoreOrGrade: `${totalNum}/25 CA`,
             numericScore: totalNum,
             cluster,
             industryRelevanceScore: industryScore,
@@ -697,7 +723,149 @@ export class StudentGrowthEngineService {
       });
     }
 
-    // Default sample remediation items if profile is clean or empty
+    // 2. Mine actual curricular academic records for genuine backlogs, low grades & high-ROI core upgrades
+    if (academicRecords && academicRecords.length > 0) {
+      const candidates: Array<{
+        code: string;
+        name: string;
+        grade: string;
+        credits: number;
+        gp: number;
+        cluster: DomainCluster;
+        industryScore: number;
+        priority: RemediationPriority;
+        rootCause: IRemediationAdvice['rootCause'];
+        rootCauseExplanation: string;
+        pragmaticAdvice: string;
+        industryContext: string;
+        numericScore: number;
+        rank: number;
+      }> = [];
+
+      academicRecords.forEach((rec) => {
+        const code = String(rec.subjectCode || '').trim().toUpperCase();
+        const name = String(rec.subjectName || code).trim();
+        const grade = String(rec.grade || '').trim().toUpperCase();
+        const status = String(rec.gradingStatus || '').trim().toUpperCase();
+
+        if (seenSubjects.has(code) || grade === 'QUALIFIED' || status === 'AUDIT') {
+          return;
+        }
+
+        const credits = Number(rec.credits || 0);
+        const gp = Number(rec.gradePoints || 0);
+        const { cluster, industryScore } = this.classifySubject(name, code);
+
+        // A. Critical backlogs or Grade F
+        if (grade === 'F') {
+          if (cluster === 'core_cs_systems' || cluster === 'applied_dev_cloud' || cluster === 'theoretical_math') {
+            candidates.push({
+              code,
+              name,
+              grade,
+              credits,
+              gp,
+              cluster,
+              industryScore,
+              priority: 'CRITICAL_CORE',
+              rootCause: 'TERMINAL_EXAM_DROP',
+              rootCauseExplanation: `End-term backlog recorded (Grade F, ${credits} credits). Suppresses cumulative CGPA and semester velocity.`,
+              pragmaticAdvice:
+                cluster === 'theoretical_math'
+                  ? `Clear this ${credits}-credit backlog promptly using standard formula cheatsheets (Bayes Theorem, probability distributions, regression). Strong statistical intuition is also a high-value asset for AI/ML engineering.`
+                  : `Critical requirement: Clear this ${credits}-credit technical course immediately. Practice previous 3-year end-term question blueprints.`,
+              industryContext:
+                cluster === 'theoretical_math'
+                  ? `High Academic Impact: ${credits} credits directly restore CGPA + unlocks Data Science/ML opportunities.`
+                  : 'Critical Tech Filter: Mandatory for graduation compliance and tech eligibility.',
+              numericScore: 35,
+              rank: 1,
+            });
+          } else {
+            candidates.push({
+              code,
+              name,
+              grade,
+              credits,
+              gp,
+              cluster,
+              industryScore,
+              priority: 'PASS_ONLY_AUXILIARY',
+              rootCause: 'TERMINAL_EXAM_DROP',
+              rootCauseExplanation: `Hardware/Auxiliary exam backlog (Grade F, ${credits} credits) requiring university graduation clearance.`,
+              pragmaticAdvice:
+                'Strictly pass-only strategy recommended. Unless pursuing embedded firmware/VLSI, do NOT waste high-energy coding hours. Master the top 5 recurring past-year question templates to clear the credits and immediately re-focus on software engineering.',
+              industryContext: 'Low Industry ROI: Purely institutional compliance; zero recruiter interest in software screens.',
+              numericScore: 30,
+              rank: 3,
+            });
+          }
+        }
+        // B. Core CS / Dev courses with moderate grade (Grade B or C) -> High ROI optimization target!
+        else if ((cluster === 'core_cs_systems' || cluster === 'applied_dev_cloud') && (grade === 'B' || grade === 'C' || grade === 'D')) {
+          candidates.push({
+            code,
+            name,
+            grade,
+            credits,
+            gp,
+            cluster,
+            industryScore,
+            priority: 'CRITICAL_CORE',
+            rootCause: 'GENERAL_UNDERPERFORMANCE',
+            rootCauseExplanation: `Grade ${grade} in core computing foundation. Creates an avoidable screening hurdle in product company interviews.`,
+            pragmaticAdvice:
+              name.toLowerCase().includes('data structure') || name.toLowerCase().includes('algorithm')
+                ? 'Highest Tech Priority! DSA is tested in 90%+ of technical coding interviews. Revisit Trees, Graphs, Dynamic Programming, and complexity analysis on LeetCode to upgrade from Grade B to interview mastery.'
+                : `Elevate technical depth in ${name}. Core software engineering concepts directly determine senior technical interview outcomes.`,
+            industryContext: 'Highest Tech ROI (95%): Mandatory technical screening filter for SDE-1, Backend, and Systems hiring.',
+            numericScore: grade === 'B' ? 60 : 50,
+            rank: 2,
+          });
+        }
+        // C. Auxiliary electives with Grade C or D -> Low ROI clearance
+        else if (cluster === 'auxiliary_general' && (grade === 'C' || grade === 'D')) {
+          candidates.push({
+            code,
+            name,
+            grade,
+            credits,
+            gp,
+            cluster,
+            industryScore,
+            priority: 'PASS_ONLY_AUXILIARY',
+            rootCause: 'GENERAL_UNDERPERFORMANCE',
+            rootCauseExplanation: `Grade ${grade} in non-technical elective; minimal semester study allocation was dedicated.`,
+            pragmaticAdvice:
+              'Zero anxiety required. Non-technical elective grades carry 0% weight in software hiring pipelines. Complete standard submissions without taking time away from GitHub portfolio projects.',
+            industryContext: 'Institutional Compliance (15% ROI): Purely university credit fulfillment; zero recruiter relevance.',
+            numericScore: grade === 'C' ? 50 : 40,
+            rank: 4,
+          });
+        }
+      });
+
+      candidates.sort((a, b) => a.rank - b.rank);
+
+      candidates.slice(0, 4).forEach((c) => {
+        seenSubjects.add(c.code);
+        actionPlan.push({
+          subjectCode: c.code,
+          subjectName: c.name,
+          scoreOrGrade: `Grade ${c.grade} (${c.credits} Cr)`,
+          numericScore: c.numericScore,
+          cluster: c.cluster,
+          industryRelevanceScore: c.industryScore,
+          priority: c.priority,
+          rootCause: c.rootCause,
+          rootCauseExplanation: c.rootCauseExplanation,
+          pragmaticAdvice: c.pragmaticAdvice,
+          industryContext: c.industryContext,
+        });
+      });
+    }
+
+    // 3. Fallback only if student has zero friction points across CA and all transcripts
     if (actionPlan.length === 0) {
       actionPlan.push(
         {
@@ -793,7 +961,7 @@ MENTOR COACHING INSTRUCTIONS:
 1. Act as a wise, pragmatic Senior Tech Mentor who understands real college engineering.
 2. If the student asks about marks, praise their positive momentum or explain root causes calmly without panic.
 3. Strongly guide deep study on high-yield core CS subjects (DSA, OS, DBMS).
-4. For non-core subjects (EVS, 8085, Ethics), reassure them that they only need passing marks; discourage wasting weeks on non-industry topics so they can focus on coding & GitHub!
+4. For non-core subjects (like compliance electives, basic sciences, hardware clearance), reassure them that they only need passing marks; discourage wasting weeks on non-industry topics so they can focus on coding & GitHub!
 ===================================================
     `.trim();
 
